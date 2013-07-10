@@ -1,0 +1,12 @@
+			}
+		},
+		plugins: ["themes", "html_data", "ui", "types"]
+	}
+);
+$(".tree").bind("select_node.jstree", handleSelect);
+
+// Initialize the tabs.
+$(".tabs").tabs();
+
+// Initialize the layout.
+$("#body").layout({ west: { size: 360, resizable: true }, center: { resizable: true }});

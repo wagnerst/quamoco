@@ -1,0 +1,24 @@
+====================================
+= How to integrate Copyright Infos =
+====================================
+
+1. Generate Zip
+2. Copy "de.quamoco.qm/resources/header.txt" to all .java files:  find -type f -name "*.java" -exec ~lochmann/tmp/quamoco/prefix.sh '{}' ';'
+3. Copy current conqat into it
+4. Copy "de.quamoco.qm/resources/*" to the root-dir of the zip
+5. Delete all ".svn" dirs: find -type d -name ".svn" -exec rm -rf '{}' ';'
+
+
+
+prefix.sh
+---------
+cp $1 tmp.java
+cat ~lochmann/tmp/quamoco/header.txt > $1
+cat tmp.java >> $1
+rm -f tmp.java
+
+
+
+converting line breaks
+----------------------
+perl -pi -e 's/\r\n/\n/g' filename.txt

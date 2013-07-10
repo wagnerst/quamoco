@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v17" xmi:id="_F8sn0PQXEeCsNr6XSGkldA">
+  <entities xmi:id="_F-CEkPQXEeCsNr6XSGkldA" name="Code"/>
+  <factors xmi:id="_F-CEkfQXEeCsNr6XSGkldA" name="Redundancy"/>
+  <factors xmi:id="_F-CEkvQXEeCsNr6XSGkldA" characterizes="_F-CEkPQXEeCsNr6XSGkldA">
+    <refines xmi:id="_F-CEk_QXEeCsNr6XSGkldA" parent="_F-CEkfQXEeCsNr6XSGkldA"/>
+  </factors>
+</qm:QualityModel>

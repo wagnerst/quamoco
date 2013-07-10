@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="de.quamoco.qm.presentation.QmEditorID"
+            labelProvider="de.quamoco.qm.properties.PropertyLabelProvider">
+               <propertyCategory category="sample"/>
+      </propertyContributor>
+   </extension>
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="de.quamoco.qm.presentation.QmEditorID">        
+         <propertyTab
+               category="sample"
+               id="de.quamoco.qm.properties.eval.evaluationFunction"
+               label="Evaluation Function">
+         </propertyTab>
+         <propertyTab
+               category="sample"
+               id="de.quamoco.qm.properties.eval.factorAggregation"
+               label="Factor Aggregation">
+         </propertyTab>
+         <propertyTab
+               category="sample"
+               id="de.quamoco.qm.properties.eval.measureEvaluation"
+               label="M. Evaluation">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+    <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="de.quamoco.qm.presentation.QmEditorID">
+         <propertySection
+               class="de.quamoco.qm.properties.DescribedElementDescriptionSection"
+               filter="de.quamoco.qm.properties.eval.filter.SingleMeasureEvaluationFilter"
+               id="de.quamoco.qm.properties.eval.evaluationFunction.descriptionSection"
+               tab="de.quamoco.qm.properties.eval.evaluationFunction">
+         </propertySection>
+         <propertySection
+               afterSection="de.quamoco.qm.properties.eval.evaluationFunction.descriptionSection"
+               class="de.quamoco.qm.properties.eval.section.SingleMeasureEvaluationSection"
+               filter="de.quamoco.qm.properties.eval.filter.SingleMeasureEvaluationFilter"
+               id="de.quamoco.qm.properties.eval.evaluationFunction.mainSection"
+               tab="de.quamoco.qm.properties.eval.evaluationFunction">
+         </propertySection>
+      </propertySections>
+   </extension>
+    <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="de.quamoco.qm.presentation.QmEditorID">
+         <propertySection
+               class="de.quamoco.qm.properties.DescribedElementDescriptionSection"
+               filter="de.quamoco.qm.properties.eval.filter.FactorAggregationFilter"
+               id="de.quamoco.qm.properties.eval.factorAggregation.descriptionSection"
+               tab="de.quamoco.qm.properties.eval.factorAggregation">
+         </propertySection>
+         <propertySection
+               afterSection="de.quamoco.qm.properties.eval.factorAggregation.descriptionSection"
+               class="de.quamoco.qm.properties.eval.section.FactorAggregationSection"
+               filter="de.quamoco.qm.properties.eval.filter.FactorAggregationFilter"
+               id="de.quamoco.qm.properties.eval.factorAggregation.factorAggregationSection"
+               tab="de.quamoco.qm.properties.eval.factorAggregation">
+         </propertySection>
+      </propertySections>
+    </extension>
+    <extension
+          point="org.eclipse.ui.views.properties.tabbed.propertySections">
+       <propertySections
+             contributorId="de.quamoco.qm.presentation.QmEditorID">
+          <propertySection
+                class="de.quamoco.qm.properties.DescribedElementDescriptionSection"
+                filter="de.quamoco.qm.properties.eval.filter.MultiMeasureEvaluationFilter"
+                id="de.quamoco.qm.properties.eval.evaluationFunction.descriptionSection1"
+                tab="de.quamoco.qm.properties.eval.measureEvaluation">
+          </propertySection>
+          <propertySection
+                afterSection="de.quamoco.qm.properties.eval.measureEvaluation.descriptionSection"
+                class="de.quamoco.qm.properties.eval.section.MultiMeasureEvaluationSection"
+                filter="de.quamoco.qm.properties.eval.filter.MultiMeasureEvaluationFilter"
+                id="de.quamoco.qm.properties.eval.measureEvaluation.mainSection"
+                tab="de.quamoco.qm.properties.eval.measureEvaluation">
+          </propertySection>
+       </propertySections>
+    </extension>
+
+</plugin>

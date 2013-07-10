@@ -1,0 +1,124 @@
+body {
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+div.excerpt {
+	background-color:#FFFFE0;
+	border-width:2px; border-color:#000000; border-style:dotted; padding:3px;
+	font-family: Arial;
+	margin:8pt;
+}
+
+div.important {
+	background-color:#EEEEEE;
+	border-width:2px; border-color:#000000; border-style:dotted; padding:3px;
+	font-family: Arial;
+	font-size:10pt;
+	font-weight:bold;
+	margin:8pt;
+}
+
+div.example {
+	background-color:#EEEEE0;
+	border-width:1px; border-color:#CCCCCC; border-style:dotted; padding:2px;
+	margin:8pt;
+}
+
+h1 {
+	font-size:16pt;
+	font-weight:bold;
+	background-color:#CCCCCC;
+	border-left-width:10px; 
+	border-bottom-width:1px;
+	border-top-width:1px;
+	border-right-width:1px;
+	border-color:#000000; 
+	border-style:solid; 
+	padding:2px;
+}
+
+h2.caption {
+	font-size:14pt;
+	font-weight:bold;
+	background-color:#CCCCCC;
+	border-left-width:10px; 
+	border-bottom-width:1px;
+	border-top-width:1px;
+	border-right-width:1px;
+	border-color:#000000; 
+	border-style:solid; 
+	padding:2px;
+}
+
+h2 {
+	font-size:12pt;
+	margin-top:8pt;
+	margin-bottom:2pt;
+	border-bottom-width:1px;
+	border-right-width:0px;
+	border-top-width:0px;
+	border-left-width:0px; 
+	border-color:#000000; 
+	border-style:solid;
+}
+
+h3 {
+	font-size:11pt;
+	margin-top:4pt;
+	margin-bottom:2pt;
+	margin-left: 0pt;
+}
+
+ol {
+	margin-top:0pt;
+	margin-bottom:0pt;
+}
+
+ol li {
+	list-style: square;
+}
+
+ol li li {
+	list-style: circle outside;
+}
+
+ul {
+	margin-top:4pt;
+	margin-bottom:4pt;
+}
+
+ul li {
+	list-style: square;
+}
+
+ul li li {
+	list-style: circle;
+	font-size:8pt;
+}
+
+table.menu {
+	background-color:#DDDDDD;
+	font-family: Courier;
+	font-size: 10pt;
+	border-width:1px; border-color:#000000; border-style:dotted;
+}
+
+span.menu {
+	font-weight:bold; color:black; text-decoration:none; 
+}
+a:link.menu { 
+	font-weight:bold; color:black; text-decoration:underline; 
+}
+a:visited.menu { 
+	font-weight:bold; color:black; text-decoration:underline;  
+}
+a:focus.menu { 
+	font-weight:bold; color:black; text-decoration:underline; 
+}
+a:hover.menu { 
+	font-weight:bold; color:black; text-decoration:underline; 
+}
+a:active.menu { 
+	font-weight:bold; color:black; text-decoration:underline; 
+}

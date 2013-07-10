@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.gen.StagedEvaluation">
+      <param name="input">
+         <attr name="scope"/>
+      </param>
+      <param name="output">
+         <attr name="dir"/>
+      </param>
+      <out name="metrics" ref="@dummy-metric-collection-creator"/>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelLoader" name="ModelLoader">
+         <input file="@qualitymodel.file"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelEvaluator" name="ModelEvaluator">
+         <input ref="@dummy-metric-collection-creator"/>
+         <models ref="@ModelLoader"/>
+         <function-range-resolver ref="@block-resolver"/>
+         <project-name ref="@project-name.ref"/>
+      </processor>
+      <out name="result" ref="@ModelEvaluator"/>
+      <param name="qualitymodel">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.quickeval.MeasureInitializer" name="dummy-metric-collection-creator">
+         <metric collection="@measure-reader"/>
+         <models ref="@ModelLoader"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.quickeval.MeasureReader" name="measure-reader">
+         <metric collection="@MetricCollector"/>
+         <excel file="@excel.file"/>
+         <models ref="@ModelLoader"/>
+      </processor>
+      <param name="excel">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.MetricCollector" name="MetricCollector">
+         <input ref="@input.scope"/>
+         <direct-measure name="@direct-measure.name" value="@direct-measure.value"/>
+         <findings-measure name="@findings-measure.name" rule-identifier="@findings-measure.rule-identifier" tool="@findings-measure.tool"/>
+         <plain-measure key="@plain-measure.key" name="@plain-measure.name"/>
+         <metric-collection ref="@metric-collection.ref"/>
+      </processor>
+      <param name="direct-measure">
+         <doc>{@connDoc}</doc>
+         <attr name="name">
+            <doc>{@connDoc}</doc>
+         </attr>
+         <attr name="value">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="findings-measure">
+         <doc>{@connDoc}</doc>
+         <attr name="rule-identifier">
+            <doc>{@connDoc}</doc>
+         </attr>
+         <attr name="name">
+            <doc>{@connDoc}</doc>
+         </attr>
+         <attr name="tool">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="plain-measure">
+         <doc>{@connDoc}</doc>
+         <attr name="name">
+            <doc>{@connDoc}</doc>
+         </attr>
+         <attr name="key">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="metric-collection">
+         <doc>{@connDoc}</doc>
+         <attr name="ref">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.BlockFunctionRangeResolver" name="block-resolver">
+         <method depth="1"/>
+         <language name="CS"/>
+         <scope keywords="CLASS"/>
+         <scope keywords="INTERFACE"/>
+         <scope keywords="ENUM"/>
+         <scope keywords="STRUCT"/>
+      </processor>
+      <param name="project-name">
+         <doc>{@connDoc}</doc>
+         <attr name="ref">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="input">
+         <entry key="pos" value="64,32"/>
+      </entries>
+      <entries namespace="output">
+         <entry key="pos" value="224,32"/>
+         <entry key="edges_invisible" value="false"/>
+      </entries>
+      <entries namespace="metrics">
+         <entry key="pos" value="86,486"/>
+      </entries>
+      <entries namespace="ModelLoader">
+         <entry key="pos" value="432,168"/>
+      </entries>
+      <entries namespace="ModelEvaluator">
+         <entry key="pos" value="216,476"/>
+      </entries>
+      <entries namespace="result">
+         <entry key="pos" value="252,552"/>
+      </entries>
+      <entries namespace="#comments"/>
+      <entries namespace="#comment-bounds"/>
+      <entries namespace="qualitymodel">
+         <entry key="pos" value="504,96"/>
+      </entries>
+      <entries namespace="dummy-metric-collection-creator">
+         <entry key="pos" value="216,396"/>
+      </entries>
+      <entries namespace="measure-reader">
+         <entry key="pos" value="214,316"/>
+      </entries>
+      <entries namespace="excel">
+         <entry key="pos" value="348,264"/>
+      </entries>
+      <entries namespace="MetricCollector">
+         <entry key="pos" value="180,168"/>
+      </entries>
+      <entries namespace="direct-measure">
+         <entry key="pos" value="80,96"/>
+      </entries>
+      <entries namespace="findings-measure">
+         <entry key="pos" value="180,96"/>
+      </entries>
+      <entries namespace="plain-measure">
+         <entry key="pos" value="280,96"/>
+      </entries>
+      <entries namespace="metric-collection">
+         <entry key="pos" value="380,96"/>
+      </entries>
+      <entries namespace="block-resolver">
+         <entry key="pos" value="456,396"/>
+      </entries>
+      <entries namespace="project-name">
+         <entry key="pos" value="256,396"/>
+      </entries>
+   </meta>
+</conqat>

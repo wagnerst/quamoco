@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="de.quamoco.adaptation.view.category"
+            name="Quality Model Adaptation">
+      </category>
+      <view
+            allowMultiple="false"
+            category="de.quamoco.adaptation.view.category"
+            class="de.quamoco.adaptation.view.history.AdaptationHistoryView"
+            icon="icons/history.gif"
+            id="de.quamoco.adaptation.view.AdaptationHistoryView"
+            name="Adaptation History"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

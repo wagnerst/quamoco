@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.ManualMeasureReaderAndWriter">
+      <processor class="edu.tum.cs.conqat.quamoco.quickeval.MeasureLister" name="measure-lister">
+         <excel file="@excel-template-name-creator"/>
+         <models ref="@models.attr"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="excel-template-name-creator2">
+         <part string="@concatenator"/>
+         <part string="-manual.xls"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="excel-template-name-creator">
+         <part string="@concatenator"/>
+         <part string="-template.xls"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.quickeval.MeasureReader" name="measure-reader">
+         <models ref="@models.attr"/>
+         <excel file="@excel-template-name-creator2"/>
+      </processor>
+      <out name="measurereader" ref="@measure-reader"/>
+      <param name="models">
+         <attr name="attr"/>
+      </param>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="concatenator">
+         <part string="@directory.root-dir"/>
+         <part string="/"/>
+         <part string="@directory.project-name"/>
+      </processor>
+      <param name="directory">
+         <attr name="root-dir"/>
+         <attr name="project-name"/>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="measure-lister">
+         <entry key="pos" value="324,360"/>
+      </entries>
+      <entries namespace="excel-template-name-creator2">
+         <entry key="pos" value="144,228"/>
+      </entries>
+      <entries namespace="excel-template-name-creator">
+         <entry key="pos" value="324,228"/>
+      </entries>
+      <entries namespace="measure-reader">
+         <entry key="pos" value="132,360"/>
+      </entries>
+      <entries namespace="measurereader">
+         <entry key="pos" value="168,468"/>
+      </entries>
+      <entries namespace="models">
+         <entry key="pos" value="540,0"/>
+      </entries>
+      <entries namespace="concatenator">
+         <entry key="pos" value="180,120"/>
+      </entries>
+      <entries namespace="directory">
+         <entry key="pos" value="216,24"/>
+      </entries>
+   </meta>
+</conqat>

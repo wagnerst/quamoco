@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+      <extension-point id="generators" name="Generators" schema="schema/generators.exsd"/>
+   <extension
+         point="de.quamoco.qm.guideline.generators">
+      <generator
+            class="de.quamoco.qm.guideline.generators.DeveloperGuideline"
+            label="Developer Guideline">
+      </generator>
+      <generator
+            class="de.quamoco.qm.guideline.generators.ModelExport"
+            label="Model Export">
+      </generator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            id="de.quamoco.qm.editor.editorContribution.QmEditor"
+            targetID="de.quamoco.qm.presentation.QmEditorID">
+         <action
+               class="de.quamoco.qm.guideline.docbook.GenerateGuidelineAction"
+               enablesFor="1"
+               id="de.quamoco.qm.guideline.docbook.GenerateGuidelineAction"
+               label="Generate Guideline"
+               menubarPath="de.quamoco.qmMenuID/additions">
+         </action>
+      </editorContribution>
+   </extension>
+
+</plugin>

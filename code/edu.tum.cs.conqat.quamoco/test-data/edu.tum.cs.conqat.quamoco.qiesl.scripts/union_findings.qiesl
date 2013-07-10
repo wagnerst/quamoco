@@ -1,0 +1,6 @@
+SET fcol1 = fcol(f("a", 1))
+SET fcol2 = fcol(f("b", 2))
+
+fcol3 = union(fcol1, fcol2)
+
+CHECK size(fcol3) == 2

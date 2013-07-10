@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.Nightly-cpp">
+      <block name="manual-measure-reader-and-writer" spec="edu.tum.cs.conqat.quamoco.changable.nightly.ManualMeasureReaderAndWriter">
+         <directory project-name="@cpp-name-generator.projectname" root-dir="@manual-measure-dir.attr"/>
+         <models attr="@model-setup.quality-model"/>
+      </block>
+      <param name="manual-measure-dir">
+         <attr name="attr"/>
+      </param>
+      <param name="quality-model">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="project-dir">
+         <attr name="attr"/>
+      </param>
+      <block name="nightly-quamoco-generatedcpp" spec="edu.tum.cs.conqat.quamoco.changable.nightly.NightlyQuamocoGeneratedCPP">
+         <input scope="@cpp-scope-creator.tokenresourceselector"/>
+         <quality-model file="@model-setup.quality-model"/>
+         <metric-collection collection="@manual-measure-reader-and-writer.measurereader"/>
+         <project-name attr="@cpp-name-generator.projectname"/>
+         <calibration-dir attr="@cpp-name-generator.output-dir"/>
+         <csv-report-file ref="@cpp-name-generator.understand-report1"/>
+         <csv-report-file ref="@cpp-name-generator.understand-report2"/>
+         <qm-result-dir dir="@qm-result-dir.dir"/>
+         <output dir="@cpp-name-generator.output-dir"/>
+         <map dir="@properties-file-reader" project="@cpp-name-generator.projectname"/>
+      </block>
+      <processor class="edu.tum.cs.conqat.quamoco.SummaryWriter" name="summary-writer">
+         <scope scope="@nightly-quamoco-generatedcpp.scope"/>
+         <output-dir dir="@cpp-name-generator.output-dir"/>
+         <projectname projectname="@cpp-name-generator.projectname"/>
+         <quality-model model="@nightly-quamoco-generatedcpp.result"/>
+         <result factor="Quality @Product"/>
+         <result factor="Functional Correctness"/>
+         <result factor="Maintainability"/>
+         <result factor="Analyzability"/>
+         <result factor="Modifiability"/>
+         <result factor="Reusability"/>
+         <result factor="Testability"/>
+         <result factor="Reliability"/>
+         <result factor="Performance Efficiency"/>
+         <result factor="Security"/>
+         <systemtype attr="@systemtype.attr"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.MetricConverter" name="metric-converter">
+         <input ref="@nightly-quamoco-generatedcpp.metrics"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TableLayouter" name="table-layouter2">
+         <input ref="@metric-converter"/>
+         <info description="Metrics" name="Metrics"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.EvaluationResultFormatter" name="evaluation-result-formatter">
+         <quality-models models="@nightly-quamoco-generatedcpp.result"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TreeTableLayouter" name="table-layouter">
+         <input ref="@evaluation-result-formatter"/>
+         <info description="Output" name="Output"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.HTMLPresentation" name="html-presentation">
+         <project title="@cpp-name-generator.projectname"/>
+         <output dir="@cpp-name-generator.output-dir"/>
+         <result ref="@table-layouter2"/>
+         <result ref="@table-layouter"/>
+      </processor>
+      <param name="systemtype">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="qm-result-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="cpp-scope-creator" spec="edu.tum.cs.conqat.quamoco.changable.nightly.CppScopeCreator">
+         <root dir="@project-dir.attr"/>
+         <project name="@cpp-name-generator.projectname"/>
+      </block>
+      <block name="cpp-name-generator" spec="edu.tum.cs.conqat.quamoco.changable.nightly.CppNameGenerator">
+         <project-root-dir dir="@project-dir.attr"/>
+      </block>
+      <processor class="org.conqat.engine.commons.input.PropertiesFileReader" condition="@find-bugs-report-condition" name="properties-file-reader">
+         <file name="@cpp-name-generator.properties-file"/>
+         <key name="pclint-root"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.FileExistenceCondition" name="find-bugs-report-condition">
+         <filename attr="@cpp-name-generator.properties-file"/>
+      </processor>
+      <block name="model-setup" spec="edu.tum.cs.conqat.quamoco.changable.nightly.ModelSetup">
+         <input file="@quality-model.file"/>
+         <calibration-zip-file attr="@calibration-zip-file.attr"/>
+      </block>
+      <param name="calibration-zip-file">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="manual-measure-reader-and-writer">
+         <entry key="pos" value="-24,336"/>
+      </entries>
+      <entries namespace="manual-measure-dir">
+         <entry key="pos" value="63,75"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="219,51"/>
+      </entries>
+      <entries namespace="project-dir">
+         <entry key="pos" value="375,15"/>
+      </entries>
+      <entries namespace="nightly-quamoco-generatedcpp">
+         <entry key="pos" value="384,588"/>
+      </entries>
+      <entries namespace="summary-writer">
+         <entry key="pos" value="156,732"/>
+         <entry key="edges_invisible" value="false"/>
+      </entries>
+      <entries namespace="metric-converter">
+         <entry key="pos" value="348,732"/>
+      </entries>
+      <entries namespace="table-layouter2">
+         <entry key="pos" value="348,804"/>
+      </entries>
+      <entries namespace="evaluation-result-formatter">
+         <entry key="pos" value="540,732"/>
+      </entries>
+      <entries namespace="table-layouter">
+         <entry key="pos" value="540,798"/>
+      </entries>
+      <entries namespace="html-presentation">
+         <entry key="pos" value="432,900"/>
+      </entries>
+      <entries namespace="systemtype">
+         <entry key="pos" value="204,564"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="564,444"/>
+      </entries>
+      <entries namespace="cpp-scope-creator">
+         <entry key="pos" value="348,348"/>
+      </entries>
+      <entries namespace="cpp-name-generator">
+         <entry key="pos" value="456,132"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="properties-file-reader">
+         <entry key="pos" value="552,312"/>
+      </entries>
+      <entries namespace="find-bugs-report-condition">
+         <entry key="pos" value="540,216"/>
+      </entries>
+      <entries namespace="model-setup">
+         <entry key="pos" value="156,216"/>
+      </entries>
+      <entries namespace="calibration-zip-file">
+         <entry key="pos" value="196,136"/>
+      </entries>
+   </meta>
+</conqat>

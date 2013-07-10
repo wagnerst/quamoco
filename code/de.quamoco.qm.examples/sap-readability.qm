@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_48pWgHtCEd6xNvnBjetEJg">
+  <modules xmi:id="_ITHgcXwjEd6MotksAvX0FQ">
+    <properties xmi:id="_WrIGsHtFEd6xNvnBjetEJg" name="Ability to run" factors="_Io7h0HtGEd6xNvnBjetEJg"/>
+    <properties xmi:id="_5RiPIHtHEd6xNvnBjetEJg" description="Conformance to (naming) conventions" name="Conformance" factors="_rGSb8HtIEd6xNvnBjetEJg _qz6SgHtIEd6xNvnBjetEJg _ree5gHtIEd6xNvnBjetEJg _JNaAgHtJEd6xNvnBjetEJg _JeRHAHtJEd6xNvnBjetEJg _JzjagHtJEd6xNvnBjetEJg"/>
+    <properties xmi:id="_D2SAQHtIEd6xNvnBjetEJg" description="Absence of syntax errors" name="Syntancial Correctness" factors="_BrVysHtIEd6xNvnBjetEJg"/>
+    <aspects xmi:id="_dLH64HtDEd6xNvnBjetEJg" name="Product Standards">
+      <subAspects xmi:id="_euUzAHtDEd6xNvnBjetEJg" name="Functional Correctness" influencedBy="_gyQSQHtGEd6xNvnBjetEJg _ParQgHtIEd6xNvnBjetEJg _TEnWMHtJEd6xNvnBjetEJg _UOtKwHtJEd6xNvnBjetEJg _UgKHIHtJEd6xNvnBjetEJg _UxMMwHtJEd6xNvnBjetEJg _VHJ1sHtJEd6xNvnBjetEJg _VbOBMHtJEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_pDOGEHtKEd6xNvnBjetEJg" specification="mit Priorit&#xe4;ten (s. Impact Evaluations) gewichtetes Mittel"/>
+      </subAspects>
+      <evaluatedBy xmi:id="_pZ8kAHtKEd6xNvnBjetEJg" specification="existiert nicht!"/>
+    </aspects>
+    <measures xmi:id="_EkSIAHtDEd6xNvnBjetEJg" name="CheckMan-CINT" description="Internal Issue: Invocation of CODE INSPECTOR failed" measures="_Io7h0HtGEd6xNvnBjetEJg" usedBy="_73pLMHtGEd6xNvnBjetEJg"/>
+    <measures xmi:id="_IyJ2oHtDEd6xNvnBjetEJg" name="CheckMan-FUGR" description="FUNCTION-POOL: Violation of Naming Conventions" measures="_JNaAgHtJEd6xNvnBjetEJg" usedBy="_bpCOUHtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_LRr0IHtDEd6xNvnBjetEJg" name="CheckMan-GLOB" description="Global Definitions: Violation of Naming Conventions" measures="_qz6SgHtIEd6xNvnBjetEJg" usedBy="_a-nYUHtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_NLAGMHtDEd6xNvnBjetEJg" name="CheckMan-LOCL" description="Local Definitions: Violation of Naming Conventions" measures="_rGSb8HtIEd6xNvnBjetEJg" usedBy="_alg70HtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_O38wMHtDEd6xNvnBjetEJg" name="CheckMan-MISC" description="Definition of Data Items: Violation of Naming Conventions" measures="_ree5gHtIEd6xNvnBjetEJg" usedBy="_bSOQ0HtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_SqvFUHtDEd6xNvnBjetEJg" name="CheckMan-OBJT" description="CLASS/INTERFACE: Violation of Naming Conventions" measures="_JeRHAHtJEd6xNvnBjetEJg" usedBy="_b-oD0HtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_Uba_0HtDEd6xNvnBjetEJg" name="CheckMan-OTHR" description="Definition of Data Items: Violation of Naming Conventions" measures="_ree5gHtIEd6xNvnBjetEJg" usedBy="_bSOQ0HtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_WB4nUHtDEd6xNvnBjetEJg" name="CheckMan-REPT" description="REPORT/PROGRAM: Violation of Naming Conventions" measures="_JzjagHtJEd6xNvnBjetEJg" usedBy="_cae5YHtJEd6xNvnBjetEJg"/>
+    <measures xmi:id="_YXGyQHtDEd6xNvnBjetEJg" name="CheckMan-SYMB" description="Internal Issue: Could not Resolve Compiler Symbol" measures="_Io7h0HtGEd6xNvnBjetEJg" usedBy="_73pLMHtGEd6xNvnBjetEJg"/>
+    <measures xmi:id="_Z41qwHtDEd6xNvnBjetEJg" name="CheckMan-SYNT" description="Syntax Error: Analysis not possible" measures="_BrVysHtIEd6xNvnBjetEJg" usedBy="_RUgf8HtIEd6xNvnBjetEJg"/>
+    <entities xmi:id="_AB2MsHtFEd6xNvnBjetEJg" name="System">
+      <subEntityTypes xmi:id="_JrMFgHtFEd6xNvnBjetEJg" name="Code Checker">
+        <characterizedBy xmi:id="_Io7h0HtGEd6xNvnBjetEJg" impacts="_gyQSQHtGEd6xNvnBjetEJg" property="_WrIGsHtFEd6xNvnBjetEJg" measuredBy="_EkSIAHtDEd6xNvnBjetEJg _YXGyQHtDEd6xNvnBjetEJg"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_MPDwcHtFEd6xNvnBjetEJg" name="Code">
+        <subEntityTypes xmi:id="_OzxI4HtFEd6xNvnBjetEJg" name="ABAP Code">
+          <subEntityTypes xmi:id="_X7nMQHtHEd6xNvnBjetEJg" name="Statement">
+            <subEntityTypes xmi:id="_aicroHtHEd6xNvnBjetEJg" name="Definition">
+              <subEntityTypes xmi:id="_br61IHtHEd6xNvnBjetEJg" name="Local Definition">
+                <characterizedBy xmi:id="_rGSb8HtIEd6xNvnBjetEJg" impacts="_TEnWMHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_NLAGMHtDEd6xNvnBjetEJg"/>
+              </subEntityTypes>
+              <subEntityTypes xmi:id="_c0tCIHtHEd6xNvnBjetEJg" name="Global Definition">
+                <characterizedBy xmi:id="_qz6SgHtIEd6xNvnBjetEJg" impacts="_UOtKwHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_LRr0IHtDEd6xNvnBjetEJg"/>
+              </subEntityTypes>
+              <subEntityTypes xmi:id="_iXBbMHtHEd6xNvnBjetEJg" name="Data Item Definition">
+                <characterizedBy xmi:id="_ree5gHtIEd6xNvnBjetEJg" impacts="_UgKHIHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_O38wMHtDEd6xNvnBjetEJg _Uba_0HtDEd6xNvnBjetEJg"/>
+              </subEntityTypes>
+            </subEntityTypes>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_fDKdwHtHEd6xNvnBjetEJg" name="Function Pool">
+            <characterizedBy xmi:id="_JNaAgHtJEd6xNvnBjetEJg" impacts="_UxMMwHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_IyJ2oHtDEd6xNvnBjetEJg"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_lcL1UHtHEd6xNvnBjetEJg" name="Class / Interface">
+            <characterizedBy xmi:id="_JeRHAHtJEd6xNvnBjetEJg" impacts="_VHJ1sHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_SqvFUHtDEd6xNvnBjetEJg"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_sHcMYHtHEd6xNvnBjetEJg" name="Report / Program">
+            <characterizedBy xmi:id="_JzjagHtJEd6xNvnBjetEJg" impacts="_VbOBMHtJEd6xNvnBjetEJg" property="_5RiPIHtHEd6xNvnBjetEJg" measuredBy="_WB4nUHtDEd6xNvnBjetEJg"/>
+          </subEntityTypes>
+          <characterizedBy xmi:id="_BrVysHtIEd6xNvnBjetEJg" description="Is the code free of syntax errors? Does it compile?" impacts="_ParQgHtIEd6xNvnBjetEJg" property="_D2SAQHtIEd6xNvnBjetEJg" measuredBy="_Z41qwHtDEd6xNvnBjetEJg"/>
+        </subEntityTypes>
+      </subEntityTypes>
+    </entities>
+    <requirements xmi:id="_ITHgl3wjEd6MotksAvX0FQ">
+      <impacts xmi:id="_gyQSQHtGEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_Io7h0HtGEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_73pLMHtGEd6xNvnBjetEJg" description="Evaluate the fact that CheckMan cannot execute the Code Inspector" specification="Beide Measures haben Prio 4" uses="_EkSIAHtDEd6xNvnBjetEJg _YXGyQHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_TEnWMHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_rGSb8HtIEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_alg70HtJEd6xNvnBjetEJg" specification="Prio 4" uses="_NLAGMHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_UOtKwHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_qz6SgHtIEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_a-nYUHtJEd6xNvnBjetEJg" specification="Prio 4" uses="_LRr0IHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_UgKHIHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_ree5gHtIEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_bSOQ0HtJEd6xNvnBjetEJg" specification="Prio 4" uses="_O38wMHtDEd6xNvnBjetEJg _Uba_0HtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_UxMMwHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_JNaAgHtJEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_bpCOUHtJEd6xNvnBjetEJg" specification="Prio 4" uses="_IyJ2oHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_VHJ1sHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_JeRHAHtJEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_b-oD0HtJEd6xNvnBjetEJg" specification="Prio 4" uses="_SqvFUHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_VbOBMHtJEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_JzjagHtJEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_cae5YHtJEd6xNvnBjetEJg" specification="Prio 4" uses="_WB4nUHtDEd6xNvnBjetEJg"/>
+      </impacts>
+      <impacts xmi:id="_ParQgHtIEd6xNvnBjetEJg" influences="_euUzAHtDEd6xNvnBjetEJg" factors="_BrVysHtIEd6xNvnBjetEJg">
+        <evaluatedBy xmi:id="_RUgf8HtIEd6xNvnBjetEJg" description="Evaluate the syntactical correctness of the code under test" specification="Prio 4" uses="_Z41qwHtDEd6xNvnBjetEJg"/>
+      </impacts>
+    </requirements>
+  </modules>
+</qm:QualityModel>

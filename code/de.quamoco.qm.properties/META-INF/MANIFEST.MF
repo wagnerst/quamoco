@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Properties Plug-in
+Bundle-SymbolicName: de.quamoco.qm.properties; singleton:=true
+Bundle-Version: 2.1.0.qualifier
+Bundle-Activator: de.quamoco.qm.properties.Activator
+Require-Bundle: org.eclipse.ui.views.properties.tabbed,
+ de.quamoco.qm.editor,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.databinding,
+ org.eclipse.emf.databinding.edit,
+ org.eclipse.jface.databinding,
+ edu.tum.cs.emf.commons.ui,
+ org.eclipse.jface.text,
+ org.eclipse.jdt.ui,
+ org.eclipse.ui.editors
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .
+Export-Package: de.quamoco.qm.properties

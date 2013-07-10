@@ -1,0 +1,63 @@
+// The currently selected tree object.
+var selected_tree = null;
+
+// Alert the properties of an object.
+function alertObject(object)
+{
+	var msg = "";
+	for (var p in object)
+		msg += "object." + p + " = " + object[p] + "\n";
+	alert(msg);
+}
+
+// Handle the select action.
+function handleSelect(node, check, event)
+{
+	// Get the context objects
+	var tree = node.target;
+	var item = $(tree).jstree("get_selected")[0];
+	
+	// Deselect all from the other trees
+	if (selected_tree && selected_tree != tree)
+	{
+		$(selected_tree).jstree("deselect_all");
+	}
+	selected_tree = tree;
+	
+	// Load the main content
+	$.ajax(
+		{
+			url: "files/" + item.id + ".html",
+			dataType: "html",
+			success: function(msg)
+			{
+				$("#main").empty();
+				$("#main").append(msg);
+			}
+		}
+	);
+}
+
+// Select an object from a specific tree.
+function selectObject(tree, item)
+{
+	// Select the right tab
+	$(".tabs").tabs("select", tree);
+	// Only select the desired node
+	$("#" + tree).jstree("select_node", document.getElementById(item), true);
+}
+
+// Configure the environment.
+$.jstree._themes = "styles/themes/";
+
+// Initialize the trees.
+$(".tree").jstree(
+	{
+		ui:
+		{
+			select_limit: 1
+		},
+		types:
+		{
+			types:
+			{

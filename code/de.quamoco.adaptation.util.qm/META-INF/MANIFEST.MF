@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Qm Utility
+Bundle-SymbolicName: de.quamoco.adaptation.util.qm
+Bundle-Version: 2.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: de.quamoco.adaptation.util;bundle-version="2.0.0";visibility:=reexport,
+ de.quamoco.qm;bundle-version="2.0.0";visibility:=reexport,
+ de.quamoco.qm.edit;bundle-version="2.0.0";visibility:=reexport,
+ de.quamoco.qm.editor;bundle-version="2.0.0";visibility:=reexport,
+ org.eclipse.core.runtime;bundle-version="3.5.0",
+ org.eclipse.emf.transaction;bundle-version="1.3.0",
+ org.eclipse.emf.compare;bundle-version="1.0.1",
+ org.eclipse.emf.compare.diff;bundle-version="1.0.1",
+ org.eclipse.emf.compare.match;bundle-version="1.0.1",
+ org.eclipse.emf.compare.ui;bundle-version="1.0.1",
+ de.quamoco.adaptation.model.status;bundle-version="1.0.0",
+ org.eclipse.compare;bundle-version="3.5.0",
+ org.eclipse.ltk.core.refactoring;bundle-version="3.5.0"
+Export-Package: de.quamoco.adaptation.util.qm,
+ de.quamoco.adaptation.util.qm.compare,
+ de.quamoco.adaptation.util.qm.resource

@@ -1,0 +1,139 @@
+[module generate('http://www.eclipse.org/emf/2002/GenModel', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[template public generate(g : GenModel)]
+	[generateExtensions(g)/]
+	[generateClasses(g)/]
+[/template]
+
+[comment Generate the extensions for the plugin.xml /]
+[template generateExtensions(g : GenModel)]
+	[file ('plugin.xml', false, 'GENERATEEXTENSIONS-ID')]
+	[for (gp : GenPackage | g.genPackages)]
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor contributorId="[fullPackageName(gp)/].presentation.QmEditorID">
+               <propertyCategory category="sample"/>
+      </propertyContributor>
+   </extension>		
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="[fullPackageName(gp)/].presentation.[gp.ecorePackage.name.toUpperFirst()/]EditorID">
+         <propertyTab
+            category="sample"
+               id="[fullPackageName(gp)/].properties.PropertiesTab"
+            label="Properties"/>
+      </propertyTabs>
+   </extension>
+	[/for]
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+	[for (gp : GenPackage | g.genPackages)]
+	[let p : EPackage = gp.ecorePackage]
+      <propertySections contributorId="[fullPackageName(gp)/].presentation.[p.name.toUpperFirst()/]EditorID">
+	[for (gc : GenClass | gp.genClasses)]
+	[let c : EClass = gc.ecoreClass]
+	[if (sectionRequired(c))]
+	[for (gf : GenFeature | gc.genFeatures)]
+	[let f : EStructuralFeature = gf.ecoreFeature]
+	[if (sectionRequired(gf))]
+         <propertySection
+         [if (lastFeature(f) <> f)]
+               afterSection="[fullPackageName(gp)/].properties.[sectionClassName(lastFeature(f))/]"
+         [/if]
+               class="[fullPackageName(gp)/].properties.[sectionClassName(f)/]"
+               id="[fullPackageName(gp)/].properties.[sectionClassName(f)/]"
+               tab="[fullPackageName(gp)/].properties.PropertiesTab">
+            <input type="[fullClassName(gc)/]"/>
+         </propertySection>
+    [/if]
+	[/let]
+	[/for]			
+    [/if]
+	[/let]
+	[/for]					
+      </propertySections>
+	[/let]
+	[/for]
+   </extension>	
+	[/file]
+[/template]
+
+
+[template public generateClasses(g : GenModel)]
+	
+	[for (gp : GenPackage | g.genPackages)]
+	[let p : EPackage = gp.ecorePackage]
+	[for (gc : GenClass | gp.genClasses)]
+	[let c : EClass = gc.ecoreClass]
+	
+	[if (sectionRequired(c))]
+	[for (gf : GenFeature | gc.genFeatures)]
+	[let f : EStructuralFeature = gf.ecoreFeature]
+	
+	[if (sectionRequired(gf))]
+	[file ('de/quamoco/qm/properties/'.concat(sectionClassName(f)).concat('.java'), false, 'GENERATECLASSSES-ID')]
+package [fullPackageName(gp)/].properties;
+
+import [fullPackageName(gp)/].[p.name.toUpperFirst()/]Package;
+import edu.tum.cs.emf.commons.sections.[sectionSuperClassName(f)/];
+
+/**
+ * The section for the feature "[f.name/]" of class "[c.name/]".
+ *
+ * @generated
+ */
+public class [sectionClassName(f)/] extends [sectionSuperClassName(f)/] {
+
+	/**
+	 * Calls the constructor of the super class.
+	 *
+	 * @generated
+	 */
+	public [sectionClassName(f)/]() {
+		super([p.name.toUpperFirst()/]Package.eINSTANCE.get[c.name/]_[f.name.toUpperFirst()/]()[if (f.eType = EString)], [gf.propertyMultiLine/][/if]);
+	}
+} 
+	[/file]
+	[/if]
+				
+	[/let]
+	[/for]			
+	[/if]
+	[/let]
+	[/for]			
+	[/let]
+	[/for]
+	
+[/template]
+
+[query lastFeature(f : EStructuralFeature) : EStructuralFeature =
+invoke('de.quamoco.qm.properties_gen.files.Util', 'lastFeature(org.eclipse.emf.ecore.EStructuralFeature)', Sequence{f})/]
+
+[query fullPackageName(gp : GenPackage) : String =
+gp.basePackage.concat('.').concat(gp.ecorePackage.name) /]
+
+[query fullClassName(gc : GenClass) : String =
+fullPackageName(gc.genPackage).concat('.').concat(gc.ecoreClass.name)/]
+
+[query sectionRequired(c : EClass) : Boolean =
+c.instanceTypeName = null/]
+
+[query sectionRequired(gf : GenFeature) : Boolean = 
+gf.property = genmodel::GenPropertyKind::Editable/]
+
+[query sectionClassName(f : EStructuralFeature) : String =
+f.eContainingClass.name.concat(f.name.toUpperFirst()).concat('Section')/]
+
+[query sectionSuperClassName(f : EStructuralFeature) : String = 
+if(f.oclIsTypeOf(EAttribute)) then 
+	if(f.eType.oclIsTypeOf(EEnum)) then
+		'EnumPropertySectionBase'
+	else
+		'TextPropertySectionBase'
+	endif
+else
+	if(f.many) then
+		'MultiReferencePropertySectionBase'
+	else
+		'SingleReferencePropertySectionBase'
+	endif
+endif/]

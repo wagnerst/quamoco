@@ -1,0 +1,10 @@
+SET s1 = set(r(1,6), r(5,10))
+
+result = size(s1);
+
+CHECK result == 2
+
+clean(s1);
+
+CHECK size(s1) == 2
+CHECK s1 == "{[1-6],[5-10]}"

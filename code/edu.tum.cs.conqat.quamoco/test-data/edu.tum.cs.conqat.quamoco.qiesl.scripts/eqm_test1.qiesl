@@ -1,0 +1,9 @@
+SET system = dict(set(r(1,100)))
+
+if(extent(system) > 0) {
+	result = 1;
+} else {
+	result = extent(system);
+}
+
+CHECK result == 1;

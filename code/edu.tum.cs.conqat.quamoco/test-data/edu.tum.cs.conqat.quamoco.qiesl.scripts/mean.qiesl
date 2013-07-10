@@ -1,0 +1,6 @@
+SET a = 5
+SET b = 3
+
+result = mean(a, b, a, b)
+
+CHECK result == 4.0

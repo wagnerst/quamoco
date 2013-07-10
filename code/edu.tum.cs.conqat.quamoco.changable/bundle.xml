@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+ @version $Rev: 27231 $
+ @levd.rating GREEN Hash: C11A54DF99AC87A8E71F9682A4C14CFE
+-->
+<bundle xmlns="http://conqat.cs.tum.edu/ns/bundle">
+   <name>Bundle Name</name>
+   <provider>Bundle Provider</provider>
+   <description>Bundle Description</description>
+   <version major="1" minor="0"/>
+   <requiresCore major="2" minor="6"/>
+   <dependsOn bundleId="org.conqat.engine.html_presentation" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.scripting" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.java" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.commons" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.sourcecode" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.cpp" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.code_clones" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.io" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.dotnet" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.blocklib" major="2" minor="7"/>
+   <dependsOn bundleId="org.conqat.engine.text" major="2" minor="7"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.quamoco" major="2" minor="7"/>
+</bundle>

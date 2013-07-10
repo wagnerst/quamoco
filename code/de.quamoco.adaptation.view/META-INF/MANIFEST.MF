@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: View utility
+Bundle-SymbolicName: de.quamoco.adaptation.view
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.quamoco.adaptation.view.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.jface;bundle-version="3.5.0",
+ org.eclipse.ui;bundle-version="3.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.5.0",
+ org.eclipse.emf.edit;bundle-version="2.5.0",
+ de.quamoco.adaptation.util;bundle-version="2.0.0",
+ de.quamoco.qm;bundle-version="2.1.0",
+ de.quamoco.qm.edit;bundle-version="2.1.0",
+ de.quamoco.qm.editor;bundle-version="2.1.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.quamoco.adaptation.view,
+ de.quamoco.adaptation.view.filter,
+ de.quamoco.adaptation.view.listener,
+ de.quamoco.adaptation.view.sorter

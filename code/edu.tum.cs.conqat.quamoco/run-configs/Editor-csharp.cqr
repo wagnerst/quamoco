@@ -1,0 +1,6 @@
+#!edu.tum.cs.conqat.quamoco.editor.Editor-csharp
+project.name=AsciiGenerator 0.9.6
+manual-measure.file=.xls
+source.dir=C:\Users\lochmann\Desktop\cs projekte\CS-Projects\AsciiGenerator 0.9.6
+output.dir=C:\Users\lochmann\Desktop\cs projekte\CS-Projects\AsciiGenerator 0.9.6\qm-output
+quality-model.file=C:\Projekte\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\csharp.qm

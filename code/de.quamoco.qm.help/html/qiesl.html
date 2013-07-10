@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>QIESL</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#geninfo">General Information</a> &gt;&gt; 
+			<span class="menu">QIESL</span>
+		</td> 
+	</tr>
+</table>
+
+
+
+<a name="QIESL">
+<h1>QIESL</h1>
+
+Quamoco Impact Evaluation Specification Language (QIESL) defines a simple semi-functional language. As interpreter, Apache-Jaxl is used. For an exact
+definition of it see here:
+<br>
+<br>
+<a href="http://commons.apache.org/jexl/reference/syntax.html" style="font-size:14pt;font-weight:bold;">Detailed Guide to QIESL Syntax</a>
+
+<br><br>
+QIESL supports the following functions:
+<ul>
+	<li>
+		intersect, union on Findings
+	</li>
+	<li>
+		max,min,median,mean on Points
+	</li>
+	<li>
+<pre>linearDistribution(proportion,
+    lowerBound,
+    lowerResult,
+    upperBound,
+    upperResult)</pre>
+    
+    realizes a linear distribution, as shown in the following figure<br>
+    <img style="width:15cm" src="figures/qiesl_functions_linearDistribution.png"/>
+	</li>
+	<li>
+		Shortcuts of linearDistribution:
+		<ul>
+			<li>
+				<pre>linearDistribution(maxPoints, proportion) = linearDistribution(proportion, 0, 0, 1, maxPoints)</pre>
+			</li>
+			<li>
+				<pre>negativeLinearDistribution(maxPoints, proportion) = linearDistribution(proportion, 0, maxPoints, 1, 0)</pre>
+			</li>
+			
+		</ul>
+	</li>
+	<li>
+		methodRange, classRange, fileRange on Findings.<br>
+	</li>
+	<li>
+		extent, calculates the size of finding-lists and of ranges.
+	</li>
+	
+</ul>
+
+
+<p>QIESL is used for the <a href="QieslEvaluation.html">QIESL Evaluation</a> and the <a href="QieslAggregation.html">QIESL Aggregation</a>.</p>
+
+</body>
+</html>

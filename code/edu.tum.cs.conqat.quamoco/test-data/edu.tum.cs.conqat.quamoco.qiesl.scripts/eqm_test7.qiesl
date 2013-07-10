@@ -1,0 +1,9 @@
+SET M1547 = fcol(f("a", 1))
+SET M1552 = fcol(f("b", 4))
+
+result = union(
+	M1547,
+	M1552
+)
+
+CHECK extent(result) == 2 

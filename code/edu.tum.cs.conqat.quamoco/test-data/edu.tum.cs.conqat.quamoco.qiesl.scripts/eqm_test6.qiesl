@@ -1,0 +1,11 @@
+SET a = fcol(f("a", 1))
+SET b = fcol()
+SET c = fcol(f("a", 1))
+
+result = 0
+	+(extent(a) ==0 ? 100 : 0)
+	+(extent(b) ==0 ? 100 : 0)
+	+(extent(c) ==0 ? 100 : 15)
+;
+
+CHECK result == 115

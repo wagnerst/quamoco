@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/de.quamoco.qm"/>
+	<classpathentry kind="lib" path="/de.quamoco.qm.standalone/lib/org.eclipse.emf.common_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="/de.quamoco.qm.standalone/lib/org.eclipse.emf.ecore_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="/de.quamoco.qm.standalone/lib/org.eclipse.emf.ecore.xmi_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="/de.quamoco.qm.standalone/lib/edu.tum.cs.emf.commons_1.0.0.201006251202.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

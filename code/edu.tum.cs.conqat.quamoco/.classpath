@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.html_presentation/lib/jfreechart.jar"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.html_presentation/lib/jfree-commons.jar"/>
+	<classpathentry kind="lib" path="lib/poi.jar"/>
+	<classpathentry kind="lib" path="lib/commons-jexl.jar" sourcepath="/ccsm-libs/sources/commons-jexl.zip"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/de.quamoco.qm_2.1.0.201111031511.jar"/>
+	<classpathentry kind="con" path="edu.tum.cs.cqedit.jdt.classpath.BUNDLE_DEPENDENCIES_CONTAINER"/>
+	<classpathentry kind="src" path="/org.conqat.engine.graph"/>
+	<classpathentry kind="src" path="/org.conqat.engine.scripting"/>
+	<classpathentry kind="src" path="/org.conqat.engine.commons"/>
+	<classpathentry kind="src" path="/org.conqat.engine.html_presentation"/>
+	<classpathentry kind="src" path="/org.conqat.engine.java"/>
+	<classpathentry kind="src" path="/org.conqat.engine.sourcecode"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.java/lib/bcel.jar" sourcepath="/ccsm-libs/sources/bcel.zip"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.scripting/lib/bsh.jar"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.sourcecode/lib/scanner.jar" sourcepath="/scanner"/>
+	<classpathentry kind="src" path="/org.conqat.engine.cpp"/>
+	<classpathentry kind="src" path="/org.conqat.engine.text"/>
+	<classpathentry kind="src" path="/org.conqat.engine.code_clones"/>
+	<classpathentry kind="src" path="/org.conqat.engine.persistence"/>
+	<classpathentry kind="src" path="/org.conqat.engine.io"/>
+	<classpathentry kind="src" path="/org.conqat.engine.dotnet"/>
+	<classpathentry kind="src" path="/org.conqat.engine.bugzilla"/>
+	<classpathentry kind="src" path="/org.conqat.engine.blocklib"/>
+	<classpathentry kind="src" path="/org.conqat.engine.svn"/>
+	<classpathentry kind="src" path="/org.conqat.engine.self"/>
+	<classpathentry kind="src" path="/org.conqat.engine.architecture"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.conqat.engine.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.conqat.engine.resource"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.core/lib/junit.jar"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.core/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/charting-0.94.jar"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.java/lib/pmd.jar"/>
+	<classpathentry kind="lib" path="lib/edu.tum.cs.emf.commons_1.0.0.201107080946.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common_2.7.0.v20110605-0747.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore_2.7.0.v20110605-0747.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.xmi_2.7.0.v20110520-1406.jar"/>
+	<classpathentry kind="lib" path="/org.conqat.engine.core/lib/ccsm-commons.jar" sourcepath="/ccsm-commons/src"/>
+	<classpathentry kind="src" path="/org.conqat.engine.simulink"/>
+	<classpathentry kind="src" path="/org.conqat.engine.model_clones"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

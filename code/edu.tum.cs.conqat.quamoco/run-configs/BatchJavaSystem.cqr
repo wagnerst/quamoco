@@ -1,0 +1,6 @@
+#!edu.tum.cs.conqat.quamoco.nightly.BatchJavaSystem
+qm-result-dir.dir=C:\Users\lochmann\workspace-conqat-3.7\edu.tum.cs.conqat.quamoco-eval\study_objects\VERKOSTUNG_001_Log4j_v1_2_15\qm-result
+project-name.attr=Log4j
+project-dir.attr=C:\Users\lochmann\workspace-conqat-3.7\edu.tum.cs.conqat.quamoco-eval\study_objects\VERKOSTUNG_001_Log4j_v1_2_15
+quality-model.file=C:\Projekte\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\java.qm
+excel.file=C:\Users\lochmann\workspace-conqat-3.7\edu.tum.cs.conqat.quamoco-eval\manual-inspection-results\VERKOSTUNG_001_Log4j_v1_2_15-manual.xls

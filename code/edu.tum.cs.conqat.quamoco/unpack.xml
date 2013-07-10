@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+ @version $Rev: 3681 $
+ @levd.rating Red Rev: 
+-->
+<project default="unpack" basedir=".">
+	<target name="unpack">
+		<unjar src="study_objects/conqat-2.6.zip" dest="study_objects"/>
+		<unjar src="study_objects/jabref-2.5.zip" dest="study_objects"/>
+		<unjar src="study_objects/tomcat-6.0.24.zip" dest="study_objects"/>
+		
+		
+		<!--
+		<move tofile="study_objects/tomcat" file="study_objects/apache-tomcat-6.0.24-src"/>
+		-->
+	</target>
+</project>

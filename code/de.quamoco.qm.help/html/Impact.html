@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>Impact</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">Impact</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>Impact</h1>
+
+<div class="excerpt">
+The <i>Impact</i> concept defines an influence of one factor to another. More precisely, 
+an impact specifies that the degree of which a product possesses a factor influences the 
+degree of which the product possesses another factor. The effect of the influence can be 
+either positive or negative. If the impact has a positive effect, the degree of which the 
+product possesses the target factor is heightened if the product possesses the source factor. 
+In contrast, if the impact has a negative effect, the degree of which the target factor is 
+possessed by the product is hindered if the product possesses the source factor. Please note 
+that therefore a positive impact does not mean that the involved factors are required from a 
+quality perspective. For each impact, a rationale, i.e. a detailed justification that describes 
+the impact, needs to be specified. It is crucial to provide a rational, since this ensures that 
+the model contains only relevant impacts.
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>
+		In the base model, impact should only be used between different types of factors. More
+		precisely, only <a href="Factor.html#productfactor">product factors</a> must have an impact on
+		<a href="Factor.html#ilitiesfactor">-ilities factors</a> or 
+		<a href="Factor.html#usecasefactor">Use case factors</a>. These two types of factors may
+		have impact on <a href="FacotBase.html#satisfactionfactor">stakeholder satisfaction factors</a>.
+	</li>
+	<li>
+		Justify for each impact, the reason why the factor has a direct effect on the other factor.
+		This is helpful to ensure that a quality model defines only relevant impacts.
+	</li>
+	<li>
+		The justification must have clear why the impact is either <i>positive</i> or <i>negative</i>.
+	</li>	
+</ol>
+
+<h2>Attributes</h2>
+
+<a name="justification" />
+<h3 class="attribute">Justification</h3> 
+<ol>
+	<li>
+		Provide a textual description of the rational, why the impact exists, and why it is
+		either <i>positive</i> or <i>negative</i>.
+	</li>
+</ol>
+
+<a name="effect" />
+<h3 class="attribute">Effect</h3> 
+<ol>
+	<li>
+		Describes whether the effect of the impact is <i>positive</i> or <i>negative</i>. 
+	</li>
+	<li>
+		If the impact has a positive effect, the degree of which the 
+		product possesses the target factor is heightened if the product possesses the source factor.
+		In contrast, if the impact has a negative effect, the degree of which the target factor is 
+		possessed by the product is hindered if the product possesses the source factor.
+	</li>
+</ol>
+
+</body>
+</html>

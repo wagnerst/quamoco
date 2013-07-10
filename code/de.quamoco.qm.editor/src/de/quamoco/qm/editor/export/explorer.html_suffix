@@ -1,0 +1,27 @@
+				</div>
+			</div>
+			
+			<!-- Main -->
+			<div class="area pad ui-layout-center" id="main">
+				<!-- Will be loaded with AJAX -->
+				<p>
+					Use the left sidebar to navigate the <span style="font-variant: small-caps;">Quamoco</span> quality model.
+				</p>
+			</div>
+			
+		</div>
+		
+		<!-- Menu -->
+		<div class="area" id="menu" align="right">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a class="self" href="explorer.html">Explorer</a></li>
+				<li><a href="imprint.html">Imprint</a></li>
+			</ul>
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="scripts/default.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,4 @@
+#!edu.tum.cs.conqat.quamoco.nightly.Nightly-csharp
+project-dir.attr=C:\Dokumente und Einstellungen\lochmann\workspace-conqat-trunk\edu.tum.cs.conqat.quamoco-eval\study_objects\019_cruisecontrol.net-1.5
+quality-model.file=C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\csharp.qm
+calibration-zip-file.attr=C:\Dokumente und Einstellungen\lochmann\Eigene Dateien\Downloads\calibration(2).zip

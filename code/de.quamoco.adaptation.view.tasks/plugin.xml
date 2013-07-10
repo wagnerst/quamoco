@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="de.quamoco.adaptation.view.category"
+            class="de.quamoco.adaptation.view.tasks.AdaptationTasksView"
+            icon="icons/tasks_tsk.gif"
+            id="de.quamoco.adaptation.view.AdaptationTaskView"
+            name="Adaptation Tasks"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:de.quamoco.adaptation.view.AdaptationTaskView">
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.toggleShowCompletedCommand"
+               icon="icons/actions/complete_filter.gif"
+               label="Show Completed Tasks"
+               style="toggle">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:de.quamoco.adaptation.view.AdaptationTaskView">
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.gotoCommand"
+               icon="icons/actions/goto.gif"
+               label="Go to"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+               </with>
+            </visibleWhen>
+         </command>
+         <separator
+               name="de.quamoco.adaptation.view.AdaptationTaskView.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.markCompletedCommand"
+               icon="icons/actions/mark_complete.gif"
+               label="Mark Completed"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="+">
+                  </count>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.ignoreCommand"
+               icon="icons/actions/hide_ignored.gif"
+               label="Ignore"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="+">
+                  </count>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.deleteCommand"
+               icon="icons/actions/delete.gif"
+               label="Delete"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="+">
+                  </count>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.selectAllCommand"
+               label="Select All"
+               style="push">
+         </command>
+         <separator
+               name="de.quamoco.adaptation.view.AdaptationTaskView.separator2"
+               visible="true">
+         </separator>
+         <command
+               commandId="de.quamoco.adaptation.view.AdaptationTaskView.deleteCompletedCommand"
+               icon="icons/actions/delete_completed.gif"
+               label="Delete Completed"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.ToggleShowCompletedHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.toggleShowCompletedCommand"
+            name="Show Completed Tasks">
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.GotoHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.gotoCommand"
+            name="Go to">
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.MarkCompletedHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.markCompletedCommand"
+            name="Mark Completed">
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.IgnoreHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.ignoreCommand"
+            name="Ignore">
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.DeleteHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.deleteCommand"
+            name="Delete">
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.DeleteCompletedHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.deleteCompletedCommand"
+            name="Delete Completed">
+      </command>
+      <command
+            defaultHandler="de.quamoco.adaptation.view.tasks.actions.SelectAllHandler"
+            id="de.quamoco.adaptation.view.AdaptationTaskView.selectAllCommand"
+            name="Select All">
+      </command>
+   </extension>
+
+</plugin>

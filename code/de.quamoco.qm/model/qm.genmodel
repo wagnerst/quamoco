@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.quamoco.qm/generated-src"
+    editDirectory="/de.quamoco.qm.edit/generated-src" editorDirectory="/de.quamoco.qm.editor/generated-src"
+    modelPluginID="de.quamoco.qm" modelName="Qm" modelPluginClass="QmPlugin" generateSchema="true"
+    testsDirectory="/de.quamoco.qm.tests/generated-src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" colorProviders="true">
+  <foreignModel>qm.ecore</foreignModel>
+  <genPackages prefix="Qm" basePackage="de.quamoco" disposableProviderFactory="true"
+      ecorePackage="qm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="qm.ecore#//Effect">
+      <genEnumLiterals ecoreEnumLiteral="qm.ecore#//Effect/POSITIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="qm.ecore#//Effect/NEGATIVE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="qm.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="qm.ecore#//Type/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="qm.ecore#//Type/FINDINGS"/>
+      <genEnumLiterals ecoreEnumLiteral="qm.ecore#//Type/NUMBER"/>
+    </genEnums>
+    <genClasses provider="Stateful" ecoreClass="qm.ecore#//QualityModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/factors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/evaluations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/measures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/measurementMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/tools"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/tags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/sources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModel/requires"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//QualityModelElement">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//QualityModelElement/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModelElement/originatesFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Source">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Source/qualityModel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//DescribedElement">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute qm.ecore#//DescribedElement/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//NamedElement/title"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//AnnotatedElement">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//AnnotatedElement/annotations"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//AnnotatedElement/advancedAnnotations"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Annotation/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Annotation/value"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Tag">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Tag/qualityModel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//TaggedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//TaggedElement/taggedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Entity/isA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Entity/isADirect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Entity/partOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Entity/partOfDirect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Entity/qualityModel"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Entity/stakeholder"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Entity/useCase"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Specialization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Specialization/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Specialization/child"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Decomposition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Decomposition/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Decomposition/child"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//CharacterizingElement">
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//CharacterizingElement/characterizes"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Factor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Factor/influences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Factor/influencesDirect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Factor/refines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Factor/refinesDirect"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//Factor/qualityModel"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Impact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Impact/source"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Impact/target"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute qm.ecore#//Impact/justification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Impact/effect"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Evaluation">
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//Evaluation/evaluates"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//Evaluation/qualityModel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Evaluation/maximumPoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Evaluation/completeness"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//FactorRefinement">
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//FactorRefinement/child"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//FactorRefinement/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Measurement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Measurement/parent"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Measurement/child"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//MeasureRefinement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureRefinement/parent"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureRefinement/child"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Measure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Measure/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Measure/measures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Measure/measuresDirect"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//Measure/qualityModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//Measure/refines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Measure/refinesDirect"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//MeasurementMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference qm.ecore#//MeasurementMethod/determines"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//MeasurementMethod/qualityModel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//MeasureAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//Instrument"/>
+    <genClasses ecoreClass="qm.ecore#//ManualInstrument"/>
+    <genClasses ecoreClass="qm.ecore#//ToolBasedInstrument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference qm.ecore#//ToolBasedInstrument/tool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//ToolBasedInstrument/metric"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//Tool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//Tool/qualityModel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//AnnotationBase"/>
+    <genClasses ecoreClass="qm.ecore#//QIESLEvaluation"/>
+    <genClasses ecoreClass="qm.ecore#//TextEvaluation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//TextEvaluation/specification"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//FormBasedEvaluation"/>
+    <genClasses ecoreClass="qm.ecore#//SingleMeasureEvaluation"/>
+    <genClasses image="false" ecoreClass="qm.ecore#//FactorAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//NormalizationMeasure"/>
+    <genClasses ecoreClass="qm.ecore#//QIESLAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//TextAggregation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//TextAggregation/specification"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//FormBasedMeasureAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//FactorRanking">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//FactorRanking/factor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//LinearFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//LinearFunction/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//LinearFunction/upperBound"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//Function"/>
+    <genClasses ecoreClass="qm.ecore#//LinearIncreasingFunction"/>
+    <genClasses ecoreClass="qm.ecore#//LinearDecreasingFunction"/>
+    <genClasses ecoreClass="qm.ecore#//WeightedSumFactorAggregation">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//WeightedSumFactorAggregation/rankings"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//FindingsUnionMeasureAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//NumberMeanMeasureAggregation"/>
+    <genClasses ecoreClass="qm.ecore#//ManualEvaluation"/>
+    <genClasses image="false" ecoreClass="qm.ecore#//MeasureEvaluation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureEvaluation/measure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureEvaluation/normlizationMeasure"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//MeasureEvaluation/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//MeasureEvaluation/range"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//Ranking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Ranking/rank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Ranking/weight"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//MultiMeasureEvaluation"/>
+    <genClasses ecoreClass="qm.ecore#//WeightedSumMultiMeasureEvaluation">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference qm.ecore#//WeightedSumMultiMeasureEvaluation/rankings"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//MeasureRanking"/>
+    <genClasses ecoreClass="qm.ecore#//QualityModelResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//QualityModelResult/system"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//QualityModelResult/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModelResult/measurementResults"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//QualityModelResult/evaluationResults"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//MeasurementResult">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasurementResult/resultsFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//NumberMeasurementResult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//NumberMeasurementResult/value"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//FindingsMeasurementResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//FindingsMeasurementResult/count"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//DoubleInterval">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//DoubleInterval/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//DoubleInterval/upper"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//EvaluationResult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//EvaluationResult/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//EvaluationResult/resultsFrom"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//SingleMeasureEvaluationResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//SingleMeasureEvaluationResult/ratioAffected"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//MultiMeasureEvaluationResult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//MultiMeasureEvaluationResult/evaluationResults"/>
+    </genClasses>
+    <genClasses ecoreClass="qm.ecore#//MeasureRankingEvaluationResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//MeasureRankingEvaluationResult/ratioAffected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureRankingEvaluationResult/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference qm.ecore#//MeasureRankingEvaluationResult/resultsFrom"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="qm.ecore#//Result">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qm.ecore#//Result/message"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

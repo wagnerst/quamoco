@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+  <block-spec name="edu.tum.cs.conqat.quamoco.changable.gen.QuamocoGeneratedJava">
+    <param name="input">
+      <attr name="scope" />
+    </param>
+    <param name="output">
+      <attr name="dir" />
+    </param>
+    <param name="map">
+      <attr name="project" />
+      <attr name="dir" />
+    </param>
+    <param name="project">
+      <attr name="name" />
+    </param>
+    <param name="evaluation-result">
+      <attr name="dir" />
+    </param>
+    <block name="QEncoding" spec="edu.tum.cs.conqat.quamoco.model.QEncoding"><input scope="@input.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QFindBugs" spec="edu.tum.cs.conqat.quamoco.model.QFindBugs"><input scope="@QEncoding.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QJavaCodeStructure" spec="edu.tum.cs.conqat.quamoco.model.QJavaCodeStructure"><input scope="@QFindBugs.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QJavaDoc" spec="edu.tum.cs.conqat.quamoco.model.QJavaDoc"><input scope="@QJavaCodeStructure.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QJavaNormalizationMeasures" spec="edu.tum.cs.conqat.quamoco.model.QJavaNormalizationMeasures"><input scope="@QJavaDoc.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QLOC" spec="edu.tum.cs.conqat.quamoco.model.QLOC"><input scope="@QJavaNormalizationMeasures.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QNaturalLanguage" spec="edu.tum.cs.conqat.quamoco.model.QNaturalLanguage"><input scope="@QLOC.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QPMD" spec="edu.tum.cs.conqat.quamoco.model.QPMD"><input scope="@QNaturalLanguage.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <block name="QJavaCloneDetection" spec="edu.tum.cs.conqat.quamoco.model.QJavaCloneDetection"><input scope="@QPMD.scope" /><output dir="@output.dir" /><map project="@map.project" dir="@map.dir" /></block>
+    <out name="scope" ref="@QJavaCloneDetection.scope" />
+    <param name="metric-collection">
+      <attr name="collection" />
+    </param>
+    <processor name="AutomaticMetricCollector" class="edu.tum.cs.conqat.quamoco.AutomaticMetricCollector"><input ref="@QJavaCloneDetection.scope" /><metric-collection ref="@metric-collection.collection" /><models ref="@ModelLoader" /></processor>
+    <out name="metrics" ref="@AutomaticMetricCollector" />
+    <param name="quality-model">
+      <attr name="file" />
+    </param>
+    <processor name="ModelLoader" class="edu.tum.cs.conqat.quamoco.ModelLoader"><input file="@quality-model.file" /></processor>
+    <block name="QJavaRangeResolvers" spec="edu.tum.cs.conqat.quamoco.model.QJavaRangeResolvers" />
+    <processor name="ModelEvaluator" class="edu.tum.cs.conqat.quamoco.ModelEvaluator"><input ref="@AutomaticMetricCollector" /><models ref="@ModelLoader" /><project-name ref="@project.name" /><function-range-resolver ref="@QJavaRangeResolvers.function-range-resolver" /></processor>
+    <processor name="ModelSaver" class="edu.tum.cs.conqat.quamoco.ModelSaver"><models ref="@ModelEvaluator" /><output dir="@evaluation-result.dir" /></processor>
+    <out name="result" ref="@ModelSaver" />
+  </block-spec>
+  <meta type="cq.edit">
+    <entries namespace="input">
+      <entry key="pos" value="40,0" />
+    </entries>
+    <entries namespace="output">
+      <entry key="pos" value="200,0" />
+      <entry key="edges_invisible" value="true" />
+    </entries>
+    <entries namespace="map">
+      <entry key="pos" value="400,0" />
+      <entry key="edges_invisible" value="true" />
+    </entries>
+    <entries namespace="evaluation-result">
+      <entry key="pos" value="200,60" />
+      <entry key="edges_invisible" value="true" />
+    </entries>
+    <entries namespace="scope">
+      <entry key="pos" value="470,970" />
+    </entries>
+    <entries namespace="QFindBugs">
+      <entry key="pos" value="200,240" />
+    </entries>
+    <entries namespace="QJavaDoc">
+      <entry key="pos" value="200,400" />
+    </entries>
+    <entries namespace="QPMD">
+      <entry key="pos" value="200,720" />
+    </entries>
+    <entries namespace="QJavaCodeStructure">
+      <entry key="pos" value="200,320" />
+    </entries>
+    <entries namespace="QJavaCloneDetection">
+      <entry key="pos" value="200,800" />
+    </entries>
+    <entries namespace="QJavaNormalizationMeasures">
+      <entry key="pos" value="200,480" />
+    </entries>
+    <entries namespace="metric-collection">
+      <entry key="pos" value="400,810" />
+    </entries>
+    <entries namespace="QNaturalLanguage">
+      <entry key="pos" value="200,640" />
+    </entries>
+    <entries namespace="ModelSaver">
+      <entry key="pos" value="200,1040" />
+    </entries>
+    <entries namespace="quality-model">
+      <entry key="pos" value="600,810" />
+    </entries>
+    <entries namespace="QEncoding">
+      <entry key="pos" value="200,160" />
+    </entries>
+    <entries namespace="QLOC">
+      <entry key="pos" value="200,560" />
+    </entries>
+    <entries namespace="QJavaRangeResolvers">
+      <entry key="pos" value="600,880" />
+    </entries>
+    <entries namespace="ModelLoader">
+      <entry key="pos" value="400,880" />
+    </entries>
+    <entries namespace="AutomaticMetricCollector">
+      <entry key="pos" value="200,880" />
+    </entries>
+    <entries namespace="metrics">
+      <entry key="pos" value="70,970" />
+    </entries>
+    <entries namespace="ModelEvaluator">
+      <entry key="pos" value="200,960" />
+    </entries>
+    <entries namespace="result">
+      <entry key="pos" value="200,1120" />
+    </entries>
+    <entries namespace="#comments">
+      <entry key="comment_1" value="This block was generated by the Quamoco editor at Wed Apr 27 16:50:17 CEST 2011. DO NOT CHANGE MANUALLY AS FILE WILL BE OVERWRITTEN BY THE GENERATOR. This block was generated for the following models:/Users/heineman/Documents/workspaces/runtime-quamoco/current/root.qm, /Users/heineman/Documents/workspaces/runtime-quamoco/current/java.qm, /Users/heineman/Documents/workspaces/runtime-quamoco/current/object.qm" />
+    </entries>
+    <entries namespace="#comment-bounds">
+      <entry key="comment_1" value="600,0,350,115" />
+    </entries>
+  </meta>
+</conqat>

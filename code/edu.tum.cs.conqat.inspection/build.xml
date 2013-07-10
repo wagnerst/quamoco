@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<!--
+ @version $Rev: 3421 $
+ @levd.rating GREEN Hash: 95B4012728A135027F977C495D46C405
+-->
+<project default="dist" basedir=".">
+	<import file="../conqat/ant/conqat-ant-base.xml" />
+</project>

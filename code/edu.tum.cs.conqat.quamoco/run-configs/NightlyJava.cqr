@@ -1,0 +1,6 @@
+#!edu.tum.cs.conqat.quamoco.nightly.Nightly-java
+qm-result-dir.dir=c:\tmp
+manual-measure-dir.attr=C:\Users\lochmann\workspace-conqat-3.7\edu.tum.cs.conqat.quamoco-eval\manual-inspection-results
+quality-model.file=C:\tmp\bm-new\java.qm
+project-dir.attr=C:\Users\lochmann\workspace-juno\edu.tum.cs.conqat.quamoco-eval\study_objects\003_tomcat-6.0.24
+calibration-zip-file.attr=c:\tmp\nothing\nothing

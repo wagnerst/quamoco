@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+ @version $Rev: 3776 $
+ @levd.rating Red Rev: 
+-->
+<project default="unpack" basedir=".">
+	<target name="unpack">
+		<unzip dest="study_objects">
+		    <fileset dir=".">
+		        <include name="**/*.zip"/>
+		    </fileset>
+		</unzip>
+	</target>
+</project>

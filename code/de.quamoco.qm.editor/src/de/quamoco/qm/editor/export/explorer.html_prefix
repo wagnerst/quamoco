@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<!-- Charset -->
+		<meta charset="utf-8"/>
+		
+		<!-- Title -->
+		<title>Quamoco Web Portal</title>
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="styles/default.css"/>
+		<link rel="stylesheet" href="styles/themes/base/jquery.ui.all.css"/>
+		<link rel="stylesheet" href="styles/themes/layout-default.css"/>
+		
+		<!-- Scripts -->
+		<script src="scripts/jquery/jquery.js"></script>
+		<script src="scripts/jquery/jquery.jstree.js"></script>
+		<script src="scripts/jquery/jquery.effects.core.js"></script>
+		<script src="scripts/jquery/jquery.effects.slide.js"></script>
+		<script src="scripts/jquery/jquery.effects.drop.js"></script>
+		<script src="scripts/jquery/jquery.effects.scale.js"></script>
+		<script src="scripts/jquery/jquery.ui.core.js"></script>
+		<script src="scripts/jquery/jquery.ui.widget.js"></script>
+		<script src="scripts/jquery/jquery.ui.mouse.js"></script>
+		<script src="scripts/jquery/jquery.ui.draggable.js"></script>
+		<script src="scripts/jquery/jquery.ui.tabs.js"></script>
+		<script src="scripts/jquery/jquery.layout.js"></script>
+		
+		<script type="text/javascript">
+			if (navigator.appVersion.indexOf("MSIE") != -1) {
+				alert("The quality model browser will not work correctly in IE 9! It works best with Chrome.");
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<!-- Head -->
+		<div class="area" id="head">
+			<center><a href="http://www.quamoco.de/"><img src="banner_eng.png"/ alt="Quamoco"></a></center>
+		</div>
+		
+		
+		
+		<!-- Body -->
+		<div class="area" id="body">
+		
+			<!-- Side -->
+			<div class="area pad ui-layout-west" id="side">
+				<div class="tabs">

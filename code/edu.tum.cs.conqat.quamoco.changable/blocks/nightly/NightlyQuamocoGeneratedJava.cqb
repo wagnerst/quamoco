@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.NightlyQuamocoGeneratedJava">
+      <param name="input">
+         <attr name="scope"/>
+      </param>
+      <param name="output">
+         <attr name="dir"/>
+      </param>
+      <param name="map">
+         <attr name="project"/>
+         <attr name="dir"/>
+      </param>
+      <block name="QEncoding" spec="edu.tum.cs.conqat.quamoco.model.QEncoding">
+         <input scope="@input.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QFindBugs" spec="edu.tum.cs.conqat.quamoco.model.QFindBugs">
+         <input scope="@QEncoding.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+         <vm-arg value="@vm-arg.value"/>
+      </block>
+      <block name="QJavaCodeStructure" spec="edu.tum.cs.conqat.quamoco.model.QJavaCodeStructure">
+         <input scope="@QFindBugs.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QJavaDoc" spec="edu.tum.cs.conqat.quamoco.model.QJavaDoc">
+         <input scope="@QJavaCodeStructure.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QJavaNormalizationMeasures" spec="edu.tum.cs.conqat.quamoco.model.QJavaNormalizationMeasures">
+         <input scope="@QJavaDoc.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QLOC" spec="edu.tum.cs.conqat.quamoco.model.QLOC">
+         <input scope="@QJavaNormalizationMeasures.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QNaturalLanguage" spec="edu.tum.cs.conqat.quamoco.model.QNaturalLanguage">
+         <input scope="@QLOC.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QPMD" spec="edu.tum.cs.conqat.quamoco.model.QPMD">
+         <input scope="@QNaturalLanguage.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <out name="scope" ref="@q-java-clone-detection.scope"/>
+      <processor class="edu.tum.cs.conqat.quamoco.AutomaticMetricCollector" name="AutomaticMetricCollector">
+         <input ref="@q-java-clone-detection.scope"/>
+         <metric-collection ref="@metric-collection.ref"/>
+         <models ref="@quality-model.file"/>
+      </processor>
+      <out name="metrics" ref="@AutomaticMetricCollector"/>
+      <param name="quality-model">
+         <attr name="file"/>
+      </param>
+      <out name="result" ref="@model-evaluator-writing-calibration-infos"/>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelEvaluatorWritingCalibrationInfos" name="model-evaluator-writing-calibration-infos">
+         <models ref="@quality-model.file"/>
+         <input ref="@AutomaticMetricCollector"/>
+         <project-name ref="@project-name.attr"/>
+         <calibration-dir attr="@calibration-dir.attr"/>
+         <function-range-resolver ref="@q-java-range-resolvers.function-range-resolver"/>
+      </processor>
+      <param name="project-name">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="calibration-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="metric-collection">
+         <doc>{@connDoc}</doc>
+         <attr name="ref">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="q-java-clone-detection" spec="edu.tum.cs.conqat.quamoco.model.QJavaCloneDetection">
+         <input scope="@QPMD.scope"/>
+         <output dir="@output.dir"/>
+      </block>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelSaver" name="model-saver">
+         <models ref="@model-evaluator-writing-calibration-infos"/>
+         <output dir="@qm-result-dir.dir"/>
+      </processor>
+      <param name="qm-result-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="q-java-range-resolvers" spec="edu.tum.cs.conqat.quamoco.model.QJavaRangeResolvers"/>
+      <param name="vm-arg">
+         <doc>{@connDoc}</doc>
+         <attr name="value">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="input">
+         <entry key="pos" value="44,56"/>
+      </entries>
+      <entries namespace="output">
+         <entry key="pos" value="204,56"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="map">
+         <entry key="pos" value="404,56"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="scope">
+         <entry key="pos" value="474,946"/>
+      </entries>
+      <entries namespace="QFindBugs">
+         <entry key="pos" value="204,200"/>
+      </entries>
+      <entries namespace="QJavaDoc">
+         <entry key="pos" value="204,360"/>
+      </entries>
+      <entries namespace="QPMD">
+         <entry key="pos" value="204,672"/>
+      </entries>
+      <entries namespace="QJavaCodeStructure">
+         <entry key="pos" value="204,280"/>
+      </entries>
+      <entries namespace="QJavaNormalizationMeasures">
+         <entry key="pos" value="204,440"/>
+      </entries>
+      <entries namespace="QNaturalLanguage">
+         <entry key="pos" value="204,600"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="520,572"/>
+      </entries>
+      <entries namespace="QEncoding">
+         <entry key="pos" value="204,120"/>
+      </entries>
+      <entries namespace="QLOC">
+         <entry key="pos" value="204,520"/>
+      </entries>
+      <entries namespace="AutomaticMetricCollector">
+         <entry key="pos" value="204,856"/>
+      </entries>
+      <entries namespace="metrics">
+         <entry key="pos" value="74,946"/>
+      </entries>
+      <entries namespace="result">
+         <entry key="pos" value="204,1016"/>
+      </entries>
+      <entries namespace="#comments">
+         <entry key="comment_1" value="This block was generated by the Quamoco editor at Tue Jan 18 16:52:47 CET 2011. DO NOT CHANGE MANUALLY AS FILE WILL BE OVERWRITTEN BY THE GENERATOR. This block was generated for the following models:C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\root.qm, C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\object.qm, C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\java.qm"/>
+      </entries>
+      <entries namespace="#comment-bounds">
+         <entry key="comment_1" value="604,56,350,115"/>
+      </entries>
+      <entries namespace="model-evaluator-writing-calibration-infos">
+         <entry key="pos" value="208,932"/>
+      </entries>
+      <entries namespace="project-name">
+         <entry key="pos" value="100,848"/>
+      </entries>
+      <entries namespace="calibration-dir">
+         <entry key="pos" value="400,848"/>
+      </entries>
+      <entries namespace="metric-collection">
+         <entry key="pos" value="460,776"/>
+      </entries>
+      <entries namespace="q-java-clone-detection">
+         <entry key="pos" value="204,744"/>
+      </entries>
+      <entries namespace="model-saver">
+         <entry key="pos" value="648,696"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="688,616"/>
+      </entries>
+      <entries namespace="q-java-range-resolvers">
+         <entry key="pos" value="649,851"/>
+      </entries>
+      <entries namespace="vm-arg">
+         <entry key="pos" value="312,48"/>
+      </entries>
+   </meta>
+</conqat>

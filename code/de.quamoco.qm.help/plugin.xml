@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Quamoco Help"
+            id="de.quamoco.qm.help">
+      </category>
+      <view
+            name="Quamoco Help"
+            icon="icons/help.gif"
+            category="de.quamoco.qm.help"
+            class="de.quamoco.qm.help.views.QuamocoHelpView"
+            id="de.quamoco.qm.help.views.QuamocoHelpView">
+      </view>
+   </extension>
+
+</plugin>

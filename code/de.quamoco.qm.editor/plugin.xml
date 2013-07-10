@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml 4971 2012-02-17 08:57:19Z lochmann $
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="QmEditorAdvisorApplication">
+      <application>
+         <run class="de.quamoco.qm.application.QmApplication"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.quamoco.qm.application.QmPerspective"
+            id="de.quamoco.qm.application.QmPerspective">
+      </perspective>
+   </extension>
+
+
+
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="%_UI_QmEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="QmEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.quamoco.qm.application.QmEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.quamoco.qm.presentation.QmEditorAdvisorAboutAction"/>
+      </actionSet>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="de.quamoco.qm.presentation.QmEditorID"
+            name="%_UI_QmEditor_label"
+            icon="icons/full/obj16/QmModelFile.gif"
+            extensions="qm,qmr"
+            class="de.quamoco.qm.editor.CustomQmEditor"
+            contributorClass="de.quamoco.qm.editor.CustomQmActionBarContributor">
+         <contentTypeBinding
+               contentTypeId="de.quamoco.qm">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.quamoco.qm.editor.QmEditorAdvisorApplication"
+            name="Quamoco Quality Model Editor">
+         <property
+               name="appName"
+               value="Quamoco Quality Model Editor">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/full/obj16/QmModelFile.gif">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.eObject"
+            objectClass="org.eclipse.emf.ecore.EObject">
+         <action
+               class="de.quamoco.qm.editor.action.ShowStatisticsAction"
+               id="de.quamoco.qm.presentation.ShowStatisticAction"
+               label="Show Statistics"
+               menubarPath="additions">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.action.CalibrateAction"
+               id="de.quamoco.qm.editor.action1"
+               label="Calibrate Model"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.annotatedElement"
+            objectClass="de.quamoco.qm.AnnotatedElement">
+         <action
+               class="de.quamoco.qm.editor.action.BaseModelAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.baseModel"
+               label="Base Model"
+               menubarPath="additions"
+               style="toggle">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.resource"
+            objectClass="org.eclipse.emf.ecore.resource.Resource">
+         <action
+               class="de.quamoco.qm.editor.action.UnloadResourceAction"
+               enablesFor="+"
+               id="de.quamoco.qm.editor.action.unload"
+               label="Unload"
+               menubarPath="additions-end">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.taggedElement"
+            objectClass="de.quamoco.qm.TaggedElement">
+         <menu
+               id="de.quamoco.qm.editor.KLLMenu"
+               label="Additions"
+               path="additions">
+         </menu>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.factor"
+            objectClass="de.quamoco.qm.Factor">
+         <action
+               class="de.quamoco.qm.editor.action.DeleteFactorRecursivelyAction"
+               id="de.quamoco.qm.editor.action1"
+               label="Delete recursively">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.factorrefinement"
+            objectClass="de.quamoco.qm.FactorRefinement">
+         <action
+               class="de.quamoco.qm.editor.action.ConvertRefinementToImpactAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.ConvertRefinementToImpact"
+               label="Convert to Impact">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.source"
+            objectClass="de.quamoco.qm.Source">
+         <action
+               class="de.quamoco.qm.editor.action.AddSourceToAllAction"
+               id="de.quamoco.qm.editor.action2"
+               label="Add this source to all model elements">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.evaluationResult"
+            objectClass="de.quamoco.qm.EvaluationResult">
+         <action
+               class="de.quamoco.qm.editor.action.ShowResultTreeMapAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.ShowEvaluationResultViewAction"
+               label="Show Result Tree Map">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.qualityModelResult"
+            objectClass="de.quamoco.qm.QualityModelResult">
+         <action
+               class="de.quamoco.qm.editor.action.ShowResultTreeMapAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.ShowEvaluationResultViewAction_qualityModelResult"
+               label="Show Result Tree Map">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.qualityModel"
+            objectClass="de.quamoco.qm.QualityModel">
+         <action
+               class="de.quamoco.qm.editor.action.EvaluateAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.EvaluateAction"
+               label="Evaluate">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.action.DeleteUnusedEntitiesAction"
+               id="de.quamoco.qm.editor.action2"
+               label="Delete all unused entities">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.action.RemoveEntitiesFromMeasures"
+               id="de.quamoco.qm.editor.removeEntitiesFromMeasures"
+               label="Remove Entities from Measures">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.action.UnsetMeasuresWithNoVariation"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.action.UnsetMeasuresWithNoVariation"
+               label="Set Measures with no variation to 0">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.action.SetSourcesHeuristic"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.SetSourceHeuristic"
+               label="Set Sources Heuristic">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            id="de.quamoco.qm.editor.editorContribution.QmEditor"
+            targetID="de.quamoco.qm.presentation.QmEditorID">
+         <action
+               class="de.quamoco.qm.editor.action.LocateIdentifierAction"
+               enablesFor="1"
+               id="de.quamoco.qm.presentation.LocateIdentifierAction"
+               label="Locate Identifier"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.export.SaveAsSingleModuleAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.export.SaveAsSingleModuleAction"
+               label="Save as a single Module"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.export.ExportResultCalibrationAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.export.SaveAsSingleModuleAction"
+               label="Export Calibration Data"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.export.ImportResultCalibrationAction"
+               enablesFor="1"
+               id="de.quamoco.qm.editor.export.SaveAsSingleModuleAction"
+               label="Import Calibration Data"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.export.ExportWebSiteAction"
+               id="de.quamoco.qm.editor.export.ExportWebSiteAction"
+               label="Export Web Site"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+         <action
+               class="de.quamoco.qm.editor.export.ExportHumanReadableExcel"
+               id="de.quamoco.qm.editor.export.ExportHumanReadableExcel"
+               label="Export as human-readable Excel"
+               menubarPath="de.quamoco.qmMenuID/additions"
+               style="push">
+         </action>
+      </editorContribution>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_QmModelWizard_category"/>
+      <wizard
+            id="de.quamoco.qm.presentation.QmModelWizardID"
+            name="%_UI_QmModelWizard_label"
+            class="de.quamoco.qm.editor.CustomQmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QmModelFile.gif">
+         <description>%_UI_QmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="de.quamoco.qm.application.QmPerspective">
+         <newWizardShortcut
+               id="de.quamoco.qm.presentation.QmModelWizardID">
+         </newWizardShortcut>
+         <viewShortcut
+               id="org.eclipse.ui.navigator.ProjectExplorer">
+         </viewShortcut>
+         <viewShortcut
+               id="org.eclipse.pde.runtime.LogView">
+         </viewShortcut>
+         <viewShortcut
+               id="org.eclipse.ui.views.PropertySheet">
+         </viewShortcut>
+         <viewShortcut
+               id="org.eclipse.ui.cheatsheets.views.CheatSheetView">
+         </viewShortcut>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="de.quamoco.qm.presentation.command.merge"
+               label="Merge"
+               style="push">
+            <visibleWhen>
+               <and>
+                  <reference
+                        definitionId="de.quamoco.qm.presentation.definition.twoEObjectsSelected">
+                  </reference>
+                  <test
+                        forcePluginActivation="true"
+                        property="de.quamoco.qm.presentation.sameEClass"
+                        value="true">
+                  </test>
+                  <test
+                        forcePluginActivation="true"
+                        property="de.quamoco.qm.presentation.sameEContainer"
+                        value="true">
+                  </test>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.quamoco.qm.editor.refactoring.MergeHandler"
+            commandId="de.quamoco.qm.presentation.command.merge">
+         <activeWhen>
+            <and>
+               <reference
+                     definitionId="de.quamoco.qm.presentation.definition.twoEObjectsSelected">
+               </reference>
+               <test
+                     forcePluginActivation="true"
+                     property="de.quamoco.qm.presentation.sameEClass"
+                     value="true">
+               </test>
+               <test
+                     forcePluginActivation="true"
+                     property="de.quamoco.qm.presentation.sameEContainer"
+                     value="true">
+               </test>
+            </and>
+         </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="de.quamoco.qm.presentation.definition.twoEObjectsSelected">
+         <with
+               variable="selection">
+            <iterate>
+               <adapt
+                     type="org.eclipse.emf.ecore.EObject">
+               </adapt>
+            </iterate>
+            <count
+                  value="2">
+            </count>
+         </with>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="de.quamoco.qm.editor.refactoring.TwoEObjectPropertyTester"
+            id="de.quamoco.qm.presentation.propertyTester.twoEObjects"
+            namespace="de.quamoco.qm.presentation"
+            properties="sameEClass, sameEContainer"
+            type="java.util.List">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="de.quamoco.qm.presentation.command.merge"
+            name="Merge">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="de.quamoco.qm.presentation.command.merge"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+SHIFT+M">
+      </key>
+   </extension>
+   <extension
+         id="taskmarker"
+         name="Qm Task"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.taskmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+      <attribute
+            name="uri">
+      </attribute>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="de.quamoco.qm.editor.result.ResultTreeMapView"
+            id="de.quamoco.qm.editor.result.ResultTreeMapView"
+            name="Result Tree Map"
+            restorable="false">
+      </view>     
+   </extension>
+</plugin>

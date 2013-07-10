@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.Nightly-csharp">
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="output-dir-creator">
+         <part string="@project-dir.attr"/>
+         <part string="/quamoco-report"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.ProjectNameDeterminer" name="project-name-determiner">
+         <input dir="@project-dir.attr"/>
+      </processor>
+      <param name="project-dir">
+         <attr name="attr"/>
+      </param>
+      <block name="nightly-quamoco-generatedcs" spec="edu.tum.cs.conqat.quamoco.nightly.NightlyQuamocoGeneratedCS">
+         <input scope="@solution-token-scope.result"/>
+         <output dir="@output-dir-creator"/>
+         <models ref="@model-setup.quality-model"/>
+         <il-input scope="@solution-assembly-scope2.result"/>
+         <calibration-dir attr="@output-dir-creator"/>
+         <project-name attr="@project-name-determiner"/>
+         <qm-result-dir attr="@qm-result-dir.dir"/>
+         <map dir="@properties-file-reader" project="@project-name-determiner"/>
+         <metric-collection collection="@manual-measure-reader-and-writer.measurereader"/>
+      </block>
+      <processor class="edu.tum.cs.conqat.quamoco.MetricConverter" name="metric-converter">
+         <input ref="@nightly-quamoco-generatedcs.metrics"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TableLayouter" name="table-layouter2">
+         <input ref="@metric-converter"/>
+         <info description="Metrics" name="Metrics"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.HTMLPresentation" name="html-presentation">
+         <project title="@project-name-determiner"/>
+         <output dir="@output-dir-creator"/>
+         <result ref="@table-layouter2"/>
+         <result ref="@table-layouter"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TreeTableLayouter" name="table-layouter">
+         <input ref="@evaluation-result-formatter"/>
+         <info description="Output" name="Output"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.EvaluationResultFormatter" name="evaluation-result-formatter">
+         <quality-models models="@nightly-quamoco-generatedcs.result"/>
+      </processor>
+      <param name="quality-model">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="solution-token-scope" spec="org.conqat.engine.dotnet.scope.SolutionTokenScope">
+         <project name="@project-name-determiner"/>
+         <solution-include pattern="**/*.sln"/>
+         <root dir="@project-dir.attr"/>
+         <language name="CS"/>
+         <project-include pattern="**/*.csproj"/>
+         <source-include pattern="**/*.cs"/>
+         <case-sensitive value="false"/>
+      </block>
+      <param name="manual-measure-dir">
+         <attr name="attr"/>
+      </param>
+      <block name="manual-measure-reader-and-writer" spec="edu.tum.cs.conqat.quamoco.nightly.ManualMeasureReaderAndWriter">
+         <models attr="@model-setup.quality-model"/>
+         <directory project-name="@project-name-determiner" root-dir="@manual-measure-dir.attr"/>
+      </block>
+      <param name="systemtype">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="solution-assembly-scope2" spec="org.conqat.engine.dotnet.scope.SolutionAssemblyScope">
+         <project name="@project-name-determiner"/>
+         <root dir="@project-dir.attr"/>
+         <solution-include pattern="**/*.sln"/>
+         <assembly-include pattern="**"/>
+         <project-include pattern="**/*.csproj"/>
+      </block>
+      <processor class="edu.tum.cs.conqat.quamoco.SummaryWriter" name="summary-writer">
+         <scope scope="@nightly-quamoco-generatedcs.scope"/>
+         <output-dir dir="@output-dir-creator"/>
+         <projectname projectname="@project-name-determiner"/>
+         <quality-model model="@nightly-quamoco-generatedcs.result"/>
+         <result factor="Quality @Product"/>
+         <result factor="Functional Correctness"/>
+         <result factor="Maintainability"/>
+         <result factor="Analyzability"/>
+         <result factor="Modifiability"/>
+         <result factor="Reusability"/>
+         <result factor="Testability"/>
+         <result factor="Reliability"/>
+         <result factor="Performance Efficiency"/>
+         <result factor="Security"/>
+         <systemtype attr="@systemtype.attr"/>
+      </processor>
+      <param name="qm-result-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.FileExistenceCondition" name="find-bugs-report-condition">
+         <filename attr="@properties-filename"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.input.PropertiesFileReader" condition="@find-bugs-report-condition" name="properties-file-reader">
+         <file name="@properties-filename"/>
+         <key name="gendarme-root"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="properties-filename">
+         <part string="@project-dir.attr"/>
+         <part string="/map.properties"/>
+      </processor>
+      <block name="model-setup" spec="edu.tum.cs.conqat.quamoco.nightly.ModelSetup">
+         <input file="@quality-model.file"/>
+         <calibration-zip-file attr="@calibration-zip-file.attr"/>
+      </block>
+      <param name="calibration-zip-file">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="#comments"/>
+      <entries namespace="#comment-bounds"/>
+      <entries namespace="output-dir-creator">
+         <entry key="pos" value="468,168"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="project-name-determiner">
+         <entry key="pos" value="132,168"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="project-dir">
+         <entry key="pos" value="375,15"/>
+      </entries>
+      <entries namespace="nightly-quamoco-generatedcs">
+         <entry key="pos" value="300,552"/>
+      </entries>
+      <entries namespace="metric-converter">
+         <entry key="pos" value="336,696"/>
+      </entries>
+      <entries namespace="table-layouter2">
+         <entry key="pos" value="336,768"/>
+      </entries>
+      <entries namespace="html-presentation">
+         <entry key="pos" value="408,876"/>
+      </entries>
+      <entries namespace="table-layouter">
+         <entry key="pos" value="528,768"/>
+      </entries>
+      <entries namespace="evaluation-result-formatter">
+         <entry key="pos" value="528,696"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="0,192"/>
+      </entries>
+      <entries namespace="solution-token-scope">
+         <entry key="pos" value="324,300"/>
+      </entries>
+      <entries namespace="manual-measure-dir">
+         <entry key="pos" value="24,36"/>
+      </entries>
+      <entries namespace="manual-measure-reader-and-writer">
+         <entry key="pos" value="84,480"/>
+      </entries>
+      <entries namespace="systemtype">
+         <entry key="pos" value="84,648"/>
+      </entries>
+      <entries namespace="solution-assembly-scope2">
+         <entry key="pos" value="144,288"/>
+      </entries>
+      <entries namespace="summary-writer">
+         <entry key="pos" value="96,732"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="516,528"/>
+      </entries>
+      <entries namespace="find-bugs-report-condition">
+         <entry key="pos" value="540,288"/>
+      </entries>
+      <entries namespace="properties-file-reader">
+         <entry key="pos" value="552,384"/>
+      </entries>
+      <entries namespace="properties-filename">
+         <entry key="pos" value="696,216"/>
+      </entries>
+      <entries namespace="model-setup">
+         <entry key="pos" value="-12,360"/>
+      </entries>
+      <entries namespace="calibration-zip-file">
+         <entry key="pos" value="28,280"/>
+      </entries>
+   </meta>
+</conqat>

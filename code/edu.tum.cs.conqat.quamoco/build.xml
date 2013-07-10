@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--
+ version $Rev: 4863 $
+ @levd.rating YELLOW Hash: 37795D0165D3B8147F98BA0605003B50
+-->
+
+<project default="build-qiesl-base-jar" basedir=".">
+	<import file="../org.conqat.engine.core/ant/conqat-ant-base.xml" />
+
+	<target name="build-qiesl-base-jar" description="Build JAR that contains QIESL and all required dependencies.">
+		<delete file="edu.tum.cs.conqat.quamoco.jar" />
+		<delete dir="dist/qiesl" />		
+		<property name="excluded.libraries" value="ccsm-commons.jar,de.quamoco.qm_2.1.0.201109142021.jar,org.eclipse.emf.common_2.7.0.v20110605-0747.jar" />
+		<antcall target="create-bundle-jar" />
+		<mkdir dir="dist/qiesl/tmp" />
+		<unjar src="edu.tum.cs.conqat.quamoco.jar" dest="dist/qiesl/tmp" />
+		<jar destfile="dist/qiesl/qiesl-base.jar">
+			<classfileset dir="dist/qiesl/tmp">
+				<root classname="edu.tum.cs.conqat.quamoco.qiesl.QIESLEngine" />
+				<exclude name="edu/tum/cs/commons/**" />
+				<exclude name="org/eclipse/**" />
+				<exclude name="de/quamoco/**" />
+				<exclude name="edu/tum/cs/conqat/quamoco/qiesl/**" />
+			</classfileset>
+		</jar>
+		<delete file="edu.tum.cs.conqat.quamoco.jar" />
+		<delete dir="dist/qiesl/tmp" />
+	</target>
+</project>

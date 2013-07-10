@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Todo
+Bundle-SymbolicName: de.quamoco.adaptation.todo;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.quamoco.adaptation.todo.Activator
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.quamoco.qm;bundle-version="2.1.0",
+ de.quamoco.qm.edit;bundle-version="2.1.0",
+ de.quamoco.qm.editor;bundle-version="2.1.0",
+ de.quamoco.adaptation.model.editor;bundle-version="1.0.0",
+ de.quamoco.adaptation.model.status;bundle-version="1.0.0",
+ org.eclipse.emf.transaction;bundle-version="1.4.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

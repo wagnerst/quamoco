@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_ZSQG0GFjEd6QTNDa7CfYsg">
+  <modules xmi:id="_9w10gXwiEd6MotksAvX0FQ">
+    <properties xmi:id="_ZSQG0WFjEd6QTNDa7CfYsg" name="Appropriateness" factors="_ZSQG4GFjEd6QTNDa7CfYsg _ZSQG4mFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZSQG0mFjEd6QTNDa7CfYsg" name="Intricacy" factors="_ZSQG2mFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZSQG02FjEd6QTNDa7CfYsg" name="Purposiveness" factors="_ZSQG12FjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZSQG1GFjEd6QTNDa7CfYsg" name="Well-Formedness" factors="_ZSQG3GFjEd6QTNDa7CfYsg"/>
+    <aspects xmi:id="_ZSQG5mFjEd6QTNDa7CfYsg" name="Maintenance">
+      <subAspects xmi:id="_ZSQG52FjEd6QTNDa7CfYsg" name="Program Comprehension" influencedBy="_ZSQG2GFjEd6QTNDa7CfYsg _ZSQG22FjEd6QTNDa7CfYsg _ZSQG3WFjEd6QTNDa7CfYsg _ZSQG5WFjEd6QTNDa7CfYsg"/>
+      <subAspects xmi:id="_ZSQG6GFjEd6QTNDa7CfYsg" name="Modification" influencedBy="_ZSQG42FjEd6QTNDa7CfYsg"/>
+      <subAspects xmi:id="_ZSQG6WFjEd6QTNDa7CfYsg" name="Porting" influencedBy="_ZSQG3mFjEd6QTNDa7CfYsg _ZSQG4WFjEd6QTNDa7CfYsg _ZSQG5GFjEd6QTNDa7CfYsg"/>
+    </aspects>
+    <entities xmi:id="_ZSQG1WFjEd6QTNDa7CfYsg" name="FOR Loop">
+      <subEntityTypes xmi:id="_ZSQG1mFjEd6QTNDa7CfYsg" name="Head">
+        <characterizedBy xmi:id="_ZSQG12FjEd6QTNDa7CfYsg" impacts="_ZSQG2GFjEd6QTNDa7CfYsg" property="_ZSQG02FjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZSQG2WFjEd6QTNDa7CfYsg" name="Body">
+        <characterizedBy xmi:id="_ZSQG2mFjEd6QTNDa7CfYsg" impacts="_ZSQG22FjEd6QTNDa7CfYsg" property="_ZSQG0mFjEd6QTNDa7CfYsg"/>
+        <characterizedBy xmi:id="_ZSQG3GFjEd6QTNDa7CfYsg" impacts="_ZSQG3WFjEd6QTNDa7CfYsg _ZSQG3mFjEd6QTNDa7CfYsg" property="_ZSQG1GFjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZSQG32FjEd6QTNDa7CfYsg" name="Counter Variable">
+        <characterizedBy xmi:id="_ZSQG4GFjEd6QTNDa7CfYsg" impacts="_ZSQG4WFjEd6QTNDa7CfYsg" property="_ZSQG0WFjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+      <characterizedBy xmi:id="_ZSQG4mFjEd6QTNDa7CfYsg" impacts="_ZSQG42FjEd6QTNDa7CfYsg _ZSQG5GFjEd6QTNDa7CfYsg _ZSQG5WFjEd6QTNDa7CfYsg" property="_ZSQG0WFjEd6QTNDa7CfYsg"/>
+    </entities>
+    <requirements xmi:id="_9w10k3wiEd6MotksAvX0FQ">
+      <impacts xmi:id="_ZSQG2GFjEd6QTNDa7CfYsg" influences="_ZSQG52FjEd6QTNDa7CfYsg" factors="_ZSQG12FjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG22FjEd6QTNDa7CfYsg" effect="NEGATIVE" influences="_ZSQG52FjEd6QTNDa7CfYsg" factors="_ZSQG2mFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG3WFjEd6QTNDa7CfYsg" influences="_ZSQG52FjEd6QTNDa7CfYsg" factors="_ZSQG3GFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG3mFjEd6QTNDa7CfYsg" influences="_ZSQG6WFjEd6QTNDa7CfYsg" factors="_ZSQG3GFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG4WFjEd6QTNDa7CfYsg" influences="_ZSQG6WFjEd6QTNDa7CfYsg" factors="_ZSQG4GFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG42FjEd6QTNDa7CfYsg" influences="_ZSQG6GFjEd6QTNDa7CfYsg" factors="_ZSQG4mFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG5GFjEd6QTNDa7CfYsg" influences="_ZSQG6WFjEd6QTNDa7CfYsg" factors="_ZSQG4mFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_ZSQG5WFjEd6QTNDa7CfYsg" influences="_ZSQG52FjEd6QTNDa7CfYsg" factors="_ZSQG4mFjEd6QTNDa7CfYsg"/>
+    </requirements>
+  </modules>
+</qm:QualityModel>

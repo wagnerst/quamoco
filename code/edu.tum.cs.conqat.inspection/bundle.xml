@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+ @version $Rev: 3554 $
+ @levd.rating GREEN Hash: C11A54DF99AC87A8E71F9682A4C14CFE
+-->
+<bundle xmlns="http://conqat.cs.tum.edu/ns/bundle">
+   <name>edu.tum.cs.conqat.quamoco.inspection</name>
+   <provider>TUM</provider>
+   <description>This bundle contains code to work with semi-automatic code inspections.</description>
+   <version major="1" minor="0"/>
+   <requiresCore major="2" minor="6"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.commons" major="2" minor="6"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.filesystem" major="2" minor="6"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.io" major="2" minor="6"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.java" major="2" minor="6"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.sourcecode" major="2" minor="6"/>
+   <dependsOn bundleId="org.conqat.resource" major="2" minor="7"/>
+   <dependsOn bundleId="edu.tum.cs.conqat.quamoco" major="2" minor="7"/>
+</bundle>

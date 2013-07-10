@@ -1,0 +1,9 @@
+SET smallAtNamespace = fcol(f("a", 1))
+SET attributes = 2
+
+result = linearDistribution(
+		100, 
+		extent(smallAtNamespace)
+		/ attributes)
+	
+CHECK result == 0.0;

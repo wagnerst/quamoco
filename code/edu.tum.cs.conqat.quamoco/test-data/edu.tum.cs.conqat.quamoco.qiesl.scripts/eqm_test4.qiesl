@@ -1,0 +1,9 @@
+SET a = qpoints(300)
+SET b = qpoints(18)
+
+result = 0
+	+linearDistribution(100, a / 600)
+	+negativeLinearDistribution(100, b / 20)
+;
+
+CHECK result == 60.0

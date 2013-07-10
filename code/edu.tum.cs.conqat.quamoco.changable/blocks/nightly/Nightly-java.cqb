@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.Nightly-java">
+      <block name="quamoco-generated" spec="edu.tum.cs.conqat.quamoco.nightly.NightlyQuamocoGeneratedJava">
+         <output dir="@output-dir-creator"/>
+         <input scope="@java-scope-creator.scope"/>
+         <calibration-dir attr="@output-dir-creator"/>
+         <project-name attr="@project-name-determiner"/>
+         <quality-model file="@model-setup.quality-model"/>
+         <metric-collection ref="@manual-measure-reader-and-writer.measurereader"/>
+         <qm-result-dir dir="@qm-result-dir.dir"/>
+      </block>
+      <processor class="org.conqat.engine.html_presentation.layouters.TreeTableLayouter" name="table-layouter">
+         <input ref="@evaluation-result-formatter"/>
+         <info description="Output" name="Output"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.HTMLPresentation" name="html-presentation">
+         <project title="@project-name-determiner"/>
+         <output dir="@output-dir-creator"/>
+         <result ref="@table-layouter2"/>
+         <result ref="@table-layouter"/>
+         <result ref="@tree-table-layouter"/>
+         <result ref="@radar-plot-layouter.html-image"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TableLayouter" name="table-layouter2">
+         <input ref="@metric-converter"/>
+         <info description="Metrics" name="Metrics"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.MetricConverter" name="metric-converter">
+         <input ref="@quamoco-generated.metrics"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.EvaluationResultFormatter" name="evaluation-result-formatter">
+         <quality-models models="@quamoco-generated.result"/>
+      </processor>
+      <param name="project-dir">
+         <attr name="attr"/>
+      </param>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="output-dir-creator">
+         <part string="@project-dir.attr"/>
+         <part string="/quamoco-report"/>
+      </processor>
+      <param name="quality-model">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.SummaryWriter" name="summary-writer">
+         <scope scope="@quamoco-generated.scope"/>
+         <output-dir dir="@output-dir-creator"/>
+         <projectname projectname="@project-name-determiner"/>
+         <quality-model model="@quamoco-generated.result"/>
+         <result factor="Quality @Product"/>
+         <result factor="Functional Correctness"/>
+         <result factor="Maintainability"/>
+         <result factor="Analyzability"/>
+         <result factor="Modifiability"/>
+         <result factor="Reusability"/>
+         <result factor="Testability"/>
+         <result factor="Reliability"/>
+         <result factor="Performance Efficiency"/>
+         <result factor="Security"/>
+         <systemtype attr="@systemtype.attr"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.ProjectNameDeterminer" name="project-name-determiner">
+         <input dir="@project-dir.attr"/>
+      </processor>
+      <param name="manual-measure-dir">
+         <attr name="attr"/>
+      </param>
+      <block name="manual-measure-reader-and-writer" spec="edu.tum.cs.conqat.quamoco.nightly.ManualMeasureReaderAndWriter">
+         <directory project-name="@project-name-determiner" root-dir="@manual-measure-dir.attr"/>
+         <models attr="@model-setup.quality-model"/>
+      </block>
+      <block name="java-scope-creator" spec="edu.tum.cs.conqat.quamoco.nightly.JavaScopeCreator">
+         <project-root-dir attr="@project-dir.attr"/>
+         <project name="@project-name-determiner"/>
+      </block>
+      <param name="systemtype">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="qm-result-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="model-setup" spec="edu.tum.cs.conqat.quamoco.nightly.ModelSetup">
+         <input file="@quality-model.file"/>
+         <calibration-zip-file attr="@calibration-zip-file.attr"/>
+      </block>
+      <param name="calibration-zip-file">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="org.conqat.engine.html_presentation.layouters.TreeTableLayouter" name="tree-table-layouter">
+         <input ref="@quamoco-generated.scope"/>
+         <info name="Scope"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.filter.DepthFilter" name="depth-filter">
+         <max depth="1"/>
+         <input ref="@radar-plot-preparator"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.statistics.LeafValueProcessor" name="leaf-value-processor">
+         <input ref="@depth-filter"/>
+         <read key="quality"/>
+      </processor>
+      <block name="radar-plot-layouter" spec="org.conqat.engine.html_presentation.RadarPlotLayouter">
+         <description description="Quality Radar Plot"/>
+         <data name="QPoints" ref="@leaf-value-processor"/>
+         <output dir="@output-dir-creator"/>
+         <info description="Radar Plot for Quality" groupId="Main" name="Quality Radar Plot"/>
+      </block>
+      <processor class="edu.tum.cs.conqat.quamoco.RadarPlotPreparator" name="radar-plot-preparator">
+         <input ref="@evaluation-result-formatter"/>
+      </processor>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="quamoco-generated">
+         <entry key="pos" value="336,402"/>
+      </entries>
+      <entries namespace="table-layouter">
+         <entry key="pos" value="480,606"/>
+      </entries>
+      <entries namespace="html-presentation">
+         <entry key="pos" value="336,960"/>
+      </entries>
+      <entries namespace="table-layouter2">
+         <entry key="pos" value="288,612"/>
+      </entries>
+      <entries namespace="metric-converter">
+         <entry key="pos" value="288,540"/>
+      </entries>
+      <entries namespace="evaluation-result-formatter">
+         <entry key="pos" value="480,540"/>
+      </entries>
+      <entries namespace="project-dir">
+         <entry key="pos" value="360,0"/>
+      </entries>
+      <entries namespace="output-dir-creator">
+         <entry key="pos" value="550,82"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="204,36"/>
+      </entries>
+      <entries namespace="summary-writer">
+         <entry key="pos" value="96,540"/>
+      </entries>
+      <entries namespace="project-name-determiner">
+         <entry key="pos" value="324,156"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="manual-measure-dir">
+         <entry key="pos" value="48,60"/>
+      </entries>
+      <entries namespace="manual-measure-reader-and-writer">
+         <entry key="pos" value="24,324"/>
+      </entries>
+      <entries namespace="java-scope-creator">
+         <entry key="pos" value="492,240"/>
+      </entries>
+      <entries namespace="systemtype">
+         <entry key="pos" value="136,460"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="552,324"/>
+      </entries>
+      <entries namespace="model-setup">
+         <entry key="pos" value="132,186"/>
+      </entries>
+      <entries namespace="calibration-zip-file">
+         <entry key="pos" value="264,96"/>
+      </entries>
+      <entries namespace="tree-table-layouter">
+         <entry key="pos" value="672,564"/>
+      </entries>
+      <entries namespace="depth-filter">
+         <entry key="pos" value="684,768"/>
+      </entries>
+      <entries namespace="leaf-value-processor">
+         <entry key="pos" value="672,864"/>
+      </entries>
+      <entries namespace="radar-plot-layouter">
+         <entry key="pos" value="673,947"/>
+      </entries>
+      <entries namespace="radar-plot-preparator">
+         <entry key="pos" value="672,672"/>
+      </entries>
+   </meta>
+</conqat>

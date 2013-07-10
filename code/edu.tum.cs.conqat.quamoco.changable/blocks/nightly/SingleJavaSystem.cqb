@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.SingleJavaSystem">
+      <block name="quamoco-generated" spec="edu.tum.cs.conqat.quamoco.nightly.NightlyQuamocoGeneratedJava">
+         <output dir="@output-dir-creator"/>
+         <input scope="@caching-simple-java-scope.scope"/>
+         <calibration-dir attr="@output-dir-creator"/>
+         <project-name attr="@project-name.attr"/>
+         <quality-model file="@model-setup.quality-model"/>
+         <qm-result-dir dir="@qm-result-dir.dir"/>
+      </block>
+      <processor class="org.conqat.engine.html_presentation.layouters.TreeTableLayouter" name="table-layouter">
+         <input ref="@evaluation-result-formatter"/>
+         <info description="Output" name="Output"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.HTMLPresentation" name="html-presentation">
+         <project title="@project-name.attr"/>
+         <output dir="@output-dir-creator"/>
+         <result ref="@table-layouter2"/>
+         <result ref="@table-layouter"/>
+      </processor>
+      <processor class="org.conqat.engine.html_presentation.layouters.TableLayouter" name="table-layouter2">
+         <input ref="@metric-converter"/>
+         <info description="Metrics" name="Metrics"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.MetricConverter" name="metric-converter">
+         <input ref="@quamoco-generated.metrics"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.EvaluationResultFormatter" name="evaluation-result-formatter">
+         <quality-models models="@quamoco-generated.result"/>
+      </processor>
+      <param name="project-dir">
+         <attr name="attr"/>
+      </param>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="output-dir-creator">
+         <part string="@project-dir.attr"/>
+         <part string="/quamoco-report"/>
+      </processor>
+      <param name="quality-model">
+         <doc>{@connDoc}</doc>
+         <attr name="file">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.SummaryWriter" name="summary-writer">
+         <scope scope="@quamoco-generated.scope"/>
+         <output-dir dir="@output-dir-creator"/>
+         <projectname projectname="@project-name.attr"/>
+         <quality-model model="@quamoco-generated.result"/>
+         <result factor="Quality @Product"/>
+         <result factor="Functional Correctness"/>
+         <result factor="Maintainability"/>
+         <result factor="Analysability"/>
+         <result factor="Modifiability"/>
+         <result factor="Reusability"/>
+         <result factor="Testability"/>
+         <result factor="Reliability"/>
+         <result factor="Performance Efficiency"/>
+         <result factor="Security"/>
+         <systemtype attr="@systemtype.attr"/>
+      </processor>
+      <param name="systemtype">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="qm-result-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="model-setup" spec="edu.tum.cs.conqat.quamoco.nightly.ModelSetup">
+         <input file="@quality-model.file"/>
+         <calibration-zip-file attr="@calibration-zip-file.attr"/>
+      </block>
+      <param name="calibration-zip-file">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="caching-simple-java-scope" spec="edu.tum.cs.conqat.quamoco.CachingSimpleJavaScope">
+         <source dir="@project-dir.attr"/>
+         <byte-code dir="@concatenator"/>
+         <cachingstrategy attr="@full-memory-cache"/>
+         <include pattern="**.java"/>
+         <lenient value="true"/>
+      </block>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="concatenator">
+         <part string="@project-dir.attr"/>
+         <part string="/bin-parall-auto"/>
+      </processor>
+      <processor class="org.conqat.engine.cache.strategy.FullMemoryCache" name="full-memory-cache"/>
+      <param name="project-name">
+         <attr name="attr"/>
+      </param>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="quamoco-generated">
+         <entry key="pos" value="336,402"/>
+      </entries>
+      <entries namespace="table-layouter">
+         <entry key="pos" value="480,606"/>
+      </entries>
+      <entries namespace="html-presentation">
+         <entry key="pos" value="372,708"/>
+      </entries>
+      <entries namespace="table-layouter2">
+         <entry key="pos" value="288,612"/>
+      </entries>
+      <entries namespace="metric-converter">
+         <entry key="pos" value="288,540"/>
+      </entries>
+      <entries namespace="evaluation-result-formatter">
+         <entry key="pos" value="480,540"/>
+      </entries>
+      <entries namespace="project-dir">
+         <entry key="pos" value="360,0"/>
+      </entries>
+      <entries namespace="output-dir-creator">
+         <entry key="pos" value="550,82"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="204,36"/>
+      </entries>
+      <entries namespace="summary-writer">
+         <entry key="pos" value="96,540"/>
+      </entries>
+      <entries namespace="systemtype">
+         <entry key="pos" value="136,460"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="552,324"/>
+      </entries>
+      <entries namespace="model-setup">
+         <entry key="pos" value="228,156"/>
+      </entries>
+      <entries namespace="calibration-zip-file">
+         <entry key="pos" value="300,96"/>
+      </entries>
+      <entries namespace="caching-simple-java-scope">
+         <entry key="pos" value="419,257"/>
+      </entries>
+      <entries namespace="concatenator">
+         <entry key="pos" value="492,156"/>
+      </entries>
+      <entries namespace="full-memory-cache">
+         <entry key="pos" value="732,108"/>
+      </entries>
+      <entries namespace="project-name">
+         <entry key="pos" value="48,84"/>
+      </entries>
+   </meta>
+</conqat>

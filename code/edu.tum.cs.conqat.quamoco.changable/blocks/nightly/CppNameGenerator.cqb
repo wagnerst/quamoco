@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.CppNameGenerator">
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="custom-understand-report">
+         <part string="@project-root-dir.dir"/>
+         <part string="/understandReportCustom.csv"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.ProjectNameDeterminer" name="project-name-determiner">
+         <input dir="@project-root-dir.dir"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="understand-report-creator">
+         <part string="@project-root-dir.dir"/>
+         <part string="/understandReport.csv"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="output-dir-creator">
+         <part string="@project-root-dir.dir"/>
+         <part string="/quamoco-report"/>
+      </processor>
+      <param name="project-root-dir">
+         <attr name="dir"/>
+      </param>
+      <out name="understand-report1" ref="@understand-report-creator"/>
+      <out name="projectname" ref="@project-name-determiner"/>
+      <out name="output-dir" ref="@output-dir-creator"/>
+      <out name="understand-report2" ref="@custom-understand-report"/>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="properties-filename">
+         <part string="@project-root-dir.dir"/>
+         <part string="/map.properties"/>
+      </processor>
+      <out name="properties-file" ref="@properties-filename"/>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="custom-understand-report">
+         <entry key="pos" value="575,221"/>
+      </entries>
+      <entries namespace="project-name-determiner">
+         <entry key="pos" value="182,221"/>
+         <entry key="edges_invisible" value="false"/>
+      </entries>
+      <entries namespace="understand-report-creator">
+         <entry key="pos" value="378,221"/>
+      </entries>
+      <entries namespace="output-dir-creator">
+         <entry key="pos" value="1008,216"/>
+         <entry key="edges_invisible" value="false"/>
+      </entries>
+      <entries namespace="projectname">
+         <entry key="pos" value="182,319"/>
+      </entries>
+      <entries namespace="understand-report1">
+         <entry key="pos" value="378,319"/>
+      </entries>
+      <entries namespace="output-dir">
+         <entry key="pos" value="968,319"/>
+      </entries>
+      <entries namespace="project-root-dir">
+         <entry key="pos" value="540,60"/>
+      </entries>
+      <entries namespace="understand-report2">
+         <entry key="pos" value="575,319"/>
+      </entries>
+      <entries namespace="properties-filename">
+         <entry key="pos" value="780,216"/>
+      </entries>
+      <entries namespace="properties-file">
+         <entry key="pos" value="768,324"/>
+      </entries>
+   </meta>
+</conqat>

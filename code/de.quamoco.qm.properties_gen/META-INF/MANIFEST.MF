@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Acceleo Properties_gen Module Runtime Plug-in
+Bundle-SymbolicName: de.quamoco.qm.properties_gen
+Bundle-Version: 2.1.0.qualifier
+Bundle-Activator: de.quamoco.qm.properties_gen.Activator
+Bundle-Vendor: Eclipse.org
+Require-Bundle: org.eclipse.core.runtime, 
+ org.eclipse.emf.codegen.ecore,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore,
+ org.eclipse.acceleo.model,
+ org.eclipse.acceleo.engine
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: de.quamoco.qm.properties_gen.files

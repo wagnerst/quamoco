@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test-src"/>
+	<classpathentry kind="lib" path="lib/edu.tum.cs.emf.commons_1.0.0.201006251202.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.xmi_2.5.0.v200906151043.jar"/>
+	<classpathentry kind="lib" path="lib/ccsm-commons.jar"/>
+	<classpathentry kind="lib" path="lib/ecj.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/conqat"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.commons"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.filesystem"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.io"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.sourcecode"/>
+	<classpathentry kind="lib" path="/conqat/lib/javadoc.jar"/>
+	<classpathentry kind="lib" path="/edu.tum.cs.conqat.java/lib/pmd.jar"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.graph"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.conqat.resource"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.quamoco"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.bugzilla"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.blocklib"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.text"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.clonedetective"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.svn"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.scripting"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.self"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.database"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.architecture"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.junit"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.html_presentation"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.cpp"/>
+	<classpathentry kind="src" path="/edu.tum.cs.conqat.dotnet"/>
+	<classpathentry kind="lib" path="lib/edu.tum.cs.conqat.inspection.cm_1.0.0.201011301824.jar"/>
+	<classpathentry kind="lib" path="/edu.tum.cs.conqat.quamoco/lib/de.quamoco.qm_2.1.0.201012021535.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,9 @@
+#!edu.tum.cs.conqat.inspection.GenerateChecklists_FileSampling
+input.source=C:\workspaceBA\edu.tum.cs.conqat.quamoco-eval\study_objects\jabref-2.5\src
+input.byte-code=C:\workspaceBA\edu.tum.cs.conqat.quamoco-eval\study_objects\jabref-2.5\bin
+inspector.name=Inspector Three
+inspector.name=Inspector Four
+inspector.name=Inspector Five
+inspector.name=Inspector Six
+output.dir=C:\workspaceBA\edu.tum.cs.conqat.inspection\examples
+qm-model.file=C:\runtime-EclipseApplication\WP 1.5 - Base Model\java.qm

@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>Factor</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">Factor</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>Factor</h1>
+
+<div class="excerpt">
+Factors are one of the basic elements of quality models. A factor constitutes a 
+property of the software product (or a part of it) that is related to the product’s quality. A factor 
+is always defined in a way, that it is possible to talk about the degree to which it 
+is present in a product that is assessed. The factor can be further defined by 
+characterizing an entity, but it does not have to define an entity. 
+<br>
+The terms <i>attribute</i> and <i>property</i> are used interchangeably 
+in the literature. Here, we chose the term <i>factor</i> to clearly distinguish it from the 
+term quality attribute defined in ISO 9126 [ISO9126].
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>Use a factor to define a property of an entity entity in a textual descriptive way.
+	</li>
+
+	<li>Provide textual criteria in the factor's description that defines when 
+		an entity exhibits the property and when not.</li>
+
+	<li>Create a factor before you think about the measures that quantify it.
+		This is helpful to ensure that you measure what you really want to measure.
+		Furthermore, it helps to create factors at the right level of abstraction, 
+		preventing the quantitative explosion of factors and impacts.
+	</li>
+	
+	<li>There are different types of factors:
+		<ul>
+			<li><a href="#productfactor">Product Factor</a></li>
+			<li><a href="#ilitiesfactor">Product Quality Attribute (ISO 25010)</a></li>
+			<li><a href="#usecasefactor">Quality in Use Attribute (ISO 25010)</a></li>
+			<li><a href="#satisfactionfactor">Stakeholder Satisfaction</a></li>
+			<li><a href="#ticfactor">Technical Issue</a></li>
+		</ul>
+	</li>
+</ol>
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Qualified Name</h3>
+<ol>
+	<li>
+		The qualified name identifies the factor; it is generated automatically based on the name and the characterizing entity (if set).
+	</li>
+</ol>
+
+<h3 class="attribute">Name</h3>
+<ol>
+	<li>
+		The name of a factor should be an adjective.
+	</li>
+	
+	<li>
+		If it is not possible to find an adjective, formulate the factor name
+		in a way that the factor can be pronounced as:
+		&lt;entity&gt; must be / must have &lt;name&gt;
+	</li>
+	
+	<li>
+		Try to use the same name in combination with different entities if you 
+		intent to characterize them with respect to common property. A large 
+		collection of viable names can be found in the base model. 
+	</li> 
+	
+	<li>
+		If there is no specific reason to do otherwise, only captialize the first word in the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Characterizes</h3>
+<ol>
+	<li>
+		Specify the entity that is characterized by the factor.
+	</li>
+</ol>
+
+<h3 class="attribute">Title</h3>
+<ol>
+	<li>
+		A factor can have an optional title. 
+	</li>
+	<li>
+		The title can be used to provide a more verbose description of the factors, beside the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Description</h3>
+<ol>
+	<li>
+		Provide a comprehensive textual criteria in the factor's description that defines 
+		when an entity exhibits the property and when not. 
+	</li>
+</ol>
+
+<a name="relationrefines" />
+<h3 class="attribute">Refined by / Refines</h3> 
+<ol>
+	<li>
+		Factors are organized in a hierarchy through a
+		refinement relation. 
+	</li>
+	<li>Refinement can only be used between of factors of
+		the same type, e.g., product-factors may only refine 
+		product factors.
+	</li>
+</ol>
+
+<a name="relationimpact" />
+<h3 class="attribute">Influenced by / Influences</h3> 
+<ol>
+	<li>
+		Factors may influence each other, which is modeled as
+		an <a href="Impact.html">Impact</a>. 
+	</li>
+</ol>
+
+<h3 class="attribute">Measured By</h3>
+<ol>
+	<li>
+		Factors can be quantified by one or more  <a href="measure.html">measures</a>. 
+	</li>
+</ol>
+
+<a name="productfactor" />
+<h1>Product Factor</h1>
+
+<div class="excerpt">
+Product factors are properties of specific parts of the software product. These parts
+are specified as artefacts or <a href="entity.html#product"/>product entities</a>, such as, 
+Conciseness @Identifier or Appropriateness @Comment.
+</div>
+<ol>
+	<li>
+		Use product factors to characterize parts of the software.
+	</li>
+	<li>
+		A product factor must make sense, without referring to the impact.
+		<br>
+		<b>Positive example:</b> [Structuredness @Expression].<br>
+		The structuredness is defined, independent of the impact it has on understandability.
+		<br>
+		<b>Negative example:</b> [Efficiency @Expression].<br>
+		You should not introduce this factor and use it to collect all measures that have an impact on performance.
+		Not doing so, assures that a new measure can be uniquely assigned to a factor, without having in mind its impact.
+	</li>
+	<li>
+		An impact of a product-factor to a <i>product quality attribute</i> or a <i>quality in use factor</i> 
+		should point to a leaf in the hierarchy.
+		<br>
+		This way it is assured that a justification is given for each of the impacted factors. 
+		<br>
+		Example: Instead of modeling an impact to [Maintainability] you should model two impacts to
+			[Analyzability], [Modifyability] and give a special justification for both of them. If you would
+			only model one impact to [Maintainability] the justification is less clearer.
+	</li>
+		
+</ol>
+
+<a name="ilitiesfactor" />
+<h1>Product Quality Attribute (ISO 25010)</h1>
+
+<div class="excerpt">
+Product quality attributes define one way to decompose the abstract concept software
+quality. These quality attributes, as given in ISO 25010, relate to the quality of
+the product without explicitly considering its use.   
+
+These quality attributes are colloquially called -illities, because they contain,
+for example, reliability or maintainability. In the standard, the top level attributes
+are refined by so-called quality characteristics.
+
+</div> 
+<ol>
+	<li>
+		Product quality attributes model the -ilities of the ISO 25010.
+	</li>
+	<li>
+		These factors do characterize the entity <i>Product</i>.
+	</li>
+</ol>
+
+<a name="usecasefactor" />
+<h1>Quality in Use Attribute</h1>
+
+<div class="excerpt">
+Quality in use attributes define a way to decompose the abstract concept software quality.
+These quality attributes are defined in the ISO 25010 as description of the quality in its
+various forms of usage. Examples are efficiency or effectiveness.
+
+To be more precise, we add the <a href="entity.html#usecase">activity</a> that is characterised
+by the attribute as entity to the factor. 
+Activities like maintenance, program comprehension, modification, or testing, which 
+can be decomposed in their respective sub-activities, provide a means to model software 
+development cost structures.
+</div>
+
+<ol>
+	<li>
+		The entity of a quality in use attribute is an <a href="entity.html#usecase">activity</a>.
+	</li>
+	<li>
+		Characterize an activity by:
+		<ul>
+			<li>Effectiveness</li>
+			<li>Efficiency</li>
+			<li>Safety</li>
+			<li>Satisfaction</li>
+		</ul>
+	</li>
+</ol>
+
+<a name="satisfactionfactor" />
+<h1>Stakeholder Satisfaction</h1>
+
+<div class="excerpt">
+On a high level of abstraction, product quality contributes to the 
+satisfaction of specific stakeholders. This can also be modeled using 
+the  <a href="entity.html#stakeholder">stakeholder</a> as an entity.
+</div>
+
+<ol>
+	<li>
+		The entity of a stakeholder satisfaction is a <a href="entity.html#stakeholder">stakeholder</a>.
+	</li>
+	<li>
+		These factors have always the name "Satisfaction".
+	</li>
+</ol>
+
+
+
+<a name="ticfactor" />
+<h1>Technical Issue</h1>
+
+<div class="excerpt">
+Technical issues are also a way to decompose the abstract concept of quality. This is a
+technical view, which assigns problems to areas such as memory or declaration.
+</div>
+
+<ol>
+	<li>
+		TIC factors do not characterize specific entities.
+	</li>
+</ol>
+
+
+</body>
+</html>

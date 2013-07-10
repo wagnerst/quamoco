@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml 4833 2011-09-23 09:41:52Z herrmama $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.quamoco.de/qm/v17"
+            class="de.quamoco.qm.QmPackage"
+            genModel="META-INF/qm.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="edu.tum.cs.emf.commons.resources.UUIDResourceFactory"
+            type="qm">
+      </parser>
+      <parser
+            class="edu.tum.cs.emf.commons.resources.UUIDResourceFactory"
+            type="qmr">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.emf.ecore.xmi"
+            file-extensions="qm,qmr"
+            id="de.quamoco.qm"
+            name="QM"
+            priority="normal">
+         <describer
+               class="org.eclipse.emf.ecore.xmi.impl.RootXMLContentHandlerImpl$Describer">
+            <parameter
+                  name="kind"
+                  value="xmi">
+            </parameter>
+            <parameter
+                  name="namespace"
+                  value="http://www.quamoco.de/qm/v17">
+            </parameter>
+         </describer>
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.content_parser">
+      <parser
+            class="edu.tum.cs.emf.commons.resources.UUIDResourceFactory"
+            contentTypeIdentifier="de.quamoco.qm">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.emf.edapt.migrators">
+      <migrator
+            path="model/qm.history">
+      </migrator>
+   </extension>
+
+</plugin>

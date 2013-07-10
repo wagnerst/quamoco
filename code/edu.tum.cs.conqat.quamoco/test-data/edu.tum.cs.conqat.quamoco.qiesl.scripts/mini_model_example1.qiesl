@@ -1,0 +1,11 @@
+SET a = fcol(f("a", 1))
+SET b = fcol(f("b", 2))
+SET c = fcol(f("c", 2))
+
+result = union(
+		a, 
+		b,
+		c
+)
+
+CHECK size(result) == 3

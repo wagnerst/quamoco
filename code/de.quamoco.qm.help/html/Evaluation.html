@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>Evaluation</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">Evaluation</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>Evaluation</h1>
+
+<div class="excerpt">
+An evaluation describes how to calculate 
+the degree to which the factor is present is a system under analysis. 
+
+There are various ways to calculate an evaluation, i.e., 
+by using the predefined operations for a <a href="SingleMeasureEvaluation.html">single measure</a> or  
+the <a href="WeightedSumFactorAggregation.html">weighted sum for factors</a>, 
+by writting <a href="QieslEvaluation.html">QIESL syntax</a> or 
+a simple <a href="TextEvaluation.html">textual specification</a>, 
+as well as performing a <a href="ManualEvaluation.html">manual evaluation</a>.
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>When evaluating a factor based on measures use only measures that are defined there (and a normalization measure for normalizing).</li>
+	<li>When evaluating a factor based on factors use only factors that refine the factor or have an impact.</li>
+</ol>
+
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Qualified Name</h3>
+<ol>
+	<li>
+		The qualified name is the identifier used to refer to the evaluation. It is generated
+		automatically based on the name of the factor and of the evaluation.
+	</li>
+</ol>
+
+<h3 class="attribute">Name</h3>
+<ol>
+	<li>
+		The default is <i>Evaluation</i>. You can optionally give it a specific name, for example,
+		if you want to have different evaluations for a factor.
+	</li>
+</ol>
+
+<h3 class="attribute">Title</h3>
+<ol>
+	<li>
+		A title is an optional additional name for the evaluation.
+	</li>
+</ol>
+
+<h3 class="attribute">Description</h3>
+<ol>
+	<li>
+		This can be used to textually describe and explain the evaluation.
+	</li>
+</ol>
+
+<h3 class="attribute">Maximum Points</h3>
+<ol>
+	<li>
+		A factor is always evaluated using points.
+		Provide the number of points that can be archived by an assessment for this factor 
+		in the best case. By default, the values is 100.
+	</li>
+	<li>
+		An evaluation result of 0 Points means that a factor is not present.
+		An evaluation result with maxPoints means that the factor is full present.
+	</li>
+	<li>
+		For <a href="Factor.html#productfactor">product factors</a> and
+		<a href="Factor.html#ilitiesfactor">-ilities factors</a>  
+		points are used to characterize the degree to which a factor is present in the software product.
+		For <a href="Factor.html#usecasefactor">use case factors</a> they are used
+		to characterize the degree to which the use case satisfies the factor. 
+		For <a href="Factor.html#satisfactionfactor">stakeholder satisfaction factors</a> they are used
+		to characterize the degree to which the stakeholder is satisfied. 
+	</li>
+</ol>
+
+</body>
+</html>

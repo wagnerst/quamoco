@@ -1,0 +1,3 @@
+#!edu.tum.cs.conqat.quamoco.model.QModelAdapter
+input.file=C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\java.qm
+output.dir=c:\tmp_java_adapted123

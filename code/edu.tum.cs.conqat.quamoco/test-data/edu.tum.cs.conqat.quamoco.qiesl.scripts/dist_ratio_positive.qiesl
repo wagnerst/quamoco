@@ -1,0 +1,5 @@
+SET cc = 0.7
+
+result = dist(cc, 0, 1, 1, 100, 100);
+
+CHECK result == 70.0

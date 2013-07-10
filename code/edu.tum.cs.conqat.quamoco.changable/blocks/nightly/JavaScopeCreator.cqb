@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.JavaScopeCreator">
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="bin-dir-creator">
+         <part string="@project-root-dir.attr"/>
+         <part string="/bin"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.string.Concatenator" name="src-dir-creator">
+         <part string="@project-root-dir.attr"/>
+         <part string="/src"/>
+      </processor>
+      <out name="scope" ref="@caching-simple-java-scope.scope"/>
+      <param name="project-root-dir">
+         <attr name="attr"/>
+      </param>
+      <param name="project">
+         <doc>{@connDoc}</doc>
+         <attr name="name">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <block name="caching-simple-java-scope" spec="edu.tum.cs.conqat.quamoco.CachingSimpleJavaScope">
+         <source dir="@src-dir-creator"/>
+         <byte-code dir="@bin-dir-creator"/>
+         <cachingstrategy attr="@full-memory-cache"/>
+         <include pattern="**.java"/>
+         <project name="@project.name"/>
+         <lenient value="true"/>
+      </block>
+      <processor class="org.conqat.engine.cache.strategy.FullMemoryCache" name="full-memory-cache"/>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="bin-dir-creator">
+         <entry key="pos" value="288,108"/>
+      </entries>
+      <entries namespace="src-dir-creator">
+         <entry key="pos" value="72,108"/>
+      </entries>
+      <entries namespace="scope">
+         <entry key="pos" value="228,372"/>
+      </entries>
+      <entries namespace="project-root-dir">
+         <entry key="pos" value="252,28"/>
+      </entries>
+      <entries namespace="project">
+         <entry key="pos" value="492,108"/>
+      </entries>
+      <entries namespace="caching-simple-java-scope">
+         <entry key="pos" value="180,240"/>
+      </entries>
+      <entries namespace="full-memory-cache">
+         <entry key="pos" value="612,132"/>
+      </entries>
+   </meta>
+</conqat>

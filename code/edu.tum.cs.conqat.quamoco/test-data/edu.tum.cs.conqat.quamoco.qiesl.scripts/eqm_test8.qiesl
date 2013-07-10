@@ -1,0 +1,9 @@
+SET MF_PNVTF = qpoints(10)
+SET MImproper_usage_of_printf_or_scanf = fcol(f("b", 4))
+SET MLOC = 10;
+
+result = 0 
+	+ linearDistribution(100, MF_PNVTF / 1000) 
+	+ negativeLinearDistribution(100, extent(methodRange(MImproper_usage_of_printf_or_scanf)) / MLOC);
+	
+CHECK result == 101.0

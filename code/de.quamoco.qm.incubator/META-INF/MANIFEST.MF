@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Incubator Plug-in
+Bundle-SymbolicName: de.quamoco.qm.incubator;singleton:=true
+Bundle-Version: 2.1.0.qualifier
+Bundle-Activator: de.quamoco.qm.incubator.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.quamoco.qm.editor,
+ org.eclipse.ocl.ecore,
+ org.eclipse.core.expressions;bundle-version="3.4.100"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

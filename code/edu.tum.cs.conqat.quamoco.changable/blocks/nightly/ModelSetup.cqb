@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.ModelSetup">
+      <processor class="edu.tum.cs.conqat.quamoco.ModelLoader" name="model-loader">
+         <input file="@input.file"/>
+      </processor>
+      <param name="input">
+         <attr name="file"/>
+      </param>
+      <out name="quality-model" ref="@model-selector"/>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelCalibrator" condition="@file-existence-condition" name="model-calibrator">
+         <models ref="@model-loader"/>
+         <calibration-data file="@calibration-zip-file.attr"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.FileExistenceCondition" name="file-existence-condition">
+         <filename attr="@calibration-zip-file.attr"/>
+      </processor>
+      <param name="calibration-zip-file">
+         <attr name="attr"/>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelSelector" name="model-selector">
+         <qualitymodel attr="@model-selector2"/>
+         <qualitymodel attr="@model-calibrator"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelSelector" condition="!@file-existence-condition" name="model-selector2">
+         <qualitymodel attr="@model-loader"/>
+      </processor>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="model-loader">
+         <entry key="pos" value="144,144"/>
+      </entries>
+      <entries namespace="input">
+         <entry key="pos" value="180,60"/>
+      </entries>
+      <entries namespace="quality-model">
+         <entry key="pos" value="180,588"/>
+      </entries>
+      <entries namespace="model-calibrator">
+         <entry key="pos" value="564,324"/>
+      </entries>
+      <entries namespace="file-existence-condition">
+         <entry key="pos" value="408,204"/>
+      </entries>
+      <entries namespace="calibration-zip-file">
+         <entry key="pos" value="600,96"/>
+      </entries>
+      <entries namespace="model-selector">
+         <entry key="pos" value="156,468"/>
+      </entries>
+      <entries namespace="model-selector2">
+         <entry key="pos" value="144,348"/>
+      </entries>
+   </meta>
+</conqat>

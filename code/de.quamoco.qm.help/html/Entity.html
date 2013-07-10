@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>Entity</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">Entity</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>Entity</h1>
+
+<div class="excerpt">
+An entity is a type of an element that is part of the software product, its environment, or 
+which is a resource required during development, maintenance, or use of a software product. 
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>
+		Use nouns to describe Entities.
+	</li>
+	<li>
+		Use entities to model the parts of the software product that are subject of a quality need.
+	</li>
+	
+	<li>
+	If there is no specific reason to do otherwise, only captialise the first word in the name.
+	</li>
+</ol>
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Qualified Name</h3>
+<ol>
+	<li>
+		The qualified name identifies the entity; it is generated automatically based on the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Name</h3>
+<ol>
+	<li>Use nouns as names</li>
+	<li>There are three types of entities:
+		<ul>
+			<li>
+				<b>Product-Parts: </b> <a name="product"/>
+				They describe a part of a software product. If they are characterized by a factors,
+				a <a href="Factor.html#productfactor">Product-Factor</a> results. The root entity of
+				this hierarchy is an entity <i>Product</i>, which is also characterized by all
+				<a href="Factor.html#ilitiesfactor">ISO 25010 -ilities</a>.
+			</li>
+			<li>
+				<b>Use Cases:</b> <a name="usecase"/>
+				A use case describes an activity conducted with the system by a stakeholder.
+				If they are characterized by a factors,
+				a <a href="Factor.html#usecasefactor">Use Case-Factor</a> results.
+			</li>
+			<li>
+				<b>Stakeholders: </b> <a name="stakeholder"/>
+				A stakeholder describes a role that is interested in the product.
+				If they are characterized by a factors, a 
+				<a href="Factor.html#satisfactionfactor">Satisfaction-Factor</a> results.
+			</li>
+		</ul>
+	</li>
+</ol>
+
+<h3 class="attribute">Description</h3>
+<ol>
+	<li>
+		Describes the entity more detailed. 
+	</li>
+</ol>
+
+<a name="relationisa" />
+<h3 class="attribute">Relation: Is-A</h3> 
+<ol>
+	<li>
+		Entities can be specialized by an "is-a" relation. 
+	</li>
+</ol>
+
+<a name="relationpartof" />
+<h3 class="attribute">Relation: Part-of</h3> 
+<ol>
+	<li>
+		Entities can be decomposed using a "part-of" relation. 
+	</li>
+</ol>
+
+</body>
+</html>

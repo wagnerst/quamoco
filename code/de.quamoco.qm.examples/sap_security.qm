@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_Z8unMGFjEd6QTNDa7CfYsg">
+  <modules xmi:id="_HOuEMXwjEd6MotksAvX0FQ">
+    <properties xmi:id="_Z8unMWFjEd6QTNDa7CfYsg" name="Guardedness" factors="_Z8unN2FjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_Z8unMmFjEd6QTNDa7CfYsg" name="Superfluosness" factors="_Z8unPWFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_Z8unM2FjEd6QTNDa7CfYsg" name="Secrecy" factors="_Z8unQWFjEd6QTNDa7CfYsg"/>
+    <aspects xmi:id="_Z8unQ2FjEd6QTNDa7CfYsg" name="Security" influencedBy="_Z8unOGFjEd6QTNDa7CfYsg _Z8unQmFjEd6QTNDa7CfYsg"/>
+    <aspects xmi:id="_Z8unRGFjEd6QTNDa7CfYsg" name="Maintainability" influencedBy="_Z8unPmFjEd6QTNDa7CfYsg"/>
+    <entities xmi:id="_Z8unNGFjEd6QTNDa7CfYsg" name="Product">
+      <subEntityTypes xmi:id="_Z8unNWFjEd6QTNDa7CfYsg" name="Features">
+        <subEntityTypes xmi:id="_Z8unNmFjEd6QTNDa7CfYsg" name="Search Functionality">
+          <characterizedBy xmi:id="_Z8unN2FjEd6QTNDa7CfYsg" impacts="_Z8unOGFjEd6QTNDa7CfYsg" property="_Z8unMWFjEd6QTNDa7CfYsg"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_Z8unOWFjEd6QTNDa7CfYsg" name="Artifacts">
+        <subEntityTypes xmi:id="_Z8unOmFjEd6QTNDa7CfYsg" name="Package">
+          <subEntityTypes xmi:id="_Z8unO2FjEd6QTNDa7CfYsg" name="Class">
+            <subEntityTypes xmi:id="_Z8unPGFjEd6QTNDa7CfYsg" name="Method">
+              <characterizedBy xmi:id="_Z8unPWFjEd6QTNDa7CfYsg" impacts="_Z8unPmFjEd6QTNDa7CfYsg" property="_Z8unMmFjEd6QTNDa7CfYsg"/>
+            </subEntityTypes>
+          </subEntityTypes>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_Z8unP2FjEd6QTNDa7CfYsg" name="User Interface">
+        <subEntityTypes xmi:id="_Z8unQGFjEd6QTNDa7CfYsg" name="Login Error Message">
+          <characterizedBy xmi:id="_Z8unQWFjEd6QTNDa7CfYsg" impacts="_Z8unQmFjEd6QTNDa7CfYsg" property="_Z8unM2FjEd6QTNDa7CfYsg"/>
+        </subEntityTypes>
+      </subEntityTypes>
+    </entities>
+    <requirements xmi:id="_HO31PXwjEd6MotksAvX0FQ">
+      <impacts xmi:id="_Z8unOGFjEd6QTNDa7CfYsg" influences="_Z8unQ2FjEd6QTNDa7CfYsg" factors="_Z8unN2FjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_Z8unPmFjEd6QTNDa7CfYsg" influences="_Z8unRGFjEd6QTNDa7CfYsg" factors="_Z8unPWFjEd6QTNDa7CfYsg"/>
+      <impacts xmi:id="_Z8unQmFjEd6QTNDa7CfYsg" influences="_Z8unQ2FjEd6QTNDa7CfYsg" factors="_Z8unQWFjEd6QTNDa7CfYsg"/>
+    </requirements>
+  </modules>
+</qm:QualityModel>

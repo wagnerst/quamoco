@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:qm="http://www.quamoco.de/qm/v17" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.quamoco.de/qm/v17">
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:simpleType name="Effect">
+    <xsd:annotation>
+      <xsd:documentation>An effect is a qualitative measure for the impact of a factor on a quality aspect.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="POSITIVE">
+        <xsd:annotation>
+          <xsd:documentation>Positive effect</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="NEGATIVE">
+        <xsd:annotation>
+          <xsd:documentation>Negative effect</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Type">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="NONE"/>
+      <xsd:enumeration value="FINDINGS"/>
+      <xsd:enumeration value="NUMBER"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="QualityModel">
+    <xsd:annotation>
+      <xsd:documentation>Modules allow decomposing a large quality model into smaller, dedicated 
+chunks. All model elements are associated with exactly one module. The 
+relations between model elements can be established across module 
+boundaries.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="entities" type="qm:Entity"/>
+          <xsd:element name="factors" type="qm:Factor"/>
+          <xsd:element name="evaluations" type="qm:Evaluation"/>
+          <xsd:element name="measures" type="qm:Measure"/>
+          <xsd:element name="measurementMethods" type="qm:MeasurementMethod"/>
+          <xsd:element name="tools" type="qm:Tool"/>
+          <xsd:element name="tags" type="qm:Tag"/>
+          <xsd:element name="sources" type="qm:Source"/>
+          <xsd:element name="requires" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="schoolGradeBoundary2" type="xsd:string" use="required"/>
+        <xsd:attribute name="schoolGradeBoundary3" type="xsd:string" use="required"/>
+        <xsd:attribute name="schoolGradeBoundary4" type="xsd:string" use="required"/>
+        <xsd:attribute name="schoolGradeBoundary5" type="xsd:string" use="required"/>
+        <xsd:attribute name="schoolGradeBoundary6" type="xsd:string" use="required"/>
+        <xsd:attribute name="requires" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="QualityModel" type="qm:QualityModel">
+    <xsd:annotation>
+      <xsd:documentation>Modules allow decomposing a large quality model into smaller, dedicated 
+chunks. All model elements are associated with exactly one module. The 
+relations between model elements can be established across module 
+boundaries.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="QualityModelElement">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="originatesFrom" type="qm:Source"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="originatesFrom" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="QualityModelElement" type="qm:QualityModelElement"/>
+  <xsd:complexType name="Source">
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Source" type="qm:Source"/>
+  <xsd:complexType abstract="true" name="DescribedElement">
+    <xsd:annotation>
+      <xsd:documentation>A described element is an annotated element that can have a description.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:attribute name="description" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The description of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DescribedElement" type="qm:DescribedElement">
+    <xsd:annotation>
+      <xsd:documentation>A described element is an annotated element that can have a description.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="NamedElement">
+    <xsd:annotation>
+      <xsd:documentation>A named element is a described element with a name. The name must be
+unique among the elements which are on the same level of hierarchy in
+the model.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:DescribedElement">
+        <xsd:attribute name="name" type="xsd:string" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The name of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="title" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NamedElement" type="qm:NamedElement">
+    <xsd:annotation>
+      <xsd:documentation>A named element is a described element with a name. The name must be
+unique among the elements which are on the same level of hierarchy in
+the model.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="AnnotatedElement">
+    <xsd:annotation>
+      <xsd:documentation>An annotated element can have a number of annotations which are key-
+value-pairs.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:TaggedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="annotations" type="qm:Annotation">
+            <xsd:annotation>
+              <xsd:documentation>The key-value-pairs defined by this annotated element</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="advancedAnnotations" type="qm:AnnotationBase"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AnnotatedElement" type="qm:AnnotatedElement">
+    <xsd:annotation>
+      <xsd:documentation>An annotated element can have a number of annotations which are key-
+value-pairs.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Annotation">
+    <xsd:annotation>
+      <xsd:documentation>A key-value-pair.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="key" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The key</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="value" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>The value</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:element name="Annotation" type="qm:Annotation">
+    <xsd:annotation>
+      <xsd:documentation>A key-value-pair.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Tag">
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tag" type="qm:Tag"/>
+  <xsd:complexType abstract="true" name="TaggedElement">
+    <xsd:complexContent>
+      <xsd:extension base="qm:QualityModelElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="taggedBy" type="qm:Tag"/>
+        </xsd:choice>
+        <xsd:attribute name="taggedBy" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TaggedElement" type="qm:TaggedElement"/>
+  <xsd:complexType name="Entity">
+    <xsd:annotation>
+      <xsd:documentation>An entity type is a type of element which is part of the software product 
+or which is a resource required during development, maintenance and 
+use of a software product. A generalization/specialization (is-a) relation 
+between entity types forms the entity type hierarchy.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="isA" type="qm:Specialization">
+            <xsd:annotation>
+              <xsd:documentation>The parent entity type in the entity type hierarchy</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="partOf" type="qm:Decomposition"/>
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Entity" type="qm:Entity">
+    <xsd:annotation>
+      <xsd:documentation>An entity type is a type of element which is part of the software product 
+or which is a resource required during development, maintenance and 
+use of a software product. A generalization/specialization (is-a) relation 
+between entity types forms the entity type hierarchy.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Specialization">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="parent" type="qm:Entity"/>
+          <xsd:element name="child" type="qm:Entity"/>
+        </xsd:choice>
+        <xsd:attribute name="parent" type="xsd:string"/>
+        <xsd:attribute name="child" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Specialization" type="qm:Specialization"/>
+  <xsd:complexType name="Decomposition">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="parent" type="qm:Entity"/>
+          <xsd:element name="child" type="qm:Entity"/>
+        </xsd:choice>
+        <xsd:attribute name="parent" type="xsd:string"/>
+        <xsd:attribute name="child" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Decomposition" type="qm:Decomposition"/>
+  <xsd:complexType abstract="true" name="CharacterizingElement">
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="characterizes" nillable="true" type="qm:Entity">
+            <xsd:annotation>
+              <xsd:documentation>The entity type which this factor characterizes</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="characterizes" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The entity type which this factor characterizes</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CharacterizingElement" type="qm:CharacterizingElement"/>
+  <xsd:complexType name="Factor">
+    <xsd:annotation>
+      <xsd:documentation>A factor associates a property to an entity type. A factor influences at 
+least one quality aspect, which is specified by an impact for each 
+influenced quality aspect. The factor can be quantified by a number of 
+measures. We do not evaluate the factor, but rather the impact on a 
+certain quality aspect, as the evaluation depends on the influenced 
+quality aspect. Factors are one of the basic building blocks of quality 
+models. They help to concretize quality requirements by specifying on a 
+more detailed level what properties of entity types are important for 
+specific quality aspects.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:CharacterizingElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="influences" type="qm:Impact">
+            <xsd:annotation>
+              <xsd:documentation>The impacts of this factor on quality aspects</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="refines" type="qm:FactorRefinement"/>
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Factor" type="qm:Factor">
+    <xsd:annotation>
+      <xsd:documentation>A factor associates a property to an entity type. A factor influences at 
+least one quality aspect, which is specified by an impact for each 
+influenced quality aspect. The factor can be quantified by a number of 
+measures. We do not evaluate the factor, but rather the impact on a 
+certain quality aspect, as the evaluation depends on the influenced 
+quality aspect. Factors are one of the basic building blocks of quality 
+models. They help to concretize quality requirements by specifying on a 
+more detailed level what properties of entity types are important for 
+specific quality aspects.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="Impact">
+    <xsd:annotation>
+      <xsd:documentation>An impact defines an influence of a factor on a quality aspect. The effect 
+of the influence can be either positive or negative. The influence a factor 
+has on a quality aspect is quantified by a single evaluation, which is 
+termed impact evaluation. Each impact needs to specify in an explicit 
+justification why the factor has an impact on the quality aspect. To 
+ensure that the model contains only relevant impacts, this description of 
+the justification is vital for the impact.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="source" type="qm:Factor">
+            <xsd:annotation>
+              <xsd:documentation>The factors which have this impact on the quality aspect</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="target" type="qm:Factor">
+            <xsd:annotation>
+              <xsd:documentation>The quality aspect on which this impact has effect</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="justification" type="xsd:string" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The justification of this impact</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="effect" type="qm:Effect">
+          <xsd:annotation>
+            <xsd:documentation>Whether this impact has positive or negative effect</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="source" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The factors which have this impact on the quality aspect</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="target" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The quality aspect on which this impact has effect</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Impact" type="qm:Impact">
+    <xsd:annotation>
+      <xsd:documentation>An impact defines an influence of a factor on a quality aspect. The effect 
+of the influence can be either positive or negative. The influence a factor 
+has on a quality aspect is quantified by a single evaluation, which is 
+termed impact evaluation. Each impact needs to specify in an explicit 
+justification why the factor has an impact on the quality aspect. To 
+ensure that the model contains only relevant impacts, this description of 
+the justification is vital for the impact.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType abstract="true" name="Evaluation">
+    <xsd:annotation>
+      <xsd:documentation>An impact evaluation evaluates the influence one factor or more factors 
+in combination have on a quality aspect. The quality model specifies 
+exactly one evaluation for each impact. The impact evaluation is based 
+on the measures associated to the factors. It has to consider all defined 
+measures for its factors. For these measures, the measurement data 
+for all entities are aggregated. The result of the evaluation is an impact 
+evaluation result, which is a value on an ordinal scale.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="evaluates" type="qm:Factor"/>
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="maximumPoints" type="xsd:int"/>
+        <xsd:attribute name="completeness" type="xsd:int" use="required"/>
+        <xsd:attribute name="evaluates" type="xsd:string"/>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Evaluation" type="qm:Evaluation">
+    <xsd:annotation>
+      <xsd:documentation>An impact evaluation evaluates the influence one factor or more factors 
+in combination have on a quality aspect. The quality model specifies 
+exactly one evaluation for each impact. The impact evaluation is based 
+on the measures associated to the factors. It has to consider all defined 
+measures for its factors. For these measures, the measurement data 
+for all entities are aggregated. The result of the evaluation is an impact 
+evaluation result, which is a value on an ordinal scale.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FactorRefinement">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="child" type="qm:Factor"/>
+          <xsd:element name="parent" type="qm:Factor"/>
+        </xsd:choice>
+        <xsd:attribute name="child" type="xsd:string"/>
+        <xsd:attribute name="parent" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FactorRefinement" type="qm:FactorRefinement"/>
+  <xsd:complexType name="Measurement">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="parent" type="qm:Factor"/>
+          <xsd:element name="child" type="qm:Measure"/>
+        </xsd:choice>
+        <xsd:attribute name="parent" type="xsd:string"/>
+        <xsd:attribute name="child" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Measurement" type="qm:Measurement"/>
+  <xsd:complexType name="MeasureRefinement">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="parent" type="qm:Measure"/>
+          <xsd:element name="child" type="qm:Measure"/>
+        </xsd:choice>
+        <xsd:attribute name="parent" type="xsd:string"/>
+        <xsd:attribute name="child" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MeasureRefinement" type="qm:MeasureRefinement"/>
+  <xsd:complexType name="Measure">
+    <xsd:complexContent>
+      <xsd:extension base="qm:CharacterizingElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="measures" type="qm:Measurement">
+            <xsd:annotation>
+              <xsd:documentation>The factors which this measure measures</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+          <xsd:element name="refines" type="qm:MeasureRefinement"/>
+        </xsd:choice>
+        <xsd:attribute name="type" type="qm:Type"/>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Measure" type="qm:Measure"/>
+  <xsd:complexType abstract="true" name="MeasurementMethod">
+    <xsd:complexContent>
+      <xsd:extension base="qm:AnnotatedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="determines" type="qm:Measure"/>
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="determines" type="xsd:string"/>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MeasurementMethod" type="qm:MeasurementMethod"/>
+  <xsd:complexType abstract="true" name="MeasureAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasurementMethod">
+        <xsd:attribute name="description" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The description of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="name" type="xsd:string" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The name of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="title" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MeasureAggregation" type="qm:MeasureAggregation"/>
+  <xsd:complexType abstract="true" name="Instrument">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasurementMethod"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Instrument" type="qm:Instrument"/>
+  <xsd:complexType name="ManualInstrument">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Instrument">
+        <xsd:attribute name="description" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>The description of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="name" type="xsd:string" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The name of this element</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="title" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ManualInstrument" type="qm:ManualInstrument"/>
+  <xsd:complexType name="ToolBasedInstrument">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Instrument">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="tool" type="qm:Tool"/>
+        </xsd:choice>
+        <xsd:attribute name="metric" type="xsd:string" use="required"/>
+        <xsd:attribute name="tool" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ToolBasedInstrument" type="qm:ToolBasedInstrument"/>
+  <xsd:complexType name="Tool">
+    <xsd:complexContent>
+      <xsd:extension base="qm:NamedElement">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="qualityModel" type="qm:QualityModel"/>
+        </xsd:choice>
+        <xsd:attribute name="qualityModel" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Tool" type="qm:Tool"/>
+  <xsd:complexType abstract="true" name="AnnotationBase">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="AnnotationBase" type="qm:AnnotationBase"/>
+  <xsd:complexType name="QIESLEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:TextEvaluation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="QIESLEvaluation" type="qm:QIESLEvaluation"/>
+  <xsd:complexType name="TextEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Evaluation">
+        <xsd:attribute name="specification" type="xsd:string" use="required">
+          <xsd:annotation>
+            <xsd:documentation>The specification of this evaluation</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TextEvaluation" type="qm:TextEvaluation"/>
+  <xsd:complexType abstract="true" name="FormBasedEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Evaluation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FormBasedEvaluation" type="qm:FormBasedEvaluation"/>
+  <xsd:complexType name="SingleMeasureEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FormBasedEvaluation">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="measure" type="qm:Measure"/>
+          <xsd:element name="normlizationMeasure" type="qm:NormalizationMeasure"/>
+          <xsd:element name="function" type="qm:Function"/>
+        </xsd:choice>
+        <xsd:attribute name="range" type="xsd:string"/>
+        <xsd:attribute name="measure" type="xsd:string"/>
+        <xsd:attribute name="normlizationMeasure" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SingleMeasureEvaluation" type="qm:SingleMeasureEvaluation"/>
+  <xsd:complexType abstract="true" name="FactorAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FormBasedEvaluation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FactorAggregation" type="qm:FactorAggregation"/>
+  <xsd:complexType name="NormalizationMeasure">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Measure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NormalizationMeasure" type="qm:NormalizationMeasure"/>
+  <xsd:complexType name="QIESLAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:TextAggregation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="QIESLAggregation" type="qm:QIESLAggregation"/>
+  <xsd:complexType name="TextAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasureAggregation">
+        <xsd:attribute name="specification" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TextAggregation" type="qm:TextAggregation"/>
+  <xsd:complexType abstract="true" name="FormBasedMeasureAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasureAggregation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FormBasedMeasureAggregation" type="qm:FormBasedMeasureAggregation"/>
+  <xsd:complexType name="FactorRanking">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Ranking">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="factor" type="qm:Factor"/>
+        </xsd:choice>
+        <xsd:attribute name="factor" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FactorRanking" type="qm:FactorRanking"/>
+  <xsd:complexType abstract="true" name="LinearFunction">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Function">
+        <xsd:attribute name="lowerBound" type="xsd:double" use="required"/>
+        <xsd:attribute name="upperBound" type="xsd:double" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LinearFunction" type="qm:LinearFunction"/>
+  <xsd:complexType abstract="true" name="Function">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Function" type="qm:Function"/>
+  <xsd:complexType name="LinearIncreasingFunction">
+    <xsd:complexContent>
+      <xsd:extension base="qm:LinearFunction"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LinearIncreasingFunction" type="qm:LinearIncreasingFunction"/>
+  <xsd:complexType name="LinearDecreasingFunction">
+    <xsd:complexContent>
+      <xsd:extension base="qm:LinearFunction"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LinearDecreasingFunction" type="qm:LinearDecreasingFunction"/>
+  <xsd:complexType name="WeightedSumFactorAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FactorAggregation">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="rankings" type="qm:FactorRanking"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="WeightedSumFactorAggregation" type="qm:WeightedSumFactorAggregation"/>
+  <xsd:complexType name="FindingsUnionMeasureAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FormBasedMeasureAggregation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FindingsUnionMeasureAggregation" type="qm:FindingsUnionMeasureAggregation"/>
+  <xsd:complexType name="NumberMeanMeasureAggregation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FormBasedMeasureAggregation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NumberMeanMeasureAggregation" type="qm:NumberMeanMeasureAggregation"/>
+  <xsd:complexType name="ManualEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Evaluation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="ManualEvaluation" type="qm:ManualEvaluation"/>
+  <xsd:complexType abstract="true" name="MeasureEvaluation">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="measure" type="qm:Measure"/>
+      <xsd:element name="normlizationMeasure" type="qm:NormalizationMeasure"/>
+      <xsd:element name="function" type="qm:Function"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="range" type="xsd:string"/>
+    <xsd:attribute name="measure" type="xsd:string"/>
+    <xsd:attribute name="normlizationMeasure" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="MeasureEvaluation" type="qm:MeasureEvaluation"/>
+  <xsd:complexType abstract="true" name="Ranking">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="rank" type="xsd:int"/>
+    <xsd:attribute name="weight" type="xsd:double"/>
+  </xsd:complexType>
+  <xsd:element name="Ranking" type="qm:Ranking"/>
+  <xsd:complexType abstract="true" name="MultiMeasureEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:FormBasedEvaluation"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MultiMeasureEvaluation" type="qm:MultiMeasureEvaluation"/>
+  <xsd:complexType name="WeightedSumMultiMeasureEvaluation">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MultiMeasureEvaluation">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="rankings" type="qm:MeasureRanking"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="WeightedSumMultiMeasureEvaluation" type="qm:WeightedSumMultiMeasureEvaluation"/>
+  <xsd:complexType name="MeasureRanking">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasureEvaluation">
+        <xsd:attribute name="rank" type="xsd:int"/>
+        <xsd:attribute name="weight" type="xsd:double"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MeasureRanking" type="qm:MeasureRanking"/>
+  <xsd:complexType name="QualityModelResult">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="measurementResults" type="qm:MeasurementResult"/>
+      <xsd:element name="evaluationResults" type="qm:EvaluationResult"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="system" type="xsd:string" use="required"/>
+    <xsd:attribute name="date" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="QualityModelResult" type="qm:QualityModelResult"/>
+  <xsd:complexType abstract="true" name="MeasurementResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Result">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="resultsFrom" type="qm:MeasurementMethod"/>
+        </xsd:choice>
+        <xsd:attribute name="resultsFrom" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MeasurementResult" type="qm:MeasurementResult"/>
+  <xsd:complexType name="NumberMeasurementResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasurementResult">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="value" type="qm:DoubleInterval"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NumberMeasurementResult" type="qm:NumberMeasurementResult"/>
+  <xsd:complexType name="FindingsMeasurementResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:MeasurementResult">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="findingMessages" type="qm:FindingMessage"/>
+        </xsd:choice>
+        <xsd:attribute name="count" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="FindingsMeasurementResult" type="qm:FindingsMeasurementResult"/>
+  <xsd:complexType name="DoubleInterval">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="lower" type="xsd:double" use="required"/>
+    <xsd:attribute name="upper" type="xsd:double" use="required"/>
+  </xsd:complexType>
+  <xsd:element name="DoubleInterval" type="qm:DoubleInterval"/>
+  <xsd:complexType name="EvaluationResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:Result">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="value" type="qm:DoubleInterval"/>
+          <xsd:element name="resultsFrom" type="qm:Evaluation"/>
+        </xsd:choice>
+        <xsd:attribute name="resultsFrom" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="EvaluationResult" type="qm:EvaluationResult"/>
+  <xsd:complexType name="SingleMeasureEvaluationResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:EvaluationResult">
+        <xsd:attribute name="ratioAffected" type="xsd:double"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SingleMeasureEvaluationResult" type="qm:SingleMeasureEvaluationResult"/>
+  <xsd:complexType name="MultiMeasureEvaluationResult">
+    <xsd:complexContent>
+      <xsd:extension base="qm:EvaluationResult">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="evaluationResults" type="qm:MeasureRankingEvaluationResult"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MultiMeasureEvaluationResult" type="qm:MultiMeasureEvaluationResult"/>
+  <xsd:complexType name="MeasureRankingEvaluationResult">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="value" type="qm:DoubleInterval"/>
+      <xsd:element name="resultsFrom" type="qm:MeasureRanking"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="ratioAffected" type="xsd:double"/>
+    <xsd:attribute name="resultsFrom" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="MeasureRankingEvaluationResult" type="qm:MeasureRankingEvaluationResult"/>
+  <xsd:complexType abstract="true" name="Result">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="message" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Result" type="qm:Result"/>
+  <xsd:complexType name="FindingMessage">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="message" type="xsd:string"/>
+    <xsd:attribute name="location" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="FindingMessage" type="qm:FindingMessage"/>
+</xsd:schema>

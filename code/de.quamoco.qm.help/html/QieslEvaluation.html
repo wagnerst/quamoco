@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>QIESL Evaluation</title>
+</head>
+
+<body>
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<a class="menu" href="Evaluation.html">Evaluation</a> &gt;&gt; 
+			<span class="menu">QIESL Evaluation</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>QIESL Evaluation</h1>
+
+<div class="excerpt">
+An evaluation using QIESL to specify
+how either the results of measures or the results of evaluations of refining and impacting
+factors are translated into points. 
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>QIESL is a language based on Java. Adhere to the Java language syntax.</li>
+	
+	<li>
+		The final result of the evaluation is expected to be assigned to the pre-defined variable
+		<i>result</i>.
+	</li>
+
+	<li>The details differ depending on what kind of factor you want to evaluate:
+		<ul>
+			<li><a href="#productfactor">Product factor</a></li>
+			<li><a href="#otherfactors">Other factors</a></li>
+		</ul>
+	</li>
+</ol>
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Specification</h3>
+<ol>
+	<li>
+		This contains the actual <a href="qiesl.html">QIESL</a> specification.
+	</li>
+	<li>
+		The box below it shows either <i>all ok</i> or errors in the QIESL specification.
+	</li>
+</ol>
+
+<p>For all other attributes and general hints, see the description of <a href="Evaluation.html">evaluation</a>.</p>
+
+<a name="productfactor" />
+<h1>Product Factor</h1>
+
+<div class="excerpt">
+An evaluation describes how the degree to which a factor is present in the system is calculated.
+This degree can be calculated using the <a href="Factor.html">factors</a> refining a factor, or 
+using the <a href="Measure.html">measures</a> measuring the factor.
+<br>
+In particular, the
+evaluation uses the Quamoco Impact Evaluation Specification Language (QIESL) to specify
+how the results of the measures are translated into points. These points do not express
+whether this is good or bad for quality, but only the degree of presence of the factor.
+For example, the factor <i>Statically unused @Source code part</i> gets the more points,
+the more source code parts are statically unused.
+</div>
+
+<ol>
+    <li>The <a href="Measure.html">measures</a> that you can use in the evaluation
+    of the product factor are shown in the table <i>Available Measures</i>. These are
+    the measures that are in the <i>measured by</i> relation to the factor. </li>
+    
+    <li>
+    	A factor always expresses to which degree it is present <b>in the entire system</b>. 
+    	Therefore, single measurement values (such as findings) must be normalized.
+    	A common form of normalization is to take the size of the single parts into account, 
+    	i.e. larger parts of the system have a larger influence on the resulting value.
+	</li>
+	
+	<li>
+		In order to normalize <i>Findings</i>, so called <i>Ranges</i> are supported. Using
+		a <i>methodRange</i> to normalize findings, means that if a method contains 
+		a finding, than the entire method is considers as affected by the finding. The 
+		normalization then calculates the ratio: 
+		<span style="font-family:Fixedsys,Courier,monospace;">(size of affected methods)/(size of all methods)</span>.
+	</li>
+        
+	<li>
+		If you do not have more information, distribute the maximum number of points
+		evenly over the measures and normalize by a suitable range that is affected. 
+		Examples for ranges are <i>classRange</i> or <i>methodRange</i>. 
+		<br>
+		Because it is very time consuming and error prone to manually write 
+		QIESL formulas, you can use the graphical interface to do so, by clicking the
+		Tab &quot;Evaluation function&quot; in the properties view, or by using the button 
+		<i>Gen. standard QIESL with Ranges</i>.
+	</li>
+
+	<li>
+		In some cases, it is more natural not to normalize by <i>Ranges</i>. For
+		example, one could also normalize by the number of classes: 
+		<span style="font-family:Fixedsys,Courier,monospace;">(number of affected methods)/(number of all methods)</span>.
+		The precondition to use such normalizations, is that there is a measure in the model that is
+		able to calcualte the <i>number of methods</i>. These <a href="Measure.html">measures</a> are explicitly 
+		flagged as normalization measures. 
+	</li>
+</ol>
+
+
+<a name="otherfactors" />
+<h1>Other Factors</h1>
+
+<div class="excerpt">
+For other factors, an evaluation describes how the evaluations of the factors that refine, influence,
+or implement
+the current factors are combined to its result. In many cases, the current factor will not
+know all of these factors, because they can be in other models. Then, we can use a standard
+mean function. If the influencing or refining factors are in the same model, the can also be
+directly included in the evaluation.
+</div>
+
+<ol>
+    <li>
+    	As a first step, just use <i>mean(allImpactsAndRefinements)</i> to calculate the
+    	average points of all influencing, implementing, and refining factors.
+    	<br>
+    	The constant <i>allImpactsAndRefinements</i> does automatically invert the points of
+    	the factors with a negative impact.
+    	<br>
+    	<b>Example:</b>
+    	<br>
+    	Factor A is influenced by B positively.
+    	<br>
+    	Factor A is influenced by C negatively.
+    	<br>
+    	The evaluation of A: 
+    	<span style="font-family:Fixedsys,Courier,monospace;">mean(allImpactsAndRefinements)</span>
+    	results in:
+    	<span style="font-family:Fixedsys,Courier,monospace;">
+    		mean(value(B),maxPointsOf(C)-value(C))</span>
+    </li>
+</ol>
+
+
+</body>
+</html>

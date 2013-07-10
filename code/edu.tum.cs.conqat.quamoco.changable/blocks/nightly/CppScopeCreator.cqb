@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.CppScopeCreator">
+      <processor class="org.conqat.engine.resource.build.ResourceBuilder" name="resource-builder">
+         <scope ref="@file-system-scope"/>
+         <factory pattern="**" ref="@token-element-factory"/>
+      </processor>
+      <processor class="org.conqat.engine.sourcecode.resource.TokenResourceSelector" name="token-resource-selector">
+         <input ref="@resource-builder"/>
+      </processor>
+      <processor class="org.conqat.engine.sourcecode.resource.TokenElementFactory" name="token-element-factory">
+         <language name="CPP"/>
+      </processor>
+      <processor class="org.conqat.engine.resource.scope.filesystem.FileSystemScope" name="file-system-scope">
+         <project name="@project.name"/>
+         <root dir="@root.dir"/>
+         <include pattern="**/*.c"/>
+         <include pattern="**/*.h"/>
+         <include pattern="**/*.cpp"/>
+      </processor>
+      <param name="project">
+         <attr name="name"/>
+      </param>
+      <param name="root">
+         <attr name="dir"/>
+      </param>
+      <out name="tokenresourceselector" ref="@token-resource-selector"/>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="resource-builder">
+         <entry key="pos" value="384,396"/>
+      </entries>
+      <entries namespace="token-resource-selector">
+         <entry key="pos" value="384,490"/>
+      </entries>
+      <entries namespace="token-element-factory">
+         <entry key="pos" value="636,288"/>
+      </entries>
+      <entries namespace="file-system-scope">
+         <entry key="pos" value="408,288"/>
+      </entries>
+      <entries namespace="project">
+         <entry key="pos" value="264,84"/>
+      </entries>
+      <entries namespace="root">
+         <entry key="pos" value="396,144"/>
+      </entries>
+      <entries namespace="tokenresourceselector">
+         <entry key="pos" value="444,576"/>
+      </entries>
+   </meta>
+</conqat>

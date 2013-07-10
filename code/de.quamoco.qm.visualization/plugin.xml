@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml 4949 2011-12-20 13:03:10Z lochmann $
+-->
+
+<plugin>
+
+
+  
+   <extension
+         point="org.eclipse.ui.popupMenus">
+     
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.editor.objectContribution.qualityModelResult"
+            objectClass="de.quamoco.qm.QualityModelResult">
+       
+         <action
+               class="de.quamoco.qm.visualization.ShowKiviatAction"
+               enablesFor="+"
+               id="de.quamoco.qm.visualization.ShowKiviatAction"
+               label="Show Kiviat">
+         </action>
+         <action
+               class="de.quamoco.qm.visualization.ShowOneHierarchySunburstAction"
+               enablesFor="1"
+               id="de.quamoco.qm.visualization.ShowOneHierarchySunburstAction"
+               label="Show One Hierarchy Sunburst">
+         </action>
+         <action
+               class="de.quamoco.qm.visualization.ShowTwoHierarchySunburstAction"
+               enablesFor="1"
+               id="de.quamoco.qm.visualization.ShowTwoHierarchySunburstAction"
+               label="Show Two Hierarchy Sunburst">
+         </action>
+         <action
+               class="de.quamoco.qm.visualization.ShowDeltaSunburstAction"
+               id="de.quamoco.qm.visualization.ShowDeltaSunburstAction"
+               label="Show Delta Sunburst">
+         </action>
+      </objectContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="de.quamoco.qm.visualization.KiviatView"
+            id="de.quamoco.qm.visualization.KiviatView"
+            name="Kiviat"
+            restorable="false">
+      </view>
+      <view
+            allowMultiple="true"
+            class="de.quamoco.qm.visualization.TwoHierarchySunburstView"
+            id="de.quamoco.qm.visualization.TwoHierarchySunburstView"
+            name="Two Hierarchy Sunburst"
+            restorable="false">
+      </view>
+      <view
+            allowMultiple="true"
+            class="de.quamoco.qm.visualization.OneHierarchySunburstView"
+            id="de.quamoco.qm.visualization.OneHierarchySunburstView"
+            name="One Hierarchy Sunburst"
+            restorable="false">
+      </view>
+      <view
+            allowMultiple="true"
+            class="de.quamoco.qm.visualization.DeltaSunburstView"
+            id="de.quamoco.qm.visualization.DeltaSunburstView"
+            name="Delta Sunburst"
+            restorable="false">
+      </view>
+     
+   </extension>
+</plugin>

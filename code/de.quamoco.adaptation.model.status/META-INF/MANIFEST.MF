@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.quamoco.adaptation.model.status;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.quamoco.adaptation.model.status,
+ de.quamoco.adaptation.model.status.impl,
+ de.quamoco.adaptation.model.status.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ de.quamoco.qm;bundle-version="2.1.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy

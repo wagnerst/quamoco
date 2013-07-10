@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.CachingSimpleJavaScope">
+      <processor class="org.conqat.engine.resource.build.ResourceBuilder" name="resource-builder">
+         <scope ref="@caching-file-system-scope"/>
+         <factory case-sensitive="@boolean-defaults-processor" pattern="**" ref="@java-filtering-element-factory"/>
+         <lenient value="@lenient.value"/>
+      </processor>
+      <processor class="org.conqat.engine.java.resource.JavaResourceSelector" name="java-resource-selector">
+         <input ref="@resource-builder"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.defaults.StringDefaultsProcessor" name="string-defaults-processor">
+         <default value="TEST"/>
+         <actual value="@project.name"/>
+      </processor>
+      <processor class="org.conqat.engine.commons.defaults.BooleanDefaultsProcessor" name="boolean-defaults-processor">
+         <default value="true"/>
+         <actual value="@case-sensitive.value"/>
+      </processor>
+      <param name="source">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="include">
+         <doc>{@connDoc}</doc>
+         <attr name="pattern">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="exclude">
+         <doc>{@connDoc}</doc>
+         <attr name="pattern">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="byte-code">
+         <doc>{@connDoc}</doc>
+         <attr name="dir">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="classes-exclude">
+         <doc>{@connDoc}</doc>
+         <attr name="pattern">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="classpath">
+         <doc>{@connDoc}</doc>
+         <attr name="element">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="lenient">
+         <doc>{@connDoc}</doc>
+         <attr name="value">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="project">
+         <doc>{@childDoc source-scope.project}</doc>
+         <attr name="name">
+            <doc>{@childDoc source-scope.project.name}</doc>
+         </attr>
+      </param>
+      <param name="case-sensitive">
+         <doc>{@connDoc}</doc>
+         <attr name="value">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="encoding">
+         <doc>{@connDoc}</doc>
+         <attr name="name">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <out name="scope" ref="@java-resource-selector">
+         <doc>{@connDoc}</doc>
+      </out>
+      <processor class="org.conqat.engine.cache.CachingFileSystemScope" name="caching-file-system-scope">
+         <project name="@string-defaults-processor"/>
+         <root dir="@source.dir"/>
+         <cachingstrategy attr="@cachingstrategy.attr"/>
+         <include pattern="@include.pattern"/>
+         <exclude pattern="@exclude.pattern"/>
+         <exclude pattern="**/package-info.java"/>
+         <case-sensitive value="@boolean-defaults-processor"/>
+      </processor>
+      <param name="cachingstrategy">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="org.conqat.engine.cache.CachingFileSystemScope" name="caching-file-system-scope2">
+         <project name="@string-defaults-processor"/>
+         <root dir="@byte-code.dir"/>
+         <cachingstrategy attr="@cachingstrategy.attr"/>
+         <include pattern="**/*.class"/>
+         <exclude pattern="@classes-exclude.pattern"/>
+         <case-sensitive value="@boolean-defaults-processor"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.quamoco.java.JavaFilteringElementFactory" name="java-filtering-element-factory">
+         <byte-code ref="@caching-file-system-scope2"/>
+         <encoding name="@encoding.name"/>
+         <classpath element="@classpath.element"/>
+      </processor>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="resource-builder">
+         <entry key="pos" value="243,327"/>
+      </entries>
+      <entries namespace="java-resource-selector">
+         <entry key="pos" value="243,411"/>
+      </entries>
+      <entries namespace="string-defaults-processor">
+         <entry key="pos" value="363,27"/>
+      </entries>
+      <entries namespace="boolean-defaults-processor">
+         <entry key="pos" value="15,15"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="source">
+         <entry key="pos" value="123,99"/>
+      </entries>
+      <entries namespace="include">
+         <entry key="pos" value="219,99"/>
+      </entries>
+      <entries namespace="exclude">
+         <entry key="pos" value="315,99"/>
+      </entries>
+      <entries namespace="byte-code">
+         <entry key="pos" value="507,87"/>
+      </entries>
+      <entries namespace="classes-exclude">
+         <entry key="pos" value="683,103"/>
+      </entries>
+      <entries namespace="classpath">
+         <entry key="pos" value="891,183"/>
+      </entries>
+      <entries namespace="lenient">
+         <entry key="pos" value="327,183"/>
+      </entries>
+      <entries namespace="project">
+         <entry key="pos" value="399,-33"/>
+      </entries>
+      <entries namespace="case-sensitive">
+         <entry key="pos" value="39,-33"/>
+         <entry key="edges_invisible" value="false"/>
+      </entries>
+      <entries namespace="encoding">
+         <entry key="pos" value="423,135"/>
+      </entries>
+      <entries namespace="scope">
+         <entry key="pos" value="283,495"/>
+      </entries>
+      <entries namespace="caching-file-system-scope">
+         <entry key="pos" value="96,216"/>
+      </entries>
+      <entries namespace="cachingstrategy">
+         <entry key="pos" value="228,-24"/>
+      </entries>
+      <entries namespace="caching-file-system-scope2">
+         <entry key="pos" value="528,180"/>
+      </entries>
+      <entries namespace="java-filtering-element-factory">
+         <entry key="pos" value="432,264"/>
+      </entries>
+   </meta>
+</conqat>

@@ -1,0 +1,7 @@
+SET c = fcol(f("a", 1))
+SET d = 33
+
+result = 0
+	+negativeLinearDistribution(100, extent(classRange(c)) / d)
+
+CHECK result == 100.0

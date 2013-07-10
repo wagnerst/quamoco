@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Qiesl
+Bundle-SymbolicName: de.quamoco.qm.properties.eval;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.quamoco.qm.properties.eval.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.quamoco.qm;bundle-version="2.1.0",
+ de.quamoco.qm.properties;bundle-version="2.1.0",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.0",
+ edu.tum.cs.emf.commons.ui;bundle-version="1.0.0",
+ de.quamoco.qm.editor;bundle-version="2.1.0",
+ org.junit4
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

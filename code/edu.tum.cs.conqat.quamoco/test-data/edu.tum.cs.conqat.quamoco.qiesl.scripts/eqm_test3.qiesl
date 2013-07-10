@@ -1,0 +1,10 @@
+SET Same_natural_language_Comment = 1;
+SET Natural_language_understandability_by_developers_Comment = 5;
+
+result =  mean(
+Same_natural_language_Comment,
+Natural_language_understandability_by_developers_Comment
+)
+
+
+CHECK result == 3.0;

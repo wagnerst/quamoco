@@ -1,0 +1,7 @@
+SET sizejava = 1000
+SET sizecs = 500
+
+sizeall= sizejava + sizecs;
+result = sizeall;
+
+CHECK result == 1500

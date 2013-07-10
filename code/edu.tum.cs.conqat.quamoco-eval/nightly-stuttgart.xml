@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<!--
+ @version $Rev: 5037 $
+ @levd.rating GREEN Hash: 95B4012728A135027F977C495D46C405
+-->
+<project default="analyze-single" basedir=".">
+
+	<property file="${properties.file}" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="/usr/share/java/ant-contrib.jar" />
+		</classpath>
+	</taskdef>
+
+	<target name="copyresult">
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="/home/jenkins/.jenkins/jobs/Quamoco_trunk/workspace/html-data/builds/${output.name}/study-objects" />
+
+		<copy todir="/home/jenkins/.jenkins/jobs/Quamoco_trunk/workspace/html-data/builds/${output.name}/study-objects">
+			<fileset dir="${studyobjects.root}">
+				<include name="*/quamoco-report/**/*" />
+			</fileset>
+		</copy>
+		
+		<zip
+			destfile="/home/jenkins/.jenkins/jobs/Quamoco_trunk/workspace/html-data/builds/${output.name}/study-objects/calibration.zip"
+		>
+			<mappedresources>
+				<fileset dir="${studyobjects.root}">
+					<include name="*/quamoco-report/calibration*.txt" />
+					<exclude name="**/*SQK*" />
+				</fileset>
+				<regexpmapper from="^.*(calibration.*txt)$$" to="\1"/>
+			</mappedresources>
+		</zip>
+
+		<antcall target="generateindex" />
+	</target>
+
+	<target name="generateindex">
+		<delete file="${index.file}" />
+		<loadfile property="filemessage.head" srcFile="${index.file}.head" />
+		<echo file="${index.file}" append="yes" message="${filemessage.head}" />
+
+		<exec executable="/bin/sh" dir="${testsystems.root}">
+			<arg value="modelversion.sh" />
+			<arg value="${qualitymodel.dir}/java.${qualitymodel.extension}" />
+			<arg value="${index.file}" />
+		</exec>
+		<exec executable="/bin/sh" dir="${testsystems.root}">
+			<arg value="modelversion.sh" />
+			<arg value="${qualitymodel.dir}/csharp.${qualitymodel.extension}" />
+			<arg value="${index.file}" />
+		</exec>
+
+		<foreach target="appendsummaryfile" param="summaryfile">
+			<path>
+				<fileset dir="${studyobjects.root}" casesensitive="yes">
+					<include name="*/quamoco-report/summary.txt" />
+					<exclude name="Sprint1Dummy/**" />
+					<exclude name="Sprint1ManualFindings/**" />
+					<exclude name="httpd-2.2.14/**" />
+				</fileset>
+			</path>
+		</foreach>
+
+		<loadfile property="filemessage.tail" srcFile="${index.file}.tail" />
+		<echo file="${index.file}" append="yes" message="${filemessage.tail}" />
+		
+	</target>
+
+	<target name="appendsummaryfile">
+		<loadfile property="filemessage" srcFile="${summaryfile}" />
+		<echo file="/home/jenkins/.jenkins/jobs/Quamoco_trunk/workspace/html-data/builds/${output.name}/study-objects/index.html" append="yes" message="${filemessage}" />
+	</target>
+
+	<target name="analyze">
+
+		<!-- load the file "systemtype.txt" which contains the information,
+		if the system is Java or C# -->
+		<loadfile property="systemtype.raw" srcFile="${system}/systemtype.txt" />
+		<propertyregex property="systemtype"
+		               input="${systemtype.raw}"
+		               regexp="([a-z]*)"
+		               select="\1"
+		               global="true" />
+		<echo message="system is ${system}" />
+
+
+		<java 
+			fork="true" 
+			maxmemory="512m"
+			dir="${conqat.dir}" 
+			classname="org.conqat.engine.core.driver.Driver" 
+			failonerror="true">
+			<jvmarg value="-Xss20m"/>
+			<classpath>
+				<fileset dir="${conqat.dir}/org.conqat.engine.core">
+					<include name="lib/*.jar"/>
+				</fileset>
+				<filelist>
+					<file name="${conqat.dir}/org.conqat.engine.core/build"/>
+				</filelist>
+			</classpath>
+			<arg value="-c" />
+			<arg value="${conqat.dir}" />
+			<arg value="-f" />
+			<arg value="${conqat.block}${systemtype}.cqb" />
+			<arg value="-p" />
+			<arg value="quality-model.file=${qualitymodel.dir}/${systemtype}.${qualitymodel.extension}" />
+			<arg value="-p" />
+			<arg value="project-dir.attr=${system}" />
+			<arg value="-p" />
+			<arg value="manual-measure-dir.attr=${manual.measure.dir}" />
+			<arg value="-p" />
+			<arg value="systemtype.attr=${systemtype}" />
+			<arg value="-p" />
+			<arg value="qm-result-dir.dir=${system}/quamoco-report/result-qm" />
+			<arg value="-p" />
+			<arg value="calibration-zip-file.attr=/home/jenkins/.jenkins/jobs/Quamoco_trunk/workspace/html-data/builds/nightly/study-objects/calibration.zip" />
+		</java>
+	</target>
+
+	<target name="analyze-all-internal">
+		<foreach target="analyze" param="system">
+			<path>
+				<dirset dir="${studyobjects.root}" casesensitive="yes">
+					<include name="*" />
+					<exclude name="Sprint1Dummy" />
+					<exclude name="Sprint1ManualFindings" />
+					<exclude name="httpd-2.2.14" />
+				</dirset>
+			</path>
+		</foreach>
+	</target>
+
+	<target name="analyze-all">
+		<antcall target="analyze-all-internal" />
+		<antcall target="copyresult" />
+	</target>
+
+	<target name="nightly">
+		<antcall target="analyze-all-internal" />
+		<antcall target="analyze-all-internal" />
+		<antcall target="copyresult" />
+	</target>
+
+	<target name="analyze-all-but-eclipse">
+		<foreach target="analyze" param="system">
+			<path>
+				<dirset dir="${studyobjects.root}" casesensitive="yes">
+					<include name="*" />
+					<exclude name="Sprint1Dummy" />
+					<exclude name="Sprint1ManualFindings" />
+					<exclude name="httpd-2.2.14" />
+					<exclude name="011_eclipse-SDK-3.7M4-win32" />
+				</dirset>
+			</path>
+		</foreach>
+
+		<antcall target="copyresult" />
+	</target>
+
+	<target name="analyze-single">
+		<antcall target="analyze" />
+		<antcall target="copyresult" />
+	</target>
+
+	<target name="testit">
+		<echo message="system is ${system}" />
+	</target>
+	
+	<target name="copyfindbugs">
+		<zip destfile="${studyobjects.root}/allFindbugsReports.zip">
+			
+			<fileset dir="${studyobjects.root}">
+					<include name="*/quamoco-report/findbugs.xml" />
+			</fileset>
+				
+		</zip>
+	</target>
+
+</project>

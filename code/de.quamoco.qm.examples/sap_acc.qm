@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_ZmX8sGFjEd6QTNDa7CfYsg">
+  <modules xmi:id="_FPA2QXwjEd6MotksAvX0FQ">
+    <properties xmi:id="_ZmX8sWFjEd6QTNDa7CfYsg" name="Completeness" factors="_ZmX8uWFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZmX8smFjEd6QTNDa7CfYsg" name="Conformance" factors="_ZmX8u2FjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZmX8s2FjEd6QTNDa7CfYsg" name="Existence" factors="_ZmX8wGFjEd6QTNDa7CfYsg _ZmX8wmFjEd6QTNDa7CfYsg _ZmX8xGFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZmX8tGFjEd6QTNDa7CfYsg" name="Simplicity" factors="_ZmX8vGFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZmX8tWFjEd6QTNDa7CfYsg" name="Descriptiveness" factors="_ZmX8xWFjEd6QTNDa7CfYsg"/>
+    <properties xmi:id="_ZmX8tmFjEd6QTNDa7CfYsg" name="Unambiguousness" factors="_ZmX8x2FjEd6QTNDa7CfYsg"/>
+    <entities xmi:id="_ZmX8t2FjEd6QTNDa7CfYsg" name="User Interface">
+      <subEntityTypes xmi:id="_ZmX8uGFjEd6QTNDa7CfYsg" name="Tooltip">
+        <characterizedBy xmi:id="_ZmX8uWFjEd6QTNDa7CfYsg" description="If tooltips are used the tooltip text must include all information of the element(s) to which the tooltip is associated." property="_ZmX8sWFjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZmX8umFjEd6QTNDa7CfYsg" name="Text">
+        <characterizedBy xmi:id="_ZmX8u2FjEd6QTNDa7CfYsg" description="SAP Accessibility Standard text formulations must be applied, if available." property="_ZmX8smFjEd6QTNDa7CfYsg"/>
+        <characterizedBy xmi:id="_ZmX8vGFjEd6QTNDa7CfYsg" description="Use the clearest and simplest language appropriate for an application's content.  " property="_ZmX8tGFjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZmX8vWFjEd6QTNDa7CfYsg" name="Widget">
+        <subEntityTypes xmi:id="_ZmX8vmFjEd6QTNDa7CfYsg" name="Table">
+          <subEntityTypes xmi:id="_ZmX8v2FjEd6QTNDa7CfYsg" name="Row Header">
+            <characterizedBy xmi:id="_ZmX8wGFjEd6QTNDa7CfYsg" description="A data table must have explicit (visible) column headers and, if appropriate, row headers as well." property="_ZmX8s2FjEd6QTNDa7CfYsg"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_ZmX8wWFjEd6QTNDa7CfYsg" name="Column Header">
+            <characterizedBy xmi:id="_ZmX8wmFjEd6QTNDa7CfYsg" description="A data table must have explicit (visible) column headers and, if appropriate, row headers as well." property="_ZmX8s2FjEd6QTNDa7CfYsg"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_ZmX8w2FjEd6QTNDa7CfYsg" name="Label">
+          <characterizedBy xmi:id="_ZmX8xGFjEd6QTNDa7CfYsg" description="Every UI element on a screen must have a visible, descriptive, and meaningful label explicitely associated with it. " property="_ZmX8s2FjEd6QTNDa7CfYsg"/>
+          <characterizedBy xmi:id="_ZmX8xWFjEd6QTNDa7CfYsg" description="Every UI element on a screen must have a visible, descriptive, and meaningful label explicitely associated with it. " property="_ZmX8tWFjEd6QTNDa7CfYsg"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZmX8xmFjEd6QTNDa7CfYsg" name="Icon/Image">
+        <characterizedBy xmi:id="_ZmX8x2FjEd6QTNDa7CfYsg" description="Do not use identical icons/images to convey different meanings for controls, status indicators, or other programmatic elements." property="_ZmX8tmFjEd6QTNDa7CfYsg"/>
+      </subEntityTypes>
+    </entities>
+  </modules>
+</qm:QualityModel>

@@ -1,0 +1,8 @@
+SET system = dict(set(r(1,100)))
+SET findingMethods = dict(set(r(5, 84)))
+
+result = distRatioToPoints(
+			loc(findingMethods) 
+			/ loc(system));
+
+CHECK result == 7.0

@@ -1,0 +1,5 @@
+#!edu.tum.cs.conqat.quamoco.nightly.SingleJavaSystem
+project-name.attr=Test
+project-dir.attr=C:\Users\lochmann\Downloads\system\content
+quality-model.file=C:\Projekte\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\java.qm
+calibration-zip-file.attr=asdjfasdf.calib

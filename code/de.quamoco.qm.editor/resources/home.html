@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<!-- Charset -->
+		<meta charset="utf-8"/>
+		
+		<!-- Title -->
+		<title>Quamoco Web Portal</title>
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="styles/default.css"/>
+		
+	</head>
+	<body>
+		
+		<!-- Head -->
+		<div class="area" id="head">
+			<center><a href="http://www.quamoco.de/"><img src="banner_eng.png"/ alt="Quamoco"></a></center>
+		</div>
+		
+		<!-- Body -->
+		<div class="area pad" id="body">
+		
+		<p>
+		<b><a href="http://www.quamoco.de/">Back to the Quamoco Web Page</a></b>
+		</p>
+		
+		<h3>
+		Welcome to the Quamoco web portal! 
+		</h3>
+		
+		<p>
+		Here you can learn everything about the Quamoco quality model.
+		</p>
+		
+		<p>
+		Go to the <a href="explorer.html" style="font-variant: small-caps;">Explorer</a> to view the quality model.
+		</p>
+		
+		<h3>Structure of the Quality Model</h3> 
+		
+		Here we give a brief overview of the structure of the quality model. 
+		
+		<img src="ModelStructure.png" alt="Structure of the Quamoco Quality Model" width="650"/>
+		
+		<p>
+		The main concept of the quality model are <i>Factors</i>. A factor expresses a property of an
+		entity. We describe with entities the things that are important for quality. Properties describe 
+		the attributes of the things we are interested in. 
+		</p>
+		
+		<p>This concept of a factor is rather general. Thus, we use it on two levels of abstraction:
+		<ol>
+			<li><i>Quality Aspects</i> describe abstract quality goals defined for the whole product. In
+				our quality model we use the "-ilities" of ISO 25010 as quality aspects. Typical examples
+				for such quality aspects are <i>Maintainability</i>, <i>Analysability</i>, and <i>Modifiability</i>.
+			</li>
+			<li><i>Product Factors</i> describe concrete, measurable properties of concrete entities. An example
+				for a factor is the <i>Complexity of a method</i>, which can be measured by the cyclomatic complexity
+				number, or by the nesting depth of the method. 
+			</li>
+		</ol>
+		</p>
+		
+		<p>
+		To close the gap between abstract quality aspects and measurable product factors, we need to set
+		the product factors in relation to the quality aspects. This is done via <i>Impacts</i>. An impact 
+		is either positive or negative and describes how the degree of presence or absence of a product factor 
+		influences a quality aspect. 
+		</p>
+		
+		<p>
+		A third layer in the levels of abstraction are <i>Measures</i>, which describe how a specify product factor
+		can be quantified. To realize the connection to concrete tools in a quality assessment, we further introduce
+		<i>Instruments</i>. An instrument describes a concrete implementation of a measure. For the example of the 
+		nesting depth, an instrument is the corresponding metric as implemented in the quality analysis framework
+		ConQAT. This way, different tools can be used for a single measure. 
+		</p>
+		
+		<p>
+		In order to fully operationalize the quality model we need to specify aggregation formulas. They are
+		called <i>Evaluations</i> and they are assigned to the factors in the quality model. 
+		</p>		
+		
+		</div>
+		
+		<!-- Menu -->
+		<div class="area" id="menu" align="right">
+			<ul>
+				<li><a class="self" href="home.html">Home</a></li>
+				<li><a  href="explorer.html">Explorer</a></li>
+				<li><a href="imprint.html">Imprint</a></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

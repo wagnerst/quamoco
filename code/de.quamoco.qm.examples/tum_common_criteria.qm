@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_3h2xUH2kEd6fvtFUFTPwiQ">
+  <modules xmi:id="_3-d00H2kEd6fvtFUFTPwiQ" name="Configuration Management (CC chap. 13)">
+    <properties xmi:id="_e_rfMH2oEd6XJqM1CCOWEw" name="existence" factors="_730ZEH2xEd6XJqM1CCOWEw _9ZausH2xEd6XJqM1CCOWEw _GTREQH2yEd6XJqM1CCOWEw _TPqCMH2yEd6XJqM1CCOWEw _a2pBsH2yEd6XJqM1CCOWEw _5p2QMH2yEd6XJqM1CCOWEw _9cTkUH9WEd65VtBv9ZMgng _IuJE8H9XEd65VtBv9ZMgng _2acfkH9gEd65VtBv9ZMgng _JcqzUH9hEd65VtBv9ZMgng _luMIMH9hEd65VtBv9ZMgng _3DMIEIAEEd6ryYDjQCjYJA _JXWb8IAFEd6ryYDjQCjYJA _aukmcIAFEd6ryYDjQCjYJA _ip1M0IAFEd6ryYDjQCjYJA _oQNmgIAFEd6ryYDjQCjYJA _xFSJwIAFEd6ryYDjQCjYJA _K2sDkIAMEd6ryYDjQCjYJA _LEi5YIAMEd6ryYDjQCjYJA _8fdp4IAMEd6ryYDjQCjYJA _927zIIAMEd6ryYDjQCjYJA _VR6P0IANEd6ryYDjQCjYJA _gXF0gIANEd6ryYDjQCjYJA _lnk2sIANEd6ryYDjQCjYJA _ygPLMIANEd6ryYDjQCjYJA _4O46oIAOEd6ryYDjQCjYJA _-EBiAIAOEd6ryYDjQCjYJA _Np2nYIAPEd6ryYDjQCjYJA _TrW20IAPEd6ryYDjQCjYJA _uQjMwIAPEd6ryYDjQCjYJA _w9HgsIAPEd6ryYDjQCjYJA _F-mWcIAQEd6ryYDjQCjYJA _VMbykIAQEd6ryYDjQCjYJA _omDSoIAQEd6ryYDjQCjYJA _YDoMsIAREd6ryYDjQCjYJA _i9LwMIAREd6ryYDjQCjYJA _jKvrEIAREd6ryYDjQCjYJA _jYmg4IAREd6ryYDjQCjYJA _jvGVUIAREd6ryYDjQCjYJA _G3voIIAUEd6ryYDjQCjYJA _lr1ncIAUEd6ryYDjQCjYJA _USVTEIAWEd6ryYDjQCjYJA _XfiO4IAWEd6ryYDjQCjYJA _w05fMIAXEd6ryYDjQCjYJA _DBvucID6Ed6WxICbbaWZFg _OMlPMID6Ed6WxICbbaWZFg _f24twID6Ed6WxICbbaWZFg _mET5UID6Ed6WxICbbaWZFg _0aG6MID6Ed6WxICbbaWZFg _DlsTkID7Ed6WxICbbaWZFg _KkAJgID7Ed6WxICbbaWZFg _QfGO8ID7Ed6WxICbbaWZFg _WjI1AID7Ed6WxICbbaWZFg _UBxPAID8Ed6WxICbbaWZFg _enf3kID8Ed6WxICbbaWZFg _4gtRQID8Ed6WxICbbaWZFg _95-cAID8Ed6WxICbbaWZFg _EwFYMID9Ed6WxICbbaWZFg _tEAvAID9Ed6WxICbbaWZFg _0KqooID9Ed6WxICbbaWZFg _9Fsp8ID9Ed6WxICbbaWZFg _QEU3IID-Ed6WxICbbaWZFg _FO03wID_Ed6WxICbbaWZFg _LEZkAID_Ed6WxICbbaWZFg _V-ZMYID_Ed6WxICbbaWZFg _a7y6gID_Ed6WxICbbaWZFg _mTJNQID_Ed6WxICbbaWZFg _qcY6kID_Ed6WxICbbaWZFg _507x4ID_Ed6WxICbbaWZFg _KkzogIEAEd6WxICbbaWZFg _RA1QwIEAEd6WxICbbaWZFg _dJ8-sIEAEd6WxICbbaWZFg _TG8zQIEBEd6WxICbbaWZFg _d163YIEBEd6WxICbbaWZFg _GYSS0IECEd6WxICbbaWZFg _bazDUIECEd6WxICbbaWZFg _bxJGwIECEd6WxICbbaWZFg _b-HLwIECEd6WxICbbaWZFg _cMkegIECEd6WxICbbaWZFg _A5zbcIEDEd6WxICbbaWZFg _EkNQoIEDEd6WxICbbaWZFg _Kw41UIEDEd6WxICbbaWZFg _QJtUIIEDEd6WxICbbaWZFg _T_lZgIEDEd6WxICbbaWZFg _YA8WIIEDEd6WxICbbaWZFg _ccq6kIEDEd6WxICbbaWZFg _CRbgQIEEEd6WxICbbaWZFg _YMkh4IEEEd6WxICbbaWZFg _kFJ5cIEEEd6WxICbbaWZFg _AgfRoIEFEd6WxICbbaWZFg _QXltMIEFEd6WxICbbaWZFg _SHpVkIEFEd6WxICbbaWZFg _9sV5kIEFEd6WxICbbaWZFg _CMiuUIEGEd6WxICbbaWZFg _PHuyYIEGEd6WxICbbaWZFg"/>
+    <properties xmi:id="_5ku8IH2xEd6XJqM1CCOWEw" name="automation" factors="_PyJR8IABEd6ryYDjQCjYJA _WMPnkIABEd6ryYDjQCjYJA _qoK5MIABEd6ryYDjQCjYJA _0iZGoIABEd6ryYDjQCjYJA _YjMg4ID-Ed6WxICbbaWZFg"/>
+    <properties xmi:id="_eFx3MH2yEd6XJqM1CCOWEw" name="adequateness" factors="_fXSiYH2yEd6XJqM1CCOWEw __0hX4H9hEd65VtBv9ZMgng _R9xKUH9kEd65VtBv9ZMgng _kF4Q4IABEd6ryYDjQCjYJA _fXngEIADEd6ryYDjQCjYJA _n-OlAIANEd6ryYDjQCjYJA _Su0rMIAREd6ryYDjQCjYJA _97jbIIAREd6ryYDjQCjYJA _H9IYUIATEd6ryYDjQCjYJA _SQnsYID6Ed6WxICbbaWZFg _uC4AcID8Ed6WxICbbaWZFg _MN1jMID9Ed6WxICbbaWZFg _Kv-ooID-Ed6WxICbbaWZFg _aM2mUID-Ed6WxICbbaWZFg _hIefMID_Ed6WxICbbaWZFg _aeb-MIEBEd6WxICbbaWZFg _6vqC0IEBEd6WxICbbaWZFg _KMhZcIECEd6WxICbbaWZFg _u8wKkIEDEd6WxICbbaWZFg _N9Cy0IEEEd6WxICbbaWZFg _q02roIEEEd6WxICbbaWZFg _VoE58IEGEd6WxICbbaWZFg"/>
+    <properties xmi:id="_0IYLsH2yEd6XJqM1CCOWEw" name="uniqueness" factors="_h2ZNsH9VEd6p5rilvOZfFA _Tw4HsH9ZEd65VtBv9ZMgng"/>
+    <properties xmi:id="_d_gXgH9cEd65VtBv9ZMgng" name="completeness" factors="_gXgJoH9cEd65VtBv9ZMgng _VKN4MH9kEd65VtBv9ZMgng _ktW18H9kEd65VtBv9ZMgng _2GbPwIACEd6ryYDjQCjYJA _axAhUIADEd6ryYDjQCjYJA _r28ukIADEd6ryYDjQCjYJA _zVcgcIADEd6ryYDjQCjYJA _5RpjsIAEEd6ryYDjQCjYJA _GrRWkIANEd6ryYDjQCjYJA _Y29D4IANEd6ryYDjQCjYJA _ZfqiUIAQEd6ryYDjQCjYJA _whKIAIAQEd6ryYDjQCjYJA _aIjR0IAREd6ryYDjQCjYJA _EaJAcIAYEd6ryYDjQCjYJA _s7UNYID6Ed6WxICbbaWZFg _-KVeIID6Ed6WxICbbaWZFg _9XiSwID7Ed6WxICbbaWZFg _HtUa0ID8Ed6WxICbbaWZFg _h8lkEID8Ed6WxICbbaWZFg _AmY-8ID9Ed6WxICbbaWZFg _R8a2oID9Ed6WxICbbaWZFg _YsajwID9Ed6WxICbbaWZFg _ee3qkID9Ed6WxICbbaWZFg _HRDDoID-Ed6WxICbbaWZFg _tXjEIID_Ed6WxICbbaWZFg _Twq7IIEAEd6WxICbbaWZFg _iE-HMIEAEd6WxICbbaWZFg _iySOQIECEd6WxICbbaWZFg _lWf3cIECEd6WxICbbaWZFg _nRI_MIECEd6WxICbbaWZFg _pL7Q4IECEd6WxICbbaWZFg _GfAT8IEEEd6WxICbbaWZFg _I0xRcIEEEd6WxICbbaWZFg _UTkQAIEEEd6WxICbbaWZFg _H2gAcIEGEd6WxICbbaWZFg"/>
+    <properties xmi:id="_orDM0H9fEd65VtBv9ZMgng" name="conformity" factors="_qTgYYH9fEd65VtBv9ZMgng _jvb-cIAPEd6ryYDjQCjYJA _fCeqoIAQEd6ryYDjQCjYJA _zPD4sIAQEd6ryYDjQCjYJA _vC4WsIAREd6ryYDjQCjYJA _m2GlsIAVEd6ryYDjQCjYJA _0zajMIAXEd6ryYDjQCjYJA _2_0YMID6Ed6WxICbbaWZFg _BFX2cID8Ed6WxICbbaWZFg _eythsID_Ed6WxICbbaWZFg _fSUSAIEDEd6WxICbbaWZFg _GMZEgIEFEd6WxICbbaWZFg"/>
+    <entities xmi:id="_Wd2ZUH2uEd6XJqM1CCOWEw" name="Configuration Management">
+      <subEntityTypes xmi:id="_bmSSwH2uEd6XJqM1CCOWEw" name="CM system">
+        <annotations xmi:id="_8dAb0IEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_8vyN4IEJEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_9ZausH2xEd6XJqM1CCOWEw" description="ACM_AUT.1.1D The developer shall use a CM system.&#xD;&#xA;ACM_CAP.2.2D The developer shall use a CM system.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_qTgYYH9fEd65VtBv9ZMgng" description="ACM_CAP.3.9C The evidence shall demonstrate that the CM system is operating in accordance with the CM plan.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+        <characterizedBy xmi:id="_ktW18H9kEd65VtBv9ZMgng" description="ACM_CAP.5.16C The CM system shall clearly identify the configuration items that comprise the TSF.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        <subEntityTypes xmi:id="_DXM7wH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.1C The CM system shall provide an automated means by which only authorised changes are made to the TOE implementation representation.&#xD;&#xA;" name="autorisation mechanism">
+          <annotations xmi:id="_IpFMkIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_WdfXoIEJEd6RRawGCGXNcQ" key="co" value="func"/>
+          <characterizedBy xmi:id="_GTREQH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.1C The CM system shall provide an automated means by which only authorised changes are made to the TOE implementation representation.&#xD;&#xA;ACM_CAP.3.11C The CM system shall provide measures such that only authorised changes are made to the configuration items.&#xD;&#xA;&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_PyJR8IABEd6ryYDjQCjYJA" description="ACM_AUT.1.1C The CM system shall provide an automated means by which only authorised changes are made to the TOE implementation representation.&#xD;&#xA;" property="_5ku8IH2xEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_kF4Q4IABEd6ryYDjQCjYJA" description="ACM_AUT.2.1C The CM system shall provide an automated means by which only authorised changes are made to the TOE implementation representation, and to all other configuration items.&#xD;&#xA;ACM_CAP.5.19C The CM documentation shall demonstrate that the use of the CM system, together with the development security measures, allow only authorised changes to be made to the TOE.&#xD;&#xA;ACM_CAP.5.20C The CM documentation shall demonstrate that the use of the integration procedures ensures that the generation of the TOE is correctly performed in an authorised manner.&#xD;&#xA;ACM_CAP.5.21C The CM documentation shall demonstrate that the CM system is sufficient to ensure that the person responsible for accepting a configuration item into CM is not the person who developed it.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_QO-fcH2yEd6XJqM1CCOWEw" description="&#xD;&#xA;" name="generation mechanism">
+          <annotations xmi:id="_YlGkYIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_aLCAYIEJEd6RRawGCGXNcQ" key="co" value="func"/>
+          <characterizedBy xmi:id="_TPqCMH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.2C The CM system shall provide an automated means to support the generation of the TOE.&#xD;&#xA;ACM_CAP.4.12C The CM system shall support the generation of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_R9xKUH9kEd65VtBv9ZMgng" description="ACM_CAP.5.20C The CM documentation shall demonstrate that the use of the integration procedures ensures that the generation of the TOE is correctly performed in an authorised manner.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_WMPnkIABEd6ryYDjQCjYJA" description="ACM_AUT.1.2C The CM system shall provide an automated means to support the generation of the TOE.&#xD;&#xA;" property="_5ku8IH2xEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_qIpMIH2yEd6XJqM1CCOWEw" description="" name="traceability">
+          <annotations xmi:id="_AckosIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_AtjrAIEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_zVcgcIADEd6ryYDjQCjYJA" description="ACM_CAP.5.18C The CM system shall be able to identify the master copy of all material used to generate the TOE.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+          <subEntityTypes xmi:id="_v5PxQIABEd6ryYDjQCjYJA" name="Change management">
+            <annotations xmi:id="_ekhJIIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+            <annotations xmi:id="_e2ZjUIEJEd6RRawGCGXNcQ" key="co" value="func"/>
+            <characterizedBy xmi:id="_qoK5MIABEd6ryYDjQCjYJA" description="ACM_AUT.2.5C The CM system shall provide an automated means to ascertain the changes between the TOE and its preceding version.&#xD;&#xA;" property="_5ku8IH2xEd6XJqM1CCOWEw"/>
+            <characterizedBy xmi:id="_r28ukIADEd6ryYDjQCjYJA" description="ACM_CAP.5.17C The CM system shall support the audit of all modifications to the TOE, including the originator, date, and time in the audit trail.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_xxqEYIABEd6ryYDjQCjYJA" name="Impact analysis">
+            <annotations xmi:id="_hefm8IEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+            <annotations xmi:id="_hwO3MIEJEd6RRawGCGXNcQ" key="co" value="func"/>
+            <characterizedBy xmi:id="_0iZGoIABEd6ryYDjQCjYJA" description="ACM_AUT.2.6C The CM system shall provide an automated means to identify all other configuration items that are affected by the modification of a given configuration item.&#xD;&#xA;" property="_5ku8IH2xEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_1WK0gH2yEd6XJqM1CCOWEw" description="" name="version reference">
+          <annotations xmi:id="_lSbyoIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_lhC2YIEJEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_5p2QMH2yEd6XJqM1CCOWEw" description="ACM_CAP.1.1D The developer shall provide a reference for the TOE.&#xD;&#xA;ACM_CAP.1.2C The TOE shall be labelled with its reference.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_h2ZNsH9VEd6p5rilvOZfFA" description="ACM_CAP.1.1C The reference for the TOE shall be unique to each version of the TOE.&#xD;&#xA;ACM_CAP.2.1C The reference for the TOE shall be unique to each version of the TOE.&#xD;&#xA;" property="_0IYLsH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_eEUFIIADEd6ryYDjQCjYJA" name="Responsibilities">
+          <annotations xmi:id="_p7bXAIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_qM3FQIEJEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_fXngEIADEd6ryYDjQCjYJA" description="ACM_CAP.5.15C The CM system shall require that the person responsible for accepting a configuration item into CM is not the person who developed it.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_m8mDsH2uEd6XJqM1CCOWEw" name="CM documentation">
+        <annotations xmi:id="_uNebAIEJEd6RRawGCGXNcQ" key="co" value="rep"/>
+        <annotations xmi:id="_ubx8wIEJEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <characterizedBy xmi:id="_9cTkUH9WEd65VtBv9ZMgng" description="ACM_CAP.2.3D The developer shall provide CM documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_VKN4MH9kEd65VtBv9ZMgng" description="ACM_CAP.3.3C The CM documentation shall include a configuration list and a CM plan.&#xD;&#xA;ACM_CAP.3.10C The CM documentation shall provide evidence that all configuration items have been and are being effectively maintained under the CM system.&#xD;&#xA;ACM_CAP.5.19C The CM documentation shall demonstrate that the use of the CM system, together with the development security measures, allow only authorised changes to be made to the TOE.&#xD;&#xA;ACM_CAP.5.20C The CM documentation shall demonstrate that the use of the integration procedures ensures that the generation of the TOE is correctly performed in an authorised manner.&#xD;&#xA;ACM_CAP.5.21C The CM documentation shall demonstrate that the CM system is sufficient to ensure that the person responsible for accepting a configuration item into CM is not the person who developed it.&#xD;&#xA;ACM_CAP.5.22C The CM documentation shall justify that the acceptance procedures provide for an adequate and appropriate review of changes to all configuration items.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_aHgnoH2uEd6XJqM1CCOWEw" name="CM plan">
+        <annotations xmi:id="_HDLwUIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_HP2TUIEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_730ZEH2xEd6XJqM1CCOWEw" description="ACM_AUT.1.2D The developer shall provide a CM plan.&#xD;&#xA;ACM_CAP.3.3C The CM documentation shall include a configuration list and a CM plan.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_2GbPwIACEd6ryYDjQCjYJA" description="ACM_CAP.3.8C The CM plan shall describe how the CM system is used.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        <subEntityTypes xmi:id="_XlINoH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.3C The CM plan shall describe the automated tools used in the CM system.&#xD;&#xA;" name="tool description">
+          <annotations xmi:id="_KUjacIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_Kkpr8IEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_a2pBsH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.3C The CM plan shall describe the automated tools used in the CM system.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_fXSiYH2yEd6XJqM1CCOWEw" description="ACM_AUT.1.4C The CM plan shall describe how the automated tools are used in the CM system.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_G5BWYH9XEd65VtBv9ZMgng" name="Configuration list">
+        <annotations xmi:id="_PcsY8IEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_Pp8x0IEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_IuJE8H9XEd65VtBv9ZMgng" description="ACM_CAP.2.3C The CM documentation shall include a configuration list.&#xD;&#xA;ACM_SCP.1.1D The developer shall provide a list of configuration items for the TOE.&#xD;&#xA;ACM_SCP.2.1D The developer shall provide a list of configuration items for the TOE.&#xD;&#xA;ACM_SCP.3.1D The developer shall provide a list of configuration items for the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_gXgJoH9cEd65VtBv9ZMgng" description="ACM_CAP.2.4C The configuration list shall uniquely identify all configuration items that comprise the TOE.&#xD;&#xA;ACM_CAP.2.5C The configuration list shall describe the configuration items that comprise the TOE.&#xD;&#xA;ACM_CAP.2.6C The CM documentation shall describe the method used to uniquely identify the configuration items that comprise the TOE.&#xD;&#xA;ACM_CAP.3.10C The CM documentation shall provide evidence that all configuration items have been and are being effectively maintained under the CM system.&#xD;&#xA;ACM_SCP.1.1C The list of configuration items shall include the following: implementation representation and the evaluation evidence required by the assurance components in the ST.&#xD;&#xA;ACM_SCP.1.1D The developer shall provide a list of configuration items for the TOE.&#xD;&#xA;ACM_SCP.2.1C The list of configuration items shall include the following: implementation representation; security flaws; and the evaluation evidence required by the assurance components in the ST.&#xD;&#xA;ACM_SCP.3.1C The list of configuration items shall include the following: implementation representation; security flaws; development tools and related information; and the evaluation evidence required by the assurance components in the ST.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_NHbugH9ZEd65VtBv9ZMgng" name="Configuration item">
+        <annotations xmi:id="_Sz3wIIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_TD-BoIEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_Tw4HsH9ZEd65VtBv9ZMgng" description="ACM_CAP.2.4C The configuration list shall uniquely identify all configuration items that comprise the TOE.&#xD;&#xA;ACM_CAP.2.7C The CM system shall uniquely identify all configuration items that comprise the TOE.&#xD;&#xA;" property="_0IYLsH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_0TvRwH9gEd65VtBv9ZMgng" name="Acceptance plan">
+        <annotations xmi:id="_WXRlcIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_WxDXYIEKEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_2acfkH9gEd65VtBv9ZMgng" description="ACM_CAP.4.3C The CM documentation shall include a configuration list, a CM plan, and an acceptance plan.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <subEntityTypes xmi:id="_H81_UH9hEd65VtBv9ZMgng" name="Acceptance procedure">
+          <annotations xmi:id="_ZdBOYIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+          <annotations xmi:id="_Zp1iYIEKEd6RRawGCGXNcQ" key="co" value="func"/>
+          <characterizedBy xmi:id="_JcqzUH9hEd65VtBv9ZMgng" description="ACM_CAP.4.13C The acceptance plan shall describe the procedures used to accept modified or newly created configuration items as part of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="__0hX4H9hEd65VtBv9ZMgng" description="ACM_CAP.5.15C The CM system shall require that the person responsible for accepting a configuration item into CM is not the person who developed it.&#xD;&#xA;ACM_CAP.5.21C The CM documentation shall demonstrate that the CM system is sufficient to ensure that the person responsible for accepting a configuration item into CM is not the person who developed it.&#xD;&#xA;ACM_CAP.5.22C The CM documentation shall justify that the acceptance procedures provide for an adequate and appropriate review of changes to all configuration items." property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_iJAKMH9hEd65VtBv9ZMgng" description="ACM_CAP.5.14C The integration procedures shall describe how the CM system is applied in the TOE manufacturing process.&#xD;&#xA;" name="Integration procedures">
+        <annotations xmi:id="_cBYokIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_cR6-8IEKEd6RRawGCGXNcQ" key="co" value="func"/>
+        <characterizedBy xmi:id="_luMIMH9hEd65VtBv9ZMgng" description="ACM_CAP.5.3C The CM documentation shall include a configuration list, a CM plan, an acceptance plan, and integration procedures.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_axAhUIADEd6ryYDjQCjYJA" description="ACM_CAP.5.14C The integration procedures shall describe how the CM system is applied in the TOE manufacturing process.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+    </entities>
+    <requirements xmi:id="_neGdAH2oEd6XJqM1CCOWEw"/>
+    <aspects xmi:id="_gT3q8H2oEd6XJqM1CCOWEw" name="Security"/>
+  </modules>
+  <modules xmi:id="_kCcbAIAEEd6ryYDjQCjYJA" name="Delivery and operation (CC chap. 14)">
+    <entities xmi:id="_zp6fIIAEEd6ryYDjQCjYJA" name="Delivery procedures">
+      <annotations xmi:id="_4kLToIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+      <annotations xmi:id="_4zrIMIEKEd6RRawGCGXNcQ" key="co" value="func"/>
+      <characterizedBy xmi:id="_3DMIEIAEEd6ryYDjQCjYJA" description="ADO_DEL.1.1D The developer shall document procedures for delivery of the TOE or parts of it to the user.&#xD;&#xA;ADO_DEL.1.2D The developer shall use the delivery procedures.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_ZHmooIAFEd6ryYDjQCjYJA" name="Detection of modification">
+        <annotations xmi:id="_6yV0UIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_7CcF0IEKEd6RRawGCGXNcQ" key="co" value="func"/>
+        <characterizedBy xmi:id="_aukmcIAFEd6ryYDjQCjYJA" description="ADO_DEL.2.2C The delivery documentation shall describe how the various procedures and technical measures provide for the detection of modifications, or any discrepancy between the developer's master copy and the version received at the user site.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_gwYX4IAFEd6ryYDjQCjYJA" name="Detection of masquerade">
+        <annotations xmi:id="_8_BHQIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_9KySYIEKEd6RRawGCGXNcQ" key="co" value="func"/>
+        <characterizedBy xmi:id="_ip1M0IAFEd6ryYDjQCjYJA" description="ADO_DEL.2.3C The delivery documentation shall describe how the various procedures allow detection of attempts to masquerade as the developer, even in cases in which the developer has sent nothing to the user's site.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_nNmS8IAFEd6ryYDjQCjYJA" name="Prevention of modification">
+        <annotations xmi:id="__n2KsIEKEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="__0qesIEKEd6RRawGCGXNcQ" key="co" value="func"/>
+        <characterizedBy xmi:id="_oQNmgIAFEd6ryYDjQCjYJA" description="ADO_DEL.3.2C The delivery documentation shall describe how the various procedures and technical measures provide for the prevention of modifications, or any discrepancy between the developer's master copy and the version received at the user site.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_2Rtn0IAEEd6ryYDjQCjYJA" name="Delivery procedure documentation">
+      <annotations xmi:id="_GOBNcIELEd6RRawGCGXNcQ" key="al" value="devenv"/>
+      <annotations xmi:id="_GeZy0IELEd6RRawGCGXNcQ" key="co" value="rep"/>
+      <characterizedBy xmi:id="_5RpjsIAEEd6ryYDjQCjYJA" description="ADO_DEL.1.1D The developer shall document procedures for delivery of the TOE or parts of it to the user.&#xD;&#xA;ADO_DEL.1.1C The delivery documentation shall describe all procedures that are necessary to maintain security when distributing versions of the TOE to a user's site.&#xD;&#xA;ADO_DEL.2.2C The delivery documentation shall describe how the various procedures and technical measures provide for the detection of modifications, or any discrepancy between the developer's master copy and the version received at the user site.&#xD;&#xA;ADO_DEL.2.3C The delivery documentation shall describe how the various procedures allow detection of attempts to masquerade as the developer, even in cases in which the developer has sent nothing to the user's site.&#xD;&#xA;ADO_DEL.3.2C The delivery documentation shall describe how the various procedures and technical measures provide for the prevention of modifications, or any discrepancy between the developer's master copy and the version received at the user site.&#xD;&#xA;ADO_IGS.1.1D The developer shall document procedures necessary for the secure installation, generation, and start-up of the TOE.&#xD;&#xA;ADO_IGS.1.1C The installation, generation and start-up documentation shall describe all the steps necessary for secure installation, generation and start-up of the TOE.&#xD;&#xA;ADO_IGS.2.2C The installation, generation and start-up documentation shall describe procedures capable of creating a log containing the generation options used to generate the TOE in such a way that it is possible to determine exactly how and when the TOE was generated.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+    </entities>
+    <entities xmi:id="_HAi8oIAFEd6ryYDjQCjYJA" name="Installation, generation, and start-up procedures">
+      <annotations xmi:id="_I6k6UIELEd6RRawGCGXNcQ" key="al" value="devenv"/>
+      <annotations xmi:id="_JGWFcIELEd6RRawGCGXNcQ" key="co" value="func"/>
+      <characterizedBy xmi:id="_JXWb8IAFEd6ryYDjQCjYJA" description="ADO_IGS.1.1D The developer shall document procedures necessary for the secure installation, generation, and start-up of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_wF8zsIAFEd6ryYDjQCjYJA" name="Generation log">
+        <annotations xmi:id="_K93AsIELEd6RRawGCGXNcQ" key="al" value="devenv"/>
+        <annotations xmi:id="_LOZ-IIELEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_xFSJwIAFEd6ryYDjQCjYJA" description="ADO_DEL.3.2C The delivery documentation shall describe how the various procedures and technical measures provide for the prevention of modifications, or any discrepancy between the developer's master copy and the version received at the user site.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+  </modules>
+  <modules xmi:id="_6ilxsIAFEd6ryYDjQCjYJA" name="Development (CC chap. 15)">
+    <properties xmi:id="_QLWbIIAMEd6ryYDjQCjYJA" name="consistency" factors="_O4o2EIAMEd6ryYDjQCjYJA _pyxEwIANEd6ryYDjQCjYJA _bw0FkIAQEd6ryYDjQCjYJA _KHeTgIAUEd6ryYDjQCjYJA _f7erAIAXEd6ryYDjQCjYJA _C3Vw8IAYEd6ryYDjQCjYJA _L437oIEEEd6WxICbbaWZFg"/>
+    <properties xmi:id="_eFn2QIAPEd6ryYDjQCjYJA" name="visibility" factors="_e6EyAIAPEd6ryYDjQCjYJA _4YQYYIAWEd6ryYDjQCjYJA"/>
+    <properties xmi:id="_-U1TQIAQEd6ryYDjQCjYJA" name="comprehensibility" factors="_9vkqEIAQEd6ryYDjQCjYJA _Cp0EkIATEd6ryYDjQCjYJA _J5KtsIEEEd6WxICbbaWZFg"/>
+    <properties xmi:id="_dNKc4IASEd6ryYDjQCjYJA" name="complexity" factors="_cKZYUIASEd6ryYDjQCjYJA _7kNT0IASEd6ryYDjQCjYJA"/>
+    <properties xmi:id="_v9DqgIASEd6ryYDjQCjYJA" name="extent" factors="_vHG58IASEd6ryYDjQCjYJA"/>
+    <properties xmi:id="_2XjW0IAUEd6ryYDjQCjYJA" name="definedness" factors="_j1kz8IAVEd6ryYDjQCjYJA _gCRsAIAWEd6ryYDjQCjYJA _yI5TIIAWEd6ryYDjQCjYJA _8rpgMIAWEd6ryYDjQCjYJA _-Tp_0IAWEd6ryYDjQCjYJA _87fdkIAXEd6ryYDjQCjYJA __Gq7sIAXEd6ryYDjQCjYJA"/>
+    <entities xmi:id="_Lp9hUIAREd6ryYDjQCjYJA" name="Software System">
+      <characterizedBy xmi:id="_f7erAIAXEd6ryYDjQCjYJA" description="ADV_RCR.1.1D The developer shall provide an analysis of correspondence between all adjacent pairs of TSF representations that are provided.&#xD;&#xA;ADV_RCR.1.1C For each adjacent pair of provided TSF representations, the analysis shall demonstrate that all relevant security functionality of the more abstract TSF representation is correctly and completely refined in the less abstract TSF representation.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+      <subEntityTypes xmi:id="_8fQD8IALEd6ryYDjQCjYJA" name="Functional Specification">
+        <annotations xmi:id="_SGc0AIELEd6RRawGCGXNcQ" key="al" value="bb"/>
+        <annotations xmi:id="_SWiecIELEd6RRawGCGXNcQ" key="co" value="rep"/>
+        <characterizedBy xmi:id="_O4o2EIAMEd6ryYDjQCjYJA" description="ADV_FSP.1.2C The functional specification shall be internally consistent.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+        <characterizedBy xmi:id="_VR6P0IANEd6ryYDjQCjYJA" description="ADV_FSP.1.1D The developer shall provide a functional specification." property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_Y29D4IANEd6ryYDjQCjYJA" description="ADV_FSP.1.1C The functional specification shall describe the TSF and its external interfaces using an informal style.&#xD;&#xA;ADV_FSP.1.3C The functional specification shall describe the purpose and method of use of all external TSF interfaces, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;ADV_FSP.1.4C The functional specification shall completely represent the TSF.&#xD;&#xA;ADV_FSP.2.5C The functional specification shall include rationale that the TSF is completely represented.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        <subEntityTypes xmi:id="_DgFpcIAMEd6ryYDjQCjYJA" name="Security Function Specification">
+          <annotations xmi:id="_Vnw-oIELEd6RRawGCGXNcQ" key="al" value="bb"/>
+          <annotations xmi:id="_Vz1EsIELEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_K2sDkIAMEd6ryYDjQCjYJA" description="ADV_FSP.1.1C The functional specification shall describe the TSF and its external interfaces using an informal style.&#xD;&#xA;&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_GrRWkIANEd6ryYDjQCjYJA" description="ADV_FSP.2.5C The functional specification shall include rationale that the TSF is completely represented.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_FG6dUIAMEd6ryYDjQCjYJA" name="External Interface Specification">
+          <annotations xmi:id="_kB4e0IELEd6RRawGCGXNcQ" key="al" value="bb"/>
+          <annotations xmi:id="_kOZQ0IELEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_LEi5YIAMEd6ryYDjQCjYJA" description="ADV_FSP.1.1C The functional specification shall describe the TSF and its external interfaces using an informal style.&#xD;&#xA;ADV_FSP.1.3C The functional specification shall describe the purpose and method of use of all external TSF interfaces, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <subEntityTypes xmi:id="_ZxmjsIAMEd6ryYDjQCjYJA" name="Purpose">
+            <annotations xmi:id="_wVJAMIELEd6RRawGCGXNcQ" key="al" value="bb"/>
+            <annotations xmi:id="_wijKEIELEd6RRawGCGXNcQ" key="co" value="other"/>
+            <characterizedBy xmi:id="_8fdp4IAMEd6ryYDjQCjYJA" description="ADV_FSP.1.3C The functional specification shall describe the purpose and method of use of all external TSF interfaces, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_alT4kIAMEd6ryYDjQCjYJA" name="Method of use">
+            <annotations xmi:id="_4btesIELEd6RRawGCGXNcQ" key="al" value="bb"/>
+            <annotations xmi:id="_4rNTQIELEd6RRawGCGXNcQ" key="co" value="rep"/>
+            <characterizedBy xmi:id="_927zIIAMEd6ryYDjQCjYJA" description="ADV_FSP.1.3C The functional specification shall describe the purpose and method of use of all external TSF interfaces, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_dXAHoIANEd6ryYDjQCjYJA" name="High-level design">
+        <annotations xmi:id="_FyergIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_F-sikIEMEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_gXF0gIANEd6ryYDjQCjYJA" description="ADV_HLD.1.1D The developer shall provide the high-level design of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_pyxEwIANEd6ryYDjQCjYJA" description="ADV_HLD.1.2C The high-level design shall be internally consistent.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+        <characterizedBy xmi:id="_jvb-cIAPEd6ryYDjQCjYJA" description="ADV_HLD.1.2E The evaluator shall determine that the high-level design is an accurate and complete instantiation of the TOE security functional requirements.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+        <subEntityTypes xmi:id="_1UGZ8IANEd6ryYDjQCjYJA" name="Subsystem">
+          <annotations xmi:id="_Kb6UwIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_KqXngIEMEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_4O46oIAOEd6ryYDjQCjYJA" description="ADV_HLD.1.3C The high-level design shall describe the structure of the TSF in terms of subsystems.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <subEntityTypes xmi:id="_8xeVAIAOEd6ryYDjQCjYJA" name="Security functionality">
+            <annotations xmi:id="_MmNCEIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_Mx-NMIEMEd6RRawGCGXNcQ" key="co" value="func"/>
+            <characterizedBy xmi:id="_-EBiAIAOEd6ryYDjQCjYJA" description="ADV_HLD.1.4C The high-level design shall describe the security functionality provided by each subsystem of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+            <subEntityTypes xmi:id="_APD2MIAPEd6ryYDjQCjYJA" name="Underlaying components">
+              <annotations xmi:id="_RJYSUIEMEd6RRawGCGXNcQ" key="al" value="depenv"/>
+              <annotations xmi:id="_RU2igIEMEd6RRawGCGXNcQ" key="co" value="struc"/>
+              <characterizedBy xmi:id="_Np2nYIAPEd6ryYDjQCjYJA" description="ADV_HLD.1.5C The high-level design shall identify any underlying hardware, firmware, and/or software required by the TSF with a presentation of the functions provided by the supporting protection mechanisms implemented in that hardware, firmware, or software.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+            </subEntityTypes>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_Eu3z8IAQEd6ryYDjQCjYJA" name="Type of subsystem">
+            <annotations xmi:id="_fJkPkIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_fY6TIIEMEd6RRawGCGXNcQ" key="co" value="func"/>
+            <characterizedBy xmi:id="_F-mWcIAQEd6ryYDjQCjYJA" description="ADV_HLD.2.9C The high-level design shall describe the separation of the TOE into TSP-enforcing and other subsystems.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_SpM2QIAPEd6ryYDjQCjYJA" name="Interface">
+          <annotations xmi:id="_WzMagIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_XBMaQIEMEd6RRawGCGXNcQ" key="co" value="interf"/>
+          <characterizedBy xmi:id="_TrW20IAPEd6ryYDjQCjYJA" description="ADV_HLD.1.6C The high-level design shall identify all interfaces to the subsystems of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_e6EyAIAPEd6ryYDjQCjYJA" description="ADV_HLD.1.7C The high-level design shall identify which of the interfaces to the subsystems of the TSF are externally visible.&#xD;&#xA;" property="_eFn2QIAPEd6ryYDjQCjYJA"/>
+          <subEntityTypes xmi:id="_sQ_IwIAPEd6ryYDjQCjYJA" name="Purpose">
+            <annotations xmi:id="_aRXxkIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_af-1UIEMEd6RRawGCGXNcQ" key="co" value="other"/>
+            <characterizedBy xmi:id="_uQjMwIAPEd6ryYDjQCjYJA" description="ADV_HLD.2.8C The high-level design shall describe the purpose and method of use of all interfaces to the subsystems of the TSF, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_tNMSUIAPEd6ryYDjQCjYJA" name="Method of use">
+            <annotations xmi:id="_cTdlIIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_cgIvMIEMEd6RRawGCGXNcQ" key="co" value="rep"/>
+            <characterizedBy xmi:id="_w9HgsIAPEd6ryYDjQCjYJA" description="ADV_HLD.2.8C The high-level design shall describe the purpose and method of use of all interfaces to the subsystems of the TSF, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_jjiiYIANEd6ryYDjQCjYJA" name="High-level-design specification">
+          <annotations xmi:id="_qpaXAIEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_q2-R4IEMEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_lnk2sIANEd6ryYDjQCjYJA" description="ADV_HLD.1.1C The presentation of the high-level design shall be informal.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_n-OlAIANEd6ryYDjQCjYJA" description="ADV_HLD.1.1C The presentation of the high-level design shall be informal.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+          <subEntityTypes xmi:id="_t4b5oIANEd6ryYDjQCjYJA" name="Subsystem description">
+            <annotations xmi:id="_tifc8IEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_txrvgIEMEd6RRawGCGXNcQ" key="co" value="rep"/>
+            <characterizedBy xmi:id="_ygPLMIANEd6ryYDjQCjYJA" description="ADV_HLD.1.3C The high-level design shall describe the structure of the TSF in terms of subsystems.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_EyhBAIAUEd6ryYDjQCjYJA" name="Low-level design">
+        <annotations xmi:id="_yHc14IEMEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_yT-O8IEMEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_G3voIIAUEd6ryYDjQCjYJA" description="ADV_LLD.1.1D The developer shall provide the low-level design of the TSF.&#xD;&#xA;ADV_LLD.1.1C The presentation of the low-level design shall be informal.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_KHeTgIAUEd6ryYDjQCjYJA" description="ADV_LLD.1.2C The low-level design shall be internally consistent.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+        <characterizedBy xmi:id="_m2GlsIAVEd6ryYDjQCjYJA" description="ADV_LLD.1.2E The evaluator shall determine that the low-level design is an accurate and complete instantiation of the TOE security functional requirements.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+        <subEntityTypes xmi:id="_kw-hsIAUEd6ryYDjQCjYJA" name="Structure">
+          <characterizedBy xmi:id="_lr1ncIAUEd6ryYDjQCjYJA" description="ADV_LLD.1.3C The low-level design shall describe the TSF in terms of modules.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <subEntityTypes xmi:id="_f00UQIAVEd6ryYDjQCjYJA" name="Separation between TOE and TSP-enforcing modules">
+            <annotations xmi:id="_Bq4ukIENEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_B45VYIENEd6RRawGCGXNcQ" key="co" value="struc"/>
+            <characterizedBy xmi:id="_j1kz8IAVEd6ryYDjQCjYJA" description="ADV_LLD.1.10C The low-level design shall describe the separation of the TOE into TSP-enforcing and other modules.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+            <subEntityTypes xmi:id="_wz85cIAWEd6ryYDjQCjYJA" name="Interfaces">
+              <annotations xmi:id="_EXAWkIENEd6RRawGCGXNcQ" key="al" value="wb"/>
+              <annotations xmi:id="_EkQvcIENEd6RRawGCGXNcQ" key="co" value="interf"/>
+              <characterizedBy xmi:id="_yI5TIIAWEd6ryYDjQCjYJA" description="ADV_LLD.1.7C The low-level design shall identify all interfaces to the modules of the TSF.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+            </subEntityTypes>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_bNEQkIAWEd6ryYDjQCjYJA" name="Interrelationsships between modules">
+            <annotations xmi:id="_Isd68IENEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_I6ehwIENEd6RRawGCGXNcQ" key="al" value="struc"/>
+            <characterizedBy xmi:id="_gCRsAIAWEd6ryYDjQCjYJA" description="ADV_LLD.1.5C The low-level design shall define the interrelationships between the modules in terms of provided security functionality and dependencies on other modules.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_Tgj34IAWEd6ryYDjQCjYJA" name="Module">
+          <annotations xmi:id="_O2xhEIENEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_PE7R0IENEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_USVTEIAWEd6ryYDjQCjYJA" description="ADV_LLD.1.3C The low-level design shall describe the TSF in terms of modules.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <subEntityTypes xmi:id="_WW9dQIAWEd6ryYDjQCjYJA" name="Purpose">
+            <annotations xmi:id="_RYmkoIENEd6RRawGCGXNcQ" key="al" value="other"/>
+            <annotations xmi:id="_RmKfgIENEd6RRawGCGXNcQ"/>
+            <characterizedBy xmi:id="_XfiO4IAWEd6ryYDjQCjYJA" description="ADV_LLD.1.4C The low-level design shall describe the purpose of each module.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_3cprwIAWEd6ryYDjQCjYJA" name="Interface">
+            <annotations xmi:id="_U8mP0IENEd6RRawGCGXNcQ" key="al" value="wb"/>
+            <annotations xmi:id="_VPq80IENEd6RRawGCGXNcQ" key="co" value="interf"/>
+            <characterizedBy xmi:id="_4YQYYIAWEd6ryYDjQCjYJA" description="ADV_LLD.1.8C The low-level design shall identify which of the interfaces to the modules of the TSF are externally visible.&#xD;&#xA;" property="_eFn2QIAPEd6ryYDjQCjYJA"/>
+            <subEntityTypes xmi:id="_6r7rMIAWEd6ryYDjQCjYJA" name="Purpose">
+              <annotations xmi:id="_XEphcIENEd6RRawGCGXNcQ" key="al" value="wb"/>
+              <annotations xmi:id="_XRK6gIENEd6RRawGCGXNcQ" key="co" value="other"/>
+              <characterizedBy xmi:id="_8rpgMIAWEd6ryYDjQCjYJA" description="ADV_LLD.1.9C The low-level design shall describe the purpose and method of use of all interfaces to the modules of the TSF, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+            </subEntityTypes>
+            <subEntityTypes xmi:id="_7cXpoIAWEd6ryYDjQCjYJA" name="Method of use">
+              <annotations xmi:id="_as9r8IENEd6RRawGCGXNcQ" key="al" value="wb"/>
+              <annotations xmi:id="_a7RNsIENEd6RRawGCGXNcQ" key="co" value="rep"/>
+              <characterizedBy xmi:id="_-Tp_0IAWEd6ryYDjQCjYJA" description="ADV_LLD.1.9C The low-level design shall describe the purpose and method of use of all interfaces to the modules of the TSF, providing details of effects, exceptions and error messages, as appropriate.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+            </subEntityTypes>
+          </subEntityTypes>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_LrPwMIAQEd6ryYDjQCjYJA" name="Implementation prepresentation">
+        <subEntityTypes xmi:id="_QyMb4IAQEd6ryYDjQCjYJA" name="Subset of the implementation of the TSF">
+          <annotations xmi:id="_iQ0e8IENEd6RRawGCGXNcQ" key="al" value="impl"/>
+          <annotations xmi:id="_ifIAsIENEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_VMbykIAQEd6ryYDjQCjYJA" description="ADV_IMP.1.1D The developer shall provide the implementation representation for a selected subset of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_ZfqiUIAQEd6ryYDjQCjYJA" description="ADV_IMP.1.1C The implementation representation shall unambiguously define the TSF to a level of detail such that the TSF can be generated without further design decisions.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+          <characterizedBy xmi:id="_bw0FkIAQEd6ryYDjQCjYJA" description="ADV_IMP.1.2C The implementation representation shall be internally consistent.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+          <characterizedBy xmi:id="_fCeqoIAQEd6ryYDjQCjYJA" description="ADV_IMP.1.2E The evaluator shall determine that the least abstract TSF representation provided is an accurate and complete instantiation of the TOE security functional requirements.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_ls0bsIAQEd6ryYDjQCjYJA" name="Entire implementation of TSF">
+          <annotations xmi:id="_ofvfUIENEd6RRawGCGXNcQ" key="al" value="impl"/>
+          <annotations xmi:id="_osjzUIENEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_omDSoIAQEd6ryYDjQCjYJA" description="ADV_IMP.2.1D The developer shall provide the implementation representation for the entire TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+          <characterizedBy xmi:id="_zPD4sIAQEd6ryYDjQCjYJA" description="ADV_IMP.2.2E The evaluator shall determine that the implementation representation is an accurate and complete instantiation of the TOE security functional requirements.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+          <subEntityTypes xmi:id="_vx6cYIAQEd6ryYDjQCjYJA" name="Relations">
+            <annotations xmi:id="_rbDZ4IENEd6RRawGCGXNcQ" key="al" value="impl"/>
+            <annotations xmi:id="_roUZ0IENEd6RRawGCGXNcQ" key="co" value="rep"/>
+            <characterizedBy xmi:id="_whKIAIAQEd6ryYDjQCjYJA" description="ADV_IMP.2.3C The implementation representation shall describe the relationships between all portions of the implementation.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+          </subEntityTypes>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_8jIFEIAQEd6ryYDjQCjYJA" name="Structure">
+          <annotations xmi:id="_t7QFwIENEd6RRawGCGXNcQ" key="al" value="impl"/>
+          <annotations xmi:id="_uHUL0IENEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_9vkqEIAQEd6ryYDjQCjYJA" description="ADV_IMP.3.4C The implementation representation shall be structured into small and comprehensible sections.&#xD;&#xA;" property="_-U1TQIAQEd6ryYDjQCjYJA"/>
+        </subEntityTypes>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_C6HU8IAUEd6ryYDjQCjYJA" name="Security Function Internals">
+      <annotations xmi:id="_65kWUIENEd6RRawGCGXNcQ" key="al" value="wb"/>
+      <annotations xmi:id="_7GibUIENEd6RRawGCGXNcQ" key="co" value="struc"/>
+      <characterizedBy xmi:id="_7kNT0IASEd6ryYDjQCjYJA" description="ADV_INT.3.4D The developer shall design and structure the TSF in such a way that minimises the complexity of the entire TSF.&#xD;&#xA;" property="_dNKc4IASEd6ryYDjQCjYJA"/>
+      <subEntityTypes xmi:id="_PWAVQIAREd6ryYDjQCjYJA" name="Module">
+        <subEntityTypes xmi:id="_esCEEIAREd6ryYDjQCjYJA" name="Purpose">
+          <annotations xmi:id="_Ad3sYIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_ArkxMIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_i9LwMIAREd6ryYDjQCjYJA" description="ADV_INT.1.2C The architectural description shall describe the purpose, interface, parameters, and effects of each module of the TSF.&#xD;&#xA;ADV_LLD.1.4C The low-level design shall describe the purpose of each module.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_fbt0kIAREd6ryYDjQCjYJA" name="Interface">
+          <annotations xmi:id="_CVYnoIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_Cg230IEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_jKvrEIAREd6ryYDjQCjYJA" description="ADV_INT.1.2C The architectural description shall describe the purpose, interface, parameters, and effects of each module of the TSF.&#xD;&#xA;&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_gTme0IAREd6ryYDjQCjYJA" name="Parameters">
+          <annotations xmi:id="_OLujgIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_OZujQIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_jYmg4IAREd6ryYDjQCjYJA" description="ADV_INT.1.2C The architectural description shall describe the purpose, interface, parameters, and effects of each module of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_hqCGQIAREd6ryYDjQCjYJA" name="Effects">
+          <annotations xmi:id="_QJf3wIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_QZSnQIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_jvGVUIAREd6ryYDjQCjYJA" description="ADV_INT.1.2C The architectural description shall describe the purpose, interface, parameters, and effects of each module of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_RNqacIAREd6ryYDjQCjYJA" name="Structure">
+        <annotations xmi:id="_SxlUUIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_TAoc8IEOEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_Su0rMIAREd6ryYDjQCjYJA" description="ADV_INT.1.1D The developer shall design and structure the TSF in a modular fashion that avoids unnecessary interactions between the modules of the design.&#xD;&#xA;ADV_INT.2.4D The developer shall design and structure the TSF in such a way that minimises the complexity of the portions of the TSF that enforce any access control and/or information flow control policies.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        <subEntityTypes xmi:id="_8k04wIAREd6ryYDjQCjYJA" name="Layered Structure">
+          <annotations xmi:id="_U4cTIIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_VDxZYIEOEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_97jbIIAREd6ryYDjQCjYJA" description="ADV_INT.2.3D The developer shall design and structure the TSF in a layered fashion that minimises mutual interactions between the layers of the design.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_s1OW4IASEd6ryYDjQCjYJA" name="Mutual interactions">
+          <annotations xmi:id="_YXqzEIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+          <annotations xmi:id="_Yi_5UIEOEd6RRawGCGXNcQ" key="co" value="struc"/>
+          <characterizedBy xmi:id="_vHG58IASEd6ryYDjQCjYJA" description="ADV_INT.2.5C The architectural description shall show that mutual interactions have been minimised, and justify those that remain.&#xD;&#xA;" property="_v9DqgIASEd6ryYDjQCjYJA"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_W40mcIAREd6ryYDjQCjYJA" name="Architectural description">
+        <annotations xmi:id="_btW8gIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_b5IusIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+        <characterizedBy xmi:id="_YDoMsIAREd6ryYDjQCjYJA" description="ADV_INT.1.2D The developer shall provide an architectural description.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_aIjR0IAREd6ryYDjQCjYJA" description="ADV_INT.1.1C The architectural description shall identify the modules of the TSF.&#xD;&#xA;ADV_INT.1.2C The architectural description shall describe the purpose, interface, parameters, and effects of each module of the TSF.&#xD;&#xA;ADV_INT.1.3C The architectural description shall describe how the TSF design provides for largely independent modules that avoid unnecessary interactions.&#xD;&#xA;ADV_INT.2.4D The developer shall design and structure the TSF in such a way that minimises the complexity of the portions of the TSF that enforce any access control and/or information flow control policies.&#xD;&#xA;ADV_INT.2.4C The architectural description shall describe the layering architecture.&#xD;&#xA;ADV_INT.2.5C The architectural description shall show that mutual interactions have been minimised, and justify those that remain.&#xD;&#xA;ADV_INT.2.5C The architectural description shall show that mutual interactions have been minimised, and justify those that remain.&#xD;&#xA;ADV_INT.2.6C The architectural description shall describe how the portions of the TSF that enforce any access control and/or information flow control policies have been structured to minimise complexity.&#xD;&#xA;ADV_INT.3.6C The architectural description shall describe how the entire TSF has been structured to minimise complexity.&#xD;&#xA;ADV_INT.3.7C The architectural description shall justify the inclusion of any non-TSP-enforcing modules in the TSF.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        <characterizedBy xmi:id="_vC4WsIAREd6ryYDjQCjYJA" description="ADV_INT.1.2E The evaluator shall determine that both the low-level design and the implementation representation are in compliance with the architectural description.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_JAIi4IASEd6ryYDjQCjYJA" name="Access control / information flow control policies">
+        <annotations xmi:id="_ej5r0IEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_ewRT4IEOEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_cKZYUIASEd6ryYDjQCjYJA" description="ADV_INT.2.4D The developer shall design and structure the TSF in such a way that minimises the complexity of the portions of the TSF that enforce any access control and/or information flow control policies.&#xD;&#xA;ADV_INT.3.3E The evaluator shall confirm that the portions of the TSF that enforce any access control and/or information flow control policies are simple enough to be analysed.&#xD;&#xA;" property="_dNKc4IASEd6ryYDjQCjYJA"/>
+        <characterizedBy xmi:id="_Cp0EkIATEd6ryYDjQCjYJA" description="ADV_INT.3.5D The developer shall design and structure the portions of the TSF that enforce any access control and/or information flow control policies such that they are simple enough to be analysed.&#xD;&#xA;ADV_INT.3.3E The evaluator shall confirm that the portions of the TSF that enforce any access control and/or information flow control policies are simple enough to be analysed.&#xD;&#xA;" property="_-U1TQIAQEd6ryYDjQCjYJA"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_O5DooIATEd6ryYDjQCjYJA" name="Functionality">
+        <annotations xmi:id="_lspQIIEOEd6RRawGCGXNcQ" key="al" value="wb"/>
+        <annotations xmi:id="_l6zA4IEOEd6RRawGCGXNcQ" key="co" value="struc"/>
+        <characterizedBy xmi:id="_H9IYUIATEd6ryYDjQCjYJA" description="ADV_INT.3.6D The developer shall ensure that functions whose objectives are not relevant for the TSF are excluded from the TSF modules.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_u-unwIAXEd6ryYDjQCjYJA" name="Security Policy Model">
+      <annotations xmi:id="_qCG0gIEOEd6RRawGCGXNcQ" key="al" value="bb"/>
+      <annotations xmi:id="_qNu1sIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+      <characterizedBy xmi:id="_w05fMIAXEd6ryYDjQCjYJA" description="ADV_SPM.1.1D The developer shall provide a TSP model.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_0zajMIAXEd6ryYDjQCjYJA" description="ADV_SPM.1.2D The developer shall demonstrate correspondence between the functional specification and the TSP model.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+      <characterizedBy xmi:id="_C3Vw8IAYEd6ryYDjQCjYJA" description="ADV_SPM.1.4C The demonstration of correspondence between the TSP model and the functional specification shall show that all of the security functions in the functional specification are consistent and complete with respect to the TSP model.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+      <characterizedBy xmi:id="_EaJAcIAYEd6ryYDjQCjYJA" description="ADV_SPM.1.4C The demonstration of correspondence between the TSP model and the functional specification shall show that all of the security functions in the functional specification are consistent and complete with respect to the TSP model." property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_wSBboIAXEd6ryYDjQCjYJA" name="Policy">
+        <subEntityTypes xmi:id="_7B43oIAXEd6ryYDjQCjYJA" name="Rule">
+          <annotations xmi:id="_8It0kIEOEd6RRawGCGXNcQ" key="al" value="bb"/>
+          <annotations xmi:id="_8UV1wIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="_87fdkIAXEd6ryYDjQCjYJA" description="ADV_SPM.1.2C The TSP model shall describe the rules and characteristics of all policies of the TSP that can be modeled.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_7zhI4IAXEd6ryYDjQCjYJA" name="Characterictis">
+          <annotations xmi:id="_99PtQIEOEd6RRawGCGXNcQ" key="al" value="bb"/>
+          <annotations xmi:id="_-JA4YIEOEd6RRawGCGXNcQ" key="co" value="rep"/>
+          <characterizedBy xmi:id="__Gq7sIAXEd6ryYDjQCjYJA" description="ADV_SPM.1.2C The TSP model shall describe the rules and characteristics of all policies of the TSP that can be modeled.&#xD;&#xA;" property="_2XjW0IAUEd6ryYDjQCjYJA"/>
+        </subEntityTypes>
+      </subEntityTypes>
+    </entities>
+  </modules>
+  <modules xmi:id="_fe2dsID5Ed6WxICbbaWZFg" name="Guidance documents (CC chap. 16)">
+    <entities xmi:id="_vdaMIID5Ed6WxICbbaWZFg" name="Administrator guidance">
+      <annotations xmi:id="_B89EEIEPEd6RRawGCGXNcQ" key="al" value="depenv"/>
+      <annotations xmi:id="_CH1eYIEPEd6RRawGCGXNcQ" key="co" value="struc"/>
+      <characterizedBy xmi:id="_DBvucID6Ed6WxICbbaWZFg" description="AGD_ADM.1.1D The developer shall provide administrator guidance addressed to system administrative personnel.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_SQnsYID6Ed6WxICbbaWZFg" description="AGD_ADM.1.2C The administrator guidance shall describe how to administer the TOE in a secure manner.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_2_0YMID6Ed6WxICbbaWZFg" description="AGD_ADM.1.7C The administrator guidance shall be consistent with all other documentation supplied for evaluation.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_LQOy0ID6Ed6WxICbbaWZFg" name="Administrative functions and interfaces description">
+        <characterizedBy xmi:id="_OMlPMID6Ed6WxICbbaWZFg" description="AGD_ADM.1.1C The administrator guidance shall describe the administrative functions and interfaces available to the administrator of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_W2CYUID6Ed6WxICbbaWZFg" name="Risky functions and priviledges description">
+        <characterizedBy xmi:id="_f24twID6Ed6WxICbbaWZFg" description="AGD_ADM.1.3C The administrator guidance shall contain warnings about functions and privileges that should be controlled in a secure processing environment.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_jkQ-cID6Ed6WxICbbaWZFg" name="Assumption about user behaviour description">
+        <characterizedBy xmi:id="_mET5UID6Ed6WxICbbaWZFg" description="AGD_ADM.1.4C The administrator guidance shall describe all assumptions regarding user behaviour that are relevant to secure operation of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_qlaF8ID6Ed6WxICbbaWZFg" name="Security parameters description">
+        <characterizedBy xmi:id="_s7UNYID6Ed6WxICbbaWZFg" description="AGD_ADM.1.5C The administrator guidance shall describe all security parameters under the control of the administrator, indicating secure values as appropriate.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_yAn6UID6Ed6WxICbbaWZFg" name="Security relevant events description">
+        <characterizedBy xmi:id="_0aG6MID6Ed6WxICbbaWZFg" description="AGD_ADM.1.6C The administrator guidance shall describe each type of security-relevant event relative to the administrative functions that need to be performed, including changing the security characteristics of entities under the control of the TSF.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_7Yj6EID6Ed6WxICbbaWZFg" name="Security requirements on the IT environment description">
+        <characterizedBy xmi:id="_-KVeIID6Ed6WxICbbaWZFg" description="AGD_ADM.1.8C The administrator guidance shall describe all security requirements for the IT environment that are relevant to the administrator.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_BgxOcID7Ed6WxICbbaWZFg" name="User guidance">
+      <annotations xmi:id="_JM_jMIEPEd6RRawGCGXNcQ" key="al" value="depenv"/>
+      <annotations xmi:id="_JaQjIIEPEd6RRawGCGXNcQ" key="co" value="struc"/>
+      <characterizedBy xmi:id="_DlsTkID7Ed6WxICbbaWZFg" description="AGD_USR.1.1D The developer shall provide user guidance.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_BFX2cID8Ed6WxICbbaWZFg" description="AGD_USR.1.5C The user guidance shall be consistent with all other documentation supplied for evaluation.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_IiXB4ID7Ed6WxICbbaWZFg" name="Non-administrative functions and interfaces description">
+        <characterizedBy xmi:id="_KkAJgID7Ed6WxICbbaWZFg" description="AGD_USR.1.1C The user guidance shall describe the functions and interfaces available to the non-administrative users of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_OoxmgID7Ed6WxICbbaWZFg" name="User accessible security functions description">
+        <characterizedBy xmi:id="_QfGO8ID7Ed6WxICbbaWZFg" description="AGD_USR.1.2C The user guidance shall describe the use of user-accessible security functions provided by the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_UbFjYID7Ed6WxICbbaWZFg" name="Risky functions and priviledges description">
+        <characterizedBy xmi:id="_WjI1AID7Ed6WxICbbaWZFg" description="AGD_USR.1.3C The user guidance shall contain warnings about user-accessible functions and privileges that should be controlled in a secure processing environment.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_5_6PoID7Ed6WxICbbaWZFg" name="User responsibilites for secure operation">
+        <characterizedBy xmi:id="_9XiSwID7Ed6WxICbbaWZFg" description="AGD_USR.1.4C The user guidance shall clearly present all user responsibilities necessary for secure operation of the TOE, including those related to assumptions regarding user behaviour found in the statement of TOE security environment.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_EfhpIID8Ed6WxICbbaWZFg" name="Security requirements on the IT environment description">
+        <characterizedBy xmi:id="_HtUa0ID8Ed6WxICbbaWZFg" description="AGD_USR.1.6C The user guidance shall describe all security requirements for the IT environment that are relevant to the user.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+    </entities>
+  </modules>
+  <modules xmi:id="_K9fyIID8Ed6WxICbbaWZFg" name="Life cycle support (CC chap. 17)">
+    <entities xmi:id="_Qql30ID8Ed6WxICbbaWZFg" name="Development security documentation">
+      <characterizedBy xmi:id="_UBxPAID8Ed6WxICbbaWZFg" description="ALC_DVS.1.1D The developer shall produce development security documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_h8lkEID8Ed6WxICbbaWZFg" description="ALC_DVS.1.1C The development security documentation shall describe all the physical, procedural, personnel, and other security measures that are necessary to protect the confidentiality and integrity of the TOE design and implementation in its development environment.&#xD;&#xA;ALC_DVS.1.2C The development security documentation shall provide evidence that these security measures are followed during the development and maintenance of the TOE.&#xD;&#xA;ALC_DVS.2.3C The evidence shall justify that the security measures provide the necessary level of protection to maintain the confidentiality and integrity of the TOE.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+    </entities>
+    <entities xmi:id="_Wf3pIID8Ed6WxICbbaWZFg" name="Development security">
+      <subEntityTypes xmi:id="_Zfp0AID8Ed6WxICbbaWZFg" name="Security measures in development environment">
+        <characterizedBy xmi:id="_enf3kID8Ed6WxICbbaWZFg" description="ALC_DVS.1.1C The development security documentation shall describe all the physical, procedural, personnel, and other security measures that are necessary to protect the confidentiality and integrity of the TOE design and implementation in its development environment.&#xD;&#xA;ALC_DVS.1.2C The development security documentation shall provide evidence that these security measures are followed during the development and maintenance of the TOE.&#xD;&#xA;ALC_DVS.1.2E The evaluator shall confirm that the security measures are being applied.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_uC4AcID8Ed6WxICbbaWZFg" description="ALC_DVS.2.3C The evidence shall justify that the security measures provide the necessary level of protection to maintain the confidentiality and integrity of the TOE.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_07EnUID8Ed6WxICbbaWZFg" name="Flaw remediation procedure">
+      <characterizedBy xmi:id="_4gtRQID8Ed6WxICbbaWZFg" description="ALC_FLR.1.1D The developer shall provide flaw remediation procedures addressed to TOE developers.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_CMKp8ID9Ed6WxICbbaWZFg" name="Procedure to track security flaws">
+        <characterizedBy xmi:id="_EwFYMID9Ed6WxICbbaWZFg" description="ALC_FLR.1.1C The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_MN1jMID9Ed6WxICbbaWZFg" description="ALC_FLR.1.2C The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_cHKzYID9Ed6WxICbbaWZFg" name="Procedure to identify of corrective actions">
+        <characterizedBy xmi:id="_ee3qkID9Ed6WxICbbaWZFg" description="ALC_FLR.1.3C The flaw remediation procedures shall require that corrective actions be identified for each of the security flaws.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_r8CaUID9Ed6WxICbbaWZFg" name="Procedure to report flaws">
+        <characterizedBy xmi:id="_tEAvAID9Ed6WxICbbaWZFg" description="ALC_FLR.2.2D The developer shall establish a procedure for accepting and acting upon all reports of security flaws and requests for corrections to those flaws.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <subEntityTypes xmi:id="_6VaToID9Ed6WxICbbaWZFg" name="User reports on flaws procedure">
+          <characterizedBy xmi:id="_9Fsp8ID9Ed6WxICbbaWZFg" description="ALC_FLR.2.5C The flaw remediation procedures shall describe a means by which the developer receives from TOE users reports and enquiries of suspected security flaws in the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_FnsgMID-Ed6WxICbbaWZFg" name="Procedure for processing reported flaws">
+        <characterizedBy xmi:id="_HRDDoID-Ed6WxICbbaWZFg" description="ALC_FLR.2.5C The flaw remediation procedures shall describe a means by which the developer receives from TOE users reports and enquiries of suspected security flaws in the TOE.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+        <characterizedBy xmi:id="_Kv-ooID-Ed6WxICbbaWZFg" description="ALC_FLR.2.7C The procedures for processing reported security flaws shall provide safeguards that any corrections to these security flaws do not introduce any new flaws.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_W5jCgID-Ed6WxICbbaWZFg" name="Procedure for generating reports">
+        <characterizedBy xmi:id="_YjMg4ID-Ed6WxICbbaWZFg" description="ALC_FLR.3.9C The flaw remediation procedures shall include a procedure requiring timely responses for the automatic distribution of security flaw reports and the associated corrections to registered users who might be affected by the security flaw.&#xD;&#xA;" property="_5ku8IH2xEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_aM2mUID-Ed6WxICbbaWZFg" description="ALC_FLR.3.9C The flaw remediation procedures shall include a procedure requiring timely responses for the automatic distribution of security flaw reports and the associated corrections to registered users who might be affected by the security flaw.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_6sCgYID8Ed6WxICbbaWZFg" name="Flaw remediation procedure documentation">
+      <characterizedBy xmi:id="_95-cAID8Ed6WxICbbaWZFg" description="ALC_FLR.1.1C The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_AmY-8ID9Ed6WxICbbaWZFg" description="ALC_FLR.1.1C The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.&#xD;&#xA;ALC_FLR.1.4C The flaw remediation procedures documentation shall describe the methods used to provide flaw information, corrections and guidance on corrective actions to TOE users.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_O8orwID9Ed6WxICbbaWZFg" name="Description of nature and effect of security flaw">
+        <characterizedBy xmi:id="_R8a2oID9Ed6WxICbbaWZFg" description="ALC_FLR.1.2C The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_UB7xoID9Ed6WxICbbaWZFg" name="Description of the status of correction of each flaw">
+        <characterizedBy xmi:id="_YsajwID9Ed6WxICbbaWZFg" description="ALC_FLR.1.2C The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_ybM2IID9Ed6WxICbbaWZFg" name="Flaw remediation guidance">
+      <characterizedBy xmi:id="_0KqooID9Ed6WxICbbaWZFg" description="ALC_FLR.2.3D The developer shall provide flaw remediation guidance addressed to TOE users.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_N_jjAID-Ed6WxICbbaWZFg" name="Description of reporting means">
+        <characterizedBy xmi:id="_QEU3IID-Ed6WxICbbaWZFg" description="ALC_FLR.2.8C The flaw remediation guidance shall describe a means by which TOE users report to the developer any suspected security flaws in the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_AKtdoID_Ed6WxICbbaWZFg" name="Description of registration procedure">
+        <characterizedBy xmi:id="_FO03wID_Ed6WxICbbaWZFg" description="ALC_FLR.3.10C The flaw remediation guidance shall describe a means by which TOE users may register with the developer, to be eligible to receive security flaw reports and corrections.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_KI8oYID_Ed6WxICbbaWZFg" name="Point of contact">
+        <characterizedBy xmi:id="_LEZkAID_Ed6WxICbbaWZFg" description="ALC_FLR.3.11C The flaw remediation guidance shall identify the specific points of contact for all reports and enquiries about security issues involving the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_UtLcIID_Ed6WxICbbaWZFg" name="Lifecycle model">
+      <characterizedBy xmi:id="_V-ZMYID_Ed6WxICbbaWZFg" description="ALC_LCD.1.1D The developer shall establish a life-cycle model to be used in the development and maintenance of the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_hIefMID_Ed6WxICbbaWZFg" description="ALC_LCD.1.2C The life-cycle model shall provide for the necessary control over the development and maintenance of the TOE.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_kxPVoID_Ed6WxICbbaWZFg" name="Standardized lifecycle model">
+        <characterizedBy xmi:id="_mTJNQID_Ed6WxICbbaWZFg" description="ALC_LCD.2.3D The developer shall use a standardised life-cycle model to develop and maintain the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <subEntityTypes xmi:id="_3-LEkID_Ed6WxICbbaWZFg" name="Measurable lifecycle model">
+          <characterizedBy xmi:id="_507x4ID_Ed6WxICbbaWZFg" description="ALC_LCD.3.3D The developer shall use a standardised and measurable life-cycle model to develop and maintain the TOE.&#xD;&#xA;ALC_LCD.3.4D The developer shall measure the TOE development using the standardised and measurable life-cycle model.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        </subEntityTypes>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_ZcRogID_Ed6WxICbbaWZFg" name="Lifecycle model documentation">
+      <characterizedBy xmi:id="_a7y6gID_Ed6WxICbbaWZFg" description="ALC_LCD.1.2D The developer shall provide life-cycle definition documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_eythsID_Ed6WxICbbaWZFg" description="ALC_LCD.1.1C The life-cycle definition documentation shall describe the model used to develop and maintain the TOE.&#xD;&#xA;ALC_LCD.2.5C The life-cycle definition documentation shall demonstrate compliance with the standardised life-cycle model.&#xD;&#xA;ALC_LCD.3.5C The life-cycle definition documentation shall demonstrate compliance with the standardised and measurable life-cycle model.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+      <characterizedBy xmi:id="_tXjEIID_Ed6WxICbbaWZFg" description="ALC_LCD.2.4C The life-cycle definition documentation shall explain how the model is used to develop and maintain the TOE.&#xD;&#xA;ALC_LCD.3.1C The life-cycle definition documentation shall describe the model used to develop and maintain the TOE, including the details of its arithmetic parameters and/or metrics used to measure the TOE development against the model.&#xD;&#xA;ALC_LCD.3.6C The life-cycle documentation shall provide the results of the measurements of the TOE development using the standardised and measurable life-cycle model.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_o9xAcID_Ed6WxICbbaWZFg" name="Rationale for the choosen lifecycle model">
+        <characterizedBy xmi:id="_qcY6kID_Ed6WxICbbaWZFg" description="ALC_LCD.2.3C The life-cycle definition documentation shall explain why the model was chosen.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_G_nqgIEAEd6WxICbbaWZFg" name="Development tools documentation">
+      <characterizedBy xmi:id="_KkzogIEAEd6WxICbbaWZFg" description="ALC_TAT.1.1D The developer shall identify the development tools being used for the TOE.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_Twq7IIEAEd6WxICbbaWZFg" description="ALC_TAT.1.1C All development tools used for implementation shall be well-defined.&#xD;&#xA;ALC_TAT.1.2C The documentation of the development tools shall unambiguously define the meaning of all statements used in the implementation.&#xD;&#xA;ALC_TAT.1.3C The documentation of the development tools shall unambiguously define the meaning of all implementation-dependent options.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_PzMY8IEAEd6WxICbbaWZFg" name="selected options documentation">
+        <characterizedBy xmi:id="_RA1QwIEAEd6WxICbbaWZFg" description="ALC_TAT.1.2D The developer shall document the selected implementation-dependent options of the development tools.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_bEu-oIEAEd6WxICbbaWZFg" name="Implementation standards documentation">
+      <characterizedBy xmi:id="_dJ8-sIEAEd6WxICbbaWZFg" description="ALC_TAT.2.3D The developer shall describe the implementation standards to be applied.&#xD;&#xA;ALC_TAT.2.2E The evaluator shall confirm that the implementation standards have been applied.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_iE-HMIEAEd6WxICbbaWZFg" description="ALC_TAT.3.3D The developer shall describe the implementation standards for all parts of the TOE.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+    </entities>
+  </modules>
+  <modules xmi:id="_kavEsIEAEd6WxICbbaWZFg" name="Tests (CC chap. 18)">
+    <entities xmi:id="_NsfVsIEBEd6WxICbbaWZFg" name="Test coverage documentation">
+      <characterizedBy xmi:id="_TG8zQIEBEd6WxICbbaWZFg" description="ATE_COV.1.1D The developer shall provide evidence of the test coverage.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+    </entities>
+    <entities xmi:id="_PP4bEIEBEd6WxICbbaWZFg" name="Test documentation">
+      <characterizedBy xmi:id="_d163YIEBEd6WxICbbaWZFg" description="ATE_COV.1.1D The developer shall provide evidence of the test coverage.&#xD;&#xA;ATE_FUN.1.1D The developer shall test the TSF and document the results.&#xD;&#xA;ATE_FUN.1.2D The developer shall provide test documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_UpAmcIECEd6WxICbbaWZFg" name="Test plan">
+        <characterizedBy xmi:id="_bazDUIECEd6WxICbbaWZFg" description="ATE_FUN.1.1C The test documentation shall consist of test plans, test procedure descriptions, expected test results and actual test results.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_iySOQIECEd6WxICbbaWZFg" description="ATE_FUN.1.2C The test plans shall identify the security functions to be tested and describe the goal of the tests to be performed.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_VhMLoIECEd6WxICbbaWZFg" name="Test procedure description">
+        <characterizedBy xmi:id="_bxJGwIECEd6WxICbbaWZFg" description="ATE_FUN.1.1C The test documentation shall consist of test plans, test procedure descriptions, expected test results and actual test results.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_lWf3cIECEd6WxICbbaWZFg" description="ATE_FUN.1.3C The test procedure descriptions shall identify the tests to be performed and describe the scenarios for testing each security function. These scenarios shall include any ordering dependencies on the results of other tests.&#xD;&#xA;ATE_FUN.2.6C The test documentation shall include an analysis of the test procedure ordering dependencies.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_W5QKwIECEd6WxICbbaWZFg" name="Expected test results description">
+        <characterizedBy xmi:id="_b-HLwIECEd6WxICbbaWZFg" description="ATE_FUN.1.1C The test documentation shall consist of test plans, test procedure descriptions, expected test results and actual test results.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_nRI_MIECEd6WxICbbaWZFg" description="ATE_FUN.1.4C The expected test results shall show the anticipated outputs from a successful execution of the tests.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_ZK1y4IECEd6WxICbbaWZFg" name="Actual test result description">
+        <characterizedBy xmi:id="_cMkegIECEd6WxICbbaWZFg" description="ATE_FUN.1.1C The test documentation shall consist of test plans, test procedure descriptions, expected test results and actual test results.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_pL7Q4IECEd6WxICbbaWZFg" description="ATE_FUN.1.5C The test results from the developer execution of the tests shall demonstrate that each tested security function behaved as specified.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_Zc3zgIEBEd6WxICbbaWZFg" name="Test coverage">
+      <characterizedBy xmi:id="_aeb-MIEBEd6WxICbbaWZFg" description="ATE_COV.1.1C The evidence of the test coverage shall show the correspondence between the tests identified in the test documentation and the TSF as described in the functional specification.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_43PvsIEBEd6WxICbbaWZFg" name="Test coverage of external interfaces">
+        <characterizedBy xmi:id="_6vqC0IEBEd6WxICbbaWZFg" description="ATE_COV.3.3C The analysis of the test coverage shall rigorously demonstrate that all external interfaces of the TSF identified in the functional specification have been completely tested.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="__aR-4IEBEd6WxICbbaWZFg" name="Test depth">
+      <characterizedBy xmi:id="_KMhZcIECEd6WxICbbaWZFg" description="ATE_DPT.1.1C The depth analysis shall demonstrate that the tests identified in the test documentation are sufficient to demonstrate that the TSF operates in accordance with its high-level design.&#xD;&#xA;ATE_DPT.2.1C The depth analysis shall demonstrate that the tests identified in the test documentation are sufficient to demonstrate that the TSF operates in accordance with its high-level design and low-level design.&#xD;&#xA;ATE_DPT.3.1C The depth analysis shall demonstrate that the tests identified in the test documentation are sufficient to demonstrate that the TSF operates in accordance with its high-level design, low-level design and implementation representation.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_E88WMIECEd6WxICbbaWZFg" name="Analysis of test depth">
+        <characterizedBy xmi:id="_GYSS0IECEd6WxICbbaWZFg" description="ATE_DPT.1.1D The developer shall provide the analysis of the depth of testing.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+  </modules>
+  <modules xmi:id="_4tao0IECEd6WxICbbaWZFg" name="Vulnerability assessment (CC chap. 19)">
+    <entities xmi:id="_-dyE8IECEd6WxICbbaWZFg" name="Covert channel analysis">
+      <characterizedBy xmi:id="_A5zbcIEDEd6WxICbbaWZFg" description="AVA_CCA.1.1D The developer shall conduct a search for covert channels for each information flow control policy.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_fSUSAIEDEd6WxICbbaWZFg" description="AVA_CCA.1.2E The evaluator shall confirm that the results of the covert channel analysis show that the TOE meets its functional requirements.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+    </entities>
+    <entities xmi:id="_DTvHQIEDEd6WxICbbaWZFg" name="Covert channel analysis documentation">
+      <characterizedBy xmi:id="_EkNQoIEDEd6WxICbbaWZFg" description="AVA_CCA.1.2D The developer shall provide covert channel analysis documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="_JFcnMIEDEd6WxICbbaWZFg" name="description of covert channels">
+        <characterizedBy xmi:id="_Kw41UIEDEd6WxICbbaWZFg" description="AVA_CCA.1.1C The analysis documentation shall identify covert channels and estimate their capacity.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_OxVzAIEDEd6WxICbbaWZFg" name="description of analysis procedure">
+        <characterizedBy xmi:id="_QJtUIIEDEd6WxICbbaWZFg" description="AVA_CCA.1.2C The analysis documentation shall describe the procedures used for determining the existence of covert channels, and the information needed to carry out the covert channel analysis.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_Sn-GUIEDEd6WxICbbaWZFg" name="description of assumtions during analysis">
+        <characterizedBy xmi:id="_T_lZgIEDEd6WxICbbaWZFg" description="AVA_CCA.1.3C The analysis documentation shall describe all assumptions made during the covert channel analysis.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_W3VCsIEDEd6WxICbbaWZFg" name="description of the used method">
+        <characterizedBy xmi:id="_YA8WIIEDEd6WxICbbaWZFg" description="AVA_CCA.1.4C The analysis documentation shall describe the method used for estimating channel capacity, based on worst case scenarios.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+        <characterizedBy xmi:id="_u8wKkIEDEd6WxICbbaWZFg" description="AVA_CCA.2.6C The analysis documentation shall provide evidence that the method used to identify covert channels is systematic.&#xD;&#xA;AVA_CCA.3.6C The analysis documentation shall provide evidence that the method used to identify covert channels is exhaustive.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_a_1JIIEDEd6WxICbbaWZFg" name="description of worst case scenarios">
+        <characterizedBy xmi:id="_ccq6kIEDEd6WxICbbaWZFg" description="AVA_CCA.1.5C The analysis documentation shall describe the worst case exploitation scenario for each identified covert channel.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_9sUWUIEDEd6WxICbbaWZFg" name="Guidance documentation">
+      <characterizedBy xmi:id="_CRbgQIEEEd6WxICbbaWZFg" description="AVA_MSU.1.1D The developer shall provide guidance documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_I0xRcIEEEd6WxICbbaWZFg" description="AVA_MSU.1.2C The guidance documentation shall be complete, clear, consistent and reasonable.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <characterizedBy xmi:id="_J5KtsIEEEd6WxICbbaWZFg" description="AVA_MSU.1.2C The guidance documentation shall be complete, clear, consistent and reasonable.&#xD;&#xA;" property="_-U1TQIAQEd6ryYDjQCjYJA"/>
+      <characterizedBy xmi:id="_L437oIEEEd6WxICbbaWZFg" description="AVA_MSU.1.2C The guidance documentation shall be complete, clear, consistent and reasonable.&#xD;&#xA;" property="_QLWbIIAMEd6ryYDjQCjYJA"/>
+      <characterizedBy xmi:id="_N9Cy0IEEEd6WxICbbaWZFg" description="AVA_MSU.1.2C The guidance documentation shall be complete, clear, consistent and reasonable.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+      <subEntityTypes xmi:id="__uaJ4IEDEd6WxICbbaWZFg" name="Modes of operation documentation">
+        <characterizedBy xmi:id="_GfAT8IEEEd6WxICbbaWZFg" description="AVA_MSU.1.1C The guidance documentation shall identify all possible modes of operation of the TOE (including operation following failure or operational error), their consequences and implications for maintaining secure operation.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_Ri--wIEEEd6WxICbbaWZFg" name="Assumptions on the environment description">
+        <characterizedBy xmi:id="_UTkQAIEEEd6WxICbbaWZFg" description="AVA_MSU.1.3C The guidance documentation shall list all assumptions about the intended environment.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_Wl5fAIEEEd6WxICbbaWZFg" name="Requirements for external security measures">
+        <characterizedBy xmi:id="_YMkh4IEEEd6WxICbbaWZFg" description="AVA_MSU.1.4C The guidance documentation shall list all requirements for external security measures (including external procedural, physical and personnel controls).&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+    <entities xmi:id="_iZj6UIEEEd6WxICbbaWZFg" name="Analysis of guidance documentation">
+      <characterizedBy xmi:id="_kFJ5cIEEEd6WxICbbaWZFg" description="AVA_MSU.2.2D The developer shall document an analysis of the guidance documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_q02roIEEEd6WxICbbaWZFg" description="AVA_MSU.2.5C The analysis documentation shall demonstrate that the guidance documentation is complete.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+    </entities>
+    <entities xmi:id="_-w4VMIEEEd6WxICbbaWZFg" name="Strenght of security function evaluation">
+      <characterizedBy xmi:id="_AgfRoIEFEd6WxICbbaWZFg" description="AVA_SOF.1.1D The developer shall perform a strength of TOE security function analysis for each mechanism identified in the ST as having a strength of TOE security function claim.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+    </entities>
+    <entities xmi:id="_E767IIEFEd6WxICbbaWZFg" name="Strength of security function">
+      <characterizedBy xmi:id="_GMZEgIEFEd6WxICbbaWZFg" description="AVA_SOF.1.1C For each mechanism with a strength of TOE security function claim the strength of TOE security function analysis shall show that it meets or exceeds the minimum strength level defined in the PP/ST.&#xD;&#xA;AVA_SOF.1.2C For each mechanism with a specific strength of TOE security function claim the strength of TOE security function analysis shall show that it meets or exceeds the specific strength of function metric defined in the PP/ST.&#xD;&#xA;" property="_orDM0H9fEd65VtBv9ZMgng"/>
+    </entities>
+    <entities xmi:id="_M-ecUIEFEd6WxICbbaWZFg" name="Vulnerability analysis">
+      <characterizedBy xmi:id="_QXltMIEFEd6WxICbbaWZFg" description="AVA_VLA.1.1D The developer shall perform a vulnerability analysis.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_VoE58IEGEd6WxICbbaWZFg" description="AVA_VLA.3.5C The vulnerability analysis documentation shall show that the search for vulnerabilities is systematic.&#xD;&#xA;" property="_eFx3MH2yEd6XJqM1CCOWEw"/>
+    </entities>
+    <entities xmi:id="_OQbzcIEFEd6WxICbbaWZFg" name="Vulnerability analysis documentation">
+      <characterizedBy xmi:id="_SHpVkIEFEd6WxICbbaWZFg" description="AVA_VLA.1.2D The developer shall provide vulnerability analysis documentation.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      <characterizedBy xmi:id="_H2gAcIEGEd6WxICbbaWZFg" description="AVA_VLA.1.3C The vulnerability analysis documentation shall show, for all identified vulnerabilities, that the vulnerability cannot be exploited in the intended environment for the TOE.&#xD;&#xA;AVA_VLA.2.4C The vulnerability analysis documentation shall justify that the TOE, with the identified vulnerabilities, is resistant to obvious penetration attacks.&#xD;&#xA;AVA_VLA.3.5C The vulnerability analysis documentation shall show that the search for vulnerabilities is systematic.&#xD;&#xA;" property="_d_gXgH9cEd65VtBv9ZMgng"/>
+      <subEntityTypes xmi:id="_79UzAIEFEd6WxICbbaWZFg" name="description of performed analysis">
+        <characterizedBy xmi:id="_9sV5kIEFEd6WxICbbaWZFg" description="AVA_VLA.1.1C The vulnerability analysis documentation shall describe the analysis of the TOE deliverables performed to search for obvious ways in which a user can violate the TSP.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="__GzFYIEFEd6WxICbbaWZFg" name="description of obvious vulnerabilities">
+        <characterizedBy xmi:id="_CMiuUIEGEd6WxICbbaWZFg" description="AVA_VLA.1.2C The vulnerability analysis documentation shall describe the disposition of obvious vulnerabilities.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_M8PyQIEGEd6WxICbbaWZFg" name="description of identified vulnerabilities">
+        <characterizedBy xmi:id="_PHuyYIEGEd6WxICbbaWZFg" description="AVA_VLA.2.2C The vulnerability analysis documentation shall describe the disposition of identified vulnerabilities.&#xD;&#xA;" property="_e_rfMH2oEd6XJqM1CCOWEw"/>
+      </subEntityTypes>
+    </entities>
+  </modules>
+</qm:QualityModel>

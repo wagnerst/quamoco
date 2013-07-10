@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_d9ViEGEEEd6k8rnx1Nuq4g">
+  <modules xmi:id="_8CRZ4XwiEd6MotksAvX0FQ">
+    <properties xmi:id="_d9ViEWEEEd6k8rnx1Nuq4g" name="StandardConformance" factors="_d9ViFWEEEd6k8rnx1Nuq4g _d9ViF2EEEd6k8rnx1Nuq4g _d9ViGGEEEd6k8rnx1Nuq4g _d9ViGWEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_d9ViGmEEEd6k8rnx1Nuq4g" name="StandardConformanceClass" measures="_d9ViFWEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_d9ViG2EEEd6k8rnx1Nuq4g" name="StandardConformanceInterface" measures="_d9ViF2EEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_d9ViHGEEEd6k8rnx1Nuq4g" name="StandardConformancePackage" measures="_d9ViGGEEEd6k8rnx1Nuq4g"/>
+    <entities xmi:id="_d9ViEmEEEd6k8rnx1Nuq4g" name="SourceCode">
+      <subEntityTypes xmi:id="_d9ViE2EEEd6k8rnx1Nuq4g" name="Package">
+        <subEntityTypes xmi:id="_d9ViFGEEEd6k8rnx1Nuq4g" name="Class">
+          <characterizedBy xmi:id="_d9ViFWEEEd6k8rnx1Nuq4g" description="" property="_d9ViEWEEEd6k8rnx1Nuq4g" measuredBy="_d9ViGmEEEd6k8rnx1Nuq4g"/>
+        </subEntityTypes>
+        <subEntityTypes xmi:id="_d9ViFmEEEd6k8rnx1Nuq4g" name="Interface">
+          <characterizedBy xmi:id="_d9ViF2EEEd6k8rnx1Nuq4g" description="" property="_d9ViEWEEEd6k8rnx1Nuq4g" measuredBy="_d9ViG2EEEd6k8rnx1Nuq4g"/>
+        </subEntityTypes>
+        <characterizedBy xmi:id="_d9ViGGEEEd6k8rnx1Nuq4g" description="" property="_d9ViEWEEEd6k8rnx1Nuq4g" measuredBy="_d9ViHGEEEd6k8rnx1Nuq4g"/>
+      </subEntityTypes>
+      <characterizedBy xmi:id="_d9ViGWEEEd6k8rnx1Nuq4g" description="" property="_d9ViEWEEEd6k8rnx1Nuq4g"/>
+    </entities>
+  </modules>
+</qm:QualityModel>

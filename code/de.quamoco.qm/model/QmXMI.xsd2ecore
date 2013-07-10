@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="qm.ecore#/"
+    outputs="QmXMI.xsd#/">
+  <nested inputs="qm.ecore#/" outputs="QmXMI.xsd#/">
+    <nested inputs="qm.ecore#//Effect" outputs="QmXMI.xsd#//Effect;XSDSimpleTypeDefinition">
+      <nested inputs="qm.ecore#//Effect/POSITIVE" outputs="QmXMI.xsd#//Effect;XSDSimpleTypeDefinition/XSDEnumerationFacet"/>
+      <nested inputs="qm.ecore#//Effect/NEGATIVE" outputs="QmXMI.xsd#//Effect;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Type" outputs="QmXMI.xsd#//Type;XSDSimpleTypeDefinition=1">
+      <nested inputs="qm.ecore#//Type/NONE" outputs="QmXMI.xsd#//Type;XSDSimpleTypeDefinition=1/XSDEnumerationFacet"/>
+      <nested inputs="qm.ecore#//Type/FINDINGS" outputs="QmXMI.xsd#//Type;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=1"/>
+      <nested inputs="qm.ecore#//Type/NUMBER" outputs="QmXMI.xsd#//Type;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//QualityModel" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition">
+      <nested inputs="qm.ecore#//QualityModel/schoolGradeBoundary2" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//QualityModel/schoolGradeBoundary3" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//QualityModel/schoolGradeBoundary4" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//QualityModel/schoolGradeBoundary5" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse=3"/>
+      <nested inputs="qm.ecore#//QualityModel/schoolGradeBoundary6" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse=4"/>
+      <nested inputs="qm.ecore#//QualityModel/entities" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//QualityModel/factors" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="qm.ecore#//QualityModel/evaluations" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+      <nested inputs="qm.ecore#//QualityModel/measures" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"/>
+      <nested inputs="qm.ecore#//QualityModel/measurementMethods" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"/>
+      <nested inputs="qm.ecore#//QualityModel/tools" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"/>
+      <nested inputs="qm.ecore#//QualityModel/tags" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=6"/>
+      <nested inputs="qm.ecore#//QualityModel/sources" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"/>
+      <nested inputs="qm.ecore#//QualityModel/requires" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDAttributeUse=5"/>
+      <nested inputs="qm.ecore#//QualityModel/requires" outputs="QmXMI.xsd#//QualityModel;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=8"/>
+    </nested>
+    <nested inputs="qm.ecore#//QualityModel" outputs="QmXMI.xsd#//QualityModel;XSDElementDeclaration"/>
+    <nested inputs="qm.ecore#//QualityModelElement" outputs="QmXMI.xsd#//QualityModelElement;XSDComplexTypeDefinition=1">
+      <nested inputs="qm.ecore#//QualityModelElement/originatesFrom" outputs="QmXMI.xsd#//QualityModelElement;XSDComplexTypeDefinition=1/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//QualityModelElement/originatesFrom" outputs="QmXMI.xsd#//QualityModelElement;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//QualityModelElement" outputs="QmXMI.xsd#//QualityModelElement;XSDElementDeclaration=1"/>
+    <nested inputs="qm.ecore#//Source" outputs="QmXMI.xsd#//Source;XSDComplexTypeDefinition=2">
+      <nested inputs="qm.ecore#//Source/qualityModel" outputs="QmXMI.xsd#//Source;XSDComplexTypeDefinition=2/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Source/qualityModel" outputs="QmXMI.xsd#//Source;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//Source" outputs="QmXMI.xsd#//Source;XSDElementDeclaration=2"/>
+    <nested inputs="qm.ecore#//DescribedElement" outputs="QmXMI.xsd#//DescribedElement;XSDComplexTypeDefinition=3">
+      <nested inputs="qm.ecore#//DescribedElement/description" outputs="QmXMI.xsd#//DescribedElement;XSDComplexTypeDefinition=3/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="qm.ecore#//DescribedElement" outputs="QmXMI.xsd#//DescribedElement;XSDElementDeclaration=3"/>
+    <nested inputs="qm.ecore#//NamedElement" outputs="QmXMI.xsd#//NamedElement;XSDComplexTypeDefinition=4">
+      <nested inputs="qm.ecore#//NamedElement/name" outputs="QmXMI.xsd#//NamedElement;XSDComplexTypeDefinition=4/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//NamedElement/title" outputs="QmXMI.xsd#//NamedElement;XSDComplexTypeDefinition=4/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//NamedElement" outputs="QmXMI.xsd#//NamedElement;XSDElementDeclaration=4"/>
+    <nested inputs="qm.ecore#//AnnotatedElement" outputs="QmXMI.xsd#//AnnotatedElement;XSDComplexTypeDefinition=5">
+      <nested inputs="qm.ecore#//AnnotatedElement/annotations" outputs="QmXMI.xsd#//AnnotatedElement;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//AnnotatedElement/advancedAnnotations" outputs="QmXMI.xsd#//AnnotatedElement;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//AnnotatedElement" outputs="QmXMI.xsd#//AnnotatedElement;XSDElementDeclaration=5"/>
+    <nested inputs="qm.ecore#//Annotation" outputs="QmXMI.xsd#//Annotation;XSDComplexTypeDefinition=6">
+      <nested inputs="qm.ecore#//Annotation/key" outputs="QmXMI.xsd#//Annotation;XSDComplexTypeDefinition=6/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Annotation/value" outputs="QmXMI.xsd#//Annotation;XSDComplexTypeDefinition=6/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//Annotation" outputs="QmXMI.xsd#//Annotation;XSDElementDeclaration=6"/>
+    <nested inputs="qm.ecore#//Tag" outputs="QmXMI.xsd#//Tag;XSDComplexTypeDefinition=7">
+      <nested inputs="qm.ecore#//Tag/qualityModel" outputs="QmXMI.xsd#//Tag;XSDComplexTypeDefinition=7/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Tag/qualityModel" outputs="QmXMI.xsd#//Tag;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//Tag" outputs="QmXMI.xsd#//Tag;XSDElementDeclaration=7"/>
+    <nested inputs="qm.ecore#//TaggedElement" outputs="QmXMI.xsd#//TaggedElement;XSDComplexTypeDefinition=8">
+      <nested inputs="qm.ecore#//TaggedElement/taggedBy" outputs="QmXMI.xsd#//TaggedElement;XSDComplexTypeDefinition=8/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//TaggedElement/taggedBy" outputs="QmXMI.xsd#//TaggedElement;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//TaggedElement" outputs="QmXMI.xsd#//TaggedElement;XSDElementDeclaration=8"/>
+    <nested inputs="qm.ecore#//Entity" outputs="QmXMI.xsd#//Entity;XSDComplexTypeDefinition=9">
+      <nested inputs="qm.ecore#//Entity/isA" outputs="QmXMI.xsd#//Entity;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Entity/partOf" outputs="QmXMI.xsd#//Entity;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="qm.ecore#//Entity/qualityModel" outputs="QmXMI.xsd#//Entity;XSDComplexTypeDefinition=9/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Entity/qualityModel" outputs="QmXMI.xsd#//Entity;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//Entity" outputs="QmXMI.xsd#//Entity;XSDElementDeclaration=9"/>
+    <nested inputs="qm.ecore#//Specialization" outputs="QmXMI.xsd#//Specialization;XSDComplexTypeDefinition=10">
+      <nested inputs="qm.ecore#//Specialization/parent" outputs="QmXMI.xsd#//Specialization;XSDComplexTypeDefinition=10/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Specialization/parent" outputs="QmXMI.xsd#//Specialization;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Specialization/child" outputs="QmXMI.xsd#//Specialization;XSDComplexTypeDefinition=10/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Specialization/child" outputs="QmXMI.xsd#//Specialization;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Specialization" outputs="QmXMI.xsd#//Specialization;XSDElementDeclaration=10"/>
+    <nested inputs="qm.ecore#//Decomposition" outputs="QmXMI.xsd#//Decomposition;XSDComplexTypeDefinition=11">
+      <nested inputs="qm.ecore#//Decomposition/parent" outputs="QmXMI.xsd#//Decomposition;XSDComplexTypeDefinition=11/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Decomposition/parent" outputs="QmXMI.xsd#//Decomposition;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Decomposition/child" outputs="QmXMI.xsd#//Decomposition;XSDComplexTypeDefinition=11/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Decomposition/child" outputs="QmXMI.xsd#//Decomposition;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Decomposition" outputs="QmXMI.xsd#//Decomposition;XSDElementDeclaration=11"/>
+    <nested inputs="qm.ecore#//CharacterizingElement" outputs="QmXMI.xsd#//CharacterizingElement;XSDComplexTypeDefinition=12">
+      <nested inputs="qm.ecore#//CharacterizingElement/characterizes" outputs="QmXMI.xsd#//CharacterizingElement;XSDComplexTypeDefinition=12/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//CharacterizingElement/characterizes" outputs="QmXMI.xsd#//CharacterizingElement;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//CharacterizingElement" outputs="QmXMI.xsd#//CharacterizingElement;XSDElementDeclaration=12"/>
+    <nested inputs="qm.ecore#//Factor" outputs="QmXMI.xsd#//Factor;XSDComplexTypeDefinition=13">
+      <nested inputs="qm.ecore#//Factor/influences" outputs="QmXMI.xsd#//Factor;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Factor/refines" outputs="QmXMI.xsd#//Factor;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="qm.ecore#//Factor/qualityModel" outputs="QmXMI.xsd#//Factor;XSDComplexTypeDefinition=13/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Factor/qualityModel" outputs="QmXMI.xsd#//Factor;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//Factor" outputs="QmXMI.xsd#//Factor;XSDElementDeclaration=13"/>
+    <nested inputs="qm.ecore#//Impact" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14">
+      <nested inputs="qm.ecore#//Impact/justification" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Impact/effect" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Impact/source" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//Impact/source" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Impact/target" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDAttributeUse=3"/>
+      <nested inputs="qm.ecore#//Impact/target" outputs="QmXMI.xsd#//Impact;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Impact" outputs="QmXMI.xsd#//Impact;XSDElementDeclaration=14"/>
+    <nested inputs="qm.ecore#//Evaluation" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15">
+      <nested inputs="qm.ecore#//Evaluation/maximumPoints" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Evaluation/completeness" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Evaluation/evaluates" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//Evaluation/evaluates" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Evaluation/qualityModel" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDAttributeUse=3"/>
+      <nested inputs="qm.ecore#//Evaluation/qualityModel" outputs="QmXMI.xsd#//Evaluation;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Evaluation" outputs="QmXMI.xsd#//Evaluation;XSDElementDeclaration=15"/>
+    <nested inputs="qm.ecore#//FactorRefinement" outputs="QmXMI.xsd#//FactorRefinement;XSDComplexTypeDefinition=16">
+      <nested inputs="qm.ecore#//FactorRefinement/child" outputs="QmXMI.xsd#//FactorRefinement;XSDComplexTypeDefinition=16/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//FactorRefinement/child" outputs="QmXMI.xsd#//FactorRefinement;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//FactorRefinement/parent" outputs="QmXMI.xsd#//FactorRefinement;XSDComplexTypeDefinition=16/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//FactorRefinement/parent" outputs="QmXMI.xsd#//FactorRefinement;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//FactorRefinement" outputs="QmXMI.xsd#//FactorRefinement;XSDElementDeclaration=16"/>
+    <nested inputs="qm.ecore#//Measurement" outputs="QmXMI.xsd#//Measurement;XSDComplexTypeDefinition=17">
+      <nested inputs="qm.ecore#//Measurement/parent" outputs="QmXMI.xsd#//Measurement;XSDComplexTypeDefinition=17/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Measurement/parent" outputs="QmXMI.xsd#//Measurement;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Measurement/child" outputs="QmXMI.xsd#//Measurement;XSDComplexTypeDefinition=17/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Measurement/child" outputs="QmXMI.xsd#//Measurement;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Measurement" outputs="QmXMI.xsd#//Measurement;XSDElementDeclaration=17"/>
+    <nested inputs="qm.ecore#//MeasureRefinement" outputs="QmXMI.xsd#//MeasureRefinement;XSDComplexTypeDefinition=18">
+      <nested inputs="qm.ecore#//MeasureRefinement/parent" outputs="QmXMI.xsd#//MeasureRefinement;XSDComplexTypeDefinition=18/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//MeasureRefinement/parent" outputs="QmXMI.xsd#//MeasureRefinement;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//MeasureRefinement/child" outputs="QmXMI.xsd#//MeasureRefinement;XSDComplexTypeDefinition=18/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//MeasureRefinement/child" outputs="QmXMI.xsd#//MeasureRefinement;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//MeasureRefinement" outputs="QmXMI.xsd#//MeasureRefinement;XSDElementDeclaration=18"/>
+    <nested inputs="qm.ecore#//Measure" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19">
+      <nested inputs="qm.ecore#//Measure/type" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Measure/measures" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//Measure/qualityModel" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Measure/qualityModel" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="qm.ecore#//Measure/refines" outputs="QmXMI.xsd#//Measure;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//Measure" outputs="QmXMI.xsd#//Measure;XSDElementDeclaration=19"/>
+    <nested inputs="qm.ecore#//MeasurementMethod" outputs="QmXMI.xsd#//MeasurementMethod;XSDComplexTypeDefinition=20">
+      <nested inputs="qm.ecore#//MeasurementMethod/determines" outputs="QmXMI.xsd#//MeasurementMethod;XSDComplexTypeDefinition=20/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//MeasurementMethod/determines" outputs="QmXMI.xsd#//MeasurementMethod;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//MeasurementMethod/qualityModel" outputs="QmXMI.xsd#//MeasurementMethod;XSDComplexTypeDefinition=20/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//MeasurementMethod/qualityModel" outputs="QmXMI.xsd#//MeasurementMethod;XSDComplexTypeDefinition=20/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//MeasurementMethod" outputs="QmXMI.xsd#//MeasurementMethod;XSDElementDeclaration=20"/>
+    <nested inputs="qm.ecore#//MeasureAggregation" outputs="QmXMI.xsd#//MeasureAggregation;XSDComplexTypeDefinition=21"/>
+    <nested inputs="qm.ecore#//DescribedElement/description" outputs="QmXMI.xsd#//MeasureAggregation;XSDComplexTypeDefinition=21/XSDAttributeUse"/>
+    <nested inputs="qm.ecore#//NamedElement/name" outputs="QmXMI.xsd#//MeasureAggregation;XSDComplexTypeDefinition=21/XSDAttributeUse=1"/>
+    <nested inputs="qm.ecore#//NamedElement/title" outputs="QmXMI.xsd#//MeasureAggregation;XSDComplexTypeDefinition=21/XSDAttributeUse=2"/>
+    <nested inputs="qm.ecore#//MeasureAggregation" outputs="QmXMI.xsd#//MeasureAggregation;XSDElementDeclaration=21"/>
+    <nested inputs="qm.ecore#//Instrument" outputs="QmXMI.xsd#//Instrument;XSDComplexTypeDefinition=22"/>
+    <nested inputs="qm.ecore#//Instrument" outputs="QmXMI.xsd#//Instrument;XSDElementDeclaration=22"/>
+    <nested inputs="qm.ecore#//ManualInstrument" outputs="QmXMI.xsd#//ManualInstrument;XSDComplexTypeDefinition=23"/>
+    <nested inputs="qm.ecore#//DescribedElement/description" outputs="QmXMI.xsd#//ManualInstrument;XSDComplexTypeDefinition=23/XSDAttributeUse"/>
+    <nested inputs="qm.ecore#//NamedElement/name" outputs="QmXMI.xsd#//ManualInstrument;XSDComplexTypeDefinition=23/XSDAttributeUse=1"/>
+    <nested inputs="qm.ecore#//NamedElement/title" outputs="QmXMI.xsd#//ManualInstrument;XSDComplexTypeDefinition=23/XSDAttributeUse=2"/>
+    <nested inputs="qm.ecore#//ManualInstrument" outputs="QmXMI.xsd#//ManualInstrument;XSDElementDeclaration=23"/>
+    <nested inputs="qm.ecore#//ToolBasedInstrument" outputs="QmXMI.xsd#//ToolBasedInstrument;XSDComplexTypeDefinition=24">
+      <nested inputs="qm.ecore#//ToolBasedInstrument/metric" outputs="QmXMI.xsd#//ToolBasedInstrument;XSDComplexTypeDefinition=24/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//ToolBasedInstrument/tool" outputs="QmXMI.xsd#//ToolBasedInstrument;XSDComplexTypeDefinition=24/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//ToolBasedInstrument/tool" outputs="QmXMI.xsd#//ToolBasedInstrument;XSDComplexTypeDefinition=24/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//ToolBasedInstrument" outputs="QmXMI.xsd#//ToolBasedInstrument;XSDElementDeclaration=24"/>
+    <nested inputs="qm.ecore#//Tool" outputs="QmXMI.xsd#//Tool;XSDComplexTypeDefinition=25">
+      <nested inputs="qm.ecore#//Tool/qualityModel" outputs="QmXMI.xsd#//Tool;XSDComplexTypeDefinition=25/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//Tool/qualityModel" outputs="QmXMI.xsd#//Tool;XSDComplexTypeDefinition=25/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//Tool" outputs="QmXMI.xsd#//Tool;XSDElementDeclaration=25"/>
+    <nested inputs="qm.ecore#//AnnotationBase" outputs="QmXMI.xsd#//AnnotationBase;XSDComplexTypeDefinition=26"/>
+    <nested inputs="qm.ecore#//AnnotationBase" outputs="QmXMI.xsd#//AnnotationBase;XSDElementDeclaration=26"/>
+    <nested inputs="qm.ecore#//QIESLEvaluation" outputs="QmXMI.xsd#//QIESLEvaluation;XSDComplexTypeDefinition=27"/>
+    <nested inputs="qm.ecore#//QIESLEvaluation" outputs="QmXMI.xsd#//QIESLEvaluation;XSDElementDeclaration=27"/>
+    <nested inputs="qm.ecore#//TextEvaluation" outputs="QmXMI.xsd#//TextEvaluation;XSDComplexTypeDefinition=28">
+      <nested inputs="qm.ecore#//TextEvaluation/specification" outputs="QmXMI.xsd#//TextEvaluation;XSDComplexTypeDefinition=28/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="qm.ecore#//TextEvaluation" outputs="QmXMI.xsd#//TextEvaluation;XSDElementDeclaration=28"/>
+    <nested inputs="qm.ecore#//FormBasedEvaluation" outputs="QmXMI.xsd#//FormBasedEvaluation;XSDComplexTypeDefinition=29"/>
+    <nested inputs="qm.ecore#//FormBasedEvaluation" outputs="QmXMI.xsd#//FormBasedEvaluation;XSDElementDeclaration=29"/>
+    <nested inputs="qm.ecore#//SingleMeasureEvaluation" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/range" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDAttributeUse"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/measure" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDAttributeUse=1"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/measure" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/normlizationMeasure" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDAttributeUse=2"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/normlizationMeasure" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation/function" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDComplexTypeDefinition=30/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    <nested inputs="qm.ecore#//SingleMeasureEvaluation" outputs="QmXMI.xsd#//SingleMeasureEvaluation;XSDElementDeclaration=30"/>
+    <nested inputs="qm.ecore#//FactorAggregation" outputs="QmXMI.xsd#//FactorAggregation;XSDComplexTypeDefinition=31"/>
+    <nested inputs="qm.ecore#//FactorAggregation" outputs="QmXMI.xsd#//FactorAggregation;XSDElementDeclaration=31"/>
+    <nested inputs="qm.ecore#//NormalizationMeasure" outputs="QmXMI.xsd#//NormalizationMeasure;XSDComplexTypeDefinition=32"/>
+    <nested inputs="qm.ecore#//NormalizationMeasure" outputs="QmXMI.xsd#//NormalizationMeasure;XSDElementDeclaration=32"/>
+    <nested inputs="qm.ecore#//QIESLAggregation" outputs="QmXMI.xsd#//QIESLAggregation;XSDComplexTypeDefinition=33"/>
+    <nested inputs="qm.ecore#//QIESLAggregation" outputs="QmXMI.xsd#//QIESLAggregation;XSDElementDeclaration=33"/>
+    <nested inputs="qm.ecore#//TextAggregation" outputs="QmXMI.xsd#//TextAggregation;XSDComplexTypeDefinition=34">
+      <nested inputs="qm.ecore#//TextAggregation/specification" outputs="QmXMI.xsd#//TextAggregation;XSDComplexTypeDefinition=34/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="qm.ecore#//TextAggregation" outputs="QmXMI.xsd#//TextAggregation;XSDElementDeclaration=34"/>
+    <nested inputs="qm.ecore#//FormBasedMeasureAggregation" outputs="QmXMI.xsd#//FormBasedMeasureAggregation;XSDComplexTypeDefinition=35"/>
+    <nested inputs="qm.ecore#//FormBasedMeasureAggregation" outputs="QmXMI.xsd#//FormBasedMeasureAggregation;XSDElementDeclaration=35"/>
+    <nested inputs="qm.ecore#//FactorRanking" outputs="QmXMI.xsd#//FactorRanking;XSDComplexTypeDefinition=36">
+      <nested inputs="qm.ecore#//FactorRanking/factor" outputs="QmXMI.xsd#//FactorRanking;XSDComplexTypeDefinition=36/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//FactorRanking/factor" outputs="QmXMI.xsd#//FactorRanking;XSDComplexTypeDefinition=36/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//FactorRanking" outputs="QmXMI.xsd#//FactorRanking;XSDElementDeclaration=36"/>
+    <nested inputs="qm.ecore#//LinearFunction" outputs="QmXMI.xsd#//LinearFunction;XSDComplexTypeDefinition=37">
+      <nested inputs="qm.ecore#//LinearFunction/lowerBound" outputs="QmXMI.xsd#//LinearFunction;XSDComplexTypeDefinition=37/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//LinearFunction/upperBound" outputs="QmXMI.xsd#//LinearFunction;XSDComplexTypeDefinition=37/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//LinearFunction" outputs="QmXMI.xsd#//LinearFunction;XSDElementDeclaration=37"/>
+    <nested inputs="qm.ecore#//Function" outputs="QmXMI.xsd#//Function;XSDComplexTypeDefinition=38"/>
+    <nested inputs="qm.ecore#//Function" outputs="QmXMI.xsd#//Function;XSDElementDeclaration=38"/>
+    <nested inputs="qm.ecore#//LinearIncreasingFunction" outputs="QmXMI.xsd#//LinearIncreasingFunction;XSDComplexTypeDefinition=39"/>
+    <nested inputs="qm.ecore#//LinearIncreasingFunction" outputs="QmXMI.xsd#//LinearIncreasingFunction;XSDElementDeclaration=39"/>
+    <nested inputs="qm.ecore#//LinearDecreasingFunction" outputs="QmXMI.xsd#//LinearDecreasingFunction;XSDComplexTypeDefinition=40"/>
+    <nested inputs="qm.ecore#//LinearDecreasingFunction" outputs="QmXMI.xsd#//LinearDecreasingFunction;XSDElementDeclaration=40"/>
+    <nested inputs="qm.ecore#//WeightedSumFactorAggregation" outputs="QmXMI.xsd#//WeightedSumFactorAggregation;XSDComplexTypeDefinition=41">
+      <nested inputs="qm.ecore#//WeightedSumFactorAggregation/rankings" outputs="QmXMI.xsd#//WeightedSumFactorAggregation;XSDComplexTypeDefinition=41/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//WeightedSumFactorAggregation" outputs="QmXMI.xsd#//WeightedSumFactorAggregation;XSDElementDeclaration=41"/>
+    <nested inputs="qm.ecore#//FindingsUnionMeasureAggregation" outputs="QmXMI.xsd#//FindingsUnionMeasureAggregation;XSDComplexTypeDefinition=42"/>
+    <nested inputs="qm.ecore#//FindingsUnionMeasureAggregation" outputs="QmXMI.xsd#//FindingsUnionMeasureAggregation;XSDElementDeclaration=42"/>
+    <nested inputs="qm.ecore#//NumberMeanMeasureAggregation" outputs="QmXMI.xsd#//NumberMeanMeasureAggregation;XSDComplexTypeDefinition=43"/>
+    <nested inputs="qm.ecore#//NumberMeanMeasureAggregation" outputs="QmXMI.xsd#//NumberMeanMeasureAggregation;XSDElementDeclaration=43"/>
+    <nested inputs="qm.ecore#//ManualEvaluation" outputs="QmXMI.xsd#//ManualEvaluation;XSDComplexTypeDefinition=44"/>
+    <nested inputs="qm.ecore#//ManualEvaluation" outputs="QmXMI.xsd#//ManualEvaluation;XSDElementDeclaration=44"/>
+    <nested inputs="qm.ecore#//MeasureEvaluation" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45">
+      <nested inputs="qm.ecore#//MeasureEvaluation/range" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//MeasureEvaluation/measure" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//MeasureEvaluation/measure" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//MeasureEvaluation/normlizationMeasure" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDAttributeUse=3"/>
+      <nested inputs="qm.ecore#//MeasureEvaluation/normlizationMeasure" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+      <nested inputs="qm.ecore#//MeasureEvaluation/function" outputs="QmXMI.xsd#//MeasureEvaluation;XSDComplexTypeDefinition=45/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//MeasureEvaluation" outputs="QmXMI.xsd#//MeasureEvaluation;XSDElementDeclaration=45"/>
+    <nested inputs="qm.ecore#//Ranking" outputs="QmXMI.xsd#//Ranking;XSDComplexTypeDefinition=46">
+      <nested inputs="qm.ecore#//Ranking/rank" outputs="QmXMI.xsd#//Ranking;XSDComplexTypeDefinition=46/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//Ranking/weight" outputs="QmXMI.xsd#//Ranking;XSDComplexTypeDefinition=46/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//Ranking" outputs="QmXMI.xsd#//Ranking;XSDElementDeclaration=46"/>
+    <nested inputs="qm.ecore#//MultiMeasureEvaluation" outputs="QmXMI.xsd#//MultiMeasureEvaluation;XSDComplexTypeDefinition=47"/>
+    <nested inputs="qm.ecore#//MultiMeasureEvaluation" outputs="QmXMI.xsd#//MultiMeasureEvaluation;XSDElementDeclaration=47"/>
+    <nested inputs="qm.ecore#//WeightedSumMultiMeasureEvaluation" outputs="QmXMI.xsd#//WeightedSumMultiMeasureEvaluation;XSDComplexTypeDefinition=48">
+      <nested inputs="qm.ecore#//WeightedSumMultiMeasureEvaluation/rankings" outputs="QmXMI.xsd#//WeightedSumMultiMeasureEvaluation;XSDComplexTypeDefinition=48/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//WeightedSumMultiMeasureEvaluation" outputs="QmXMI.xsd#//WeightedSumMultiMeasureEvaluation;XSDElementDeclaration=48"/>
+    <nested inputs="qm.ecore#//MeasureRanking" outputs="QmXMI.xsd#//MeasureRanking;XSDComplexTypeDefinition=49"/>
+    <nested inputs="qm.ecore#//Ranking/rank" outputs="QmXMI.xsd#//MeasureRanking;XSDComplexTypeDefinition=49/XSDAttributeUse"/>
+    <nested inputs="qm.ecore#//Ranking/weight" outputs="QmXMI.xsd#//MeasureRanking;XSDComplexTypeDefinition=49/XSDAttributeUse=1"/>
+    <nested inputs="qm.ecore#//MeasureRanking" outputs="QmXMI.xsd#//MeasureRanking;XSDElementDeclaration=49"/>
+    <nested inputs="qm.ecore#//QualityModelResult" outputs="QmXMI.xsd#//QualityModelResult;XSDComplexTypeDefinition=50">
+      <nested inputs="qm.ecore#//QualityModelResult/system" outputs="QmXMI.xsd#//QualityModelResult;XSDComplexTypeDefinition=50/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//QualityModelResult/date" outputs="QmXMI.xsd#//QualityModelResult;XSDComplexTypeDefinition=50/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//QualityModelResult/measurementResults" outputs="QmXMI.xsd#//QualityModelResult;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//QualityModelResult/evaluationResults" outputs="QmXMI.xsd#//QualityModelResult;XSDComplexTypeDefinition=50/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//QualityModelResult" outputs="QmXMI.xsd#//QualityModelResult;XSDElementDeclaration=50"/>
+    <nested inputs="qm.ecore#//MeasurementResult" outputs="QmXMI.xsd#//MeasurementResult;XSDComplexTypeDefinition=51">
+      <nested inputs="qm.ecore#//MeasurementResult/resultsFrom" outputs="QmXMI.xsd#//MeasurementResult;XSDComplexTypeDefinition=51/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//MeasurementResult/resultsFrom" outputs="QmXMI.xsd#//MeasurementResult;XSDComplexTypeDefinition=51/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//MeasurementResult" outputs="QmXMI.xsd#//MeasurementResult;XSDElementDeclaration=51"/>
+    <nested inputs="qm.ecore#//NumberMeasurementResult" outputs="QmXMI.xsd#//NumberMeasurementResult;XSDComplexTypeDefinition=52">
+      <nested inputs="qm.ecore#//NumberMeasurementResult/value" outputs="QmXMI.xsd#//NumberMeasurementResult;XSDComplexTypeDefinition=52/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//NumberMeasurementResult" outputs="QmXMI.xsd#//NumberMeasurementResult;XSDElementDeclaration=52"/>
+    <nested inputs="qm.ecore#//FindingsMeasurementResult" outputs="QmXMI.xsd#//FindingsMeasurementResult;XSDComplexTypeDefinition=53">
+      <nested inputs="qm.ecore#//FindingsMeasurementResult/count" outputs="QmXMI.xsd#//FindingsMeasurementResult;XSDComplexTypeDefinition=53/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//FindingsMeasurementResult/findingMessages" outputs="QmXMI.xsd#//FindingsMeasurementResult;XSDComplexTypeDefinition=53/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//FindingsMeasurementResult" outputs="QmXMI.xsd#//FindingsMeasurementResult;XSDElementDeclaration=53"/>
+    <nested inputs="qm.ecore#//DoubleInterval" outputs="QmXMI.xsd#//DoubleInterval;XSDComplexTypeDefinition=54">
+      <nested inputs="qm.ecore#//DoubleInterval/lower" outputs="QmXMI.xsd#//DoubleInterval;XSDComplexTypeDefinition=54/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//DoubleInterval/upper" outputs="QmXMI.xsd#//DoubleInterval;XSDComplexTypeDefinition=54/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//DoubleInterval" outputs="QmXMI.xsd#//DoubleInterval;XSDElementDeclaration=54"/>
+    <nested inputs="qm.ecore#//EvaluationResult" outputs="QmXMI.xsd#//EvaluationResult;XSDComplexTypeDefinition=55">
+      <nested inputs="qm.ecore#//EvaluationResult/value" outputs="QmXMI.xsd#//EvaluationResult;XSDComplexTypeDefinition=55/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//EvaluationResult/resultsFrom" outputs="QmXMI.xsd#//EvaluationResult;XSDComplexTypeDefinition=55/XSDAttributeUse"/>
+      <nested inputs="qm.ecore#//EvaluationResult/resultsFrom" outputs="QmXMI.xsd#//EvaluationResult;XSDComplexTypeDefinition=55/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//EvaluationResult" outputs="QmXMI.xsd#//EvaluationResult;XSDElementDeclaration=55"/>
+    <nested inputs="qm.ecore#//SingleMeasureEvaluationResult" outputs="QmXMI.xsd#//SingleMeasureEvaluationResult;XSDComplexTypeDefinition=56">
+      <nested inputs="qm.ecore#//SingleMeasureEvaluationResult/ratioAffected" outputs="QmXMI.xsd#//SingleMeasureEvaluationResult;XSDComplexTypeDefinition=56/XSDAttributeUse"/>
+    </nested>
+    <nested inputs="qm.ecore#//SingleMeasureEvaluationResult" outputs="QmXMI.xsd#//SingleMeasureEvaluationResult;XSDElementDeclaration=56"/>
+    <nested inputs="qm.ecore#//MultiMeasureEvaluationResult" outputs="QmXMI.xsd#//MultiMeasureEvaluationResult;XSDComplexTypeDefinition=57">
+      <nested inputs="qm.ecore#//MultiMeasureEvaluationResult/evaluationResults" outputs="QmXMI.xsd#//MultiMeasureEvaluationResult;XSDComplexTypeDefinition=57/XSDParticle/XSDModelGroup/XSDParticle"/>
+    </nested>
+    <nested inputs="qm.ecore#//MultiMeasureEvaluationResult" outputs="QmXMI.xsd#//MultiMeasureEvaluationResult;XSDElementDeclaration=57"/>
+    <nested inputs="qm.ecore#//MeasureRankingEvaluationResult" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDComplexTypeDefinition=58">
+      <nested inputs="qm.ecore#//MeasureRankingEvaluationResult/ratioAffected" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDComplexTypeDefinition=58/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//MeasureRankingEvaluationResult/value" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDComplexTypeDefinition=58/XSDParticle/XSDModelGroup/XSDParticle"/>
+      <nested inputs="qm.ecore#//MeasureRankingEvaluationResult/resultsFrom" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDComplexTypeDefinition=58/XSDAttributeUse=2"/>
+      <nested inputs="qm.ecore#//MeasureRankingEvaluationResult/resultsFrom" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDComplexTypeDefinition=58/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//MeasureRankingEvaluationResult" outputs="QmXMI.xsd#//MeasureRankingEvaluationResult;XSDElementDeclaration=58"/>
+    <nested inputs="qm.ecore#//Result" outputs="QmXMI.xsd#//Result;XSDComplexTypeDefinition=59">
+      <nested inputs="qm.ecore#//Result/message" outputs="QmXMI.xsd#//Result;XSDComplexTypeDefinition=59/XSDAttributeUse=1"/>
+    </nested>
+    <nested inputs="qm.ecore#//Result" outputs="QmXMI.xsd#//Result;XSDElementDeclaration=59"/>
+    <nested inputs="qm.ecore#//FindingMessage" outputs="QmXMI.xsd#//FindingMessage;XSDComplexTypeDefinition=60">
+      <nested inputs="qm.ecore#//FindingMessage/message" outputs="QmXMI.xsd#//FindingMessage;XSDComplexTypeDefinition=60/XSDAttributeUse=1"/>
+      <nested inputs="qm.ecore#//FindingMessage/location" outputs="QmXMI.xsd#//FindingMessage;XSDComplexTypeDefinition=60/XSDAttributeUse=2"/>
+    </nested>
+    <nested inputs="qm.ecore#//FindingMessage" outputs="QmXMI.xsd#//FindingMessage;XSDElementDeclaration=60"/>
+  </nested>
+</xsd2ecore:XSD2EcoreMappingRoot>

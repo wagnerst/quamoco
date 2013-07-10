@@ -1,0 +1,184 @@
+/*-------------------------------------------------------------------------+
+|                                                                          |
+| Copyright 2012 Technische Universitaet Muenchen and                      |
+| Fraunhofer-Institut fuer Experimentelles Software Engineering (IESE)     |
+|                                                                          |
+| Licensed under the Apache License, Version 2.0 (the "License");          |
+| you may not use this file except in compliance with the License.         |
+| You may obtain a copy of the License at                                  |
+|                                                                          |
+|    http://www.apache.org/licenses/LICENSE-2.0                            |
+|                                                                          |
+| Unless required by applicable law or agreed to in writing, software      |
+| distributed under the License is distributed on an "AS IS" BASIS,        |
+| WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. |
+| See the License for the specific language governing permissions and      |
+| limitations under the License.                                           |
+|                                                                          |
++-------------------------------------------------------------------------*/
+
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package de.quamoco.adaptation.model.status.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import de.quamoco.adaptation.model.status.AdaptationStatusItem;
+import de.quamoco.adaptation.model.status.StatusPackage;
+import de.quamoco.qm.impl.AnnotationBaseImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Adaptation Status Item</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link de.quamoco.adaptation.model.status.impl.AdaptationStatusItemImpl#getAffectedElementAdaptationId <em>Affected Element Adaptation Id</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public abstract class AdaptationStatusItemImpl extends AnnotationBaseImpl implements AdaptationStatusItem {
+	/**
+	 * The default value of the '{@link #getAffectedElementAdaptationId() <em>Affected Element Adaptation Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedElementAdaptationId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AFFECTED_ELEMENT_ADAPTATION_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAffectedElementAdaptationId() <em>Affected Element Adaptation Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAffectedElementAdaptationId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String affectedElementAdaptationId = AFFECTED_ELEMENT_ADAPTATION_ID_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AdaptationStatusItemImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return StatusPackage.Literals.ADAPTATION_STATUS_ITEM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAffectedElementAdaptationId() {
+		return affectedElementAdaptationId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAffectedElementAdaptationId(String newAffectedElementAdaptationId) {
+		String oldAffectedElementAdaptationId = affectedElementAdaptationId;
+		affectedElementAdaptationId = newAffectedElementAdaptationId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatusPackage.ADAPTATION_STATUS_ITEM__AFFECTED_ELEMENT_ADAPTATION_ID, oldAffectedElementAdaptationId, affectedElementAdaptationId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case StatusPackage.ADAPTATION_STATUS_ITEM__AFFECTED_ELEMENT_ADAPTATION_ID:
+				return getAffectedElementAdaptationId();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case StatusPackage.ADAPTATION_STATUS_ITEM__AFFECTED_ELEMENT_ADAPTATION_ID:
+				setAffectedElementAdaptationId((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case StatusPackage.ADAPTATION_STATUS_ITEM__AFFECTED_ELEMENT_ADAPTATION_ID:
+				setAffectedElementAdaptationId(AFFECTED_ELEMENT_ADAPTATION_ID_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case StatusPackage.ADAPTATION_STATUS_ITEM__AFFECTED_ELEMENT_ADAPTATION_ID:
+				return AFFECTED_ELEMENT_ADAPTATION_ID_EDEFAULT == null ? affectedElementAdaptationId != null : !AFFECTED_ELEMENT_ADAPTATION_ID_EDEFAULT.equals(affectedElementAdaptationId);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (affectedElementAdaptationId: ");
+		result.append(affectedElementAdaptationId);
+		result.append(')');
+		return result.toString();
+	}
+
+} //AdaptationStatusItemImpl

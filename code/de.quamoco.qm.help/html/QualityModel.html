@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>QualityModel</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">QualityModel</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>QualityModel</h1>
+
+<div class="excerpt">
+A quality model is the basic module of Quamoco quality models. A quality model contains
+entities, factors, measures, evaluations, aggregations, tools, and tags. It is a means
+for structuring the complete model into sensible parts. Usually, a quality model defines
+a quality model for a specific technology and depends on the root model.
+</div>
+
+<div class="important">
+	See also: <a href="modularizationconcept.html">Modularization Concept</a>.
+</div>
+
+<h2>General Rules</h2>
+<ol>
+	<li>
+		Build a separate quality model for each technology.
+	</li>
+	<li>
+		Set a dependency on the root model and other appropriate models. For example, a
+		quality model for Java should also depend on the object-oriented quality model.
+	</li>
+</ol>
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Qualified Name</h3>
+<ol>
+	<li>
+		The qualified name is the identifier used to refer to the model. It is generated
+		automatically based on the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Name</h3>
+<ol>
+	<li>
+		The name of a model should represent the content of the model. For example,
+		if it describes factors for the programming language Java, it should be called
+		<i>Java</i>.
+	</li>
+	
+	<li>
+	If there is no specific reason to do otherwise, only captialise the first word in the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Title</h3>
+<ol>
+	<li>
+		The title is a more elaborated/detailed name for the model. 
+	</li>
+	
+	<li>
+		This is optional.
+	</li>
+
+	<li>
+	If there is no specific reason to do otherwise, only captialise the first word in the title.
+	</li>
+</ol>
+
+<h3 class="attribute">Description</h3>
+<ol>
+	<li>
+		A textual explanation what the model contains.
+	</li>
+</ol>
+
+<h3 class="attribute">Requires</h3>
+<ol>
+	<li>
+		The quality models the current quality model depends on. These models will be loaded
+		together with the current model
+	</li>
+	
+	<li>
+		You can only link in any way from the current model to models that are in this requires list.
+	</li>
+</ol>
+
+</body>
+</html>

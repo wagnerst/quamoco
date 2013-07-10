@@ -1,0 +1,13 @@
+SET a = 1
+SET b = 2
+SET c = 3
+
+ result = mean(
+	a,
+	b,
+	c,
+	b
+	)
+	
+
+CHECK result == 2.0

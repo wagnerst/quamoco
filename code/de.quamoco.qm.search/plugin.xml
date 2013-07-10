@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.modelSearchEngine">
+      <modelSearchEngine
+            id="search.QmSearchEngine"
+            label="Qm Search Engine"
+            modelResourceValidator="de.quamoco.qm.search.engine.ModelResourceValidator"
+            queryParametersFactory="de.quamoco.qm.search.factories.ModelSearchQueryParametersFactory"
+            searchQueryFactory="de.quamoco.qm.search.factories.ModelSearchQueryFactory"/>
+   </extension>
+</plugin>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.quamoco.changable.nightly.NightlyQuamocoGeneratedCS">
+      <param name="input">
+         <attr name="scope"/>
+      </param>
+      <param name="output">
+         <attr name="dir"/>
+      </param>
+      <param name="map">
+         <attr name="project"/>
+         <attr name="dir"/>
+      </param>
+      <param name="evaluation-result">
+         <attr name="dir"/>
+      </param>
+      <param name="il-input">
+         <attr name="scope"/>
+      </param>
+      <block name="QCSNormalizationMeasuresIL" spec="edu.tum.cs.conqat.quamoco.model.QCSNormalizationMeasuresIL">
+         <input scope="@input.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+         <il-input scope="@il-input.scope"/>
+      </block>
+      <block name="QEncoding" spec="edu.tum.cs.conqat.quamoco.model.QEncoding">
+         <input scope="@QCSNormalizationMeasuresIL.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QGendarme" spec="edu.tum.cs.conqat.quamoco.model.QGendarme">
+         <input scope="@QEncoding.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QLOC" spec="edu.tum.cs.conqat.quamoco.model.QLOC">
+         <input scope="@QGendarme.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <block name="QNaturalLanguage" spec="edu.tum.cs.conqat.quamoco.model.QNaturalLanguage">
+         <input scope="@QLOC.scope"/>
+         <output dir="@output.dir"/>
+         <map dir="@map.dir" project="@map.project"/>
+      </block>
+      <out name="scope" ref="@qcs-clone-detection.scope"/>
+      <param name="metric-collection">
+         <attr name="collection"/>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.AutomaticMetricCollector" name="AutomaticMetricCollector">
+         <input ref="@qcs-clone-detection.scope"/>
+         <metric-collection ref="@metric-collection.collection"/>
+         <models ref="@models.ref"/>
+      </processor>
+      <out name="metrics" ref="@AutomaticMetricCollector"/>
+      <block name="QCSRangeResolvers" spec="edu.tum.cs.conqat.quamoco.model.QCSRangeResolvers"/>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelEvaluatorWritingCalibrationInfos" name="ModelEvaluator">
+         <input ref="@AutomaticMetricCollector"/>
+         <models ref="@models.ref"/>
+         <function-range-resolver ref="@QCSRangeResolvers.function-range-resolver"/>
+         <project-name ref="@project-name.attr"/>
+         <calibration-dir attr="@calibration-dir.attr"/>
+      </processor>
+      <out name="result" ref="@ModelEvaluator"/>
+      <param name="models">
+         <doc>{@connDoc}</doc>
+         <attr name="ref">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="project-name">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <param name="calibration-dir">
+         <doc>{@connDoc}</doc>
+         <attr name="attr">
+            <doc>{@connDoc}</doc>
+         </attr>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelSaver" name="model-saver">
+         <models ref="@ModelEvaluator"/>
+         <output dir="@qm-result-dir.attr"/>
+      </processor>
+      <param name="qm-result-dir">
+         <attr name="attr"/>
+      </param>
+      <block name="qcs-clone-detection" spec="edu.tum.cs.conqat.quamoco.model.QCSCloneDetection">
+         <input scope="@QNaturalLanguage.scope"/>
+         <output dir="@output.dir"/>
+      </block>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="input">
+         <entry key="pos" value="40,0"/>
+      </entries>
+      <entries namespace="output">
+         <entry key="pos" value="200,0"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="map">
+         <entry key="pos" value="400,0"/>
+         <entry key="edges_invisible" value="true"/>
+      </entries>
+      <entries namespace="il-input">
+         <entry key="pos" value="400,80"/>
+      </entries>
+      <entries namespace="scope">
+         <entry key="pos" value="470,650"/>
+      </entries>
+      <entries namespace="metric-collection">
+         <entry key="pos" value="400,490"/>
+      </entries>
+      <entries namespace="QNaturalLanguage">
+         <entry key="pos" value="204,392"/>
+      </entries>
+      <entries namespace="QCSNormalizationMeasuresIL">
+         <entry key="pos" value="204,72"/>
+      </entries>
+      <entries namespace="QCSRangeResolvers">
+         <entry key="pos" value="600,560"/>
+      </entries>
+      <entries namespace="QEncoding">
+         <entry key="pos" value="204,152"/>
+      </entries>
+      <entries namespace="QLOC">
+         <entry key="pos" value="204,312"/>
+      </entries>
+      <entries namespace="AutomaticMetricCollector">
+         <entry key="pos" value="200,560"/>
+      </entries>
+      <entries namespace="metrics">
+         <entry key="pos" value="70,650"/>
+      </entries>
+      <entries namespace="ModelEvaluator">
+         <entry key="pos" value="200,640"/>
+      </entries>
+      <entries namespace="QGendarme">
+         <entry key="pos" value="204,232"/>
+      </entries>
+      <entries namespace="result">
+         <entry key="pos" value="200,720"/>
+      </entries>
+      <entries namespace="#comments">
+         <entry key="comment_1" value="This block was generated by the Quamoco editor at Wed Jan 19 11:56:20 CET 2011. DO NOT CHANGE MANUALLY AS FILE WILL BE OVERWRITTEN BY THE GENERATOR. This block was generated for the following models:C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\csharp\object.qm, C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\csharp\root.qm, C:\Projekte\Quamoco2\quamoco\wps\WP 1 - QM Foundations\WP 1.5 - Base Model\base model\current\calibrated\csharp\csharp.qm"/>
+      </entries>
+      <entries namespace="#comment-bounds">
+         <entry key="comment_1" value="600,0,350,115"/>
+      </entries>
+      <entries namespace="models">
+         <entry key="pos" value="528,492"/>
+      </entries>
+      <entries namespace="project-name">
+         <entry key="pos" value="72,528"/>
+      </entries>
+      <entries namespace="calibration-dir">
+         <entry key="pos" value="60,456"/>
+      </entries>
+      <entries namespace="model-saver">
+         <entry key="pos" value="396,708"/>
+      </entries>
+      <entries namespace="qm-result-dir">
+         <entry key="pos" value="600,660"/>
+      </entries>
+      <entries namespace="qcs-clone-detection">
+         <entry key="pos" value="204,468"/>
+      </entries>
+   </meta>
+</conqat>

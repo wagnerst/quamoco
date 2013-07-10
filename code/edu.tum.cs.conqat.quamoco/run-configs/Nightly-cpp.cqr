@@ -1,0 +1,6 @@
+#!edu.tum.cs.conqat.quamoco.nightly.Nightly-cpp
+manual-measure-dir.attr=C:\Dokumente und Einstellungen\lochmann\workspace-conqat-trunk\edu.tum.cs.conqat.quamoco-eval\manual-inspection-results
+systemtype.attr=cpp
+quality-model.file=C:\tmp\current\cpp.qm
+project-dir.attr=C:\Users\lochmann\workspace-conqat-3.7\edu.tum.cs.conqat.quamoco-eval\study_objects\021_httpd-2.2.14
+calibration-zip-file.attr=C:\Dokumente und Einstellungen\lochmann\Eigene Dateien\Downloads\calibration(2).zip

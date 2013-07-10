@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="search.ui.QmPlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="0"
+            label="%ModelSearchParticipantArea.QmPlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="search.ui.pages.QmModelSearchPageID"
+            tooltip="%QmPlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchParticipantTab">
+         
+      <participantTab
+            elementComposeableAdapterFactory="de.quamoco.qm.provider.QmItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="de.quamoco.qm.search.ui.handlers.EditorSelectionHandler"
+            id="de.quamoco.qm.QmPackageParticipantTab"
+            image="icons/ecore.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.QmPackageParticipantTab.Label"
+            participantCompositeAreaFactory="de.quamoco.qm.search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.QmModelSearchPageID"
+            targetNsURI="http://www.quamoco.de/qm/v4"
+            tooltip="%ModelSearchParticipantArea.QmPackageParticipantTab.Tooltip">
+      </participantTab>
+      
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="de.quamoco.qm.search.ui.pages.ModelSearchPage"
+            enabled="true"
+            icon="icons/esearch.gif"
+            id="search.ui.pages.QmModelSearchPageID"
+            label="%ModelSearchParticipantArea.QmModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="0"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchEngineMapping">
+ 
+      <mapping
+            id="search.text4QmPackage"
+            engineID="search.QmSearchEngine"
+            participantsTabID="de.quamoco.qm.QmPackageParticipantTab"
+            queryTabID="search.ui.QmPlainTextSearchID">
+      </mapping>
+      
+   </extension>
+</plugin>

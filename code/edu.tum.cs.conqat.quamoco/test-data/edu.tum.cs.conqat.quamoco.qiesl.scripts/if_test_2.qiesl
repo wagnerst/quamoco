@@ -1,0 +1,12 @@
+SET a = fcol(f("a", 1))
+SET b = fcol()
+SET c = fcol(f("a", 1))
+
+if(extent(a) == 0) {
+	result = 1;
+} else {
+	result = 2;
+}
+
+
+CHECK result == 2

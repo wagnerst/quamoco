@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="de.quamoco.qm.conqat.objectContribution.blockGenerator"
+            objectClass="de.quamoco.qm.QualityModel">
+         <action
+               class="de.quamoco.qm.conqat.action.GenerateConQATBlockAction"
+               icon="icons/conqat.png"
+               id="de.quamoco.qm.conqat.action.GenerateConQATBlockAction"
+               label="Generate ConQAT Block"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+</plugin>

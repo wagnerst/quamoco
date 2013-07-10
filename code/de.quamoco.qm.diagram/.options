@@ -1,0 +1,7 @@
+# Tracing options for the de.quamoco.qm.diagram plug-in
+
+# Common issues
+de.quamoco.qm.diagram/debug=false
+
+# Visual IDs
+de.quamoco.qm.diagram/debug/visualID=false

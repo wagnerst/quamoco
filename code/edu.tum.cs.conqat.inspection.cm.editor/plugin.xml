@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml 3486 2010-08-23 19:33:24Z niessner $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.tum.cs.conqat.inspection.cm.presentation.CmModelWizardID"
+            name="%_UI_CmModelWizard_label"
+            class="edu.tum.cs.conqat.inspection.cm.presentation.CmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CmModelFile.gif">
+         <description>%_UI_CmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="edu.tum.cs.conqat.inspection.cm.presentation.CmEditorID"
+            name="%_UI_CmEditor_label"
+            icon="icons/full/obj16/CmModelFile.gif"
+            extensions="cm"
+            class="edu.tum.cs.conqat.inspection.cm.presentation.CustomCmEditor"
+            contributorClass="edu.tum.cs.conqat.inspection.cm.presentation.CmActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

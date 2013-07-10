@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jaxb
+Bundle-SymbolicName: de.quamoco.qm.docbook;singleton:=true
+Bundle-Version: 2.1.0.qualifier
+Bundle-Activator: de.quamoco.qm.docbook.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.quamoco.qm.docbook

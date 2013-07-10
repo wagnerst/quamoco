@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConQAT
+Bundle-SymbolicName: de.quamoco.qm.conqat;singleton:=true
+Bundle-Version: 2.1.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.quamoco.qm,
+ de.quamoco.qm.editor
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Activator: de.quamoco.qm.conqat.ConQATActivator

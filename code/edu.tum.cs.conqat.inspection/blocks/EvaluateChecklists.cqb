@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.inspection.EvaluateChecklists">
+      <param name="checklists">
+         <attr name="dir"/>
+      </param>
+      <out name="output" ref="@checklist-evaluator"/>
+      <processor class="edu.tum.cs.conqat.inspection.ChecklistModelLoader" name="checklist-model-loader">
+         <input dir="@checklists.dir"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.inspection.ChecklistEvaluator" name="checklist-evaluator">
+         <models ref="@checklist-model-loader"/>
+      </processor>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="checklists">
+         <entry key="pos" value="96,48"/>
+      </entries>
+      <entries namespace="output">
+         <entry key="pos" value="156,312"/>
+      </entries>
+      <entries namespace="checklist-model-loader">
+         <entry key="pos" value="80,120"/>
+      </entries>
+      <entries namespace="checklist-evaluator">
+         <entry key="pos" value="79,216"/>
+      </entries>
+   </meta>
+</conqat>

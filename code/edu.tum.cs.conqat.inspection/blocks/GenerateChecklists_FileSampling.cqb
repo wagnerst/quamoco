@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	$Id: $$
+	$Rev: 12646 $
+	@levd.rating YELLOW Rev: 11033
+-->
+<conqat xmlns="http://conqat.cs.tum.edu/ns/config">
+   <block-spec name="edu.tum.cs.conqat.inspection.GenerateChecklists_FileSampling">
+      <param name="qm-model">
+         <attr name="file"/>
+      </param>
+      <param name="inspector">
+         <attr name="name"/>
+      </param>
+      <param name="output">
+         <attr name="dir"/>
+      </param>
+      <processor class="edu.tum.cs.conqat.quamoco.ModelLoader" name="model-loader">
+         <input file="@qm-model.file"/>
+      </processor>
+      <processor class="edu.tum.cs.conqat.inspection.ChecklistGenerator" name="checklist-generator">
+         <models ref="@model-loader"/>
+         <input file="@qm-model.file"/>
+         <output dir="@output.dir"/>
+         <inspector ref="@inspector.name"/>
+         <sampleStrategy ref="@random-file-sample-strategy"/>
+      </processor>
+      <block name="simple-java-scope" spec="edu.tum.cs.conqat.java.resource.SimpleJavaScope">
+         <source dir="@input.source"/>
+         <byte-code dir="@input.byte-code"/>
+         <include pattern="**/*.java"/>
+      </block>
+      <param name="input">
+         <attr name="source"/>
+         <attr name="byte-code"/>
+      </param>
+      <processor class="edu.tum.cs.conqat.inspection.sampling.RandomFileSampleStrategy" name="random-file-sample-strategy">
+         <java ref="@simple-java-scope.scope"/>
+      </processor>
+   </block-spec>
+   <meta type="cq.edit">
+      <entries namespace="qm-model">
+         <entry key="pos" value="36,84"/>
+      </entries>
+      <entries namespace="inspector">
+         <entry key="pos" value="288,96"/>
+      </entries>
+      <entries namespace="output">
+         <entry key="pos" value="180,96"/>
+      </entries>
+      <entries namespace="model-loader">
+         <entry key="pos" value="12,180"/>
+      </entries>
+      <entries namespace="checklist-generator">
+         <entry key="pos" value="180,312"/>
+      </entries>
+      <entries namespace="simple-java-scope">
+         <entry key="pos" value="423,123"/>
+      </entries>
+      <entries namespace="input">
+         <entry key="pos" value="463,54"/>
+      </entries>
+      <entries namespace="random-file-sample-strategy">
+         <entry key="pos" value="420,204"/>
+      </entries>
+   </meta>
+</conqat>

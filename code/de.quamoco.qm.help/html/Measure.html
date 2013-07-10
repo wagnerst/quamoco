@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" type="text/css" href="format.css">
+	<title>Tool</title>
+</head>
+
+<body>
+
+
+<table class="menu" border=0 width="100%">
+	<tr>
+		<td class="menu">
+			<a class="menu" href="index.html">Index</a> &gt;&gt; 
+			<a class="menu" href="index.html#modelelements">Model Elements</a> &gt;&gt; 
+			<span class="menu">Measure</span>
+		</td> 
+	</tr>
+</table>
+
+<h1>Measure</h1>
+
+<div class="excerpt">
+A measure defines how a specific entity is measured. For the concrete measurement,
+it defines either an instrument, which is bound to a tool or manual measurement, or
+an aggregation of other measures.
+</div>
+
+<h2>General Rules</h2>
+
+<ol>
+<li>Use measures to quantify factors.</li>
+<li>Use measures to model checklist items for manual reviews.</li>
+<li>For normalizing purposes at an evaluation use <a href="NormalizationMeasure.html">normalization measures</a>.</li>
+</ol>
+
+<h2>Attributes</h2>
+
+<h3 class="attribute">Qualified Name</h3>
+<ol>
+	<li>
+		The qualified name is generated automatically based on the name and the characterizing entity.
+	</li>
+</ol>
+
+<h3 class="attribute">Name</h3>
+<ol>
+	<li>
+		Choose a short, descriptive name for the measure. 
+	</li>
+	
+	<li>
+	If there is no specific reason to do otherwise, only captialise the first word in the name.
+	</li>
+</ol>
+
+<h3 class="attribute">Characterizes</h3>
+<ol>
+	<li>
+		Specify the entity that is characterized by the measure.
+	</li>
+</ol>
+
+<h3 class="attribute">Title</h3>
+<ol>
+	<li>
+		A title can be an alternative, more readable identifier for the measure.
+	</li>
+	
+	<li>
+		Providing a title is optional.
+	</li>
+
+	<li>
+	If there is no specific reason to do otherwise, only captialise the first word in the title.
+	</li>
+</ol>
+
+<h3 class="attribute">Description</h3>
+<ol>
+	<li>
+		Describe what the measure is intended to measure.
+	</li>
+	<li>
+		What does it actually measure?
+	</li>
+</ol>
+
+<h3 class="attribute">Type</h3>
+<ol>
+	<li>
+		Set one of <i>NONE</i>, <i>FINDINGS</i>, <i>NUMBER</i>.
+	</li>
+	<li>
+		In many cases, <i>FINDINGS</i> is an appropriate type. 
+		Measures that represent rules that are checked on a product can identify locations in the product where the rule is violated. 
+		Such a location is called finding.
+		Most of static code analysis tools, for example, return findings. 
+	</li>
+	<li>
+		Measures can return an arbitrary real numerical value. 
+		The data type to represent them is <i>NUMBER</i>. 
+		This number can be an absolute value or a ratio of some kind, it is mostly appropriate for numerical measures.
+	</li>
+</ol>
+
+<h3 class="attribute">Refined by / Refines</h3>
+<ol>
+	<li>
+		A measure can be consists of other measures. In this case, a measure is
+		<i>refined by</i> other measures.
+	</li>
+</ol>
+
+</body>
+</html>

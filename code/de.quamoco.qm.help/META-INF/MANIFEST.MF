@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Help
+Bundle-SymbolicName: de.quamoco.qm.help;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.quamoco.qm.help.QuamocoHelpActivator
+Bundle-Vendor: Quamoco
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.quamoco.qm.editor;bundle-version="2.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: de.quamoco.qm.provider.util
+Export-Package: de.quamoco.qm.help.views
+Eclipse-BundleShape: dir
+Bundle-ActivationPolicy: lazy

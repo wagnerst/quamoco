@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml 4916 2011-11-02 08:48:34Z lochmann $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.quamoco.de/qm/v17"
+            class="de.quamoco.qm.provider.QmItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            default="false"
+            id="de.quamoco.qm.validation.clientContext">
+         <selector
+               class="edu.tum.cs.emf.commons.validation.ValidationDelegateClientSelector">
+         </selector>
+      </clientContext>
+      <binding
+            category="de.quamoco.qm.constraints.basic.category"
+            context="de.quamoco.qm.validation.clientContext">
+      </binding>
+      <binding
+            category="de.quamoco.qm.constraints.extended.category"
+            context="de.quamoco.qm.validation.clientContext">
+      </binding>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.validationListeners">
+      <listener
+            class="edu.tum.cs.emf.commons.validation.ValidationListener">
+         <clientContext
+               id="de.quamoco.qm.validation.clientContext">
+         </clientContext>
+      </listener>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <constraintProvider
+            cache="true">
+         <package
+               namespaceUri="http://www.quamoco.de/qm/v17">
+         </package>
+         <constraints
+               categories="de.quamoco.qm.constraints.basic.category">
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.DescribedElementNoDescriptionConstraint"
+                  id="de.quamoco.qm.constraints.basic.DescribedElementNoDescriptionConstraint"
+                  lang="Java"
+                  mode="Live"
+                  name="Described Element No Description"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  The description is not set.
+               </message>
+               <target
+                     class="DescribedElement">
+                  <event
+                        name="Set">
+                     <feature
+                           name="description">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.QualityModelDuplicateQualifiedNameConstraint"
+                  id="de.quamoco.qm.constraints.basic.QualityModelDuplicateQualifiedNameConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Qualified Name"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Duplicate qualified name.
+               </message>
+               <target
+                     class="QualityModel">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.QIESLEvaluationSpecificationConstraint"
+                  id="de.quamoco.qm.constraints.basic.QIESLEvaluationSpecificationConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Live"
+                  name="QIESL Evaluation Specification Error"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="QIESLEvaluation">
+                  <event
+                        name="Set">
+                     <feature
+                           name="specification">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.QIESLAggregationSpecificationConstraint"
+                  id="de.quamoco.qm.constraints.basic.QIESLAggregationSpecificationConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Live"
+                  name="QIESL Aggregation Specification Error"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="QIESLAggregation">
+                  <event
+                        name="Set">
+                     <feature
+                           name="specification">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.EntityNotUsedConstraint"
+                  id="de.quamoco.qm.constraints.basic.EntityNotUsedConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Entity Not Used"
+                  severity="INFO"
+                  statusCode="1">
+               <message>
+                  Entity not used.
+               </message>
+               <target
+                     class="Entity">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.MeasuredFactorNotEvaluatedConstraint"
+                  id="de.quamoco.qm.constraints.basic.MeasuredFactorNotEvaluatedConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Measured Factor Not Evaluated"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Measured factor not evaluated.
+               </message>
+               <target
+                     class="Factor">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.MeasureValidDatatypeConstraint"
+                  id="de.quamoco.qm.constraints.basic.MeasureValidDatatypeConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Live"
+                  name="Measure Valid Datatype"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Measure has no type.
+               </message>
+               <target
+                     class="Measure">
+                  <event
+                        name="Set">
+                     <feature
+                           name="type">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.MeasureNotUsedConstraint"
+                  id="de.quamoco.qm.constraints.basic.MeasureNotUsedConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Measure Not Used"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Measure not used.
+               </message>
+               <target
+                     class="Measure">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.QualityModelElementRequiresConstraint"
+                  id="de.quamoco.qm.constraints.basic.QualityModelElementRequiresConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Quality Model Element Requires"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  The relation &quot;{0}&quot; to &quot;{1}&quot; violates the requires relation between the quality models.
+               </message>
+               <target
+                     class="QualityModelElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.FactorCorrectAbstractnessConstraint"
+                  id="de.quamoco.qm.constraints.basic.FactorCorrectAbstractnessConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Factor Correct Abstractness"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Factor &apos;&apos;{0}&apos;&apos; has no evaluation, but refines factor &apos;&apos;{1}&apos;&apos; who has an evaluation.
+               </message>
+               <target
+                     class="Factor">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.WeightedSumMultiMeasureEvaluationInvalidRankingConstraint"
+                  id="de.quamoco.qm.constraints.basic.WeightedSumMultiMeasureEvaluationInvalidRankingConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Weighted Sum Multi Measure Evaluation Invalid Ranking"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  All ranks are 0.
+               </message>
+               <target
+                     class="WeightedSumMultiMeasureEvaluation">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationUndefinedFactorConstraint"
+                  id="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationUndefinedFactorConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Weighted Sum Factor Aggregation Undefined Factor"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  A factor is undefined.
+               </message>
+               <target
+                     class="WeightedSumFactorAggregation">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationMissingFactorConstraint"
+                  id="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationMissingFactorConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Weighted Sum Factor Aggregation Missing Factor"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  The factor''{0}'' is missing.
+               </message>
+               <target
+                     class="WeightedSumFactorAggregation">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationSurplusFactorConstraint"
+                  id="de.quamoco.qm.constraints.basic.WeightedSumFactorAggregationSurplusFactorConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Weighted Sum Factor Aggregation Surplus Factor"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  The factor&apos;&apos;{0}&apos;&apos; is too much.
+               </message>
+               <target
+                     class="WeightedSumFactorAggregation">
+               </target>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+      <constraintProvider
+            cache="true">
+         <package
+               namespaceUri="http://www.quamoco.de/qm/v17">
+         </package>
+         <constraints
+               categories="de.quamoco.qm.constraints.extended.category">
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.DescribedElementDescriptionSelfDescriptiveConstraint"
+                  id="de.quamoco.qm.constraints.extended.DescribedElementDescriptionSelfDescriptiveConstraint"
+                  lang="Java"
+                  mode="Live"
+                  name="Described Element Description Self-Descriptive"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Described element has &quot;self-descriptive&quot; as description.
+               </message>
+               <target
+                     class="DescribedElement">
+                  <event
+                        name="Set">
+                     <feature
+                           name="description">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.FactorOneRefinementConstraint"
+                  id="de.quamoco.qm.constraints.extended.FactorOneRefinementConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Factor One Refinement"
+                  severity="INFO"
+                  statusCode="1">
+               <message>
+                  The factor refines more than one factors.
+               </message>
+               <target
+                     class="Factor">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.ConsistentFactorEntityRefinementConstraint"
+                  id="de.quamoco.qm.constraints.extended.ConsistentFactorEntityRefinementConstraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Consistent Factor Entity Refinement"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="Factor">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.MoreThanOneSource"
+                  id="de.quamoco.qm.constraints.extended.MoreThanOneSource"
+                  lang="Java"
+                  mode="Batch"
+                  name="Elements with more than one Source"
+                  severity="INFO"
+                  statusCode="0">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="Factor">
+               </target>
+            </constraint>
+            
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.MeasureNoMethodConstraint"
+                  id="de.quamoco.qm.constraints.extended.MeasureNoMethodConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Measure No Method"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Measure has no instrument and no aggregation.
+               </message>
+               <target
+                     class="Measure">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.MeasureWrongEntityConstraint"
+                  id="de.quamoco.qm.constraints.extended.MeasureWrongEntityConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="Measure Wrong Entity"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  The measure measures&apos;&apos;{0}&apos;&apos;, but it&apos;s entity is not a is-a of the factor&apos;s entity.
+               </message>
+               <target
+                     class="Measure">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.OneImpactOnPathToRootConstraint"
+                  id="de.quamoco.qm.constraints.extended.OneImpactOnPathToRootConstraint"
+                  isEnabledByDefault="true"
+                  lang="Java"
+                  mode="Batch"
+                  name="One Impact On Path to Root"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Both the factors &apos;&apos;{0}&apos;&apos; and &apos;&apos;{1}&apos;&apos; have an impact, although &apos;&apos;{1}&apos;&apos; refines &apos;&apos;{0}&apos;&apos;.
+               </message>
+               <target
+                     class="Impact">
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.ImpactJustificationSelfDescriptiveConstraint"
+                  id="de.quamoco.qm.constraints.extended.ImpactJustificationSelfDescriptiveConstraint"
+                  lang="Java"
+                  mode="Live"
+                  name="Impact Justification Self-Descriptive"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Described element has"self-descriptive" as description.
+               </message>
+               <target
+                     class="Impact">
+                  <event
+                        name="Set">
+                     <feature
+                           name="justification">
+                     </feature>
+                  </event>
+               </target>
+            </constraint>
+            <constraint
+                  class="de.quamoco.qm.constraints.extended.ImpactTargetsLeafConstraint"
+                  id="de.quamoco.qm.constraints.extended.ImpactTargetsLeafConstraint"
+                  isEnabledByDefault="false"
+                  lang="Java"
+                  mode="Batch"
+                  name="Impact Targets Leaf"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  The impact targets a factor that has sub-factors.
+               </message>
+               <target
+                     class="Impact">
+               </target>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+      <category
+            id="de.quamoco.qm.constraints.basic.category"
+            name="Quality Model Editor Basic">
+      </category>
+      <category
+            id="de.quamoco.qm.constraints.extended.category"
+            name="Quality Model Editor Extended">
+      </category>
+   </extension>
+
+</plugin>

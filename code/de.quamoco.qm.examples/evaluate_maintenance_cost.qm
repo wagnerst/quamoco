@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:qm="http://www.quamoco.de/qm/v4" xmi:id="_cNuloGEEEd6k8rnx1Nuq4g">
+  <modules xmi:id="_6FGikXwiEd6MotksAvX0FQ">
+    <properties xmi:id="_cNuloWEEEd6k8rnx1Nuq4g" name="Experience" factors="_cNulsmEEEd6k8rnx1Nuq4g"/>
+    <properties xmi:id="_cNulomEEEd6k8rnx1Nuq4g" name="Existence" factors="_cNultWEEEd6k8rnx1Nuq4g"/>
+    <properties xmi:id="_cNulo2EEEd6k8rnx1Nuq4g" name="StandardConformance" factors="_cNulqGEEEd6k8rnx1Nuq4g _cNulrWEEEd6k8rnx1Nuq4g _cNulsGEEEd6k8rnx1Nuq4g"/>
+    <aspects xmi:id="_cNult2EEEd6k8rnx1Nuq4g" name="MaintenanceCost" influencedBy="_cNuls2EEEd6k8rnx1Nuq4g">
+      <subAspects xmi:id="_cNuluGEEEd6k8rnx1Nuq4g" name="UnderstandingCost" influencedBy="_cNulq2EEEd6k8rnx1Nuq4g _cNulr2EEEd6k8rnx1Nuq4g"/>
+      <subAspects xmi:id="_cNuluWEEEd6k8rnx1Nuq4g" name="ChangeCost" influencedBy="_cNulqmEEEd6k8rnx1Nuq4g _cNulrmEEEd6k8rnx1Nuq4g"/>
+      <subAspects xmi:id="_cNulumEEEd6k8rnx1Nuq4g" name="TestingCost" influencedBy="_cNultmEEEd6k8rnx1Nuq4g"/>
+      <subAspects xmi:id="_cNulu2EEEd6k8rnx1Nuq4g" name="IntegrationCost" influencedBy="_cNulqWEEEd6k8rnx1Nuq4g"/>
+    </aspects>
+    <measures xmi:id="_cNulvGEEEd6k8rnx1Nuq4g" name="StandardConformanceInterface" measures="_cNulqGEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_cNulvWEEEd6k8rnx1Nuq4g" name="StandardConformanceClass" measures="_cNulrWEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_cNulvmEEEd6k8rnx1Nuq4g" name="Years" measures="_cNulsmEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_cNulv2EEEd6k8rnx1Nuq4g" name="Projects" measures="_cNulsmEEEd6k8rnx1Nuq4g"/>
+    <measures xmi:id="_cNulwGEEEd6k8rnx1Nuq4g" name="ExistenceTraceabilityMatrix" measures="_cNultWEEEd6k8rnx1Nuq4g"/>
+    <entities xmi:id="_cNulpGEEEd6k8rnx1Nuq4g" name="Artifacts">
+      <subEntityTypes xmi:id="_cNulpWEEEd6k8rnx1Nuq4g" name="SourceCode">
+        <subEntityTypes xmi:id="_cNulpmEEEd6k8rnx1Nuq4g" name="Package">
+          <subEntityTypes xmi:id="_cNulp2EEEd6k8rnx1Nuq4g" name="Interface">
+            <characterizedBy xmi:id="_cNulqGEEEd6k8rnx1Nuq4g" impacts="_cNulqWEEEd6k8rnx1Nuq4g _cNulqmEEEd6k8rnx1Nuq4g _cNulq2EEEd6k8rnx1Nuq4g" property="_cNulo2EEEd6k8rnx1Nuq4g" measuredBy="_cNulvGEEEd6k8rnx1Nuq4g"/>
+          </subEntityTypes>
+          <subEntityTypes xmi:id="_cNulrGEEEd6k8rnx1Nuq4g" name="Class">
+            <characterizedBy xmi:id="_cNulrWEEEd6k8rnx1Nuq4g" impacts="_cNulrmEEEd6k8rnx1Nuq4g _cNulr2EEEd6k8rnx1Nuq4g" property="_cNulo2EEEd6k8rnx1Nuq4g" measuredBy="_cNulvWEEEd6k8rnx1Nuq4g"/>
+          </subEntityTypes>
+          <characterizedBy xmi:id="_cNulsGEEEd6k8rnx1Nuq4g" property="_cNulo2EEEd6k8rnx1Nuq4g"/>
+        </subEntityTypes>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_cNulsWEEEd6k8rnx1Nuq4g" name="Developer">
+        <characterizedBy xmi:id="_cNulsmEEEd6k8rnx1Nuq4g" impacts="_cNuls2EEEd6k8rnx1Nuq4g" property="_cNuloWEEEd6k8rnx1Nuq4g" measuredBy="_cNulvmEEEd6k8rnx1Nuq4g _cNulv2EEEd6k8rnx1Nuq4g"/>
+      </subEntityTypes>
+      <subEntityTypes xmi:id="_cNultGEEEd6k8rnx1Nuq4g" name="TraceabilityMatrix">
+        <characterizedBy xmi:id="_cNultWEEEd6k8rnx1Nuq4g" impacts="_cNultmEEEd6k8rnx1Nuq4g" property="_cNulomEEEd6k8rnx1Nuq4g" measuredBy="_cNulwGEEEd6k8rnx1Nuq4g"/>
+      </subEntityTypes>
+    </entities>
+    <requirements xmi:id="_6FGiq3wiEd6MotksAvX0FQ">
+      <impacts xmi:id="_cNulqWEEEd6k8rnx1Nuq4g" influences="_cNulu2EEEd6k8rnx1Nuq4g" factors="_cNulqGEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNulqmEEEd6k8rnx1Nuq4g" effect="NEGATIVE" influences="_cNuluWEEEd6k8rnx1Nuq4g" factors="_cNulqGEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNulq2EEEd6k8rnx1Nuq4g" influences="_cNuluGEEEd6k8rnx1Nuq4g" factors="_cNulqGEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNulrmEEEd6k8rnx1Nuq4g" effect="NEGATIVE" influences="_cNuluWEEEd6k8rnx1Nuq4g" factors="_cNulrWEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNulr2EEEd6k8rnx1Nuq4g" influences="_cNuluGEEEd6k8rnx1Nuq4g" factors="_cNulrWEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNuls2EEEd6k8rnx1Nuq4g" influences="_cNult2EEEd6k8rnx1Nuq4g" factors="_cNulsmEEEd6k8rnx1Nuq4g"/>
+      <impacts xmi:id="_cNultmEEEd6k8rnx1Nuq4g" influences="_cNulumEEEd6k8rnx1Nuq4g" factors="_cNultWEEEd6k8rnx1Nuq4g"/>
+    </requirements>
+  </modules>
+</qm:QualityModel>
