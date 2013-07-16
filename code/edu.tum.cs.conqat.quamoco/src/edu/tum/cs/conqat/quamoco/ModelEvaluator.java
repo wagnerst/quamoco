@@ -19,9 +19,11 @@
 
 package edu.tum.cs.conqat.quamoco;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -39,9 +41,13 @@ import org.conqat.lib.commons.assertion.CCSMAssert;
 import org.conqat.lib.commons.collections.CollectionUtils;
 import org.conqat.lib.commons.collections.UnmodifiableList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.quamoco.qm.CharacterizingElement;
 import de.quamoco.qm.Effect;
@@ -97,30 +103,15 @@ import edu.tum.cs.conqat.quamoco.qiesl.QPoints;
  * @version $Rev: 5044 $
  * @levd.rating RED Hash: 2C1CCBD9EE559CB879F7BD3F8B5154B0
  */
-@AConQATProcessor(description = "This processor performs the actual evaluations of"
-		+ " a Quamoco model. It returns a simple node structure that describes all factors"
-		+ " and metrics along with its evaluation specification and the evaluation result.")
+/**
+ * This is the changed version of the Quamoco-Model-Evaluator originally
+ * designed by Floiran Deissenbeock und Klaus Lichmann. 
+ * 
+ * @author Jan-Peter Ostberg
+ *
+ */
 public class ModelEvaluator extends QMProcessorBase {
 
-	/** {@ConQAT.Doc} */
-	@AConQATFieldParameter(optional = false, parameter = "project-name", attribute = "ref", description = "The name of the project")
-	public String projectName;
-
-	/** Function range resolver */
-	@AConQATFieldParameter(parameter = "function-range-resolver", attribute = ConQATParamDoc.INPUT_REF_NAME, description = ConQATParamDoc.INPUT_REF_DESC)
-	public IFunctionRangeResolver functionRangeResolver;
-
-	/** File range resolver */
-	@AConQATFieldParameter(parameter = "file-range-resolver", attribute = ConQATParamDoc.INPUT_REF_NAME, description = ConQATParamDoc.INPUT_REF_DESC, optional = false)
-	public IFileRangeResolver fileRangeResolver = new FileRangeResolver();
-
-	/** Class range resolver */
-	@AConQATFieldParameter(parameter = "class-range-resolver", attribute = ConQATParamDoc.INPUT_REF_NAME, description = ConQATParamDoc.INPUT_REF_DESC, optional = false)
-	public IFileRangeResolver classRangeResolver = new FileRangeResolver();
-
-	/** {@ConQAT.Doc} */
-	@AConQATFieldParameter(parameter = "writeFindings", attribute = "value", description = "Whether detailed findings shall be written to the result", optional = true)
-	public boolean writeFindings = true;
 
 	/** The metric values. */
 	private MetricCollection metricValues;
@@ -134,20 +125,51 @@ public class ModelEvaluator extends QMProcessorBase {
 	/** Result of the evaluation. */
 	private QualityModelResult result;
 
-	/** {@ConQAT.Doc} */
-	@AConQATParameter(name = ConQATParamDoc.INPUT_NAME, minOccurrences = 1, maxOccurrences = 1, description = ConQATParamDoc.INPUT_DESC)
-	public void setMetrics(
-			@AConQATAttribute(name = ConQATParamDoc.INPUT_REF_NAME, description = ConQATParamDoc.INPUT_REF_DESC) MetricCollection collection) {
-		this.metricValues = collection;
-	}
 
+	public void getQualityModelFromPath(HashSet<String> filenames){
+		
+		ResourceSet resourceSet = new ResourceSetImpl();
+
+		for (String filename : filenames) {
+			resourceSet.getResource(
+					URI.createFileURI(new File(filename).getAbsolutePath()),
+					true);
+		}
+
+		// TODO (FD): We had this here first: EcoreUtil.resolveAll(resourceSet);
+		// However, this causes problems when run on a submodel like C#. If
+		// everything was resolved,getFactors() for this model also returns
+		// factors defined in an "upper" model.
+
+		// Klaus: I think this is no longer relevant.
+
+		EcoreUtil.resolveAll(resourceSet);
+
+		List<QualityModel> qmList = new LinkedList<QualityModel>();
+
+		for (Resource res : resourceSet.getResources()) {
+			TreeIterator<EObject> it = res.getAllContents();
+			while (it.hasNext()) {
+				EObject eObject = it.next();
+				if (eObject instanceof QualityModel) {
+					qmList.add((QualityModel) eObject);
+				}
+			}
+		}
+
+		getLogger().debug("Returning " + qmList + " quality models.");
+
+		return CollectionUtils.toArray(qmList, QualityModel.class);
+
+	}
+	
 	/**
 	 * {@inheritDoc}
 	 * 
 	 * @throws ConQATException
 	 */
-	@Override
-	public QualityModel[] process() throws ConQATException {
+	//@Override
+	public QualityModel[] process() throws QuamocoEvaluateException { //TODO: Write Exception or use fitting existend exception
 
 		createResultModelResource();
 
@@ -196,7 +218,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * 
 	 * @throws ConQATException
 	 */
-	private void process(CharacterizingElement element) throws ConQATException {
+	private void process(CharacterizingElement element) throws QuamocoEvaluateException { //TODO: Write Exception or use fitting existend exception
 
 		if (element instanceof Measure) {
 			determine((Measure) element);
@@ -385,7 +407,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	}
 
 	/** Evaluates the factor. */
-	private QPoints evaluate(Factor factor) throws ConQATException {
+	private QPoints evaluate(Factor factor) throws QuamocoEvaluateException { //TODO: Write Exception or use fitting existend exception
 
 		QPoints value = getValue(factor);
 		if (value != null) {
