@@ -49,6 +49,10 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import utils.Logger;
+import utils.QuamocoEvaluateException;
+import utils.Types;
+
 import de.quamoco.qm.CharacterizingElement;
 import de.quamoco.qm.Effect;
 import de.quamoco.qm.Evaluation;
@@ -96,22 +100,24 @@ import edu.tum.cs.conqat.quamoco.qiesl.QIESLFunctions;
 import edu.tum.cs.conqat.quamoco.qiesl.QPoints;
 
 /**
- * {@ConQAT.Doc}
- * 
- * @author Florian Deissenboeck
- * @author $Author: lochmann $
- * @version $Rev: 5044 $
- * @levd.rating RED Hash: 2C1CCBD9EE559CB879F7BD3F8B5154B0
- */
-/**
  * This is the changed version of the Quamoco-Model-Evaluator originally
- * designed by Floiran Deissenbeock und Klaus Lichmann. 
+ * designed by Floiran Deissenbeock und Klaus Lochmann. 
  * 
  * @author Jan-Peter Ostberg
  *
  */
+
+
 public class ModelEvaluator extends QMProcessorBase {
 
+	/** Function range resolver */
+	public IFunctionRangeResolver functionRangeResolver;
+
+	/** File range resolver */
+	public IFileRangeResolver fileRangeResolver = new FileRangeResolver();
+
+	/** Class range resolver */
+	public IFileRangeResolver classRangeResolver = new FileRangeResolver();
 
 	/** The metric values. */
 	private MetricCollection metricValues;
@@ -124,9 +130,16 @@ public class ModelEvaluator extends QMProcessorBase {
 
 	/** Result of the evaluation. */
 	private QualityModelResult result;
+	
+	private String projectName = "No Name set";
 
+	public boolean writeFindings = true;
+	
+	public void setProjectName (String name){
+		this.projectName = name;
+	}
 
-	public void getQualityModelFromPath(HashSet<String> filenames){
+	public QualityModel[] getQualityModelFromPath(HashSet<String> filenames){
 		
 		ResourceSet resourceSet = new ResourceSetImpl();
 
@@ -157,8 +170,9 @@ public class ModelEvaluator extends QMProcessorBase {
 			}
 		}
 
-		getLogger().debug("Returning " + qmList + " quality models.");
+		Logger.getLogger("Returning " + qmList + " quality models.",Types.MessageType.DEBUG);
 
+		//TODO: Write new Util
 		return CollectionUtils.toArray(qmList, QualityModel.class);
 
 	}
@@ -169,7 +183,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * @throws ConQATException
 	 */
 	//@Override
-	public QualityModel[] process() throws QuamocoEvaluateException { //TODO: Write Exception or use fitting existend exception
+	public QualityModel[] process() throws QuamocoEvaluateException { 
 
 		createResultModelResource();
 
@@ -189,12 +203,12 @@ public class ModelEvaluator extends QMProcessorBase {
 			process(element);
 		}
 
-		getLogger().info(
+		Logger.getLogger(
 				"FunctionRangeResolver processed "
 						+ functionRangeResolver.getNumLocationsWithoutRegion()
 						+ " locations without region of totally "
 						+ functionRangeResolver.getNumLocations()
-						+ " locations.");
+						+ " locations.", Types.MessageType.INFO);
 
 		return models;
 
@@ -225,6 +239,7 @@ public class ModelEvaluator extends QMProcessorBase {
 		} else if (element instanceof Factor) {
 			evaluate((Factor) element);
 		} else {
+			//TODO: Write new Util
 			CCSMAssert.fail("Unknown element type: " + element.getClass());
 		}
 	}
@@ -314,7 +329,7 @@ public class ModelEvaluator extends QMProcessorBase {
 		if (value == null) {
 			message = "No value for instrument "
 					+ instrument.getQualifiedName();
-			getLogger().warn(message);
+			Logger.getLogger(message,Types.MessageType.WARN);
 			Measure measure = instrument.getDetermines();
 			value = getUnknownValue(measure);
 		}
@@ -338,7 +353,7 @@ public class ModelEvaluator extends QMProcessorBase {
 		} catch (QIESLException e) {
 			// if the QIESL fails a warning is logged, and the result of the
 			// measure is set to unknown
-			getLogger().warn(e.getMessage(), e);
+			Logger.getLogger(e.getMessage(), Types.MessageType.WARN);
 			value = getUnknownValue(measure);
 		}
 		storeMeasurementResult(aggregation, value, message);
@@ -372,7 +387,7 @@ public class ModelEvaluator extends QMProcessorBase {
 			optionalVariables.put(subMeasure.getQualifiedName(),
 					getValue(subMeasure));
 		}
-
+//TODO: Write new Util
 		return new QIESLEvalVariables(null,
 				CollectionUtils.asUnmodifiable(optionalVariables),
 				CollectionUtils.asUnmodifiable(mandatoryVariables));
@@ -402,12 +417,13 @@ public class ModelEvaluator extends QMProcessorBase {
 		case NUMBER:
 			return QPoints.UNKNOWN;
 		}
+		//TODO: Write new Util
 		CCSMAssert.fail("Unknown type: " + type);
 		return null;
 	}
 
 	/** Evaluates the factor. */
-	private QPoints evaluate(Factor factor) throws QuamocoEvaluateException { //TODO: Write Exception or use fitting existend exception
+	private QPoints evaluate(Factor factor) throws QuamocoEvaluateException { 
 
 		QPoints value = getValue(factor);
 		if (value != null) {
@@ -431,8 +447,7 @@ public class ModelEvaluator extends QMProcessorBase {
 			} else if (evaluation instanceof WeightedSumMultiMeasureEvaluation) {
 				value = evaluate((WeightedSumMultiMeasureEvaluation) evaluation);
 			} else {
-				getLogger().error(
-						"Unknown evaluation type: " + evaluation.getClass());
+				Logger.getLogger("Unknown evaluation type: " + evaluation.getClass(),Types.MessageType.ERROR);
 			}
 		}
 		return value;
@@ -450,7 +465,7 @@ public class ModelEvaluator extends QMProcessorBase {
 
 	/** Evaluates a {@link WeightedSumMultiMeasureEvaluation}. */
 	private QPoints evaluate(WeightedSumMultiMeasureEvaluation evaluation)
-			throws ConQATException {
+			throws QuamocoEvaluateException {
 		QPoints value = QPoints.valueOf(0);
 		EList<MeasureRanking> rankings = evaluation.getRankings();
 		MultiMeasureEvaluationResult evaluationResult = QmFactory.eINSTANCE
@@ -468,7 +483,7 @@ public class ModelEvaluator extends QMProcessorBase {
 					.createMeasureRankingEvaluationResult();
 
 			if (ranking.getMeasure() == null) {
-				throw new ConQATException(
+				throw new QuamocoEvaluateException(
 						"WeightedSumMultiMeasureEvaluation + '"
 								+ evaluation.getQualifiedName()
 								+ "' of factor '"
@@ -501,7 +516,7 @@ public class ModelEvaluator extends QMProcessorBase {
 		if (value == null) {
 			message = "No value for manual evaluation "
 					+ evaluation.getQualifiedName();
-			getLogger().warn(message);
+			Logger.getLogger(message,Types.MessageType.WARN);
 			value = QPoints.UNKNOWN;
 		}
 		storeEvaluationResult(evaluation, value, message);
@@ -522,7 +537,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * @throws ConQATException
 	 */
 	private QPoints evaluate(WeightedSumFactorAggregation evaluation)
-			throws ConQATException {
+			throws QuamocoEvaluateException {
 
 		// empty rankings return unknown
 		if (evaluation.getRankings().isEmpty()) {
@@ -535,7 +550,7 @@ public class ModelEvaluator extends QMProcessorBase {
 		for (FactorRanking ranking : evaluation.getRankings()) {
 			QPoints weight = QPoints.valueOf(ranking.getWeight());
 			if (ranking.getFactor() == null) {
-				throw new ConQATException("The WeightedSumFactorAggregation '"
+				throw new QuamocoEvaluateException("The WeightedSumFactorAggregation '"
 						+ evaluation.getQualifiedName() + "' of the factor '"
 						+ evaluation.getEvaluates().getQualifiedName()
 						+ "' has a factor==null.");
@@ -566,7 +581,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * @throws ConQATException
 	 */
 	private QPoints evaluate(SingleMeasureEvaluation evaluation)
-			throws ConQATException {
+			throws QuamocoEvaluateException {
 		SingleMeasureEvaluationResult evaluationResult = QmFactory.eINSTANCE
 				.createSingleMeasureEvaluationResult();
 		QPoints value = evaluate(evaluation, evaluationResult);
@@ -580,13 +595,13 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * @throws ConQATException
 	 */
 	private QPoints evaluate(MeasureEvaluation evaluation,
-			EObject evaluationResult) throws ConQATException {
+			EObject evaluationResult) throws QuamocoEvaluateException {
 		Function function = evaluation.getFunction();
 
 		Measure measure = evaluation.getMeasure();
 		double ratioAffected = QIESLFunctions.UNKNOWN_DOUBLE;
 
-		getLogger().info("Range=" + evaluation.getRange());
+		Logger.getLogger("Range=" + evaluation.getRange(),Types.MessageType.WARN);
 
 		if (measure.getType() == Type.NUMBER) {
 			final QPoints measureValue = (QPoints) determine(measure);
@@ -601,7 +616,7 @@ public class ModelEvaluator extends QMProcessorBase {
 				QPoints value = (QPoints) determine(evaluation
 						.getNormlizationMeasure());
 				if (!value.isSingleValue()) {
-					throw new ConQATException(
+					throw new QuamocoEvaluateException(
 							"Value of normalization measure is an interval '"
 									+ value.toString()
 									+ "'. That is not allwoed.");
@@ -620,7 +635,7 @@ public class ModelEvaluator extends QMProcessorBase {
 				QPoints value = (QPoints) determine(evaluation
 						.getNormlizationMeasure());
 				if (!value.isSingleValue()) {
-					throw new ConQATException(
+					throw new QuamocoEvaluateException(
 							"Value of normalization measure is an interval '"
 									+ value.toString()
 									+ "'. That is not allwoed.");
@@ -652,7 +667,7 @@ public class ModelEvaluator extends QMProcessorBase {
 						.getNormlizationMeasure())).doubleValue();
 				ratioAffected = extent / locs;
 
-			} catch (ConQATException e) {
+			} catch (QuamocoEvaluateException e) {
 				getLogger()
 						.error("Error when determining the extent: '"
 								+ e.getMessage()
@@ -686,7 +701,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	}
 
 	/** Evaluate a {@link QIESLEvaluation}. */
-	private QPoints evaluate(QIESLEvaluation evaluation) throws ConQATException {
+	private QPoints evaluate(QIESLEvaluation evaluation) throws QuamocoEvaluateException {
 		Factor factor = evaluation.getEvaluates();
 
 		QPoints value = null;
@@ -699,8 +714,8 @@ public class ModelEvaluator extends QMProcessorBase {
 
 			extensionPointForCalibration(factor, evaluation, variables);
 		} catch (QIESLException e) {
-			getLogger().warn(
-					"QIESL-Exception: " + QuamocoUtils.stackTraceToString(e));
+			Logger.getLogger(
+					"QIESL-Exception: " + QuamocoUtils.stackTraceToString(e),Types.MessageType.WARN);
 			message = "QIESL-Exception: " + e.getMessage();
 
 			value = QPoints.UNKNOWN;
@@ -757,6 +772,10 @@ public class ModelEvaluator extends QMProcessorBase {
 			numberMeasurementResult.setValue(points.doubleIntervalValue());
 			measurementResult = numberMeasurementResult;
 			break;
+		case NONE:
+			break;
+		default:
+			break;
 		}
 		if (measurementResult != null) {
 			measurementResult.setResultsFrom(method);
@@ -795,7 +814,7 @@ public class ModelEvaluator extends QMProcessorBase {
 	 * @throws ConQATException
 	 */
 	private IQIESLEvalVariables prepareVariables(QIESLEvaluation evaluation)
-			throws ConQATException {
+			throws QuamocoEvaluateException {
 
 		Factor factor = evaluation.getEvaluates();
 
