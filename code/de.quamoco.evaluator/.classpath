@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/de.quamoco.qm"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common_2.7.0.v20110605-0747.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore_2.7.0.v20110605-0747.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.xmi_2.7.0.v20110520-1406.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.tum.cs.conqat.quamoco"/>
+	<classpathentry kind="lib" path="lib/qiesl-base.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
