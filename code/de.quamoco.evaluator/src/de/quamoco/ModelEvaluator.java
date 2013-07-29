@@ -140,8 +140,10 @@ public class ModelEvaluator {
 	public String getProjectName(){
 		return this.projectName;
 	}
+	
+	private QualityModel[] models ;
 
-	public QualityModel[] getQualityModelFromPath(HashSet<String> filenames){
+	public void getQualityModelFromPath(HashSet<String> filenames){
 		
 		ResourceSet resourceSet = new ResourceSetImpl();
 
@@ -175,7 +177,7 @@ public class ModelEvaluator {
 		Logger.getLogger("Returning " + qmList + " quality models.",Types.MessageType.DEBUG);
 
 		//TODO: Write new Util
-		return CollectionUtils.toArray(qmList, QualityModel.class);
+		models = CollectionUtils.toArray(qmList, QualityModel.class);
 
 	}
 	
