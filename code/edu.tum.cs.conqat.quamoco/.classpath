@@ -43,5 +43,6 @@
 	<classpathentry kind="lib" path="/org.conqat.engine.core/lib/ccsm-commons.jar" sourcepath="/ccsm-commons/src"/>
 	<classpathentry kind="src" path="/org.conqat.engine.simulink"/>
 	<classpathentry kind="src" path="/org.conqat.engine.model_clones"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.stg.quamoco.runner"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
