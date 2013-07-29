@@ -649,6 +649,7 @@ public class ModelEvaluator extends QMProcessorBase {
 			FindingCollection findings = (FindingCollection) determine(measure);
 			String range = evaluation.getRange().toLowerCase();
 			try {
+				// is from the conqat engine -> needs to be replaced
 				RegionSetDictionary dictionary;
 
 				if (range.equals("class")) {
@@ -668,13 +669,8 @@ public class ModelEvaluator extends QMProcessorBase {
 				ratioAffected = extent / locs;
 
 			} catch (QuamocoEvaluateException e) {
-				getLogger()
-						.error("Error when determining the extent: '"
-								+ e.getMessage()
-								+ "' Stack-Trace: "
-								+ org.conqat.lib.commons.string.StringUtils
-										.obtainStackTrace(e),
-								e);
+				Logger.getLogger("Error when determining the extent: '"
+								+ e.getMessage(), Types.MessageType.ERROR);
 				return QPoints.UNKNOWN;
 			}
 		}
@@ -878,6 +874,7 @@ public class ModelEvaluator extends QMProcessorBase {
 					getValue(subMeasure));
 		}
 
+		//TODO: eigenes Util bauen
 		return new QIESLEvalVariables(
 				allImpactsAndRefinements.toArray(new QPoints[0]),
 				CollectionUtils.asUnmodifiable(optionalVariables),
