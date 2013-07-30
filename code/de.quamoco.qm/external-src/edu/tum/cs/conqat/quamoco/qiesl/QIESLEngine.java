@@ -27,6 +27,8 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import junit.framework.Assert;
+
 import org.apache.commons.jexl2.JexlContext;
 import org.apache.commons.jexl2.JexlEngine;
 import org.apache.commons.jexl2.JexlException;
@@ -45,12 +47,7 @@ import org.apache.commons.jexl2.parser.Parser;
 import org.apache.commons.jexl2.parser.TokenMgrError;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.conqat.lib.commons.assertion.CCSMAssert;
-import org.conqat.lib.commons.assertion.CCSMPre;
-import org.conqat.lib.commons.io.NullOutputStream;
-import org.conqat.lib.commons.logging.ILogger;
-import org.conqat.lib.commons.logging.SimpleLogger;
-import org.conqat.lib.commons.string.StringUtils;
+
 
 import de.quamoco.qm.Type;
 import edu.tum.cs.conqat.quamoco.FindingCollection;
@@ -100,9 +97,9 @@ public class QIESLEngine {
 	/** Constructs a new engine with the given resolvers. */
 	public QIESLEngine(IFunctionRangeResolver functionRangeResolver,
 			IFileRangeResolver fileRangeResolver,
-			IFileRangeResolver classRangeResolver, ILogger logger) {
+			IFileRangeResolver classRangeResolver) {
 		jexlEngine = createJexlEngine(new QIESLFunctions(functionRangeResolver,
-				fileRangeResolver, classRangeResolver, logger));
+				fileRangeResolver, classRangeResolver));
 	}
 
 	/**
@@ -112,8 +109,8 @@ public class QIESLEngine {
 	 */
 	public QIESLEngine() {
 		jexlEngine = createJexlEngine(new QIESLFunctions(
-				new NullFunctionRangeResolver(), new NullFileRangeResolver(), new NullFileRangeResolver(),
-				new SimpleLogger(new NullOutputStream())));
+				new NullFunctionRangeResolver(), new NullFileRangeResolver(), new NullFileRangeResolver()
+				));
 	}
 
 	/** Creates a new {@link JexlEngine} using the given function object */
@@ -178,7 +175,7 @@ public class QIESLEngine {
 		intersection.retainAll(set2);
 		if (!intersection.isEmpty()) {
 			throw new QIESLException("Overlapping variables: "
-					+ StringUtils.concat(intersection, ", "));
+					/*+ StringUtils.concat(intersection, ", ")*/);
 		}
 	}
 
@@ -204,7 +201,7 @@ public class QIESLEngine {
 						.contains(ALL_IMPACTS_AND_REFINEMENTS_LITERAL)) {
 			throw new QIESLException("Expression " + expression
 					+ " does not use mandatory variables: "
-					+ StringUtils.concat(unusedModelVariables, ", "));
+					/*+ StringUtils.concat(unusedModelVariables, ", ")*/);
 		}
 	}
 
@@ -223,14 +220,13 @@ public class QIESLEngine {
 				continue;
 			}
 			String modelName = nameMapping.get(technicalName);
-			CCSMAssert
-					.isNotNull(modelName,
-							"Null-reference should be sorted out in toTechnicalExpression");
+			Assert
+					.assertNotNull("Null-reference should be sorted out in toTechnicalExpression", modelName);
 
 			Object value = modelVariables.get(modelName);
 
-			CCSMAssert.isNotNull(value, "Value of model variable " + modelName
-					+ " was null");
+			Assert.assertNotNull( "Value of model variable " + modelName
+					+ " was null", value);
 
 			if (value instanceof Exception) {
 				throw new QIESLException(
@@ -374,7 +370,7 @@ public class QIESLEngine {
 			}
 			String replacement = toTechnicalName(match);
 			matcher.appendReplacement(result,
-					StringUtils.escapeRegexReplacementString(replacement));
+					escapeRegexReplacementString(replacement));
 		}
 		matcher.appendTail(result);
 		return result.toString();
@@ -447,11 +443,25 @@ public class QIESLEngine {
 	 * Escapes a measure name, so that a valid java identifier results
 	 */
 	protected static String toTechnicalName(String name) {
-		CCSMPre.isFalse(StringUtils.isEmpty(name), "Name cannot be empty");
+		Assert.assertNotNull("Name cannot be empty", name);
+		//CCSMPre.isFalse(StringUtils.isEmpty(name), "Name cannot be empty");
 		if (!Character.isJavaIdentifierStart(name.charAt(0))) {
 			name = "_" + name;
 		}
 		return name.replaceAll("[^\\p{javaJavaIdentifierPart}]", "_");
+	}
+	
+	/**
+	 * Regex replacement methods like
+	 * {@link Matcher#appendReplacement(StringBuffer, String)} or
+	 * {@link String#replaceAll(String, String)} treat dollar signs as group
+	 * references. This method escapes replacement strings so that dollar signs
+	 * are treated as literals.
+	 */
+	public static String escapeRegexReplacementString(String replacement) {
+		// this needs to be escape thrice as replaceAll also recognizes the
+		// dollar sign
+		return replacement.replaceAll("([$\\\\])", "\\\\$1");
 	}
 
 }

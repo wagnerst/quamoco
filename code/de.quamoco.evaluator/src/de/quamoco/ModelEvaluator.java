@@ -31,6 +31,7 @@ import java.util.Map;
 import junit.framework.Assert;
 
 
+import org.conqat.engine.core.core.ConQATException;
 import org.conqat.engine.resource.regions.RegionSetDictionary;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -81,9 +82,7 @@ import de.quamoco.qm.Type;
 import de.quamoco.qm.WeightedSumFactorAggregation;
 import de.quamoco.qm.WeightedSumMultiMeasureEvaluation;
 import de.quamoco.qm.util.QmModelUtils;
-import de.quamoco.utils.Logger;
-import de.quamoco.utils.QuamocoEvaluateException;
-import de.quamoco.utils.Types;
+import de.quamoco.utils.*;
 import edu.tum.cs.conqat.quamoco.FileRangeResolver;
 import edu.tum.cs.conqat.quamoco.FindingCollection;
 import edu.tum.cs.conqat.quamoco.IFileRangeResolver;
@@ -192,10 +191,10 @@ public class ModelEvaluator {
 		createResultModelResource();
 
 		functions = new QIESLFunctions(functionRangeResolver,
-				fileRangeResolver, classRangeResolver, getLogger());
+				fileRangeResolver, classRangeResolver);
 
 		qieslEngine = new QIESLEngine(functionRangeResolver, fileRangeResolver,
-				classRangeResolver, getLogger());
+				classRangeResolver);
 
 		List<CharacterizingElement> elements = new ArrayList<CharacterizingElement>();
 		for (QualityModel model : models) {
@@ -675,6 +674,11 @@ public class ModelEvaluator {
 			} catch (QuamocoEvaluateException e) {
 				Logger.getLogger("Error when determining the extent: '"
 								+ e.getMessage(), Types.MessageType.ERROR);
+				return QPoints.UNKNOWN;
+			} catch (ConQATException e) {
+				Logger.getLogger("Error from ConQAT: '"
+						+ e.getMessage(), Types.MessageType.ERROR);
+				e.printStackTrace();
 				return QPoints.UNKNOWN;
 			}
 		}

@@ -23,17 +23,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.conqat.engine.commons.findings.Finding;
 import org.conqat.engine.commons.findings.location.ElementLocation;
 import org.conqat.engine.commons.findings.location.TextRegionLocation;
 import org.conqat.engine.core.core.ConQATException;
 import org.conqat.engine.resource.regions.RegionSetDictionary;
-import org.conqat.lib.commons.assertion.CCSMAssert;
-import org.conqat.lib.commons.assertion.CCSMPre;
-import org.conqat.lib.commons.collections.CollectionUtils;
-import org.conqat.lib.commons.logging.ILogger;
-import org.conqat.lib.commons.math.MathUtils;
-import org.conqat.lib.commons.region.RegionSet;
+
+import de.quamoco.utils.*;
+
 
 import edu.tum.cs.conqat.quamoco.FindingCollection;
 import edu.tum.cs.conqat.quamoco.IFileRangeResolver;
@@ -62,22 +61,20 @@ public class QIESLFunctions {
 	private final IFileRangeResolver fileRangeResolver;
 
 	/** Logger used for logging */
-	private final ILogger logger;
+	private final de.quamoco.utils.Logger logger;
 
 	/** Constructor */
 	public QIESLFunctions(IFunctionRangeResolver functionRangeResolver,
 			IFileRangeResolver fileRangeResolver,
-			IFileRangeResolver classRangeResolver, ILogger logger) {
-		CCSMAssert
-				.isNotNull(functionRangeResolver,
-						"functionRangeResolver must not be null. Use NullFunctionRangeResolver instead");
-		CCSMAssert
-				.isNotNull(fileRangeResolver,
-						"fileRangeResolver must not be null. Use NullFileRangeResolver instead");
+			IFileRangeResolver classRangeResolver) {
+		Assert
+				.assertNotNull("functionRangeResolver must not be null. Use NullFunctionRangeResolver instead", functionRangeResolver);
+		Assert
+				.assertNotNull("fileRangeResolver must not be null. Use NullFileRangeResolver instead", fileRangeResolver);
 		this.functionRangeResolver = functionRangeResolver;
 		this.fileRangeResolver = fileRangeResolver;
 		this.classRangeResolver = classRangeResolver;
-		this.logger = logger;
+		
 	}
 
 	public QPoints[] asQPointArray(Number... values) {
@@ -529,7 +526,7 @@ public class QIESLFunctions {
 				result.addAll(regionSet);
 
 			} catch (ConQATException e) {
-				logger.warn(e + "");
+				logger.  warn(e + "");
 			}
 
 		}
@@ -550,7 +547,7 @@ public class QIESLFunctions {
 		RegionSetDictionary result = new RegionSetDictionary();
 		for (Finding finding : report) {
 			ElementLocation location = finding.getLocation();
-			CCSMAssert.isInstanceOf(location, ElementLocation.class);
+			Assert.isInstanceOf(location, ElementLocation.class);
 			RegionSetDictionary region = classRangeResolver
 					.obtainRegion(location);
 			result.addAll(region);
@@ -573,7 +570,7 @@ public class QIESLFunctions {
 		RegionSetDictionary result = new RegionSetDictionary();
 		for (Finding finding : report) {
 			ElementLocation location = finding.getLocation();
-			CCSMAssert.isInstanceOf(location, ElementLocation.class);
+			Assert.isInstanceOf(location, ElementLocation.class);
 			RegionSetDictionary region = fileRangeResolver
 					.obtainRegion(location);
 			result.addAll(region);

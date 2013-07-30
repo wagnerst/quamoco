@@ -36,7 +36,7 @@ $Id: IQIESLEvalVariables.java 4974 2012-02-17 09:34:10Z lochmann $
 +--------------------------------------------------------------------------*/
 package edu.tum.cs.conqat.quamoco.qiesl;
 
-import org.conqat.lib.commons.collections.UnmodifiableMap;
+import de.quamoco.utils.UnmodifiableMap;
 
 /**
  * 
