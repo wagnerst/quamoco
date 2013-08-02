@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Method ignores results of InputStream.skip() [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Method ignores results of InputStream.skip()
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Method ignores results of InputStream.skip()
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This method ignores the return value of<br/>  java.io.InputStream.skip() which can skip multiple bytes.<br/>  If the return value is not checked, the caller will not be able to correctly<br/>  handle the case where fewer bytes were skipped than the caller requested.<br/>  This is a particularly insidious kind of bug, because in many programs,<br/>  skips from input streams usually do skip the full amount of data requested,<br/>  causing the program to fail only sporadically. With Buffered streams, however,<br/>  skip() will only skip data in the buffer, and will routinely fail to skip the<br/>  requested number of bytes." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paAjAxdREeCWcbKUk5fWYg');">Java/Method ignores results of InputStream.skip()/SR_NOT_CHECKED [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9czMUYXWEeCT8pJoQsn4HQ');">Unintentional Side-Effect @IO Library Function Call [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

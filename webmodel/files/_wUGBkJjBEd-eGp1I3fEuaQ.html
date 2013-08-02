@@ -1,0 +1,83 @@
+<h3><img src="icons/image6.png"/> Missing equals overload @Value type [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Missing equals overload @Value type
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Missing equals overload
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+<img src="icons/image1.png"/> <a href="javascript:selectObject('entities', '_wty9MJPuEd-zCrQnPoQOsw');">Value type [C#]</a>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule checks all value types, except enumerations, to see if they use the default implementation of Equals(object) and GetHashCode() methods. While ValueType implementations work for any value type they do so at the expense of performance (the default implementation uses reflection to access fields). You can easily override both methods with much faster code since you know all meaningful fields inside your structure. At the same time you should also provide, if your language allows it, operator overloads for equality (op_Equality, ==) and inequality (op_Inequality, !=).<br/><br/><br/><br/><br/><br/>" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_45fxIJjBEd-eGp1I3fEuaQ');">C#/Missing equals overload @Value type/OverrideValueTypeDefaultsRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9bdvkYXWEeCT8pJoQsn4HQ');">Interface and Implementation Consistency @Value type [C#]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Synchronization on getClass rather than class literal [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Synchronization on getClass rather than class literal
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Synchronization on getClass rather than class literal
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This instance method synchronizes on this.getClass(). If this class is subclassed,<br/>     subclasses will synchronize on the class object for the subclass, which isn't likely what was intended.<br/>     For example, consider this code from java.awt.Label:<br/>     <br/>     private static final String base = "label";<br/>     private static int nameCounter = 0;<br/>     String constructComponentName() {<br/>        synchronized (getClass()) {<br/>            return base + nameCounter++;<br/>        }<br/>     }<br/>     <br/>     Subclasses of Label won't synchronize on the same subclass, giving rise to a datarace.<br/>     Instead, this code should be synchronizing on Label.class<br/>      <br/>     private static final String base = "label";<br/>     private static int nameCounter = 0;<br/>     String constructComponentName() {<br/>        synchronized (Label.class) {<br/>            return base + nameCounter++;<br/>        }<br/>     }<br/>     <br/>      Bug pattern contributed by Jason Mehrens" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_pZ8RaRdREeCWcbKUk5fWYg');">Java/Synchronization on getClass rather than class literal/WL_USING_GETCLASS_RATHER_THAN_CLASS_LITERAL [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9jNWUIXWEeCT8pJoQsn4HQ');">Synchronization Integrity @Class [Object-orientation]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

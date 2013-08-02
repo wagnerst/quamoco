@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Stopwatch not used [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Stopwatch not used
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Stopwatch not used
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule checks methods for cases where a System.Diagnostics.Stopwatch could be used instead of using System.DateTime to compute the time required for an action. Stopwatch is preferred because it better expresses the intent of the code and because (on some platforms at least) StopWatch is accurate to roughly the microsecond whereas DateTime.Now is only accurate to 16 milliseconds or so. This rule only applies to assemblies compiled with the .NET framework version 2.0 (or later)." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_j7vuUJSvEd-40qNQIH1mBQ');">C#/Stopwatch not used/ConsiderUsingStopwatchRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9S0J4IXWEeCT8pJoQsn4HQ');">Ignored Existence of Already Implemented Code @Date or Time Statement [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

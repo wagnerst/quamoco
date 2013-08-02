@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Inconsistent synchronization [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Inconsistent synchronization
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Inconsistent synchronization
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"The fields of this class appear to be accessed inconsistently with respect to synchronization. This bug report indicates that the bug pattern detector judged that<br/>  <br/>- the class contains a mix of locked and unlocked accesses,<br/>- at least one locked access was performed by one of the class's own methods, <br/>and<br/>- the number of unsynchronized field accesses (reads and writes) was no more than one third of all accesses, with writes being weighed twice as high as reads.<br/>  <br/>A typical bug matching this bug pattern is forgetting to synchronize one of the methods in a class that is intended to be thread-safe.<br/><br/>You can select the nodes labeled "Unsynchronized access" to show the code locations where the detector believed that a field was accessed without synchronization.<br/><br/>Note that there are various sources of inaccuracy in this detector; for example, the detector cannot statically detect all situations in which a lock is held. Also, even when the detector is accurate in distinguishing locked vs. unlocked accesses, the code in question may still be correct." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paBxVBdREeCWcbKUk5fWYg');">Java/Inconsistent synchronization/IS2_INCONSISTENT_SYNC [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9jNWUIXWEeCT8pJoQsn4HQ');">Synchronization Integrity @Class [Object-orientation]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Method invokes inefficient Number constructor [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Method invokes inefficient Number constructor
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Method invokes inefficient Number constructor
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"Using new Integer(int) is guaranteed to always result in a new object whereas Integer.valueOf(int) allows caching of values to be done by the compiler, class library, or JVM.<br/>Using of cached values avoids object allocation and the code will be faster.<br/><br/>Values between -128 and 127 are guaranteed to have corresponding cached instances and using valueOf is approximately 3.5 times faster than using constructor.<br/>For values outside the constant range the performance of both styles is the same.<br/><br/>Unless the class must be compatible with JVMs predating Java 1.5, use either autoboxing or the valueOf() method when creating instances of Long, Integer, Short, Character, and Byte." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paDmcRdREeCWcbKUk5fWYg');">Java/Method invokes inefficient Number constructor/DM_NUMBER_CTOR [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9obNgIXWEeCT8pJoQsn4HQ');">Unneeded Resource Overhead @Object Allocation Statement [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

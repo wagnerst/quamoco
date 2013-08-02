@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Impossible downcast of toArray() result [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Impossible downcast of toArray() result
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Impossible downcast of toArray() result
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This code is casting the result of calling toArray() on a collection<br/>to a type more specific than Object[], as in:<br/><br/>String[] getAsArray(Collection&lt;String&gt; c) {<br/>  return (String[]) c.toArray();<br/>  }<br/><br/>This will usually fail by throwing a ClassCastException. The toArray() of almost all collections return an Object[]. They can't really do anything else, since the Collection object has no reference to the declared generic type of the collection. The correct way to do get an array of a specific type from a collection is to use c.toArray(new String[]);<br/>or c.toArray(new String[c.size()]); (the latter is slightly more efficient).<br/>There is one common/known exception exception to this. The toArray() method of lists returned by Arrays.asList(...) will return a covariantly typed array. For example, Arrays.asArray(new String[] { "a" }).toArray() will return a String []. FindBugs attempts to detect and suppress<br/>such cases, but may miss some." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paAjFxdREeCWcbKUk5fWYg');">Java/Impossible downcast of toArray() result/BC_IMPOSSIBLE_DOWNCAST_OF_TOARRAY [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9NdIw4XWEeCT8pJoQsn4HQ');">Definition and Usage Consistency @Type cast [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Potential lost logger changes due to weak reference in OpenJDK [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Potential lost logger changes due to weak reference in OpenJDK
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Potential lost logger changes due to weak reference in OpenJDK
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"OpenJDK introduces a potential incompatibility.<br/>In particular, the java.util.logging.Logger behavior has changed. Instead of using strong references, it now uses weak references internally. That's a reasonable change, but unfortunately some code relies on the old behavior - when changing logger configuration, it simply drops the logger reference. That means that the garbage collector is free to reclaim that memory, which means that the logger configuration is lost. For example, consider:<br/><br/>public static void initLogging() throws Exception {<br/> Logger logger = Logger.getLogger("edu.umd.cs");<br/> logger.addHandler(new FileHandler()); // call to change logger configuration<br/> logger.setUseParentHandlers(false); // another call to change logger configuration<br/>}<br/><br/>The logger reference is lost at the end of the method (it doesn't escape the method), so if you have a garbage collection cycle just<br/>after the call to initLogging, the logger configuration is lost (because Logger only keeps weak references).<br/><br/>public static void main(String[] args) throws Exception {<br/> initLogging(); // adds a file handler to the logger<br/> System.gc(); // logger configuration lost<br/> Logger.getLogger("edu.umd.cs").info("Some message"); // this isn't logged to the file as expected<br/>}<br/><br/>Ulf Ochsenfahrt and Eric Fellheimer" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_pZ_7zhdREeCWcbKUk5fWYg');">Java/Potential lost logger changes due to weak reference in OpenJDK/LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9fod4YXWEeCT8pJoQsn4HQ');">Runtime Environment Independence @Library function call [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

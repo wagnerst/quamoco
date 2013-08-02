@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Synchronization on interned String [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Synchronization on interned String
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Synchronization on interned String
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"The code synchronizes on interned String.<br/><br/>private static String LOCK = "LOCK";<br/>...<br/>  synchronized(LOCK) { ...}<br/>...<br/><br/><br/>Constant Strings are interned and shared across all other classes loaded by the JVM. Thus, this could<br/>is locking on something that other code might also be locking. This could result in very strange and hard to diagnose<br/>blocking and deadlock behavior. See http://www.javalobby.org/java/forums/t96352.html and http://jira.codehaus.org/browse/JETTY-352." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paBw9BdREeCWcbKUk5fWYg');">Java/Synchronization on interned String/DL_SYNCHRONIZATION_ON_SHARED_CONSTANT [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9ll78YXWEeCT8pJoQsn4HQ');">Synchronization Integrity @Synchronization statement [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

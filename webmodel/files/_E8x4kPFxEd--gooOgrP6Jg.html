@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Casting to float after integer division [Root]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Casting to float after integer division
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Casting to float after integer division
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This code casts the result of an integral division (e.g., int or long division)<br/>operation to double or float.<br/>Doing division on integers truncates the result to the integer value closest to zero. The fact that the result was cast to double suggests that this precision should have been retained.<br/>What was probably meant was to cast one or both of the operands to<br/>double before performing the division.  Here is an example:<br/><br/>int x = 2;<br/>int y = 5;<br/>// Wrong: yields result 0.0<br/>double value1 =  x / y;<br/>// Right: yields result 0.4<br/>double value2 =  x / (double) y;" [2]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Root
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_wEXp0PFxEd--gooOgrP6Jg');">Java/Casting to float after integer division/ICAST_IDIV_CAST_TO_DOUBLE [FindBugs]</a></li><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_UewYsPFxEd--gooOgrP6Jg');">C#/Casting to float after integer division/ReviewCastOnIntegerDivisionRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9R7ZE4XWEeCT8pJoQsn4HQ');">General Expression Applicability @Mathematical expression [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr><tr><td valign=top style="width:1cm;border:0px;">[2]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

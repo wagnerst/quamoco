@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Synchronization on field in futile attempt to guard that field [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Synchronization on field in futile attempt to guard that field
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Synchronization on field in futile attempt to guard that field
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This method synchronizes on a field in what appears to be an attempt<br/>to guard against simultaneous updates to that field. But guarding a field<br/>gets a lock on the referenced object, not on the field. This may not <br/>provide the mutual exclusion you need, and other threads might <br/>be obtaining locks on the referenced objects (for other purposes). An example<br/>of this pattern would be:<br/><br/><br/>private Long myNtfSeqNbrCounter = new Long(0);<br/>private Long getNotificationSequenceNumber() {<br/>     Long result = null;<br/>     synchronized(myNtfSeqNbrCounter) {<br/>         result = new Long(myNtfSeqNbrCounter.longValue() + 1);<br/>         myNtfSeqNbrCounter = new Long(result.longValue());<br/>     }<br/>     return result;<br/> }" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_pZ9fghdREeCWcbKUk5fWYg');">Java/Synchronization on field in futile attempt to guard that field/ML_SYNC_ON_FIELD_TO_GUARD_CHANGING_THAT_FIELD [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9ll78YXWEeCT8pJoQsn4HQ');">Synchronization Integrity @Synchronization statement [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

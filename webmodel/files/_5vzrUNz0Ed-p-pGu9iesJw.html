@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Bad recursive [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Bad recursive
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Bad recursive
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule checks for a few common scenarios where a method may be infinitely recursive. For example, getter properties which call themselves or methods with no conditional code which call themselves (instead of the base method).<br/><br/>Old description: This rule catches a common mistake in programs when a method or property invokes itself recursively in a suspicious way. Usually the developer forgot to result = a variable, or call a base method. <br/><br/>" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_5vzrY9z0Ed-p-pGu9iesJw');">C#/Bad recursive/BadRecursiveInvocationRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9dskMoXWEeCT8pJoQsn4HQ');">Termination @Subroutine [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Ignores return value of const method [Java]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Ignores return value of const method
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Ignores return value of const method
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"The return value of this method should be checked. One common<br/>cause of this warning is to invoke a method on an immutable object,<br/>thinking that it updates the object. For example, in the following code<br/>fragment,<br/><br/><br/>String dateString = getHeaderField(name);<br/>dateString.trim();<br/><br/><br/>the programmer seems to be thinking that the trim() method will update<br/>the String referenced by dateString. But since Strings are immutable, the trim()<br/>function returns a new String value, which is being ignored here. The code<br/>should be corrected to: <br/><br/><br/>String dateString = getHeaderField(name);<br/>dateString = dateString.trim();" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> Java
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_paBKQBdREeCWcbKUk5fWYg');">Java/Ignores return value of const method/RV_RETURN_VALUE_IGNORED [FindBugs]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9xEMIIXWEeCT8pJoQsn4HQ');">Uselessness @Method invocation [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">FindBugs™ - Find Bugs in Java Programs. <a target="_blank" href="http://findbugs.sourceforge.net/">http://findbugs.sourceforge.net/</a>. Accessed on 01.11.2011.</td></tr></table>

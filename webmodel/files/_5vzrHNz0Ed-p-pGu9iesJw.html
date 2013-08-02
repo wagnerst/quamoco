@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Visible constant [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Visible constant
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Visible constant
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule looks for constant fields that are visible outside the current assembly. Such fields, if used outside the assemblies, will have their value (not the field reference) copied into the other assembly. Changing the value will requires to recompile all assemblies in order to have the desired effect. Declaring the field as static read-only will have the desired effect (i.e. insert a reference to the field in its original assembly). <br/><br/>Note: <br/>'const': <br/>    * Can't be static.<br/>    * Value is evaluated at compile time.<br/>    * Initialized at declaration only.<br/><br/>'readonly':<br/>    * Can be either instance-level or static.<br/>    * Value is evaluated at run time.<br/>    * Can be initialized in declaration or by code in the constructor.<br/>" [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_5vzrMdz0Ed-p-pGu9iesJw');">C#/Visible constant/AvoidVisibleConstantFieldRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9PizcIXWEeCT8pJoQsn4HQ');">Encapsulation Strength @Field [Object-orientation]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Wrong native code handling [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Wrong native code handling
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Wrong native code handling
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"In general it is best to interop with native code using System.Runtime.InteropServices.SafeHandle instead of System.IntPtr or System.UIntPtr because:<br/><br/>* SafeHandles are type safe.<br/>* SafeHandles are guaranteed to be disposed of during exceptional conditions like a thread aborting unexpectedly or a stack overflow.<br/>* SafeHandles are not vulnerable to reycle attacks.<br/>* You don't need to write a finalizer which can be tricky to do because they execute within their own thread, may execute on partially constructed objects, and normally tear down the application if you allow an exception to escape from them. " [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_5wGlstz0Ed-p-pGu9iesJw');">C#/Wrong native code handling/PreferSafeHandleRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9S0J5IXWEeCT8pJoQsn4HQ');">Ignored Existence of Already Implemented Code @Library function call [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

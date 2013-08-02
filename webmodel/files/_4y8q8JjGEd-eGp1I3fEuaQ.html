@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Non-implemented Feature [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Non-implemented Feature
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Non-implemented Feature
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule will fire if one of the assemblies being checked contains a call to a .NET method which is either not implemented on Mono or partially implemented. It does this by downloading a MoMA definitions file under ~/.local/share/Gendarme/ (on UNIX) or C:\Documents and Settings\{username}\Local Settings\Application Data\Gendarme (on Windows) and checking for calls to the methods therein. The rule will work without MoMA but if it does fire it may be useful to download and run MoMA. By default the rule will use the latest local version available. This can be overridden to use a specific, local, version if you want to review compatibility against a specific Mono version. You can also manually remove them, now and then, to ensure you are using the latest version. Also upgrading Gendarme will try to download a newer version of the definitions files.<br/><br/>Configuration<br/><br/>Some elements of this rule can be customized to better fit your needs.<br/><br/>Version<br/><br/>The version of Mono against which you wish to review compatibility. You need to have this version of the definitions file downloaded in order to use it. This is useful if you want to upgrade Gendarme but still want to test compatibility against an older version of Mono." [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_54sLAJjGEd-eGp1I3fEuaQ');">C#/Non-implemented Feature/MonoCompatibilityReviewRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9fod4YXWEeCT8pJoQsn4HQ');">Runtime Environment Independence @Library function call [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>

@@ -1,0 +1,82 @@
+<h3><img src="icons/image6.png"/> Double check locking [C#]</h3>
+<h4>Attributes</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Qualified Name</td>
+<td>
+Double check locking
+</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>
+Double check locking
+</td>
+</tr>
+<tr>
+<td>Characterizes</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>
+"This rule is used to check for the double-check pattern, often used when implementing the singleton pattern (1), and warns of its potential incorrect usage. The original CLR (1.x) could not guarantee that a double-check would work correctly in multithreaded applications. However the technique do work on the x86 architecture, the most common architecture, so the problem is seldom seen (e.g. IA64). The CLR 2 and later introduce a strong memory model (2) where a double check for a lock is correct (as long as you assign to a volatile variable). This rule wont report any defect for assemblies targeting the 2.0 (and later) runtime. " [1]
+</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>
+FINDINGS
+</td>
+</tr>
+<tr>
+<td>Quality Model</td>
+<td>
+<img src="icons/image2.png"/> C#
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Hierarchy</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Refined by</td>
+<td>
+<ul>
+</td>
+</tr>
+<tr>
+<td>Refines</td>
+<td>
+<ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table>
+<thead><tr><th>Property name</th><th>Property value</th></tr></thead>
+<tbody>
+<tr>
+<td>Determined by</td>
+<td>
+<ul><li><img src="icons/image9.png"/> <a href="javascript:selectObject('factors', '_5vzsOdz0Ed-p-pGu9iesJw');">C#/Double check locking/DoubleCheckLockingRule [Gendarme]</a></li>
+</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>
+<ul><li><img src="icons/image4.png"/> <a href="javascript:selectObject('factors', '_9qNWMYXWEeCT8pJoQsn4HQ');">Unnecessarily Complicated @Synchronization statement [Root]</a></li>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>References</h4><table style="border:0px;"><tr><td valign=top style="width:1cm;border:0px;">[1]</td><td style="border:0px;">Gendarme. <a target="_blank" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a>. Accessed on 01.11.2011.</td></tr></table>
