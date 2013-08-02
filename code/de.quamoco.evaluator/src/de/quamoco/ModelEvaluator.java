@@ -33,6 +33,8 @@ import junit.framework.Assert;
 
 import org.conqat.engine.core.core.ConQATException;
 import org.conqat.engine.resource.regions.RegionSetDictionary;
+
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
@@ -755,8 +757,9 @@ public class ModelEvaluator {
 			findingsMeasurementResult.setCount(findings.size());
 			findingsMeasurementResult.setFindings(findings);
 			measurementResult = findingsMeasurementResult;
-			if (writeFindings) {
-				for (Finding finding : findings) {
+			//FIXME: For first testing commented out
+			/*if (writeFindings) {
+				for (Finding finding : findings) {  //Finding wird durch Message bzw. Daten aus dem Cash ersetzt enthält 
 					ElementLocation location = finding.getLocation();
 
 					FindingMessage findingMessage = QmFactory.eINSTANCE
@@ -767,7 +770,7 @@ public class ModelEvaluator {
 							findingMessage);
 
 				}
-			}
+			}*/
 			break;
 		case NUMBER:
 			QPoints points = QPoints.asQPoints(value);
