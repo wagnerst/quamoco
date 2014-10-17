@@ -61,123 +61,11 @@ $(".tree").jstree(
 		{
 			types:
 			{
-image18:
+image14:
 {
 icon:
 {
-image: "icons/image18.png"
-}
-},
-image10:
-{
-icon:
-{
-image: "icons/image10.png"
-}
-},
-image1:
-{
-icon:
-{
-image: "icons/image1.png"
-}
-},
-image20:
-{
-icon:
-{
-image: "icons/image20.png"
-}
-},
-image13:
-{
-icon:
-{
-image: "icons/image13.png"
-}
-},
-image22:
-{
-icon:
-{
-image: "icons/image22.png"
-}
-},
-image6:
-{
-icon:
-{
-image: "icons/image6.png"
-}
-},
-image16:
-{
-icon:
-{
-image: "icons/image16.png"
-}
-},
-image19:
-{
-icon:
-{
-image: "icons/image19.png"
-}
-},
-image21:
-{
-icon:
-{
-image: "icons/image21.png"
-}
-},
-image8:
-{
-icon:
-{
-image: "icons/image8.png"
-}
-},
-image0:
-{
-icon:
-{
-image: "icons/image0.png"
-}
-},
-image24:
-{
-icon:
-{
-image: "icons/image24.png"
-}
-},
-image17:
-{
-icon:
-{
-image: "icons/image17.png"
-}
-},
-image23:
-{
-icon:
-{
-image: "icons/image23.png"
-}
-},
-image2:
-{
-icon:
-{
-image: "icons/image2.png"
-}
-},
-image9:
-{
-icon:
-{
-image: "icons/image9.png"
+image: "icons/image14.png"
 }
 },
 image12:
@@ -187,11 +75,53 @@ icon:
 image: "icons/image12.png"
 }
 },
-image7:
+image13:
 {
 icon:
 {
-image: "icons/image7.png"
+image: "icons/image13.png"
+}
+},
+image23:
+{
+icon:
+{
+image: "icons/image23.png"
+}
+},
+image9:
+{
+icon:
+{
+image: "icons/image9.png"
+}
+},
+image17:
+{
+icon:
+{
+image: "icons/image17.png"
+}
+},
+image16:
+{
+icon:
+{
+image: "icons/image16.png"
+}
+},
+image24:
+{
+icon:
+{
+image: "icons/image24.png"
+}
+},
+image22:
+{
+icon:
+{
+image: "icons/image22.png"
 }
 },
 image11:
@@ -201,11 +131,32 @@ icon:
 image: "icons/image11.png"
 }
 },
-image5:
+image19:
 {
 icon:
 {
-image: "icons/image5.png"
+image: "icons/image19.png"
+}
+},
+image7:
+{
+icon:
+{
+image: "icons/image7.png"
+}
+},
+image8:
+{
+icon:
+{
+image: "icons/image8.png"
+}
+},
+image3:
+{
+icon:
+{
+image: "icons/image3.png"
 }
 },
 image4:
@@ -215,11 +166,67 @@ icon:
 image: "icons/image4.png"
 }
 },
-image14:
+image10:
 {
 icon:
 {
-image: "icons/image14.png"
+image: "icons/image10.png"
+}
+},
+image2:
+{
+icon:
+{
+image: "icons/image2.png"
+}
+},
+image5:
+{
+icon:
+{
+image: "icons/image5.png"
+}
+},
+image18:
+{
+icon:
+{
+image: "icons/image18.png"
+}
+},
+image20:
+{
+icon:
+{
+image: "icons/image20.png"
+}
+},
+image0:
+{
+icon:
+{
+image: "icons/image0.png"
+}
+},
+image1:
+{
+icon:
+{
+image: "icons/image1.png"
+}
+},
+image6:
+{
+icon:
+{
+image: "icons/image6.png"
+}
+},
+image21:
+{
+icon:
+{
+image: "icons/image21.png"
 }
 },
 image15:
@@ -227,13 +234,6 @@ image15:
 icon:
 {
 image: "icons/image15.png"
-}
-},
-image3:
-{
-icon:
-{
-image: "icons/image3.png"
 }
 }
 			}

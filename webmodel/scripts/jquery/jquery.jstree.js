@@ -8,7 +8,7 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
- * $Date: 2011-09-21 09:50:12 +0200 (Mi, 21 Sep 2011) $
+ * $Date: 2011-09-21 09:50:12 +0200 (Wed, 21 Sep 2011) $
  * $Revision: 4819 $
  */
 
