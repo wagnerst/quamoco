@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="ASCII"?>
+<qm:QualityModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qm="http://www.quamoco.de/qm/v17" xmi:id="_vVIPYKUsEd-NpKpUUyVKCQ" description="This model describes typical factors for object-oriented programming languages.  " name="Object-orientation">
+  <taggedBy href="root.qm#_ThcY0E8cEeCyVsuO56b1rA"/>
+  <entities xmi:id="_Fu3aEKVEEd-NpKpUUyVKCQ" description="&quot;In object-oriented programming, a destructor (sometimes shortened to dtor) is a method which is automatically invoked when the object is destroyed. Its main purpose is to clean up and to free the resources which were acquired by the object along its life cycle and unlink it from other objects or resources invalidating any references in the process.&quot; [1]" name="Destructor">
+    <originatesFrom href="root.qm#_GATYoeKrEd-KpYBi5GbJBw"/>
+    <isA xmi:id="_gI_6IOtOEd-gfuvsxq3wHA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_Ve0-kJP7Ed-a_JX6fZrQQA" description="&quot;In object-oriented programming, a class is a construct that is used as a blueprint (or template) to create objects of that class. This blueprint describes the state and behavior that the objects of the class all share. An object of a given class is called an instance of the class. The class that contains (and was used to create) that instance can be considered as the type of that object, e.g. an object instance of the &quot;Fruit&quot; class would be of the type &quot;Fruit&quot;.&#xA;A class usually represents a noun, such as a person, place or (possibly quite abstract) thing - it is a model of a concept within a computer program. Fundamentally, it encapsulates the state and behavior of the concept it represents. It encapsulates state through data placeholders called attributes (or member variables or instance variables); it encapsulates behavior through reusable sections of code called methods.&#xA;More technically, a class is a cohesive package that consists of a particular kind of metadata. A class has both an interface and a structure. The interface describes how to interact with the class and its instances with methods, while the structure describes how the data is partitioned into attributes within an instance. A class may also have a representation (metaobject) at run time, which provides run time support for manipulating the class-related metadata. In object-oriented design, a class is the most specific type of an object in relation to a specific layer.&#xA;Programming languages that support classes subtly differ in their support for various class-related features. Most support various forms of class inheritance. Many languages also support features providing encapsulation, such as access specifiers.&quot; [1]" name="Class">
+    <originatesFrom href="root.qm#_GATYoeKrEd-KpYBi5GbJBw"/>
+    <isA xmi:id="_xW1LW54vEd-Ot6QNrtZtmg">
+      <parent href="root.qm#_D4QfkJPyEd-zCrQnPoQOsw"/>
+    </isA>
+    <partOf xmi:id="_HhKQQOsjEd-XsNJ8L7AOPA">
+      <parent href="root.qm#_rgD5YZsHEd-BEeIfUepsAQ"/>
+    </partOf>
+  </entities>
+  <entities xmi:id="_YevPwJTAEd-40qNQIH1mBQ" description="A property is a field with simple or implicit getter and setter methods." name="Property">
+    <isA xmi:id="_ZLviMOtQEd-gfuvsxq3wHA" parent="_lz7rgLtdEd-4Dvfk12g7Xw"/>
+  </entities>
+  <entities xmi:id="_lz7rgLtdEd-4Dvfk12g7Xw" description="&quot;In object-oriented programming, field (also called data member or member variable) is the data encapsulated within a class or object. In the case of a regular field (also called instance variable), for each instance of the object there is an instance variable: for example, an Employee class has a Name field and there is one distinct name per employee. A static field (also called class variable) is one variable, which is shared by all instances.&quot; [1]" name="Field">
+    <originatesFrom href="root.qm#_GATYoeKrEd-KpYBi5GbJBw"/>
+    <isA xmi:id="_priVcOtQEd-gfuvsxq3wHA">
+      <parent href="root.qm#_UQFHYOY_Ed6we8JnAXCkYw"/>
+    </isA>
+    <partOf xmi:id="_SAR68ODlEd-wi_Y82tmGBA" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_BD65MJTCEd-40qNQIH1mBQ" description="A class inside another class. The internal class is not visible to the outside." name="Internal class">
+    <isA xmi:id="_xW1LYp4vEd-Ot6QNrtZtmg" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_zDY80LpUEd-vsOyJ3PcLww" description="&quot;In object-oriented programming, a method is a subroutine that is exclusively associated either with a class (in which case it is called a class method or a static method) or with an object (in which case it is an instance method). Like a subroutine in procedural programming languages, a method usually consists of a sequence of programming statements to perform an action, a set of input parameters to customize those actions, and possibly an output value (called the return value) of some kind. Methods provide a mechanism for accessing and manipulating the encapsulated data stored in an object.&quot; [1]" name="Method">
+    <originatesFrom href="root.qm#_GATYoeKrEd-KpYBi5GbJBw"/>
+    <isA xmi:id="_92HN0OtPEd-gfuvsxq3wHA">
+      <parent href="root.qm#_b2g3AOP_Ed6mXujsf-O9qQ"/>
+    </isA>
+    <partOf xmi:id="_dZrmsODmEd-wi_Y82tmGBA" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_ptr5EJNBEd-PbauLYkgVgA" description="The signature of the method." name="Method interface">
+    <isA xmi:id="_02VJkAkCEeC0UMa3kSWuRw">
+      <parent href="root.qm#_GJuXcJjKEd-vUPy_oGILFw"/>
+    </isA>
+    <partOf xmi:id="_f2UoQODmEd-wi_Y82tmGBA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_xJVLQJNBEd-PbauLYkgVgA" description="It is the call from a statement to run a method." name="Method invocation statement">
+    <isA xmi:id="_xW5c3J4vEd-Ot6QNrtZtmg">
+      <parent href="root.qm#_Jjpo0JsIEd-BEeIfUepsAQ"/>
+    </isA>
+  </entities>
+  <entities xmi:id="_4lB0kJSxEd-40qNQIH1mBQ" description="The name or identifier of the method" name="Method name">
+    <isA xmi:id="_koAMkOD8Ed-wi_Y82tmGBA">
+      <parent href="root.qm#_n3OgULtaEd-4Dvfk12g7Xw"/>
+    </isA>
+    <partOf xmi:id="_YQwnYA3QEeCG5Z2FF82LIQ" parent="_ptr5EJNBEd-PbauLYkgVgA"/>
+  </entities>
+  <entities xmi:id="_8gP84JTFEd-40qNQIH1mBQ" description="Parameters inside the method interface" name="Method parameter">
+    <isA xmi:id="_fXjGQAkiEeCOqaO8I6kIkw">
+      <parent href="root.qm#_GJuXcJjKEd-vUPy_oGILFw"/>
+    </isA>
+    <partOf xmi:id="_xW0kQ54vEd-Ot6QNrtZtmg" parent="_ptr5EJNBEd-PbauLYkgVgA"/>
+  </entities>
+  <entities xmi:id="_UiFsUJsIEd-BEeIfUepsAQ" description="&quot;In object-oriented programming, a constructor (sometimes shortened to ctor) in a class is a special type of subroutine called at the creation of an object. It prepares the new object for use, often accepting parameters which the constructor uses to set any member variables required when the object is first created.&#xA;A constructor resembles an instance method, but it differs from a method in that it never has an explicit return-type, it is not inherited (though many languages provide access to the superclass's constructor, for example through the super keyword in Java), and it usually has different rules for scope modifiers. Constructors are often distinguished by having the same name as the declaring class. They have the task of initializing the object's data members and of establishing the invariant of the class, failing if the invariant isn't valid. A properly written constructor will leave the object in a valid state. Immutable objects must be initialized in a constructor.&#xA;&quot; [1]" name="Constructor">
+    <originatesFrom href="root.qm#_GATYoeKrEd-KpYBi5GbJBw"/>
+    <isA xmi:id="_YAGS4ODmEd-wi_Y82tmGBA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_yFL1cJsWEd-BEeIfUepsAQ" description="An argument passed to a method that is invoked." name="Method invocation argument">
+    <isA xmi:id="_HatT0O5hEd-1Aq9SWLMS-Q">
+      <parent href="root.qm#_-7wYsOY_Ed6we8JnAXCkYw"/>
+    </isA>
+    <partOf xmi:id="_jrlLIOD9Ed-wi_Y82tmGBA" parent="_xJVLQJNBEd-PbauLYkgVgA"/>
+  </entities>
+  <entities xmi:id="_kiaCsB2IEeCNh6gDxKEFqw" description="A comparison method compares one object to another one." name="Comparison method">
+    <isA xmi:id="_LdA8gB2REeCFr67xrl1rFA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_0g6CUCMQEeCb0sGZOjuejQ" description="A garbage collection statement performs memory and resource management in order to minimize overhead." name="Garbage collection statement">
+    <isA xmi:id="_0hM9QCMQEeCb0sGZOjuejQ">
+      <parent href="root.qm#_0V0GMJsUEd-BEeIfUepsAQ"/>
+    </isA>
+  </entities>
+  <entities xmi:id="_DeemID3yEeClGOQset1ATQ" description="A class that solely performs one or more test cases." name="Test Class">
+    <isA xmi:id="_De_jgD3yEeClGOQset1ATQ" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_lNwCAFU8EeCD5J7zIBfdhQ" description="The name or identifier of the class." name="Class name">
+    <isA xmi:id="_oSwrIFU8EeCD5J7zIBfdhQ">
+      <parent href="root.qm#_n3OgULtaEd-4Dvfk12g7Xw"/>
+    </isA>
+    <partOf xmi:id="_lPFewFU8EeCD5J7zIBfdhQ" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_9UdIoYXWEeCT8pJoQsn4HQ" description="A special method that outputs a string representation of an object." name="ToString Method">
+    <isA xmi:id="_v_3w0JDREeCBHt0LVePNEA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_9MQ18IXWEeCT8pJoQsn4HQ" description="A method with the purpose of checking a security relevant aspect." name="Security Check Method">
+    <isA xmi:id="_-s8pQJDREeCBHt0LVePNEA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_9g0wsIXWEeCT8pJoQsn4HQ" description="An attribute, i.e. meta-information to a class/field/etc. that regards serialization." name="Serialization Attribute">
+    <isA xmi:id="_ApvOoL9MEeC8YfiwhoYmbA">
+      <parent href="root.qm#_3_rmUJsIEd-BEeIfUepsAQ"/>
+    </isA>
+  </entities>
+  <entities xmi:id="_9ingcIXWEeCT8pJoQsn4HQ" description="A class that is defined within another class." name="Inner Class">
+    <isA xmi:id="_pmVt0JDPEeCBHt0LVePNEA" parent="_Ve0-kJP7Ed-a_JX6fZrQQA"/>
+  </entities>
+  <entities xmi:id="_9Z96woXWEeCT8pJoQsn4HQ" description="A method that is overridden by another method." name="Overridden Method">
+    <isA xmi:id="_XeySkJDPEeCBHt0LVePNEA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <entities xmi:id="_9UAcsYXWEeCT8pJoQsn4HQ" description="A method that creates a duplicate of an object." name="Clone method">
+    <isA xmi:id="_eG0WgJDPEeCBHt0LVePNEA" parent="_zDY80LpUEd-vsOyJ3PcLww"/>
+  </entities>
+  <factors xmi:id="_9TkX1IXWEeCT8pJoQsn4HQ" description="A comparison method's behavioral integrity is present if it behaves according to the semantic assumptions associate with it." name="Behavioral Integrity" characterizes="_kiaCsB2IEeCNh6gDxKEFqw">
+    <influences xmi:id="_95aP0IXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because a comparison method that behaves according to convention can be used in other setups as well.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP0YXWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced because the unintended call of a non-standard implementation of a comparison method may lead to incorrect results.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP0oXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because the unintended call of a non-standard implementation of a comparison method can lead to unsuccessful validations, e.g. for null-pointers, that lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP04XWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because changes can be easier made when comparison methods behave according to conventions.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP1IXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because comparison methods that behave according to standards are easier to test against this standard.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_KXtcQYeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#__i7EAYeGEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9TkX0IXWEeCT8pJoQsn4HQ" description="A destructor's behavioral integrity is present if it behaves according to the semantic assumptions associate with it." name="Behavioral Integrity" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <influences xmi:id="_95kA1YXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the intention of non standard conform behavior is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95kA1oXWEeCT8pJoQsn4HQ" justification="Resource Utilization is positively influenced because non standard conform destruction can lead to unnecessary memory consumption.">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_KXtcQoeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#__i7EAYeGEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9H8WoIXWEeCT8pJoQsn4HQ" description="A class name is conform to naming convention if no coding conventions rule of the respective programming language is violated. Domain, technology, library and project coding conventions are excluded.&#xA;Note: Conventions imposed by libraries are usually classified as &quot;Consistency of Interface and Implementation&quot;." name="Conformity to Naming Convention" characterizes="_lNwCAFU8EeCD5J7zIBfdhQ">
+    <influences xmi:id="_9zTAwIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the people reading source code are used to patterns of the coding convention.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zTAwYXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced, because test tools are designed for compatibility to coding conventions. Writing test cases is additionally eased, because the source code must be understood therefore.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_SLzqsIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_N8ACYIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9IPRkIXWEeCT8pJoQsn4HQ" description="A Method Name is conform to naming convention if no coding conventions rule of the respective programming language is violated. Domain, technology, library and project coding conventions are excluded." name="Conformity to Naming Convention" characterizes="_4lB0kJSxEd-40qNQIH1mBQ">
+    <influences xmi:id="_9zcxwIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the people reading source code are used to patterns of the coding convention.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zcxwYXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced, because test tools are designed for compatibility to coding conventions. Writing test cases is additionally eased, because the source code must be understood therefore.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zcxwoXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because the code conform to coding conventions is easy to modify.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_SLzqsoeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_N8ACYIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9IiMgIXWEeCT8pJoQsn4HQ" description="A method parameter is conform to naming convention if no coding conventions rule of the respective programming language is violated. Domain, technology, library and project coding conventions are excluded.&#xA;Note: Conventions imposed by libraries are usually classified as &quot;Consistency of Interface and Implementation&quot;." name="Conformity to Naming Convention" characterizes="_8gP84JTFEd-40qNQIH1mBQ">
+    <influences xmi:id="_9zcxw4XWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the people reading source code are used to patterns of the coding convention.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zcxxIXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced, because test tools are designed for compatibility to coding conventions. Writing test cases is additionally eased, because the source code must be understood therefore.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_SL9bsIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_N8ACYIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9KetQIXWEeCT8pJoQsn4HQ" description="A Constructor's definition and usage are consistent if its definition allows usage in the intended way and if it is used in the defined way. " name="Definition and Usage Consistency" characterizes="_UiFsUJsIEd-BEeIfUepsAQ">
+    <influences xmi:id="_9zmiy4XWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because if the definition and usage of constructors are consistent, then the usage produces the intended result.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zmizIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because  consistent usage avoids system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zmizYXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because inconsistent constructors may cause additional effort figuring out the intended usage.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_pTk3gIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_i3PGMIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9LEjIIXWEeCT8pJoQsn4HQ" description="A destructors definition and usage are consistent if its definition allows usage in the intended way and if it is used in the defined way. " name="Definition and Usage Consistency" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <influences xmi:id="_9zvstoXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because inconsistent calls of destructors can result in incorrect system state, which leads to functional errors.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zvst4XWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because inconsistent calls of destructors may cause additional effort figuring out the intended usage.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9zvsuIXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced, because the fan-out of source code changes will be reduced, as the system state is safe.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_pTuogIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_i3PGMIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9LXeEIXWEeCT8pJoQsn4HQ" description="A field's definition and usage are consistent if its definition allows usage in the intended way and if it is used in the defined way. " name="Definition and Usage Consistency" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_9z5dsIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because inconsistent fields may cause additional effort figuring out the intended usage.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9z5dsYXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because if the definition and usage of fields are consistent, then the usage produces the intended result.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_pTuogoeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_i3PGMIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Mth4IXWEeCT8pJoQsn4HQ" description="An method parameter's definition and usage are consistent if its definition allows usage in the intended way and if it is used in the defined way. " name="Definition and Usage Consistency" characterizes="_8gP84JTFEd-40qNQIH1mBQ">
+    <influences xmi:id="_90DOsIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because inconsistent method parameters may cause additional effort figuring out the intended usage.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90DOsYXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because if the definition and usage of method parameters are consistent, then the usage produces the intended result.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_pUBjcYeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_i3PGMIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9NwDsIXWEeCT8pJoQsn4HQ" description="An class's definition and usage regarding scope are consistent if its definition allows usage in the intended way and if it is used in the defined way within the defined scope. " name="Definition and Usage Consistency Regarding Scope" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_90DOvoXWEeCT8pJoQsn4HQ" justification="Security is positively influenced because it is ensured that scope dependent functionality is used consistently.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_kalHQIeSEeCvOcxPw9PG9g">
+      <parent href="root.qm#_dY07wIeSEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9N50sIXWEeCT8pJoQsn4HQ" description="An constructor's definition and usage regarding scope are consistent if its definition allows usage in the intended way and if it is used in the defined way within the defined scope. " name="Definition and Usage Consistency Regarding Scope" characterizes="_UiFsUJsIEd-BEeIfUepsAQ">
+    <influences xmi:id="_90MYoIXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because if the definition and usage of constructors are consistent regarding the scope, then the usage produces the intended result.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90MYoYXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because  consistent usage regarding the scope avoids system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90MYooXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because constructors, inconsistent regarding the scope, may cause additional effort figuring out the intended usage.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_kalHQYeSEeCvOcxPw9PG9g">
+      <parent href="root.qm#_dY07wIeSEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9OC-oIXWEeCT8pJoQsn4HQ" description="A class is complex because it contains a large number of members which is reflected by the large class size." name="Detail Complexity" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_90MYpIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because a large number of class members demand more effort to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90MYpYXWEeCT8pJoQsn4HQ" justification="Modifiability is negatively influenced because a large number of dependencies between class members hamper modification of the class." effect="NEGATIVE">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_1z918IeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_sZBlgIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9OMvoIXWEeCT8pJoQsn4HQ" description="A method is complex because it contains a large number of statements which is reflected by the method length." name="Detail Complexity" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_90WJoIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because a large number of method statements demand more effort to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90WJoYXWEeCT8pJoQsn4HQ" justification="Modifiability is negatively influenced because a large number of dependencies between method statements hamper modification of the method." effect="NEGATIVE">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_1z918YeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_sZBlgIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9OWgoIXWEeCT8pJoQsn4HQ" description="A method interface is complex if it consists of many parameters." name="Detail Complexity" characterizes="_ptr5EJNBEd-PbauLYkgVgA">
+    <annotations xmi:id="_CXIe0LK6EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_90fTkIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because many parameters demand more effort to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90fTkYXWEeCT8pJoQsn4HQ" justification="Testability is negatively influenced, because writing test cases is the more difficult the more parameters are there." effect="NEGATIVE">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_1z918oeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_sZBlgIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9OzMkIXWEeCT8pJoQsn4HQ" description="A method is hard to understand and maintain if it has a high dynamic complexity." name="Dynamic Complexity" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_90fTm4XWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because a dynamically complex method is hard to analyze." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90fTnIXWEeCT8pJoQsn4HQ" justification="Modifiability is negatively influenced because if a method is hard to understand it is either hard to modify." effect="NEGATIVE">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_ZsXDUIeNEeCvOcxPw9PG9g">
+      <parent href="root.qm#_XxRPoIeNEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9O8WgIXWEeCT8pJoQsn4HQ" description="A class is strong encapsulated if its data and state is enclosed as much as possible." name="Encapsulation Strength" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_90pEkIXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because strong encapsulation avoids unforeseen errors and keeps the modification effort local to the intended change.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90pEkYXWEeCT8pJoQsn4HQ" justification="Security is positively influenced, because strong encapsulation increases confidentiality of the class' data and state.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90pEkoXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because strong encapsulation ensures the encapsulated data and state remains consistent. This is a precondition for reliable systems.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qBVEIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9nrmoIXWEeCT8pJoQsn4HQ" description="A  constructor is strong encapsulated if it is enclosed as much as possible." name="Encapsulation Strength" characterizes="_UiFsUJsIEd-BEeIfUepsAQ">
+    <influences xmi:id="_93ngE4XWEeCT8pJoQsn4HQ" justification="Security is positively influenced because strong encapsulation increases constructor's confidentiality.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qBVEYeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9PZCcIXWEeCT8pJoQsn4HQ" description="A destructor is strongly encapsulated if its access modifier is protected." name="Encapsulation Strength" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <influences xmi:id="_90pEk4XWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because a strong encapsulated destructor simplifies analysis.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90pElIXWEeCT8pJoQsn4HQ" justification="Security is positively influenced because strong encapsulation increases destructor's confidentiality.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qLGEIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9PizcIXWEeCT8pJoQsn4HQ" description="A field is strong encapsulated if it is enclosed as much as possible." name="Encapsulation Strength" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_90y1kIXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced because a strong encapsulated field cannot be modified by external code and thus retains its value.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90y1kYXWEeCT8pJoQsn4HQ" justification="Security is positively influenced because strong encapsulation increases field's confidentiality.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90y1koXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because a strong encapsulated field is protected from unpredictable values which could cause a program crash. ">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90y1k4XWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because for a strong encapsulated field no effort is required for analyzing direct access.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90y1lIXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because a strong encapsulated field allows modifications to implementation without breaking compatibility.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qUQAIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9RCBMIXWEeCT8pJoQsn4HQ" description="A method is strong encapsulated if it is enclosed as much as possible." name="Encapsulation Strength" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_90y1lYXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because for a strong encapsulated method no effort is required for analyzing external access.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_90y1loXWEeCT8pJoQsn4HQ" justification="Security is positively influenced because strong encapsulation increases the confidentiality of the method's class' data and state.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_907_gIXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because a strong encapsulated method allows modifications to implementation without breaking compatibility.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qUQAYeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9RetIIXWEeCT8pJoQsn4HQ" description="A property is strong encapsulated if it is of clearly object oriented or primitive data type." name="Encapsulation Strength" characterizes="_YevPwJTAEd-40qNQIH1mBQ">
+    <influences xmi:id="_907_goXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because modifiability of primitive and object oriented data types is clear and therefore avoids unforeseen errors and keeps the modification effort local to the intended change.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_907_g4XWEeCT8pJoQsn4HQ" justification="Security is positively influenced, because the modifiability of primitive and object oriented data types is clear. Thus, it does not lead to unintended modifiability.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_907_hIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because modifiability of primitive and object oriented data types is clear and therefore ensures the encapsuled data and state remains consistent. This is a precondition for reliable systems.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="__qeBAIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_8q1AEIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Sq_8IXWEeCT8pJoQsn4HQ" description="A class ignores already implemented code if a code syntactically or semantically identical with the class code already exists elsewhere." name="Ignored Existence of Already Implemented Code" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_91FwhYXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because duplicated class code demands additional effort for analysis." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_91FwhoXWEeCT8pJoQsn4HQ" justification="Modifiability is negatively influenced because all instances of duplicated class code must be updated." effect="NEGATIVE">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_NtWs8IeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_KjIzsIeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Y7Y8IXWEeCT8pJoQsn4HQ" description="A comparison method's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_kiaCsB2IEeCNh6gDxKEFqw">
+    <influences xmi:id="_uRGB4IX8EeC1QZLmtzUecQ" justification="Analyzability is positively influenced because the intended purpose of a comparison method is easier to understand if its interface and implementation are consistent.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_xkMxYIX8EeC1QZLmtzUecQ" justification="Reusability is positively influenced because consistent interfaces and implementations guarantee easy integration in other systems.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_y1bvwIX8EeC1QZLmtzUecQ" justification="Functional correctness is positively influenced because inconsistent interfaces and implementations of comparison methods can lead to incorrect comparison results.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U1z9YoeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9ZYE4YXWEeCT8pJoQsn4HQ" description="A destructor's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <influences xmi:id="_91YrcYXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because destructors' consistent interfaces and implementations avoid additional effort figuring out the intention of an inconsistency.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_91YrcoXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because inconsistent interfaces and implementations may cause additional effort figuring out the behavior of the class.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_91Yrc4XWEeCT8pJoQsn4HQ" justification="Resource Utilization is positively influenced because consistent destructors ensure efficient memory deallocation.">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U19HUYeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Zq_0IXWEeCT8pJoQsn4HQ" description="A field's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_91iccIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because fields' consistent interfaces and implementations avoid additional effort figuring out the intention of an inconsistency.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_91iccYXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because inconsistent field values, such as null, can lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U19HU4eIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Z0w0IXWEeCT8pJoQsn4HQ" description="A garbage collection statement's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_0g6CUCMQEeCb0sGZOjuejQ">
+    <influences xmi:id="_91icc4XWEeCT8pJoQsn4HQ" justification="Resource Utilization is positively influenced because inconsistent garbage collection statements could lead to (temporary) unnecessary resource consumption.">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_91icdIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced to a little degree, because inconsistent garbage collection statements can lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_Rwf64LLNEeCyAK5nzDCfkg" justification="Time Behavior is positively influenced because inconsistent garbage collection statements could require additional garbage collection effort." effect="POSITIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U2G4UIeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9aamsIXWEeCT8pJoQsn4HQ" description="A method's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_91rmYoXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because inconsistent method interfaces and implementations may lead to system failures, e.g. in the case of thrown exceptions that contradict the interface.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U2G4UoeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9athoIXWEeCT8pJoQsn4HQ" description="A property's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_YevPwJTAEd-40qNQIH1mBQ">
+    <influences xmi:id="_911XYIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because consistent interfaces and implementations avoid additional effort figuring out the intention of an inconsistency.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_911XYYXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because consistent interfaces and implementations avoid unforeseen errors and keep the modification effort local to the intended change.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U2QCQYeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9bBDoIXWEeCT8pJoQsn4HQ" description="A test class' interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_DeemID3yEeClGOQset1ATQ">
+    <influences xmi:id="_911XY4XWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because inconsistent interfaces and implementation of test classes potentially reduce the effectiveness of the test framework.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_911XZIXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced, because bugs can be detected easier with a consistent test setup.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_911XZYXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because consistent interfaces and implementations avoid additional effort figuring out the intention of an inconsistency.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_911XZoXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because consistent interfaces and implementations of test classes guarantee applicability in other scenarios.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U2ZzQYeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9TkX0oXWEeCT8pJoQsn4HQ" description="A class' interface permission consistency is given if it fulfills the need-to-know principle." name="Interface Permission Consistency" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_95tKxYXWEeCT8pJoQsn4HQ" justification="Security is positively influenced because inconsistent interface permissions can lead to scenarios where too much information is available to users.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_G-ay8IeMEeCvOcxPw9PG9g">
+      <parent href="root.qm#_En61oIeMEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9XSaMIXWEeCT8pJoQsn4HQ" description="A destructor has a memory leak if it leads to undisposed unused memory." name="Memory Leak" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <influences xmi:id="_95Qe1IXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively influenced because memory leaks consume unnecessary amounts of resources." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95Qe1YXWEeCT8pJoQsn4HQ" justification="Reliability is negatively influenced because memory leaks can lead to memory shortage and consequently system failures." effect="NEGATIVE">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95Qe1oXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because the intended purpose of the destructor that does not free memory is hard to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_MT0xYoeMEeCvOcxPw9PG9g">
+      <parent href="root.qm#_KcmxEIeMEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9UT-sIXWEeCT8pJoQsn4HQ" description="A class' method-pair consistency is given when methods that usually appear in pairs are both present in a consistent way." name="Method-Pair Consistency " characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_95kA0IXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the absence of one method of a method-pair is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95kA0YXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because changes that affect both methods of a method-pair can easily be done on both.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95kA0oXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because consistent method-pairs can be easily used in other systems.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95kA04XWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because inconsistent method-pairs can lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95kA1IXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because consistent method-pairs can be easily tested at the same time.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_mMmQwIeNEeCvOcxPw9PG9g">
+      <parent href="root.qm#_jyEIAIeNEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9TthwYXWEeCT8pJoQsn4HQ" description="A class' modifiers are consistent if they reflect the capabilities and intended purpose of a class." name="Modifier Consistency" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_9527wIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the purpose of inconsistent modifiers is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_tz5ZUIeNEeCvOcxPw9PG9g">
+      <parent href="root.qm#_rbc7QIeNEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9cqCYIXWEeCT8pJoQsn4HQ" description="A constructor has unintentional side-effects, if an operation has implications unclear to the developer." name="Unintentional Side-Effect" characterizes="_UiFsUJsIEd-BEeIfUepsAQ">
+    <influences xmi:id="_92ISUIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because the side-effect of a constructor is hard to detect." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92ISUYXWEeCT8pJoQsn4HQ" justification="Modifiability is negatively influenced because a constructor with side effects is difficult to change." effect="NEGATIVE">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92ISUoXWEeCT8pJoQsn4HQ" justification="Functional Correctness is negatively influenced because the side-effect potentially causes unintended results." effect="NEGATIVE">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92ISU4XWEeCT8pJoQsn4HQ" justification="Reliability is negatively influenced because the side effect might lead to system failures." effect="NEGATIVE">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U9F0oIeJEeCvOcxPw9PG9g">
+      <parent href="root.qm#_SGZUUIeJEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9fLx8IXWEeCT8pJoQsn4HQ" description="A method invocation argument's reference validity is given if the references passed as arguments are valid and conform to nullable rules." name="Reference Validity" characterizes="_yFL1cJsWEd-BEeIfUepsAQ">
+    <influences xmi:id="_92SDUYXWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced because valid method invocation arguments ensure an operation's intended results.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92SDUoXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because invalid (e.g. null-) references potentially lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_cFPjEIeJEeCvOcxPw9PG9g">
+      <parent href="root.qm#_ZMdYEIeJEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9MHE8IXWEeCT8pJoQsn4HQ" description="A method parameter's reference validity is given if the references passed as arguments are valid and conform to nullable rules." name="Reference Validity" characterizes="_8gP84JTFEd-40qNQIH1mBQ">
+    <influences xmi:id="_92bNQIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because invalid (e.g. null-) references potentially lead to system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92bNQYXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because invalid (e.g. null-) references are hard to detect.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92bNQoXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because invalid (e.g. null-) references are hard to detect.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92bNQ4XWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because valid reference checks make the code compatible with other scenarios that might not agree to a non-nullable code contract.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_cFPjEYeJEeCvOcxPw9PG9g">
+      <parent href="root.qm#_ZMdYEIeJEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9gO60IXWEeCT8pJoQsn4HQ" description="A field's scope definition consistency is given, if the field doesn't interfere with other entities of the same or a higher scope." name="Scope Definition Consistency" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_92k-RoXWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced because various fields with different purposes will be correctly used if their definition is consistent across scopes.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92k-R4XWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the intended purpose is easier to understand when fields are defined consistently across scopes.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92k-SIXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because changes are easier when fields are defined consistently across scopes.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_UsJHMIeMEeCvOcxPw9PG9g">
+      <parent href="root.qm#_QcxjwIeMEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Um5oIXWEeCT8pJoQsn4HQ" description="A class' serialization interface integrity is present if its interface doesn't hinder successful serialization." name="Serialization Interface Integrity" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_92uvQoXWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced because successful serialization guarantees that no incorrect values are read in deserialization.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92uvQ4XWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because if the serialization and deserialization lead to an identical state, no errors are introduced through serialization.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_t1rCUIeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_pOxIoIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9iT-cIXWEeCT8pJoQsn4HQ" description="A class' serialization usage integrity is present if the used serialization statements yield successful serialization and deserialization." name="Serialization Usage Integrity" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_9235MIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because if the serialization and deserialization lead to an identical state, no errors are introduced through serialization.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_9235MYXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced because successful serialization usage guarantees that no incorrect values are read in deserialization.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_Ro5GsIeOEeCvOcxPw9PG9g">
+      <parent href="root.qm#_PBPH8IeOEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9U50kIXWEeCT8pJoQsn4HQ" description="A class' signature is consistent if its parts are not only syntactically aligned but also semantically." name="Signature Consistency" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_95tKwIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the intended purpose of an inconsistent signature is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95tKwYXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because inconsistent signatures are harder to be changed.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95tKwoXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because inconsistent signatures are hard to be used in other systems.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95tKw4XWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced because inconsistent signatures can be mistaken to do something else than they actually do, which can lead to incorrect results.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95tKxIXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because (semantically) inconsistent signatures are hard to test.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_eRoI0IeOEeCvOcxPw9PG9g">
+      <parent href="root.qm#_bU9jYIeOEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9jNWUIXWEeCT8pJoQsn4HQ" description="An class's synchronization integrity is present if program flow and data can handle concurrency." name="Synchronization Integrity" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_93BqMIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because a concurrent program is easier to understand if it handles concurrency rigorously. Otherwise, it has to be checked why it can be omitted in this special case.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93BqMYXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because synchronization failures may occur when integrity is low.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_2p-JgIeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_xcf_EIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9j89MIXWEeCT8pJoQsn4HQ" description="A field's synchronization integrity is present if program flow and data can handle concurrency." name="Synchronization Integrity" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_93BqNIXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because deadlocks and other system failures can occur if fields are not synchronized properly.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93BqNYXWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced, because data can be corrupted by multiple-thread-access when fields are not synchronized properly.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_2qREcIeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_xcf_EIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9k2VEoXWEeCT8pJoQsn4HQ" description="A method's synchronization integrity is present if program flow and data can handle concurrency." name="Synchronization Integrity" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_93LbNoXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because deadlocks and other system failures can occur if methods are not synchronized properly.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_2qkmcYeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_xcf_EIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9mfT0IXWEeCT8pJoQsn4HQ" description="A field's synchronization interface is used consistently if its synchronization implementation (i.e. access of the field) fulfills the interface. " name="Synchronization Interface Consistency" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_93UlIIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because consistent synchronization interfaces and implementations avoid additional effort figuring out the intention of an inconsistency.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93UlIYXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced, because  consistently synchronized fields avoids system failures by deadlocks, race conditions, life locks, etc.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93UlI4XWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because consistent synchronized fields avoid unforeseen errors and keep the modification effort local to the intended change.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_mpfrUIeREeCvOcxPw9PG9g">
+      <parent href="root.qm#_kedXIIeREeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9modwIXWEeCT8pJoQsn4HQ" description="A class' synchronization overhead is present if an unnecessary amount of synchronization is performed." name="Synchronization Overhead" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <annotations xmi:id="_9CzFILK-EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_93UlJIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced because the intended purpose of a synchronization overhead is hard to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93UlJYXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively influenced because unnecessary synchronization on serialized classes costs resources." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_RwTGkbLNEeCyAK5nzDCfkg" justification="Time Behavior is negatively influenced because unnecessary synchronization on serialized classes costs resources." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_fEnW4IeMEeCvOcxPw9PG9g">
+      <parent href="root.qm#_calZkIeMEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9nrmooXWEeCT8pJoQsn4HQ" description="A method parameter's definition is general, if it's parameter types are as abstract as possible and as specialized as necessary, regarding the inheritance hierarchy. Or as wide as possible and as narrow as necessary for not object-oriented languages." name="Type Generality" characterizes="_8gP84JTFEd-40qNQIH1mBQ">
+    <influences xmi:id="_93ngEIXWEeCT8pJoQsn4HQ" justification="Reusabiltiy is positively influenced, because a more general method can be used in more situations.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93ngEYXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because for very general types, more cases must be regarded, which makes the code harder to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93ngEoXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced, because more general types reduce the fan-out of source code changes.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_B6kUAYeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_-OY9MIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9rQfEIXWEeCT8pJoQsn4HQ" description="A field has an unneeded resource overhead if it uses more resources than needed for the intended purpose." name="Unneeded Resource Overhead" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <annotations xmi:id="_aru44LK_EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_94EMAIXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted as unnecessary resource consumption requires additional memory." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94EMAYXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because unnecessary resource consumption for fields make them harder to understand as they are not minimal." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_RwWJ4LLNEeCyAK5nzDCfkg" justification="Time Behavior is negatively impacted as unnecessary resource consumption requires additional time." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_OeBNgoeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_LRIawIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9q89EIXWEeCT8pJoQsn4HQ" description="An internal class has an unneeded resource overhead if its usage requires more resources than needed for the intended purpose." name="Unneeded Resource Overhead" characterizes="_BD65MJTCEd-40qNQIH1mBQ">
+    <influences xmi:id="_94EMA4XWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because unneeded resource consumption for internal classes makes them harder to understand as they are not minimal." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94EMBIXWEeCT8pJoQsn4HQ" justification="Time Behavior is negatively impacted as unnecessary resource consumption requires additional time." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_OeKXcYeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_LRIawIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9sAF8YXWEeCT8pJoQsn4HQ" description="A method has an unneeded resource overhead if its implementation requires more resources than needed for the intended purpose." name="Unneeded Resource Overhead" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <influences xmi:id="_94N9AIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because unneeded resource consumption in methods makes the code harder to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94N9AYXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted as unnecessary resource consumption requires additional memory." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_Rwgh8LLNEeCyAK5nzDCfkg" justification="Time Behavior is negatively impacted as unnecessary resource consumption requires additional time." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_OedSYIeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_LRIawIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9urmgIXWEeCT8pJoQsn4HQ" description="A destructor is useless if it does not have any effect but is nevertheless explicitly defined.&#xA;Note: This factor regards completely unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_Fu3aEKVEEd-NpKpUUyVKCQ">
+    <annotations xmi:id="_1C6A8LK_EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_94g38IXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted, because useless operations require more memory than needed." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94g38YXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless statements blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_RwWw8bLNEeCyAK5nzDCfkg" justification="Time Behavior is negatively impacted, because useless operations require more CPU cycles than needed." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_ef7x84eLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9vSDdYXWEeCT8pJoQsn4HQ" description="A field is useless if it is never referenced but nevertheless explicitly defined.&#xA;Note: This factor regards completely unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <annotations xmi:id="_4IU5wLK_EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_94g394XWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted, because useless fields require more memory than needed." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94g3-IXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless fields blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94g3-YXWEeCT8pJoQsn4HQ" justification="Functional correctness is negatively influenced, because the developer obviously intended to do something else even though the useless field does not have a direct functional effect." effect="NEGATIVE">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_egFi8oeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9wK0QIXWEeCT8pJoQsn4HQ" description="An internal class is useless if it is never referenced but nevertheless explicitly defined.&#xA;Note: This factor regards completely unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_BD65MJTCEd-40qNQIH1mBQ">
+    <influences xmi:id="_94qo8YXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless internal classes blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94qo8oXWEeCT8pJoQsn4HQ" justification="Functional correctness is negatively influenced, because the developer obviously intended to do something with the internal class even though it is never referenced and therefore does not have a functional effect." effect="NEGATIVE">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_egPT8YeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9okXcIXWEeCT8pJoQsn4HQ" description="A method is useless if it is never referenced but nevertheless explicitly defined.&#xA;Note: This factor regards completely unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_zDY80LpUEd-vsOyJ3PcLww">
+    <annotations xmi:id="_BTTbkLLAEeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_94zy5IXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted, because useless methods require more memory than needed." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94zy5YXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless methods blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94zy5oXWEeCT8pJoQsn4HQ" justification="Functional correctness is negatively influenced, because the developer obviously intended to do something with the method even though it is never referenced and therefore does not have a functional effect." effect="NEGATIVE">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_egrY0YeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9xN9IIXWEeCT8pJoQsn4HQ" description="A method parameter is useless if it is never referenced but nevertheless explicitly defined.&#xA;Note: This factor regards completely unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_8gP84JTFEd-40qNQIH1mBQ">
+    <annotations xmi:id="_Erjw0LLAEeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_949j4IXWEeCT8pJoQsn4HQ" justification="Functional correctness is negatively influenced, because the developer obviously intended to do something else even though the useless method parameter does not have a direct functional effect." effect="NEGATIVE">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_949j4YXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless method parameters blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_eg-60IeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9yGt8IXWEeCT8pJoQsn4HQ" description="A test class is useless if it does not contain any test cases but nevertheless explicitly defined.&#xA;Note: This factor regards completly unnecessary code which could be deleted without any effect, whereas the &quot;unnecessarily complicated&quot; factor regards code that is too complicated due to an apparent programming mistake." name="Uselessness" characterizes="_DeemID3yEeClGOQset1ATQ">
+    <annotations xmi:id="_J5iRkLLAEeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_95HU4IXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because useless test classes blow up the code." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95HU4YXWEeCT8pJoQsn4HQ" justification="Testability is negatively influenced, because useless test classes may let one believe that parts of the code are being tested, but the test cases are actually empty." effect="NEGATIVE">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_ehuhsIeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_a0gCAIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9yjZ4IXWEeCT8pJoQsn4HQ" description="A field's value validity is given when the value is defined and is in the specified range of its type." name="Value Validity" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw">
+    <influences xmi:id="_95Qe0IXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because valid values may prevent system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95Qe0YXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because if the value validity is given the code is easier to understand for the developers.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_qXD7gIeMEeCvOcxPw9PG9g">
+      <parent href="root.qm#_nllSYIeMEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9UdIooXWEeCT8pJoQsn4HQ" description="A To-String method's behavioral integrity is present if it behaves according to the semantic assumptions associate with it." name="Behavioral Integrity" characterizes="_9UdIoYXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_95aP2YXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because lacking behavioral integrity of to-string methods can lead to null-pointer exceptions and hence system failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP2oXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because implementations conform with assumptions can be changed easier.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP24XWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because implementations conform with assumptions can be used in other systems.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP3IXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because implementations conform with assumptions can be tested easier against these assumptions or standards.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_KX2mMIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#__i7EAYeGEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9kskEYXWEeCT8pJoQsn4HQ" description="An inner class' synchronization integrity is present if program flow and data can handle concurrency." name="Synchronization Integrity" characterizes="_9ingcIXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_93LbMIXWEeCT8pJoQsn4HQ" justification="Resource Utilization is positively influenced because synchronization integrity assures that no links are retained (possibly in a cross-referencing fashion) that prevent garbage collection.">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93LbMYXWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because synchronization integrity on inner classes assures that no memory leaks (by unreachable object for garbage collection) can lead to out-of-memory failures.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_2qa1cIeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_xcf_EIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9g0wsYXWEeCT8pJoQsn4HQ" description="A serialization attribute's serialization interface integrity is present if its interface doesn't hinder successful serialization." name="Serialization Interface Integrity" characterizes="_9g0wsIXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_92uvRoXWEeCT8pJoQsn4HQ" justification="Modifiability is positively influenced because serialization attributes' integrity assures that new serialization entities can be added easily.">
+      <target href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92uvR4XWEeCT8pJoQsn4HQ" justification="Portability is positively influenced because serialization attributes' integrity assures that serialized data (and/or serialization code) can be transfered to other environments.">
+      <target href="root.qm#_hCU10OP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_92uvSIXWEeCT8pJoQsn4HQ" justification="Functional correctness is positively influenced because successful serialization guarantees that no incorrect values are read in deserialization.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_t10zUIeKEeCvOcxPw9PG9g">
+      <parent href="root.qm#_pOxIoIeKEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9ingcYXWEeCT8pJoQsn4HQ" description="An inner class' serialization integrity is present if its serialization and deserialization lead to an identical state." name="Serialization Integrity" characterizes="_9ingcIXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_9235M4XWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because when serialization integrity is not given with inner classes, errors can occur (e.g. in attempting to also serialize its outer class).">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_3g3KsYeJEeCvOcxPw9PG9g">
+      <parent href="root.qm#_1Li5IIeJEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9rjaAYXWEeCT8pJoQsn4HQ" description="An inner class has an unneeded resource overhead if its implementation requires more resources than needed for the intended purpose." name="Unneeded Resource Overhead" characterizes="_9ingcIXWEeCT8pJoQsn4HQ">
+    <annotations xmi:id="_cAtu0LK_EeCzKNauogpT3Q" key="aggregation" value="ONE"/>
+    <influences xmi:id="_94EMAoXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted as unnecessary resource consumption requires additional memory." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_OeKXcIeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_LRIawIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9UAcsoXWEeCT8pJoQsn4HQ" description="A clone method's behavioral integrity is present if it behaves according to the semantic assumptions associate with it." name="Behavioral Integrity" characterizes="_9UAcsYXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_95aP1YXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced because the intention of the non-standard implementation is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP1oXWEeCT8pJoQsn4HQ" justification="Reusability is positively influenced because implementation of the clone methods that follow general assumptions are easier to be used in other systems as well.">
+      <target href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP14XWEeCT8pJoQsn4HQ" justification="Reliability is positively influenced because non-standard implementation of clone methods can lead to invalid memory access that leads to a system failure.">
+      <target href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_95aP2IXWEeCT8pJoQsn4HQ" justification="Testability is positively influenced because clone methods that are conform to assumptions are easier to test against these assumptions or standards.">
+      <target href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_KXtcQIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#__i7EAYeGEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Mam8IXWEeCT8pJoQsn4HQ" description="A security check method's definition and usage are consistent if its definition allows usage in the intended way and if it is used in the defined way. " name="Definition and Usage Consistency" characterizes="_9MQ18IXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_96AFv4XWEeCT8pJoQsn4HQ" justification="Security is positively influenced because consistent usage of security check methods helps to avoid security issues.">
+      <target href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_pULUcIeHEeCvOcxPw9PG9g">
+      <parent href="root.qm#_i3PGMIeHEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9Z96w4XWEeCT8pJoQsn4HQ" description="An overridden method's interface and implementation are consistent if the implementation fits to the interface and the interface allows for the intended implementation." name="Interface and Implementation Consistency" characterizes="_9Z96woXWEeCT8pJoQsn4HQ">
+    <influences xmi:id="_93eWI4XWEeCT8pJoQsn4HQ" justification="Functional Correctness is positively influenced, because inconsistent method overriding may lead to incorrect results.">
+      <target href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_93eWJIXWEeCT8pJoQsn4HQ" justification="Analyzability is positively influenced, because the intended purpose of an inconsistently overridden method is hard to understand.">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_U2QCQIeIEeCvOcxPw9PG9g">
+      <parent href="root.qm#_RtOb0IeIEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <factors xmi:id="_9scx4oXWEeCT8pJoQsn4HQ" description="A source code has an unneeded resource overhead if its implementation requires more resources than needed for the intended purpose." name="Unneeded Resource Overhead" characterizes="_Ve0-kJP7Ed-a_JX6fZrQQA">
+    <influences xmi:id="_94N9BIXWEeCT8pJoQsn4HQ" justification="Analyzability is negatively influenced, because unneeded resource consumption makes the code harder to understand." effect="NEGATIVE">
+      <target href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_94N9BYXWEeCT8pJoQsn4HQ" justification="Resource Utilization is negatively impacted as unnecessary resource consumption requires additional memory." effect="NEGATIVE">
+      <target href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <influences xmi:id="_RwQqUbLNEeCyAK5nzDCfkg" justification="Time Behavior is negatively impacted as unnecessary resource consumption requires additional time." effect="NEGATIVE">
+      <target href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    </influences>
+    <refines xmi:id="_OedSYoeLEeCvOcxPw9PG9g">
+      <parent href="root.qm#_LRIawIeLEeCvOcxPw9PG9g"/>
+    </refines>
+  </factors>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_NEa_4aehEeCeT84Z3j_9QA" description="some factors are missing, e.g. rounding error propagation (float comparison with zero), inconsistent call of mathematical library functions (e.g. negative value for logarithmic functions), code contract checks;Our evaluation criteria where rank 1 for problems that will most probably lead to significantly incorrect results, rank 2 for problems that might lead to significantly incorrect results, and rank 3 for problems that might lead to incorrect results. Thereby, we degraded the rank for very special problems that are unlikely to occur. Also note that the usual way of measuring functional correctness is to test against the requirements." name="WeightedSumFactorAggregation" completeness="90">
+    <evaluates href="root.qm#_hCU1k-P0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_Ku898N9zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687">
+      <factor href="root.qm#_9GTX4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku898d9zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687">
+      <factor href="root.qm#_9bm5gYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku898t9zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687">
+      <factor href="root.qm#_9bwqgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89899zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687">
+      <factor href="root.qm#_9b50cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku899N9zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687" factor="_9fLx8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku899d9zEeCDLdD4jHX2QQ" rank="1" weight="0.04136620575077687">
+      <factor href="root.qm#_9fCoAIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku899t9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9TkX1IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku89999zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9Z96wIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89-N9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9JufUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89-d9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9KLLQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89-t9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9KU8QYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89-99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9KetQIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku89_N9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9Kn3M4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku89_d9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9LEjIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku89_t9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9LXeEIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku89_99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9LhPEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-AN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9L0KAYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ad9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9Mth4IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-At9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9Kn3MIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-A99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9Rn3EYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-BN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9RxoEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Bd9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9Y7Y8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Bt9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9f7Y0YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-B99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9gO60IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-CN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9iwqYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Cd9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9Um5oIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Ct9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9g0wsYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-C99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9iT-cIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-DN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9i6bYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Dd9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9jqCQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Dt9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9j89MIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-D99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9k2VEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-EN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9cgRYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ed9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731" factor="_9cqCYIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Et9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9c89UIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-E99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9n-hk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-FN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9oRcgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Fd9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9pUlYYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ft9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9qEMQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-F99zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9qEMQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-GN9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Gd9zEeCDLdD4jHX2QQ" rank="2" weight="0.01619915661947731">
+      <factor href="root.qm#_9uO6koXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Gt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9JlVYoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-G99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9KCBUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-HN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9K6yIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Hd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9LrAE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ht9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9Mth44XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-H99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-IN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9NdIwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Id9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9N50sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-It9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9PizcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-I99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9R7ZE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-JN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9SYFAYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Jd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9S0J4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Jt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9THr4oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-J99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9Z96w4XWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-KN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9bBDoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Kd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9THr4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Kt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9fod4YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-K99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9f7Y04XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-LN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9gFJ0IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ld9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9gYEwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Lt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9U50kIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-L99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9nO6sYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-MN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9czMUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Md9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9dP4QYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Mt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9sTA4oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-M99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9dZpQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-NN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9ouIcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Nd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9o35cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Nt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9p6bQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-N99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9pngUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-ON9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9qqCIYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Od9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9qXHMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Ot9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9pdvUoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-O99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9vSDdYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-PN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9wK0QIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Pd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9wK0QoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Pt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9wUlQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-P99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9wUlQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-QN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9wngMoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Qd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9okXcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-Qt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9xEMIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Q99zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864" factor="_9xN9IIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Ku8-RN9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9vSDcYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Rd9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9xqpEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Ku8-Rt9zEeCDLdD4jHX2QQ" rank="3" weight="0.0037474028265367864">
+      <factor href="root.qm#_9yQe84XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_UjEtUKeiEeCeT84Z3j_9QA" description="some factors are missing, e.g. detection of cyclic packages, inter-module dependencies, meaningful identifiers (not only one character literals), spelling, consistent adherence to code formatting regulations (e.g. indentation); Our evaluation criteria where rank 1 for issues that will most probably significantly confuse a developer, rank 2 for issues that might lead to significantly confusion, and rank 3 for problems that might lead to some additional effort in understanding the code. Thereby, we degraded the rank for very special issues that are unlikely to occur.  We also only ranked the severness of obstacles in understanding the code in its whole, not the effort for finding each issue." name="WeightedSumFactorAggregation" completeness="75">
+    <evaluates href="root.qm#_hCU1x-P0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_LcakILLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9OC-oIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakIbLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9OMvoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakIrLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9OWgoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakI7LBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9OfqkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakJLLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9OfqlIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakJbLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9OpbkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakJrLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9OzMkIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakJ7LBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9Sq_8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakKLLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9akXsYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakKbLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9aRcwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakKrLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9cDlcoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakK7LBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9cNWcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakLLLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622" factor="_9MHE8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakLbLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9i6bYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakLrLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9k2VEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakL7LBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9ll78YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakMLLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9dskMoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakMbLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9n-hk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakMrLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9RU8IoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakM7LBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9qEMQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakNLLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakNbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9W1uQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakNrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9JufUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakN7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9KLLQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakOLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9KU8QYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakObLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9KetQIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakOrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9Kn3M4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakO7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9K6yIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakPLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9LEjIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakPbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9LXeEIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakPrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9Mth4IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakP7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9Kn3MIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakQLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9Mth44XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakQbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakQrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9NdIwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakQ7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9N50sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakRLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9OfqkoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakRbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9PizcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakRrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9RCBMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakR7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9Rn3EYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakSLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9S0J4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakSbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9S0J5IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakSrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9S964oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakS7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9Hpbs4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakTLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9THr4oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakTbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9Y7Y8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakTrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9ZYE4YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakT7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9Zq_0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakULLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9Z96w4XWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakUbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9athoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakUrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9bm5gYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakU7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9bwqgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakVLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9b50cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakVbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9UT-sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakVrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9cqCYIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakV7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9czMUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakWLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9dskMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakWbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9gO60IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakWrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9gYEwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakW7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9U50kIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakXLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9i6bYoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakXbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9jDlUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakXrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9jNWUIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakX7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9jqCQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakYLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9mVi0YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakYbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9mfT0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakYrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9n0wkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakY7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9oRcgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakZLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9ouIcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakZbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9o35cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakZrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9pUlYYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakZ7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9p6bQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakaLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9pngUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakabLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9qEMQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakarLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9qqCIYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcaka7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9qXHMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakbLLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9uO6koXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakbbLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9wK0QoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakbrLBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329" factor="_9yjZ4IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcakb7LBEeCzKNauogpT3Q" rank="2" weight="0.007622028535578329">
+      <factor href="root.qm#_9y274IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakcLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9UAcsoXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakcbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9TkX0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakcrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9H8WoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcakc7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9IPRkIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakdLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9IiMgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakdbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9Ir9g4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakdrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9JlVYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakd7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9OfqloXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakeLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9PZCcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakebLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9RxoEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakerLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9R7ZE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcake7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9SYFAYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakfLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9ShO8IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakfbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9bBDoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakfrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9bdvk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakf7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9XSaMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakgLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9TthwYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakgbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9fVi8YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakgrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9modwIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcakg7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9nO6sYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakhLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9nrmooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakhbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9n-hkYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakhrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9rQfEIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcakh7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9q89EIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakiLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9sAF8YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakibLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9obNgIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakirLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9scx4oXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcaki7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9svs0IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakjLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9pdvUoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakjbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9uh1goXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakjrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9urmgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Lcakj7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9vIScIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakkLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9vSDc4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakkbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9vSDdYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakkrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9wBqUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakk7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9wK0QIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcaklLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9wUlQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcaklbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9wUlQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcaklrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9wngMoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakl7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9okXcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakmLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9xN9IIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcakmbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9vSDcYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakmrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9xqpEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakm7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9xzzAIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcaknLLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9x9kAIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcaknbLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574" factor="_9yGt8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_LcaknrLBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9yQe84XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Lcakn7LBEeCzKNauogpT3Q" rank="3" weight="0.001740421616562574">
+      <factor href="root.qm#_9yaP8IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakoLLBEeCzKNauogpT3Q" rank="10" weight="5.91715976331361E-5">
+      <factor href="root.qm#_9GTX4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_LcakobLBEeCzKNauogpT3Q" rank="1" weight="0.021213677600374622">
+      <factor href="root.qm#_9Z96wIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_aGy0kKeiEeCeT84Z3j_9QA" description="Important impacts on modifiability are missing, e.g. inter-code dependencies, cycles, changes that need to be propagated across many modules; Our evaluation criteria where rank 1 for issues that will most probably add excessive modification effort , rank 2 for issues that might lead to large modification effort, and rank 3 for issues that might lead to some additional modification effort. Thereby, we degraded the rank for very special issues that are unlikely to occur." name="WeightedSumFactorAggregation" completeness="70">
+    <evaluates href="root.qm#_hCU1yeP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_MwkToLLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313">
+      <factor href="root.qm#_9W1uQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTobLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9OC-oIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTorLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9OMvoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTo7LBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9OzMkIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTpLLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9O8WgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTpbLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9PizcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTprLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9RCBMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTp7LBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9RetIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTqLLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9Sq_8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTqbLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313">
+      <factor href="root.qm#_9S964oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTqrLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313">
+      <factor href="root.qm#_9Hpbs4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTq7LBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9U50kIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTrLLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313" factor="_9mfT0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTrbLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9TkX1IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTrrLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9JlVYoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTr7LBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9LrAEYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTsLLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTsbLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9OfqkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTsrLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9Yxn8IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTs7LBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9akXsYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTtLLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9athoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTtbLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9aRcwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTtrLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9athooXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTt7LBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9UT-sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTuLLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9MHE8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTubLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9gO60IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTurLBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317" factor="_9nrmooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTu7LBEeCzKNauogpT3Q" rank="2" weight="0.016549449893382317">
+      <factor href="root.qm#_9n0wkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTvLLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512" factor="_9UdIooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTvbLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512" factor="_9IPRkIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTvrLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512" factor="_9LEjIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTv7LBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9OfqlIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTwLLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9ShO8oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTwbLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512" factor="_9cqCYIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTwrLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9gYEwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTw7LBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512" factor="_9g0wsYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_MwkTxLLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9jDlUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTxbLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9modwoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTxrLBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9n-hkYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTx7LBEeCzKNauogpT3Q" rank="3" weight="0.00427417668231512">
+      <factor href="root.qm#_9vIScIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_MwkTyLLBEeCzKNauogpT3Q" rank="1" weight="0.05003343795796313">
+      <factor href="root.qm#_9GTX4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_erSTcKeiEeCeT84Z3j_9QA" description="only few impacts are modeled, missing ones are for example level of abstraction, encapsulation, isolation, self containment, low coupling, documentation of interfaces;Our evaluation criteria where rank 1 for issues that will most probably significantly prohibit the code's re-use , rank 2 for issues that might prohibit the code's re-use, and rank 3 for issues that might lead to some trouble in re-using code. Thereby, we degraded the rank for very special issues that are unlikely to occur." name="WeightedSumFactorAggregation" completeness="20">
+    <evaluates href="root.qm#_hCU1xeP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_N3qekLLBEeCzKNauogpT3Q" rank="1" weight="0.15487349951635668" factor="_9UT-sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qekbLBEeCzKNauogpT3Q" rank="1" weight="0.15487349951635668" factor="_9MHE8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qekrLBEeCzKNauogpT3Q" rank="1" weight="0.15487349951635668" factor="_9U50kIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qek7LBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706" factor="_9UAcsoXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qelLLBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706" factor="_9TkX1IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qelbLBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706">
+      <factor href="root.qm#_9W1uQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_N3qelrLBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706" factor="_9Y7Y8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qel7LBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706" factor="_9nrmooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qemLLBEeCzKNauogpT3Q" rank="2" weight="0.05420267563124706">
+      <factor href="root.qm#_9n0wkIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_N3qembLBEeCzKNauogpT3Q" rank="3" weight="0.013822487036772751" factor="_9UdIooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qemrLBEeCzKNauogpT3Q" rank="3" weight="0.013822487036772751" factor="_9ZYE4YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qem7LBEeCzKNauogpT3Q" rank="3" weight="0.013822487036772751" factor="_9bBDoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_N3qenLLBEeCzKNauogpT3Q" rank="3" weight="0.013822487036772751">
+      <factor href="root.qm#_9bdvk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_N3qenbLBEeCzKNauogpT3Q" rank="1" weight="0.15487349951635668">
+      <factor href="root.qm#_9LrAEYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_hDLX4KeiEeCeT84Z3j_9QA" description="many other impacts are missing, e.g. detail/dynamic complexity for entire modules/classes, inter-code dependencies, dedicated interfaces usable for testing; Our evaluation criteria where rank 1 for issues that will most probably lead to excessive test effort and rank 2 for issues that might lead to large test effort. Thereby, we degraded the rank for very special issues that are unlikely to occur." name="WeightedSumFactorAggregation" completeness="10">
+    <evaluates href="root.qm#_hCU1zeP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_OujDQLLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696">
+      <factor href="root.qm#_9OfqloXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDQbLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696" factor="_9bBDoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDQrLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696" factor="_9UT-sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDQ7LBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696">
+      <factor href="root.qm#_9fyO4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDRLLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696" factor="_9U50kIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDRbLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696" factor="_9yGt8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDRrLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9UAcsoXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDR7LBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9TkX1IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDSLLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9W1uQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDSbLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9UdIooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDSrLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9H8WoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDS7LBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9IPRkIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDTLLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856" factor="_9IiMgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_OujDTbLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9Ir9g4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDTrLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9JlVYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDT7LBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9KCBUYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDULLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9ShO8oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDUbLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9cNWcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujDUrLBEeCzKNauogpT3Q" rank="2" weight="0.02294547076920856">
+      <factor href="root.qm#_9vIScIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_OujqULLBEeCzKNauogpT3Q" rank="1" weight="0.10024412571432696" factor="_9OWgoIXWEeCT8pJoQsn4HQ"/>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_ooeVUKeiEeCeT84Z3j_9QA" description="Some impacts are missing like memory leaks in general; Our evaluation criteria where rank 1 for issues that will most probably lead to highly wasteful resource utilization and rank 2 for issues that might lead to wasteful resource utilization and rank 3 for issues that might lead to some wasting of resources. Thereby, we degraded the rank for very special issues that are unlikely to occur." name="WeightedSumFactorAggregation" completeness="90">
+    <evaluates href="root.qm#_hCU1o-P0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_u6ek0LbKEeCyLMZSFoTGGQ" rank="1" weight="0.0837864647176763">
+      <factor href="root.qm#_9Kn3MIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek0bbKEeCyLMZSFoTGGQ" rank="1" weight="0.0837864647176763" factor="_9XSaMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek0rbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665" factor="_9TkX0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek07bKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665">
+      <factor href="root.qm#_9S0J5IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek1LbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665" factor="_9ZYE4YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek1bbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665" factor="_9Z0w0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek1rbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665">
+      <factor href="root.qm#_9b50coXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek17bKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665" factor="_9rjaAYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek2LbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665">
+      <factor href="root.qm#_9sl70oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek2bbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665" factor="_9vSDdYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek2rbKEeCyLMZSFoTGGQ" rank="2" weight="0.044262467569565665">
+      <factor href="root.qm#_9vSDcYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek27bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek3LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9cWgYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek3bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9kskEYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek3rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9modwIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek37bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9n-hk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek4LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9oRcgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek4bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9ouIcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek4rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9o35cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek47bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9p6bQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek5LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9pngUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek5bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9qEMQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek5rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9qEMQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek57bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek6LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9qXHMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek6bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9rGuEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek6rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9rGuEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek67bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9rQfEIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek7LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9r2U8YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek7bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9sAF8YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek7rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9obNgIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek77bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9scx4oXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek8LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9sl70IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek8bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9svs0IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek8rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9pdvUoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek87bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9uO6koXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek9LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9uh1goXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek9bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9urmgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_u6ek9rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9vSDc4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek97bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9wK0QoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek-LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9wUlQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek-bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9wUlQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek-rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9xEMIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek-7bKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9xqpEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek_LbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9x9kAIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek_bbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901">
+      <factor href="root.qm#_9yQe84XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_u6ek_rbKEeCyLMZSFoTGGQ" rank="3" weight="0.012057357289959901" factor="_9okXcIXWEeCT8pJoQsn4HQ"/>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_2mKYMKeiEeCeT84Z3j_9QA" description="Many other impacts are missing, e.g. call-by-value instead call-by-reference, copying large data, livelocks; Our evaluation criteria where rank 1 for issues that will most probably lead to poor time behavior and rank 2 for issues that might lead to some degraded time behavior. Thereby, we degraded the rank for very special issues that are unlikely to occur." name="WeightedSumFactorAggregation" completeness="25">
+    <evaluates href="root.qm#_hCU1oeP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_Hpc3gN9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9S0J5IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3gd9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596" factor="_9Z0w0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3gt9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9modwoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3g99xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9cgRYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3hN9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9sl70oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3hd9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9scx4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3ht9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9wngMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3h99xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9vSDcYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3iN9xEeCDLdD4jHX2QQ" rank="1" weight="0.05702177470184596">
+      <factor href="root.qm#_9yaP8IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3id9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3it9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9R7ZE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3i99xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747" factor="_9modwIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3jN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9cWgYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3jd9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9n-hk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3jt9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9oRcgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3j99xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9ouIcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3kN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9o35cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3kd9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9p6bQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3kt9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9pngUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3k99xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9qEMQIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3lN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9qEMQoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3ld9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3lt9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9qXHMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3l99xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747" factor="_9scx4oXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3mN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9rGuEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3md9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9rGuEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3mt9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747" factor="_9q89EIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3m99xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9r2U8YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3nN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9obNgIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3nd9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9sl70IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3nt9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_9svs0IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3n99xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608" factor="_9rQfEIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3oN9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608" factor="_9sAF8YXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3od9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9pdvUoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3ot9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9uO6koXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3o99xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9uh1goXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3pN9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608" factor="_9urmgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_Hpc3pd9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9vSDc4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3pt9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9wK0QoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3p99xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9wngMoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3qN9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9xEMIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3qd9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9xqpEoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3qt9xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9x9kAIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3q99xEeCDLdD4jHX2QQ" rank="3" weight="0.0038179599253441608">
+      <factor href="root.qm#_9yQe84XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_Hpc3rN9xEeCDLdD4jHX2QQ" rank="2" weight="0.019007415158865747">
+      <factor href="root.qm#_7EYp4N9vEeCDLdD4jHX2QQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_6WkuwKeiEeCeT84Z3j_9QA" description="Portability is refined by adaptability, installability and replaceability but at least adhering to language standards are missing and deprecation of language parts and runtime libraries should be checked, the coverage of the sub-aspects have to be taken into account; Our evaluation criteria where rank 1 for issues that will most probably lead to a severe lack of portability and rank 2 for issues that might lead to a significant lack of probability and rank 3 for issues that might lead to some lack of probability. Thereby, we degraded the rank for very special issues that are unlikely to occur.&#xD;&#xA;All factors in the base model directly influence portability and not its sub aspects (Rankings = 0) //TODO note in description the correct weight of each sub aspect based on survey results" name="WeightedSumFactorAggregation" completeness="50">
+    <evaluates href="root.qm#_hCU10OP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_TQouYLLBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768">
+      <factor href="root.qm#_9fod4YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVcLLBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768">
+      <factor href="root.qm#_9fyO4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVcbLBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768">
+      <factor href="root.qm#_9f7Y0YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVcrLBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768">
+      <factor href="root.qm#_9gFJ0IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVc7LBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768" factor="_9g0wsYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_TQpVdLLBEeCzKNauogpT3Q" rank="3" weight="0.02874065328610783">
+      <factor href="root.qm#_9OfqloXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVdbLBEeCzKNauogpT3Q" rank="3" weight="0.02874065328610783">
+      <factor href="root.qm#_9k2VEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVdrLBEeCzKNauogpT3Q" rank="3" weight="0.02874065328610783">
+      <factor href="root.qm#_9n-hkYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVd7LBEeCzKNauogpT3Q" rank="3" weight="0.02874065328610783">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVeLLBEeCzKNauogpT3Q" rank="3" weight="0.02874065328610783">
+      <factor href="root.qm#_9uh1goXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVebLBEeCzKNauogpT3Q" rank="2" weight="0.1427161222615768">
+      <factor href="root.qm#_9fes4oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVerLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU10eP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVe7LBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU10-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_TQpVfLLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU11eP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="__wxGkKeiEeCeT84Z3j_9QA" description="some factors are missing, e.g. explicit error handling that avoids immediate program termination at smaller errors, availability of resources (e.g. mobile network access), data input validation;Our evaluation criteria where rank 1 for issues that will most probably lead to significant reliability problems, rank 2 for issues that might lead to significant reliability problems, and rank 3 for problems that might lead to some reliability problems. Thereby, we degraded the rank for very special issues that are unlikely to occur. &#xD;&#xA;All factors in the base model directly influence portability and not its sub aspects (Rankings = 0) //TODO note in description the correct weight of each sub aspect based on survey results" name="WeightedSumFactorAggregation" completeness="70">
+    <evaluates href="root.qm#_hCU1luP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_-zuiEN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9NTXwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiEd9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9NdIwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiEt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9bdvk4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiE99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9bm5gYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiFN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9bwqgYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiFd9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9b50cIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiFt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9b50coXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiF99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9XSaMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiGN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9d2VMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiGd9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9fLx8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiGt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9MHE8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiG99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9i6bYoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiHN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9jDlUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiHd9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9jNWUIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiHt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9j89MIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiH99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9kskEYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiIN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9k2VEIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiId9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9k2VEoXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiIt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9ll78YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiI99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9mVi0YXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiJN9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9mfT0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiJd9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9dskMoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiJt9yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058" factor="_9yjZ4IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiJ99yEeCDLdD4jHX2QQ" rank="1" weight="0.0305125744821058">
+      <factor href="root.qm#_9y274IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiKN9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9UAcsoXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiKd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9TkX1IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiKt9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9KetQIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiK99yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9Kn3M4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiLN9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9Kn3MIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiLd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9NdIw4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiLt9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9N50sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiL99yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9S0J5IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiMN9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9aRcwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiMd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9UT-sIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiMt9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9ingcYXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiM99yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9iwqYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiNN9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9Um5oIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiNd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9iT-cIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiNt9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9cWgYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiN99yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9cgRYIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiON9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507" factor="_9cqCYIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiOd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9c89UIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiOt9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9dskMIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiO99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9W1uQYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiPN9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9UdIooXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiPd9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9K6yIIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiPt9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9LOUIoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiP99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9LrAE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiQN9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9Mth44XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiQd9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9O8WgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiQt9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9PizcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiQ99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9RetIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiRN9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9R7ZE4XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiRd9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9ShO8IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiRt9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9ShO8oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiR99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9Zq_0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiSN9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9Z0w0IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiSd9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185" factor="_9aamsIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_-zuiSt9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9f7Y04XWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiS99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9gYEwIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiTN9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9idvcYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiTd9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9modwoXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiTt9yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9ouIcIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiT99yEeCDLdD4jHX2QQ" rank="3" weight="0.0029244076677681185">
+      <factor href="root.qm#_9qNWMYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiUN9yEeCDLdD4jHX2QQ">
+      <factor href="root.qm#_hCU1meP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiUd9yEeCDLdD4jHX2QQ" rank="2" weight="0.010314282570316507">
+      <factor href="root.qm#_9L0KAYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiUt9yEeCDLdD4jHX2QQ">
+      <factor href="root.qm#_hCU1m-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiU99yEeCDLdD4jHX2QQ">
+      <factor href="root.qm#_hCU1l-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_-zuiVN9yEeCDLdD4jHX2QQ">
+      <factor href="root.qm#_hCU1neP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+  </evaluations>
+  <evaluations xsi:type="qm:WeightedSumFactorAggregation" xmi:id="_FF5_QKejEeCeT84Z3j_9QA" description="some important impacts are missing, e.g. authentication present, secure storage (hashed and salted) of passwords, signed code, message exchange over secure channels;Our evaluation criteria where rank 1 for issues that will most probably lead to significant security problems, rank 2 for issues that might lead to significant security problems, and rank 3 for problems that might lead to some security problems. Thereby, we degraded the rank for very special issues that are unlikely to occur. &#xD;&#xA;//TODO note in description the correct weight of each sub aspect based on survey results" name="WeightedSumFactorAggregation" completeness="30">
+    <evaluates href="root.qm#_hCU1suP0Ed6mXujsf-O9qQ"/>
+    <rankings xmi:id="_QkfRMLLBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208" factor="_9TkX0oXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRMbLBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208">
+      <factor href="root.qm#_9Mjw4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRMrLBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208">
+      <factor href="root.qm#_9fes4oXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRM7LBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208">
+      <factor href="root.qm#_9pdvUIXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRNLLBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208">
+      <factor href="root.qm#_9tCnwYXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRNbLBEeCzKNauogpT3Q" rank="2" weight="0.05370627636252637">
+      <factor href="root.qm#_9N50soXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRNrLBEeCzKNauogpT3Q" rank="2" weight="0.05370627636252637">
+      <factor href="root.qm#_9fyO4IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRN7LBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9NwDsIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfROLLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9O8WgIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRObLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9nrmoIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfROrLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9PZCcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRO7LBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9PizcIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRPLLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9RCBMIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRPbLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935" factor="_9RetIIXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRPrLBEeCzKNauogpT3Q" rank="3" weight="0.02107050935175935">
+      <factor href="root.qm#_9S0J5IXWEeCT8pJoQsn4HQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRP7LBEeCzKNauogpT3Q" rank="1" weight="0.12067056207681208" factor="_9Mam8IXWEeCT8pJoQsn4HQ"/>
+    <rankings xmi:id="_QkfRQLLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU1ueP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRQbLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU1u-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRQrLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU1s-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRQ7LBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU1teP0Ed6mXujsf-O9qQ"/>
+    </rankings>
+    <rankings xmi:id="_QkfRRLLBEeCzKNauogpT3Q">
+      <factor href="root.qm#_hCU1t-P0Ed6mXujsf-O9qQ"/>
+    </rankings>
+  </evaluations>
+  <measures xmi:id="_XLr4QKUuEd-NpKpUUyVKCQ" description="&quot;Checks whether a private field is unused.&quot; [1]" name="Statically unused" characterizes="_lz7rgLtdEd-4Dvfk12g7Xw" type="FINDINGS">
+    <originatesFrom href="root.qm#_eEfjwQRpEeGawN0_s32iQQ"/>
+    <originatesFrom href="root.qm#_-xoiUKO7Ed-Pv7j9Ez0GHQ"/>
+    <measures xmi:id="_9v35UIXWEeCT8pJoQsn4HQ" parent="_9vSDdYXWEeCT8pJoQsn4HQ"/>
+  </measures>
+  <measures xmi:id="_dxlb8KUzEd-NpKpUUyVKCQ" description="&quot;Checks whether a private method is unused.&quot; [1]" name="Statically unused" characterizes="_zDY80LpUEd-vsOyJ3PcLww" type="FINDINGS">
+    <originatesFrom href="root.qm#_-xoiUKO7Ed-Pv7j9Ez0GHQ"/>
+    <originatesFrom href="root.qm#_eEfjwQRpEeGawN0_s32iQQ"/>
+    <measures xmi:id="_9w6bIIXWEeCT8pJoQsn4HQ" parent="_9okXcIXWEeCT8pJoQsn4HQ"/>
+  </measures>
+  <measures xmi:id="_GxjEQKUyEd-NpKpUUyVKCQ" description="&quot;A method parameter is unused, if its value is never accessed.&quot; [1]" name="Statically unused" characterizes="_8gP84JTFEd-40qNQIH1mBQ" type="FINDINGS">
+    <originatesFrom href="root.qm#_-xoiUKO7Ed-Pv7j9Ez0GHQ"/>
+    <originatesFrom href="root.qm#_eEfjwQRpEeGawN0_s32iQQ"/>
+    <measures xmi:id="_9xXHEIXWEeCT8pJoQsn4HQ" parent="_9xN9IIXWEeCT8pJoQsn4HQ"/>
+  </measures>
+  <measures xsi:type="qm:NormalizationMeasure" xmi:id="_86NjcOHREd-Z2eCtn83" description="Number of classes." name="#Classes" type="NUMBER"/>
+  <measures xmi:id="_s1W3wPDPEd-dO4k3YfzrzA" description="&quot;This rule warns if a non-constant public static field is found. In a multi-threaded environment access to those fields must be synchronized. &quot; [1]" name="Non constant and static" type="FINDINGS">
+    <originatesFrom href="root.qm#_uliZAQQNEeGSsdo78OGnBA"/>
+    <originatesFrom href="root.qm#_-xoiUKO7Ed-Pv7j9Ez0GHQ"/>
+    <measures xmi:id="_JtsyMJDYEeCBGcHpeUosJQ" parent="_9j89MIXWEeCT8pJoQsn4HQ"/>
+  </measures>
+  <measures xmi:id="_kq-VMPFcEd-dO4k3YfzrzA" description="&quot;Check if there are constant fields that refer to arrays. Despite the constant declaration, the referenced array could be modified.&quot; [1]" name="Mutable object declared as constant" type="FINDINGS">
+    <originatesFrom href="root.qm#_uliZAQQNEeGSsdo78OGnBA"/>
+    <originatesFrom href="root.qm#_-xoiUKO7Ed-Pv7j9Ez0GHQ"/>
+    <measures xmi:id="_9nYrsIXWEeCT8pJoQsn4HQ" parent="_9PizcIXWEeCT8pJoQsn4HQ"/>
+  </measures>
+  <measures xsi:type="qm:NormalizationMeasure" xmi:id="_nTyhAFqYEeC1KZOCQoCvzA" description="Number of methods." name="#Methods" type="NUMBER"/>
+  <measures xsi:type="qm:NormalizationMeasure" xmi:id="_nTx6BVqYEeC1KZOCQoCvzA" description="Number of fields." name="#Fields" type="NUMBER"/>
+  <measures xsi:type="qm:NormalizationMeasure" xmi:id="_nTzIG1qYEeC1KZOCQoCvzA" description="Number of variables." name="#Variables" type="NUMBER"/>
+  <measures xsi:type="qm:NormalizationMeasure" xmi:id="_nTzIGVqYEeC1KZOCQoCvzA" description="Number of statements." name="#Statements" type="NUMBER"/>
+  <requires href="root.qm#_JarMoOHNEd-I9oS2OyT8ug"/>
+</qm:QualityModel>
